@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LlamaBox — Architecture</title>
+  <meta name="description" content="How LlamaBox works and why it is built the way it is: on-device LLM inference on Android via llama.cpp + llama.rn, fully offline and private.">
+  <link rel="canonical" href="https://llamabox-ai.github.io/architecture.html">
+  <meta property="og:title" content="LlamaBox — Architecture">
+  <meta property="og:description" content="How LlamaBox works and why it is built the way it is — on-device LLM inference on Android.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://llamabox-ai.github.io/architecture.html">
+  <meta property="og:site_name" content="LlamaBox">
+  <meta property="og:image" content="https://llamabox-ai.github.io/assets/screenshot-1-home.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="LlamaBox — Architecture">
+  <meta name="twitter:description" content="How LlamaBox works and why it is built the way it is.">
+  <meta name="theme-color" content="#7c3aed">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20100%20100%22%3E%3Crect%20width%3D%22100%22%20height%3D%22100%22%20rx%3D%2220%22%20fill%3D%22%237c3aed%22%2F%3E%3Ctext%20x%3D%2250%22%20y%3D%2268%22%20font-family%3D%22Arial%2CHelvetica%2Csans-serif%22%20font-size%3D%2250%22%20font-weight%3D%22bold%22%20fill%3D%22white%22%20text-anchor%3D%22middle%22%3ELB%3C%2Ftext%3E%3C%2Fsvg%3E">
+  <style>
+    :root {
+      --bg: #0f172a;
+      --surface: #1e293b;
+      --border: #334155;
+      --text: #f1f5f9;
+      --muted: #94a3b8;
+      --accent: #7c3aed;
+      --accent-soft: rgba(124, 58, 237, 0.15);
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+    }
+    nav {
+      position: sticky; top: 0; z-index: 50;
+      background: rgba(15, 23, 42, 0.85);
+      backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+    }
+    .nav-inner {
+      max-width: 880px; margin: 0 auto;
+      padding: 0.75rem 1.25rem;
+      display: flex; align-items: center; justify-content: space-between;
+    }
+    .wordmark { font-weight: 700; font-size: 1.25rem; color: var(--text); text-decoration: none; letter-spacing: -0.02em; }
+    .wordmark span { color: var(--accent); }
+    .nav-links { display: flex; gap: 1.25rem; align-items: center; font-size: 0.9rem; }
+    .nav-links a { color: var(--muted); text-decoration: none; transition: color .2s; }
+    .nav-links a:hover { color: var(--text); }
+    header.hero { text-align: center; padding: 3.5rem 1.25rem 1.5rem; max-width: 760px; margin: 0 auto; }
+    header.hero h1 { margin: 0; font-size: clamp(1.9rem, 5vw, 2.75rem); letter-spacing: -0.03em; line-height: 1.1; }
+    header.hero p { margin: 0.75rem auto 0; color: var(--muted); font-size: clamp(1rem, 2.2vw, 1.15rem); max-width: 620px; }
+    main { max-width: 880px; margin: 0 auto; padding: 1.5rem 1.25rem 3.5rem; }
+    .cta-row { text-align: center; margin: 1.5rem 0 2.5rem; }
+    .cta {
+      display: inline-block; background: var(--accent); color: #fff;
+      padding: 0.7rem 1.4rem; border-radius: 999px; font-weight: 600;
+      text-decoration: none; box-shadow: 0 8px 24px rgba(124,58,237,0.25);
+      transition: background .2s, transform .2s;
+    }
+    .cta:hover { background: #8b5cf6; transform: translateY(-2px); }
+    h2 { font-size: 1.5rem; margin: 2.75rem 0 0.75rem; letter-spacing: -0.02em; border-bottom: 1px solid var(--border); padding-bottom: 0.4rem; }
+    h2 .num { color: var(--accent); margin-right: 0.5rem; }
+    h3 { font-size: 1.1rem; margin: 1.75rem 0 0.5rem; color: var(--text); }
+    p { margin: 0 0 1rem; color: var(--muted); }
+    p strong, li strong { color: var(--text); }
+    ul, ol { padding-left: 1.4rem; color: var(--muted); }
+    li { margin-bottom: 0.5rem; }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .why { background: var(--surface); border: 1px solid var(--border); border-left: 3px solid var(--accent); border-radius: 14px; padding: 1.1rem 1.25rem; margin: 1rem 0; }
+    .why h3 { margin: 0 0 0.4rem; color: var(--text); font-size: 1.05rem; }
+    .why h3::before { content: "Why? "; color: var(--accent); font-weight: 700; }
+    .why p { margin: 0; }
+    pre {
+      background: #0b1220; border: 1px solid var(--border); border-radius: 12px;
+      padding: 1rem 1.1rem; overflow-x: auto; color: #cbd5e1;
+      font-size: 0.82rem; line-height: 1.5;
+    }
+    code { background: var(--accent-soft); color: #ddd6fe; padding: 0.1rem 0.35rem; border-radius: 6px; font-size: 0.85em; }
+    pre code { background: none; color: inherit; padding: 0; }
+    table { width: 100%; border-collapse: collapse; margin: 1rem 0; font-size: 0.9rem; }
+    th, td { text-align: left; padding: 0.55rem 0.7rem; border-bottom: 1px solid var(--border); }
+    th { color: var(--text); font-weight: 600; }
+    td { color: var(--muted); }
+    .note { background: var(--accent-soft); border: 1px solid rgba(124,58,237,0.4); border-radius: 12px; padding: 0.9rem 1.1rem; color: #ddd6fe; margin: 1.25rem 0; }
+    footer { border-top: 1px solid var(--border); background: var(--surface); padding: 2.5rem 1.25rem; text-align: center; color: var(--muted); font-size: 0.85rem; }
+    footer a { color: var(--muted); margin: 0 0.4rem; }
+    footer a:hover { color: var(--accent); }
+    @media (max-width: 600px) { .nav-links { gap: 0.85rem; font-size: 0.85rem; } pre { font-size: 0.75rem; } }
+  </style>
+</head>
+<body>
+  <nav>
+    <div class="nav-inner">
+      <a href="/" class="wordmark">Llama<span>Box</span></a>
+      <div class="nav-links">
+        <a href="/">Home</a>
+        <a href="/#features">Features</a>
+        <a href="https://github.com/llamabox-ai/llamabox/blob/main/docs/ARCHITECTURE.md">Full doc</a>
+        <a href="https://github.com/llamabox-ai">GitHub</a>
+      </div>
+    </div>
+  </nav>
+
+  <header class="hero">
+    <h1>How LlamaBox works — and why</h1>
+    <p>LlamaBox runs large language models entirely on your Android phone, with no cloud and no accounts. Here is the architecture behind that, and the reasoning behind each decision.</p>
+  </header>
+
+  <main>
+    <div class="cta-row">
+      <a class="cta" href="https://github.com/llamabox-ai/llamabox/blob/main/docs/ARCHITECTURE.md">Read the full architecture doc on GitHub →</a>
+    </div>
+
+    <h2><span class="num">1.</span>What LlamaBox is</h2>
+    <p>A React Native Android app that runs LLMs <strong>on-device</strong> using <strong>llama.cpp</strong> via the <strong>llama.rn</strong> bridge. You download a quantized <code>GGUF</code> model, the app memory-maps it into RAM, and tokens are generated on your phone's CPU. No inference call ever leaves the device.</p>
+    <ul>
+      <li><strong>Platform:</strong> Android 7.0+ (arm64). iOS is a future target.</li>
+      <li><strong>Framework:</strong> React Native 0.81, New Architecture (JSI/TurboModules)</li>
+      <li><strong>Inference:</strong> llama.rn 0.12.0-rc.8 wrapping llama.cpp</li>
+      <li><strong>Compute today:</strong> CPU-only (4 threads, ARM NEON)</li>
+      <li><strong>State:</strong> Zustand (UI) · SQLite (history) · AsyncStorage (settings)</li>
+    </ul>
+
+    <h2><span class="num">2.</span>High-level architecture</h2>
+    <pre><code>JavaScript layer   →   React Native bridge (JSI)   →   Native (C++)
+  UI + Zustand                                    llama.rn → llama.cpp → ggml (CPU)</code></pre>
+    <p>Three layers: a TypeScript UI and state layer, a JSI bridge with near-zero overhead (critical for the hot token-streaming path), and a native C++ inference core.</p>
+
+    <h2><span class="num">3.</span>The decisions, explained</h2>
+
+    <div class="why"><h3>On-device / offline</h3><p>Privacy is the product. The moment inference touches a server, the privacy claim becomes unverifiable. Running locally makes the claim auditable — there is genuinely no code path that sends your prompts anywhere. Offline is a <em>consequence</em> of privacy, not just a feature.</p></div>
+
+    <div class="why"><h3>llama.cpp + llama.rn</h3><p>llama.cpp is the most mature, mobile-optimized CPU engine for GGUF, with hand-tuned ARM NEON kernels. llama.rn is its React Native bridge. We get native-class inference without writing our own JNI.</p></div>
+
+    <div class="why"><h3>React Native + New Architecture</h3><p>One TypeScript codebase runs on Android today and can target iOS later. The New Architecture (JSI) matters specifically here: inference calls pass large token buffers between JS and native, and JSI avoids the legacy async bridge's serialization cost.</p></div>
+
+    <div class="why"><h3>CPU-only today (GPU is planned)</h3><p>On every device tested, GPU detection returns none. The current build uses llama.rn's prebuilt binaries, whose Java loader only attempts the OpenCL-capable library when a Hexagon DSP is also detected — coupling two independent backends. The roadmap: a GPU diagnostics panel, decoupling OpenCL from Hexagon, and an Auto/CPU/GPU selector with a per-device smoke test. Until that is validated, CPU-only is the honest default.</p></div>
+
+    <div class="why"><h3>Vision encoder forced to CPU</h3><p>Vision encoding is a one-shot burst that saturates GPU memory. On Android, running the CLIP-style encoder on the GPU can freeze the system UI for seconds. Forcing <code>use_gpu: false</code> for the encoder — while the text decoder can still use GPU layers — keeps the interface responsive. The encoder runs once per image; the decoder runs continuously.</p></div>
+
+    <div class="why"><h3>No Reanimated</h3><p>Reanimated crashes with the New Architecture in this setup. Every animation uses RN's built-in <code>Animated</code> API with <code>useNativeDriver: true</code>. New animation code must follow this or the app crashes.</p></div>
+
+    <div class="why"><h3>Three stores (Zustand / SQLite / AsyncStorage)</h3><p>Each does what it is best at: Zustand for reactive in-memory UI state, SQLite (WAL) for durable chat history, AsyncStorage for key/value settings. Keeping them separate is simpler and faster than fighting one store's limits.</p></div>
+
+    <div class="why"><h3>Memory-mapped weights, no mlock</h3><p>A 1–4 GB GGUF is mmap'd and paged in on demand — fast startup, low apparent RAM. We do not pin pages in RAM (mlock) because on low-memory phones that risks OOM. Tradeoff: occasional micro-stutters from page faults.</p></div>
+
+    <div class="why"><h3>KV cache is not persisted</h3><p>Resuming an old chat replays the whole history and rebuilds the KV cache from scratch, so long chats are slower to first token. Persisting a multi-hundred-MB FP16 cache across model/context changes is fragile and unsafe. We chose simple-and-correct over fast-and-fragile — a known limitation, not a bug.</p></div>
+
+    <div class="why"><h3>Context 2048 (4096 for vision)</h3><p>KV cache grows linearly with context. 2048 is the sweet spot for fluid chat on mid-range phones. Vision auto-bumps to 4096 (image tokens are expensive, 1000+ each) and disables context shifting, which can corrupt image-embedding KV entries.</p></div>
+
+    <div class="why"><h3>Q4_K_M quantization</h3><p>Best speed/quality tradeoff on CPU. Smaller degrades quality noticeably; larger is slower with marginal gains on a phone. Qwen2.5 0.5B and SmolLM2 360M run smoothly even on mid-range devices.</p></div>
+
+    <div class="why"><h3>AGPL-3.0 + reserved trademark</h3><p>A closed-source privacy app asks you to <em>trust</em> its claim; open source lets you <em>verify</em> it. AGPL-3.0 (strong copyleft) means any fork that ships must also be open — blocking silent closed clones. "LlamaBox" is a reserved trademark so the name cannot endorse derived works. A commercial license is available for closed-source commercial use.</p></div>
+
+    <h2><span class="num">4.</span>Inference, in brief</h2>
+    <p>Per output token: embedding lookup → transformer block × N layers across 4 worker threads (LayerNorm, Q/K/V GEMM, RoPE, attention, FFN) → final projection → sampling → KV-cache append. On a mid-range device with a ~1B Q4_K_M model, generation is roughly <strong>2–8 tokens/sec</strong>; prompt processing <strong>1–5 tok/s</strong>; model load <strong>5–30 s</strong>.</p>
+
+    <h2><span class="num">5.</span>Multimodal vision</h2>
+    <p>Images are picked via <code>expo-image-picker</code>, copied to persistent storage (the picker's temp URIs are unreliable), and sent as an OpenAI-style <code>content</code> array with a <code>file://</code> image. A model is vision-capable when its filename matches vision keywords <em>and</em> a sibling <code>mmproj</code> file is found.</p>
+
+    <h2><span class="num">6.</span>State &amp; persistence</h2>
+    <p>Two Zustand stores (<code>chatStore</code>, <code>modelStore</code>) drive the UI. SQLite stores <code>conversations</code> and <code>messages</code> (with an <code>attachments</code> column for image metadata, migrated idempotently). AsyncStorage holds settings and per-model overrides. Sending a message: build the prompt, prune to fit context (system prompt always kept), insert the user message + a streaming placeholder, stream tokens back on a ~150 ms throttled UI tick, then finalize in SQLite.</p>
+
+    <h2><span class="num">7.</span>Memory footprint</h2>
+    <table>
+      <tr><th>Component</th><th>Approx.</th></tr>
+      <tr><td>GGUF model (mmap'd)</td><td>1–4 GB (virtual)</td></tr>
+      <tr><td>KV cache (FP16)</td><td>200–800 MB (RAM)</td></tr>
+      <tr><td>llama.cpp runtime</td><td>50–100 MB</td></tr>
+      <tr><td>JS heap + UI</td><td>70–200 MB</td></tr>
+      <tr><td><strong>Typical active peak</strong></td><td><strong>500 MB – 2 GB</strong></td></tr>
+    </table>
+
+    <h2><span class="num">8.</span>Limitations &amp; roadmap</h2>
+    <ul>
+      <li><strong>Today:</strong> CPU-only; KV cache not persisted; one model at a time; Android-first.</li>
+      <li><strong>Planned:</strong> GPU (OpenCL) enablement with diagnostics + engine selector; expanded model presets; plugin/tool-use system; more vision preset packs; auto context sizing; iOS port.</li>
+    </ul>
+
+    <div class="note">This page is a summary. For the complete reference — native API tables, CMake/build detail, sampling parameters, and the full chat-lifecycle trace — see the <a href="https://github.com/llamabox-ai/llamabox/blob/main/docs/ARCHITECTURE.md">full architecture document on GitHub</a>.</div>
+
+    <div class="cta-row">
+      <a class="cta" href="https://github.com/llamabox-ai/llamabox/blob/main/docs/ARCHITECTURE.md">Read the full architecture doc on GitHub →</a>
+    </div>
+  </main>
+
+  <footer>
+    <div>
+      <a href="/">Home</a> ·
+      <a href="/privacy.html">Privacy</a> ·
+      <a href="https://github.com/llamabox-ai">GitHub</a> ·
+      <a href="mailto:aalhad.dev@gmail.com">Contact</a>
+    </div>
+    <p style="margin-top:1rem">© 2026 LlamaBox. All rights reserved. "LlamaBox" is a reserved trademark.</p>
+  </footer>
+</body>
+</html>
