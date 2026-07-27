@@ -509,6 +509,31 @@ section.block .section-subtitle {
   margin: 0;
 }
 
+/* FAQ (AEO) */
+.faq {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 1.25rem;
+  text-align: left;
+}
+.faq-item {
+  border-radius: 16px;
+  padding: 1.4rem 1.5rem;
+}
+.faq-item h3 {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--gold);
+  margin: 0 0 0.5rem;
+  letter-spacing: -0.01em;
+  display: flex;
+  gap: 0.6rem;
+  align-items: baseline;
+}
+.faq-item h3 .q-mark { color: var(--text-faint); font-weight: 700; font-size: 0.8rem; }
+.faq-item p { color: var(--text-dim); font-size: 0.9rem; margin: 0; line-height: 1.55; }
+.faq-item p strong { color: var(--text); font-weight: 600; }
+
 /* Tech band */
 .tech {
   text-align: center;

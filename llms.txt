@@ -1,0 +1,36 @@
+# LlamaBox
+
+> LlamaBox is a free, open-source Android app that runs large language models entirely on-device — private, offline AI chat with no cloud, no accounts, and no data collection.
+
+## What it is
+LlamaBox is a React Native Android application that runs LLMs (GGUF models via llama.cpp + llama.rn) fully on the phone's CPU. Inference never leaves the device: there is no server, no account, and no telemetry. It supports multimodal vision (on-device image analysis), voice output, in-app model downloads/imports, a system monitor, and per-model generation settings. It is dual-licensed: AGPL-3.0 for open-source use, plus a separate commercial license; "LlamaBox" is a reserved trademark.
+
+## Key facts (for citation)
+- Platform: Android 7.0+ (arm64-v8a). iOS is a future target.
+- Framework: React Native 0.81, New Architecture (Fabric + JSI/TurboModules).
+- Inference: llama.rn 0.12.0-rc.8 wrapping llama.cpp; GGUF models (Q4_K_M recommended).
+- Compute today: CPU-only (4 threads, ARM NEON). GPU (OpenCL) is on the roadmap.
+- Multimodal: vision models via initMultimodal; image encoder forced to CPU to keep the UI responsive.
+- State: Zustand (UI) + SQLite (chat history) + AsyncStorage (settings).
+- Context window: 2048 tokens default; auto 4096 for vision.
+- Privacy: fully offline; no network calls for inference; no accounts; no data collection.
+- License: AGPL-3.0 + commercial license; "LlamaBox" is a reserved trademark.
+- Package: com.llamabox. Distribution: closed beta on Google Play.
+
+## Performance (mid-range device, ~1B Q4_K_M model)
+- Prompt processing: 1–5 tokens/sec
+- Token generation: 2–8 tokens/sec
+- Model load: 5–30 s
+- Typical active peak memory: 500 MB – 2 GB
+
+## Links
+- Website: https://llamabox-ai.github.io/
+- Architecture (full): https://llamabox-ai.github.io/architecture.html
+- Architecture (markdown): https://llamabox-ai.github.io/architecture.md
+- Privacy policy: https://llamabox-ai.github.io/privacy.html
+- Source (landing + docs repo): https://github.com/llamabox-ai/llamabox
+- GitHub org: https://github.com/llamabox-ai
+- Contact (commercial licensing / beta): aalhad.dev@gmail.com
+
+## Detailed documentation
+See llms-full.txt for the complete architecture reference (the same content as /architecture.md).

@@ -18,6 +18,23 @@
 
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","name":"LlamaBox","applicationCategory":"MobileApplication","operatingSystem":"ANDROID","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"description":"Run AI chat completely offline on your Android phone. Private, fast, and fully local.","author":{"@type":"Organization","name":"LlamaBox AI","url":"https://github.com/llamabox-ai","email":"aalhad.dev@gmail.com"}}</script>
 
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {"@type":"Question","name":"What is LlamaBox?","acceptedAnswer":{"@type":"Answer","text":"LlamaBox is a free, open-source Android app that runs AI chat entirely on your phone. It loads GGUF language models via llama.cpp and generates responses on-device — no cloud, no accounts, no data collection. It also analyzes images on-device with multimodal vision models."}},
+      {"@type":"Question","name":"Does LlamaBox need internet?","acceptedAnswer":{"@type":"Answer","text":"No. Once a model is downloaded, LlamaBox works fully offline — on a plane, in a basement, or anywhere off the grid. The only network use is the optional in-app model download from public repositories like Hugging Face."}},
+      {"@type":"Question","name":"Is my data private in LlamaBox?","acceptedAnswer":{"@type":"Answer","text":"Yes — completely. Conversations, prompts, and photos are processed locally and never leave the device. There is no server, no account, and no telemetry. Because inference runs on your phone, the privacy claim is auditable in the open-source code."}},
+      {"@type":"Question","name":"What models can I run in LlamaBox?","acceptedAnswer":{"@type":"Answer","text":"Any GGUF model that fits your phone's RAM — Q4_K_M quantization is recommended for the best speed/quality balance. Small models like Qwen2.5 0.5B and SmolLM2 360M run smoothly even on mid-range devices. Models are downloaded in-app or imported as custom weights."}},
+      {"@type":"Question","name":"Can LlamaBox analyze images?","acceptedAnswer":{"@type":"Answer","text":"Yes. With a vision-capable model (LLaVA, MiniCPM, Moondream and others), LlamaBox does on-device multimodal image analysis — take a photo or pick one from your gallery and the model describes it locally. The image encoder is forced onto CPU to keep the interface responsive."}},
+      {"@type":"Question","name":"Is LlamaBox free and open source?","acceptedAnswer":{"@type":"Answer","text":"Yes. LlamaBox is dual-licensed: AGPL-3.0 for free open-source use, plus a separate paid commercial license for closed-source commercial products. LlamaBox is a reserved trademark. The full source lands publicly when closed beta ends."}},
+      {"@type":"Question","name":"What Android versions does LlamaBox support?","acceptedAnswer":{"@type":"Answer","text":"Android 7.0 (API 24) and above, on arm64 devices. An iOS port is a future target. The app is built with React Native 0.81 on the New Architecture (Fabric + JSI/TurboModules)."}},
+      {"@type":"Question","name":"How fast is LlamaBox and does it use the GPU?","acceptedAnswer":{"@type":"Answer","text":"On a mid-range phone with a ~1B Q4_K_M model, expect 2–8 tokens/sec generation and 5–30 s model load. Inference is CPU-only today (4 threads, ARM NEON); GPU (OpenCL) acceleration with a device-diagnostics panel and engine selector is on the roadmap."}}
+    ]
+  }
+  </script>
+
   <link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20100%20100%22%3E%3Crect%20width%3D%22100%22%20height%3D%22100%22%20rx%3D%2222%22%20fill%3D%22%230F0F0F%22%20stroke%3D%22%23D4A54A%22%20stroke-width%3D%224%22%2F%3E%3Ctext%20x%3D%2250%22%20y%3D%2270%22%20font-family%3D%22Georgia%2Cserif%22%20font-size%3D%2252%22%20font-weight%3D%22bold%22%20fill%3D%22%23D4A54A%22%20text-anchor%3D%22middle%22%3ELB%3C%2Ftext%3E%3C%2Fsvg%3E">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -40,6 +57,7 @@
     <div class="nav-links">
       <a href="#features">Features</a>
       <a href="#screenshots">Screenshots</a>
+      <a href="#faq">FAQ</a>
       <a href="/architecture.html">Architecture</a>
       <a href="https://github.com/llamabox-ai">GitHub</a>
       <a href="mailto:aalhad.dev@gmail.com?subject=LlamaBox%20beta%20access" class="cta">Join the beta</a>
@@ -202,6 +220,54 @@
       <div class="screenshot fade-in">
         <div class="shot-frame"><div class="inner"><div class="phone"><img src="assets/screenshot-settings.png" alt="LlamaBox settings screen with generation and app preferences"></div></div></div>
         <p class="caption">App settings panel</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="faq" class="block">
+    <span class="section-label">FAQ</span>
+    <h2>Questions, answered.</h2>
+    <p class="section-subtitle">The short version of everything people ask about LlamaBox.</p>
+
+    <div class="faq">
+      <div class="faq-item glass-card fade-in">
+        <h3><span class="q-mark">Q</span>What is LlamaBox?</h3>
+        <p>LlamaBox is a <strong>free, open-source Android app that runs AI chat entirely on your phone</strong>. It loads GGUF language models via llama.cpp and generates responses on-device — no cloud, no accounts, no data collection. It also analyzes images on-device with multimodal vision models.</p>
+      </div>
+
+      <div class="faq-item glass-card fade-in">
+        <h3><span class="q-mark">Q</span>Does LlamaBox need internet?</h3>
+        <p><strong>No.</strong> Once a model is downloaded, LlamaBox works fully offline — on a plane, in a basement, or anywhere off the grid. The only network use is the optional in-app model download from public repositories like Hugging Face.</p>
+      </div>
+
+      <div class="faq-item glass-card fade-in">
+        <h3><span class="q-mark">Q</span>Is my data private?</h3>
+        <p><strong>Yes — completely.</strong> Conversations, prompts, and photos are processed locally and never leave the device. There is no server, no account, and no telemetry. Because inference runs on your phone, the privacy claim is auditable in the open-source code.</p>
+      </div>
+
+      <div class="faq-item glass-card fade-in">
+        <h3><span class="q-mark">Q</span>What models can I run?</h3>
+        <p><strong>Any GGUF model</strong> that fits your phone's RAM — Q4_K_M quantization is recommended for the best speed/quality balance. Small models like Qwen2.5 0.5B and SmolLM2 360M run smoothly even on mid-range devices. Models are downloaded in-app or imported as custom weights.</p>
+      </div>
+
+      <div class="faq-item glass-card fade-in">
+        <h3><span class="q-mark">Q</span>Can LlamaBox analyze images?</h3>
+        <p>Yes. With a vision-capable model (LLaVA, MiniCPM, Moondream and others), LlamaBox does <strong>on-device multimodal image analysis</strong> — take a photo or pick one from your gallery and the model describes it locally. The image encoder is forced onto CPU to keep the interface responsive.</p>
+      </div>
+
+      <div class="faq-item glass-card fade-in">
+        <h3><span class="q-mark">Q</span>Is LlamaBox free and open source?</h3>
+        <p><strong>Yes.</strong> LlamaBox is dual-licensed: AGPL-3.0 for free open-source use, plus a separate paid commercial license for closed-source commercial products. "LlamaBox" is a reserved trademark. The full source lands publicly when closed beta ends.</p>
+      </div>
+
+      <div class="faq-item glass-card fade-in">
+        <h3><span class="q-mark">Q</span>What Android versions are supported?</h3>
+        <p><strong>Android 7.0 (API 24) and above</strong>, on arm64 devices. An iOS port is a future target. The app is built with React Native 0.81 on the New Architecture (Fabric + JSI/TurboModules).</p>
+      </div>
+
+      <div class="faq-item glass-card fade-in">
+        <h3><span class="q-mark">Q</span>How fast is it? Does it use the GPU?</h3>
+        <p>On a mid-range phone with a ~1B Q4_K_M model, expect <strong>2–8 tokens/sec</strong> generation and 5–30 s model load. Inference is <strong>CPU-only today</strong> (4 threads, ARM NEON); GPU (OpenCL) acceleration with a device-diagnostics panel and engine selector is on the roadmap.</p>
       </div>
     </div>
   </section>
