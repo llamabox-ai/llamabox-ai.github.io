@@ -17,22 +17,27 @@
   <meta name="twitter:title" content="LlamaBox — Privacy Policy">
   <meta name="twitter:description" content="LlamaBox privacy policy. Your data stays on your device.">
   <meta name="twitter:image" content="https://llamabox-ai.github.io/assets/screenshot-1-home.png">
-  <meta name="theme-color" content="#7c3aed">
+  <meta name="theme-color" content="#0F0F0F">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20100%20100%22%3E%3Crect%20width%3D%22100%22%20height%3D%22100%22%20rx%3D%2222%22%20fill%3D%22%230F0F0F%22%20stroke%3D%22%23D4A54A%22%20stroke-width%3D%224%22%2F%3E%3Ctext%20x%3D%2250%22%20y%3D%2270%22%20font-family%3D%22Georgia%2Cserif%22%20font-size%3D%2252%22%20font-weight%3D%22bold%22%20fill%3D%22%23D4A54A%22%20text-anchor%3D%22middle%22%3ELB%3C%2Ftext%3E%3C%2Fsvg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <style>
     :root {
-      --bg: #0f172a;
-      --surface: #1e293b;
-      --border: #334155;
-      --text: #f1f5f9;
-      --muted: #94a3b8;
-      --accent: #7c3aed;
+      --bg: #0F0F0F;
+      --surface: #171717;
+      --border: #2C2C2C;
+      --text: #F0ECE5;
+      --muted: #A09888;
+      --accent: #D4A54A;
     }
     * { box-sizing: border-box; }
     html { scroll-behavior: smooth; }
     body {
       margin: 0;
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
       background: var(--bg);
+      background-image: url("data:image/svg+xml,%3Csvg width='28' height='49' viewBox='0 0 28 49' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M13.99 9.25l13 7.5v15l-13 7.5L1 31.75v-15l12.99-7.5zM3 17.9v12.7l10.99 6.34 11-6.35V17.9l-11-6.34L3 17.9zM0 15l12.98-7.5V0h-2v6.35L0 12.69v2.3zm0 18.5L12.98 41v8h-2v-6.85L0 35.81v-2.3zM15 0v7.5L27.99 15H28v-2.31h-.01L17 6.35V0h-2zm0 49v-8l12.99-7.5H28v2.31h-.01L17 42.15V49h-2z' fill='%23D4A54A' fill-opacity='0.035' fill-rule='evenodd'/%3E%3C/svg%3E");
       color: var(--text);
       line-height: 1.6;
       -webkit-font-smoothing: antialiased;
@@ -41,7 +46,7 @@
       position: sticky;
       top: 0;
       z-index: 50;
-      background: rgba(15, 23, 42, 0.85);
+      background: rgba(15, 15, 15, 0.72);
       backdrop-filter: blur(12px);
       -webkit-backdrop-filter: blur(12px);
       border-bottom: 1px solid var(--border);
@@ -55,11 +60,12 @@
       justify-content: space-between;
     }
     .wordmark {
+      font-family: Georgia, 'Times New Roman', serif;
       font-weight: 700;
-      font-size: 1.25rem;
+      font-size: 1.3rem;
       color: var(--text);
       text-decoration: none;
-      letter-spacing: -0.02em;
+      letter-spacing: 0.01em;
     }
     .wordmark span { color: var(--accent); }
     .nav-links {
@@ -95,7 +101,9 @@
     p { margin: 0 0 1rem; }
     ul { padding-left: 1.25rem; margin: 0 0 1rem; }
     li { margin-bottom: 0.5rem; }
-    strong { color: #fff; }
+    strong { color: var(--text); }
+    ::selection { background: rgba(212, 165, 74, 0.3); color: #fff; }
+    :focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; border-radius: 4px; }
     a { color: var(--accent); text-decoration: none; }
     a:hover { text-decoration: underline; }
     footer {

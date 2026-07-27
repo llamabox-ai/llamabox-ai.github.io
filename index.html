@@ -18,12 +18,16 @@
 
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","name":"LlamaBox","applicationCategory":"MobileApplication","operatingSystem":"ANDROID","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"description":"Run AI chat completely offline on your Android phone. Private, fast, and fully local.","author":{"@type":"Organization","name":"LlamaBox AI","url":"https://github.com/llamabox-ai","email":"aalhad.dev@gmail.com"}}</script>
 
-  <link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20100%20100%22%3E%3Crect%20width%3D%22100%22%20height%3D%22100%22%20rx%3D%2220%22%20fill%3D%22%237c3aed%22%2F%3E%3Ctext%20x%3D%2250%22%20y%3D%2268%22%20font-family%3D%22Arial%2CHelvetica%2Csans-serif%22%20font-size%3D%2250%22%20font-weight%3D%22bold%22%20fill%3D%22white%22%20text-anchor%3D%22middle%22%3ELB%3C%2Ftext%3E%3C%2Fsvg%3E">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20100%20100%22%3E%3Crect%20width%3D%22100%22%20height%3D%22100%22%20rx%3D%2222%22%20fill%3D%22%230F0F0F%22%20stroke%3D%22%23D4A54A%22%20stroke-width%3D%224%22%2F%3E%3Ctext%20x%3D%2250%22%20y%3D%2270%22%20font-family%3D%22Georgia%2Cserif%22%20font-size%3D%2252%22%20font-weight%3D%22bold%22%20fill%3D%22%23D4A54A%22%20text-anchor%3D%22middle%22%3ELB%3C%2Ftext%3E%3C%2Fsvg%3E">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="style.css">
-<meta name="theme-color" content="#7c3aed">
+<meta name="theme-color" content="#0F0F0F">
 <link rel="manifest" href="site.webmanifest">
-<link rel="apple-touch-icon" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22180%22%20height%3D%22180%22%20viewBox%3D%220%200%20512%20512%22%3E%3Crect%20width%3D%22512%22%20height%3D%22512%22%20rx%3D%22128%22%20fill%3D%22%237c3aed%22%2F%3E%3Ctext%20x%3D%22256%22%20y%3D%22320%22%20font-family%3D%22system-ui%2C-apple-system%2CBlinkMacSystemFont%2CSegoe%20UI%2CRoboto%2Csans-serif%22%20font-size%3D%22240%22%20font-weight%3D%22700%22%20text-anchor%3D%22middle%22%20fill%3D%22%23ffffff%22%3ELB%3C%2Ftext%3E%3C%2Fsvg%3E">
+<link rel="apple-touch-icon" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22180%22%20height%3D%22180%22%20viewBox%3D%220%200%20512%20512%22%3E%3Crect%20width%3D%22512%22%20height%3D%22512%22%20rx%3D%22112%22%20fill%3D%22%230F0F0F%22%20stroke%3D%22%23D4A54A%22%20stroke-width%3D%2218%22%2F%3E%3Ctext%20x%3D%22256%22%20y%3D%22360%22%20font-family%3D%22Georgia%2Cserif%22%20font-size%3D%22260%22%20font-weight%3D%22700%22%20text-anchor%3D%22middle%22%20fill%3D%22%23D4A54A%22%3ELB%3C%2Ftext%3E%3C%2Fsvg%3E">
 <meta property="og:site_name" content="LlamaBox">
 <meta property="og:locale" content="en_US">
 <meta name="twitter:title" content="LlamaBox — Offline AI Chat for Android">
@@ -32,154 +36,182 @@
 </head>
 <body>
   <nav id="nav" class="nav">
-    <div class="wordmark">LlamaBox</div>
+    <div class="wordmark">Llama<span class="gold">Box</span></div>
     <div class="nav-links">
       <a href="#features">Features</a>
       <a href="#screenshots">Screenshots</a>
       <a href="/architecture.html">Architecture</a>
       <a href="https://github.com/llamabox-ai">GitHub</a>
-      <a href="mailto:aalhad.dev@gmail.com?subject=LlamaBox%20beta%20access" class="cta">Join the closed beta</a>
+      <a href="mailto:aalhad.dev@gmail.com?subject=LlamaBox%20beta%20access" class="cta">Join the beta</a>
     </div>
   </nav>
 
   <section id="hero" class="hero">
-    <h1>AI chat that never leaves your phone</h1>
-    <p class="subheadline">Run large language models entirely on your Android device. No cloud servers, no user accounts, and no data collection — just private, local conversation.</p>
+    <div class="hero-glow-1" aria-hidden="true"></div>
+    <div class="hero-glow-2" aria-hidden="true"></div>
 
-    <div class="cta-row">
-      <a href="mailto:aalhad.dev@gmail.com?subject=LlamaBox%20beta%20access" class="cta-primary">Join the closed beta</a>
-      <a href="https://github.com/llamabox-ai" class="cta-secondary">View on GitHub</a>
-    </div>
+    <div class="hero-grid">
+      <div class="hero-copy">
+        <span class="section-label">On-device AI · Android 7.0+</span>
+        <h1>AI chat that never <span class="text-gold-gradient">leaves your phone</span></h1>
+        <p class="subheadline">Run large language models entirely on your Android device. No cloud servers, no user accounts, and no data collection — just private, local conversation.</p>
 
-    <div class="badges">
-      <span class="badge">com.llamabox</span>
-      <span class="badge">Android 7.0+</span>
-      <span class="badge">Free</span>
-      <span class="badge">Open source</span>
-      <span class="badge">No accounts</span>
-    </div>
+        <div class="cta-row">
+          <a href="mailto:aalhad.dev@gmail.com?subject=LlamaBox%20beta%20access" class="cta-primary">
+            Join the closed beta
+            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"/></svg>
+          </a>
+          <a href="https://github.com/llamabox-ai" class="cta-secondary">View on GitHub</a>
+        </div>
 
-    <div class="phone">
-      <img src="assets/screenshot-1-home.png" alt="LlamaBox home screen">
+        <div class="hero-stats">
+          <div class="hero-stat"><div class="v">0</div><div class="l">Servers</div></div>
+          <div class="hero-stat"><div class="v">0</div><div class="l">Accounts</div></div>
+          <div class="hero-stat"><div class="v">100%</div><div class="l">On-device</div></div>
+        </div>
+
+        <div class="badges">
+          <span class="badge">com.llamabox</span>
+          <span class="badge">Free</span>
+          <span class="badge">Open source</span>
+          <span class="badge">No accounts</span>
+          <span class="badge">Offline</span>
+        </div>
+      </div>
+
+      <div class="hero-visual" aria-hidden="true">
+        <div class="halo"></div>
+        <div class="frame">
+          <div class="inner">
+            <div class="honeycomb"></div>
+            <div class="corner-label"><span class="dot"></span>On-device · CPU</div>
+            <div class="phone">
+              <img src="assets/screenshot-1-home.png" alt="LlamaBox home screen">
+            </div>
+            <div class="visual-foot">
+              <div><div class="k">Privacy</div><div class="v">Fully offline</div></div>
+              <div style="text-align:right"><div class="k">Package</div><div class="v">com.llamabox</div></div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
 
     <div class="trust-banner">
-      <p>The official Android app from @llamabox-ai — package com.llamabox — built for fully offline, on-device LLM chat.</p>
+      The official Android app from <strong>@llamabox-ai</strong> — package <strong>com.llamabox</strong> — built for fully offline, on-device LLM chat.
     </div>
   </section>
 
-  <section id="why">
-    <h2>Why LlamaBox?</h2>
-    <p class="section-subtitle">The problems with typical AI apps — and how we solve them.</p>
+  <section id="why" class="block">
+    <span class="section-label">Why LlamaBox</span>
+    <h2>The privacy problem, solved.</h2>
+    <p class="section-subtitle">What typical AI apps get wrong — and how running the model on your phone fixes it.</p>
 
     <div class="why-cards">
-      <div class="why-card">
-        <div class="icon">🔒</div>
-        <p class="problem-label">Other apps:</p>
+      <div class="why-card glass-card glow-hover fade-in">
+        <div class="icon"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 11c0-1.657 1.343-3 3-3s3 1.343 3 3-1.343 3-3 3-3-1.343-3-3z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 11v3m0 0l-7 4 7 4 7-4-7-4z"/></svg></div>
+        <p class="problem-label">Other apps</p>
         <p class="problem">Most AI apps send your messages to remote servers, creating a permanent data trail.</p>
-        <p class="solution-label">LlamaBox:</p>
-        <p class="solution">LlamaBox runs the model entirely on your phone — your chats never leave the device.</p>
+        <p class="solution-label">LlamaBox</p>
+        <p class="solution">The model runs entirely on your phone — your chats never leave the device.</p>
       </div>
 
-      <div class="why-card">
-        <div class="icon">👤</div>
-        <p class="problem-label">Other apps:</p>
+      <div class="why-card glass-card glow-hover fade-in">
+        <div class="icon"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14c-4 0-7 2-7 5v1h14v-1c0-3-3-5-7-5z"/></svg></div>
+        <p class="problem-label">Other apps</p>
         <p class="problem">Other apps force you to create accounts and track every interaction you have.</p>
-        <p class="solution-label">LlamaBox:</p>
-        <p class="solution">LlamaBox requires no signup, no email, and collects absolutely no data.</p>
+        <p class="solution-label">LlamaBox</p>
+        <p class="solution">No signup, no email, and absolutely no data collected.</p>
       </div>
 
-      <div class="why-card">
-        <div class="icon">✈️</div>
-        <p class="problem-label">Other apps:</p>
+      <div class="why-card glass-card glow-hover fade-in">
+        <div class="icon"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M21 16v-5l-9-5-9 5v5l9 5 9-5z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 11l9 5 9-5M3 16l9 5 9-5"/></svg></div>
+        <p class="problem-label">Other apps</p>
         <p class="problem">Typical AI assistants stop working the instant you lose internet connectivity.</p>
-        <p class="solution-label">LlamaBox:</p>
-        <p class="solution">LlamaBox works fully offline — on a plane, in a basement, or anywhere off the grid.</p>
+        <p class="solution-label">LlamaBox</p>
+        <p class="solution">Works fully offline — on a plane, in a basement, anywhere off the grid.</p>
       </div>
     </div>
   </section>
 
-  <section id="features">
-    <h2>Features</h2>
-    <p class="section-subtitle">Everything you need for private, on-device AI chat.</p>
+  <section id="features" class="block">
+    <span class="section-label">Features</span>
+    <h2>Everything for private, on-device AI.</h2>
+    <p class="section-subtitle">A complete local-LLM toolkit — no cloud, no compromises.</p>
 
     <div class="features-grid">
-      <div class="feature-card">
-        <div class="icon">🔒</div>
+      <div class="feature-card glass-card glow-hover fade-in">
+        <div class="icon"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 3l8 4v5c0 5-3.5 8-8 9-4.5-1-8-4-8-9V7l8-4z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12l2 2 4-4"/></svg></div>
         <h3>Fully Offline</h3>
         <p>Chat with AI without any internet connection; your data never leaves the device.</p>
       </div>
 
-      <div class="feature-card">
-        <div class="icon">📸</div>
+      <div class="feature-card glass-card glow-hover fade-in">
+        <div class="icon"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 7h3l2-2h8l2 2h3v12H3V7z"/><circle cx="12" cy="13" r="3.5"/></svg></div>
         <h3>Multimodal Vision</h3>
         <p>Point your camera or pick a photo and let AI analyze it entirely on-device.</p>
       </div>
 
-      <div class="feature-card">
-        <div class="icon">🔊</div>
+      <div class="feature-card glass-card glow-hover fade-in">
+        <div class="icon"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M11 5L6 9H3v6h3l5 4V5z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M16 9c1.5 1 1.5 4 0 6M19 7c3 2 3 8 0 10"/></svg></div>
         <h3>Voice Output</h3>
         <p>Listen to AI responses aloud with built-in text-to-speech for hands-free conversations.</p>
       </div>
 
-      <div class="feature-card">
-        <div class="icon">📦</div>
+      <div class="feature-card glass-card glow-hover fade-in">
+        <div class="icon"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M21 8l-9-5-9 5 9 5 9-5zM3 8v8l9 5 9-5V8M12 13v8"/></svg></div>
         <h3>Model Hub</h3>
         <p>Download optimized GGUF models in-app, or import your own custom weights easily.</p>
       </div>
 
-      <div class="feature-card">
-        <div class="icon">⚡</div>
+      <div class="feature-card glass-card glow-hover fade-in">
+        <div class="icon"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M13 3L4 14h7l-1 7 9-11h-7l1-7z"/></svg></div>
         <h3>GPU Acceleration</h3>
         <p>Offload inference to Snapdragon and Mali GPUs for dramatically faster local generation.</p>
       </div>
 
-      <div class="feature-card">
-        <div class="icon">📊</div>
+      <div class="feature-card glass-card glow-hover fade-in">
+        <div class="icon"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 20V10M9 20V4M14 20v-8M19 20v-5"/></svg></div>
         <h3>System Monitor</h3>
         <p>Watch live RAM, CPU, and GPU usage while chatting with your local models.</p>
       </div>
     </div>
   </section>
 
-  <section id="screenshots">
-    <h2>See it in action</h2>
-    <p class="section-subtitle">Private, offline AI that lives entirely on your phone.</p>
+  <section id="screenshots" class="block">
+    <span class="section-label">In action</span>
+    <h2>Private AI that lives on your phone.</h2>
+    <p class="section-subtitle">Four views of the app — entirely offline, entirely on-device.</p>
 
     <div class="screenshots-grid">
-      <div class="screenshot">
-        <div class="phone">
-          <img src="assets/screenshot-1-home.png" alt="LlamaBox home screen showing local model management interface">
-        </div>
+      <div class="screenshot fade-in">
+        <div class="shot-frame"><div class="inner"><div class="phone"><img src="assets/screenshot-1-home.png" alt="LlamaBox home screen showing local model management interface"></div></div></div>
         <p class="caption">Manage local models</p>
       </div>
 
-      <div class="screenshot">
-        <div class="phone">
-          <img src="assets/screenshot-3-chat.png" alt="LlamaBox chat screen showing an active offline conversation">
-        </div>
+      <div class="screenshot fade-in">
+        <div class="shot-frame"><div class="inner"><div class="phone"><img src="assets/screenshot-3-chat.png" alt="LlamaBox chat screen showing an active offline conversation"></div></div></div>
         <p class="caption">Chat fully offline</p>
       </div>
 
-      <div class="screenshot">
-        <div class="phone">
-          <img src="assets/screenshot-sidebar.png" alt="LlamaBox sidebar displaying downloaded models and quick settings">
-        </div>
+      <div class="screenshot fade-in">
+        <div class="shot-frame"><div class="inner"><div class="phone"><img src="assets/screenshot-sidebar.png" alt="LlamaBox sidebar displaying downloaded models and quick settings"></div></div></div>
         <p class="caption">Model sidebar view</p>
       </div>
 
-      <div class="screenshot">
-        <div class="phone">
-          <img src="assets/screenshot-settings.png" alt="LlamaBox settings screen with generation and app preferences">
-        </div>
+      <div class="screenshot fade-in">
+        <div class="shot-frame"><div class="inner"><div class="phone"><img src="assets/screenshot-settings.png" alt="LlamaBox settings screen with generation and app preferences"></div></div></div>
         <p class="caption">App settings panel</p>
       </div>
     </div>
   </section>
 
   <section id="tech" class="tech">
-    <h2>Built on open foundations.</h2>
-    <p>LlamaBox is built with React Native and Expo, powered by llama.cpp and llama.rn for on-device inference, and is open source under AGPL-3.0 with a separate commercial license available. <a href="https://github.com/llamabox-ai">View on GitHub</a>.</p>
+    <div class="inner">
+      <span class="section-label">Built on open foundations</span>
+      <h2>Open source. Verifiably private.</h2>
+      <p>Built with React Native and Expo, powered by llama.cpp and llama.rn for on-device inference. Open source under AGPL-3.0, with a separate commercial license available. <a href="https://github.com/llamabox-ai">View on GitHub</a>.</p>
+    </div>
   </section>
 
   <footer>
@@ -195,5 +227,21 @@
 
     <p class="copyright">© 2026 LlamaBox. All rights reserved.</p>
   </footer>
+
+  <script>
+    // Scroll-reveal fade-in
+    (function () {
+      if (!('IntersectionObserver' in window) || window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+        document.querySelectorAll('.fade-in').forEach(function (el) { el.classList.add('is-visible'); });
+        return;
+      }
+      var io = new IntersectionObserver(function (entries) {
+        entries.forEach(function (e) {
+          if (e.isIntersecting) { e.target.classList.add('is-visible'); io.unobserve(e.target); }
+        });
+      }, { rootMargin: '0px 0px -8% 0px', threshold: 0.08 });
+      document.querySelectorAll('.fade-in').forEach(function (el) { io.observe(el); });
+    })();
+  </script>
 </body>
 </html>
