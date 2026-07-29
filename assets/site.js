@@ -2,6 +2,7 @@
   var nav = document.getElementById("nav");
   var toggle = document.getElementById("navToggle");
   var links = document.getElementById("navLinks");
+  var themeBtn = document.getElementById("themeToggle");
 
   function onScroll() {
     if (!nav) return;
@@ -21,6 +22,17 @@
         links.classList.remove("is-open");
         toggle.setAttribute("aria-expanded", "false");
       });
+    });
+  }
+
+  if (themeBtn) {
+    themeBtn.addEventListener("click", function () {
+      var cur = document.documentElement.getAttribute("data-theme") || "dark";
+      var next = cur === "dark" ? "light" : "dark";
+      document.documentElement.setAttribute("data-theme", next);
+      try {
+        localStorage.setItem("lb-theme", next);
+      } catch (e) {}
     });
   }
 
