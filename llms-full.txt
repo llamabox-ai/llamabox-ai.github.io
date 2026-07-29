@@ -279,4 +279,23 @@ LlamaBox is **dual-licensed**:
 
 ---
 
-*Last updated: 2026-07-26. This document describes the architecture as of the closed beta; specifics may evolve before and after public source release.*
+## 12. Public site map (marketing + SEO)
+
+| URL | Purpose |
+|-----|---------|
+| https://llamabox-ai.github.io/ | Landing |
+| https://llamabox-ai.github.io/waitlist.html | Closed beta waitlist |
+| https://llamabox-ai.github.io/download.html | Download / install status |
+| https://llamabox-ai.github.io/guides.html | Guides hub |
+| https://llamabox-ai.github.io/offline-ai-android.html | Offline AI Android |
+| https://llamabox-ai.github.io/on-device-llm.html | On-device LLM |
+| https://llamabox-ai.github.io/private-chatgpt-alternative.html | Private ChatGPT alternative |
+| https://llamabox-ai.github.io/gguf-android.html | GGUF on Android |
+| https://llamabox-ai.github.io/how-to-run-llm-on-android.html | Tutorial |
+| https://llamabox-ai.github.io/vs-chatgpt.html | Comparison |
+| https://llamabox-ai.github.io/vs-ollama.html | Comparison |
+| https://llamabox-ai.github.io/blog/ | Blog index |
+| https://llamabox-ai.github.io/architecture.html | Architecture (HTML) |
+| https://llamabox-ai.github.io/llms.txt | Short LLM brief |
+
+*Last updated: 2026-07-28. This document describes the architecture as of the closed beta; specifics may evolve before and after public source release.*

@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <meta name="author" content="LlamaBox AI">
+  <meta name="theme-color" content="#080808">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='22' fill='%230F0F0F' stroke='%23D4A54A' stroke-width='4'/%3E%3Ctext x='50' y='68' font-family='Georgia,serif' font-size='48' font-weight='700' fill='%23D4A54A' text-anchor='middle'%3ELB%3C/text%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/style.css">
+  <link rel="alternate" type="text/plain" title="LLM brief" href="https://llamabox-ai.github.io/llms.txt">
+
+  <title>How to run an LLM on Android offline | LlamaBox guide</title>
+  <meta name="description" content="Step-by-step: run an LLM on Android offline with LlamaBox. Install, load GGUF, chat without cloud. Troubleshooting tips included.">
+  <link rel="canonical" href="https://llamabox-ai.github.io/how-to-run-llm-on-android.html">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="LlamaBox">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:url" content="https://llamabox-ai.github.io/how-to-run-llm-on-android.html">
+  <meta property="og:title" content="How to run an LLM on Android offline | LlamaBox guide">
+  <meta property="og:description" content="Step-by-step: run an LLM on Android offline with LlamaBox. Install, load GGUF, chat without cloud. Troubleshooting tips included.">
+  <meta property="og:image" content="https://llamabox-ai.github.io/assets/screenshot-1-home.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="How to run an LLM on Android offline | LlamaBox guide">
+  <meta name="twitter:description" content="Step-by-step: run an LLM on Android offline with LlamaBox. Install, load GGUF, chat without cloud. Troubleshooting tips included.">
+  <meta name="twitter:image" content="https://llamabox-ai.github.io/assets/screenshot-1-home.png">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "HowTo",
+    "name": "How to run an LLM on Android offline with LlamaBox",
+    "description": "Install LlamaBox, load a GGUF model, and chat fully offline on Android.",
+    "step": [
+      {"@type": "HowToStep", "name": "Join the waitlist", "text": "Request closed beta access for Android 7.0+ arm64."},
+      {"@type": "HowToStep", "name": "Install LlamaBox", "text": "Install the beta build for package com.llamabox."},
+      {"@type": "HowToStep", "name": "Download or import a GGUF", "text": "Use the in-app hub or import a local Q4_K_M model that fits RAM."},
+      {"@type": "HowToStep", "name": "Load the model", "text": "Open the model library, load weights, wait for initialization."},
+      {"@type": "HowToStep", "name": "Chat offline", "text": "Enable airplane mode if you want — inference stays on-device."}
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Do I need root?", "acceptedAnswer": {"@type": "Answer", "text": "No. LlamaBox targets standard Android 7.0+ arm64 devices."}}, {"@type": "Question", "name": "Why is generation slow?", "acceptedAnswer": {"@type": "Answer", "text": "Phone CPUs are limited. Use smaller models, lower context, and close background apps. GPU acceleration is not shipping yet."}}, {"@type": "Question", "name": "What if the app runs out of memory?", "acceptedAnswer": {"@type": "Answer", "text": "Choose a smaller GGUF / heavier quantization, reduce context, and free RAM."}}]}
+  </script>
+</head>
+<body>
+  <div class="bg-mesh" aria-hidden="true"></div>
+  <div class="bg-noise" aria-hidden="true"></div>
+  <header class="nav" id="nav">
+    <div class="nav-inner">
+      <a href="/" class="wordmark" aria-label="LlamaBox home">Llama<span>Box</span></a>
+      <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="nav-links" id="navLinks" aria-label="Primary">
+        <a href="/#features">Features</a>
+        <a href="/guides.html">Guides</a>
+        <a href="/blog/">Blog</a>
+        <a href="/architecture.html">Architecture</a>
+        <a href="https://github.com/llamabox-ai" rel="noopener">GitHub</a>
+        <a class="btn btn-primary btn-sm" href="/waitlist.html">Join waitlist</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+
+    <section class="section page-hero">
+      <div class="wrap narrow">
+        <div class="eyebrow">Tutorial</div>
+        <h1>How to run an LLM on Android offline.</h1>
+        <p class="lead">Five practical steps. No root. No API keys for chat.</p>
+      </div>
+    </section>
+    <section class="section section-tight">
+      <div class="wrap narrow prose reveal is-in">
+
+        <h2>Before you start</h2>
+        <ul>
+          <li>Android <strong>7.0+</strong>, <strong>arm64</strong></li>
+          <li>Free storage for the model file</li>
+          <li>Realistic expectations: CPU-only speeds</li>
+        </ul>
+        <h2>Steps</h2>
+        <ol class="steps-ol">
+          <li><strong>Join the beta</strong> — <a href="/waitlist.html">waitlist</a> for package <code>com.llamabox</code>.</li>
+          <li><strong>Install</strong> the build you receive (status on <a href="/download.html">download</a>).</li>
+          <li><strong>Get a GGUF</strong> — start small (0.5B–1B class Q4_K_M) via hub or import.</li>
+          <li><strong>Load</strong> the model; wait through initialization (often 5–30s).</li>
+          <li><strong>Chat offline</strong> — optional airplane mode to prove the loop is local.</li>
+        </ol>
+        <h2>Optional: vision</h2>
+        <p>Pick a vision-capable model with mmproj. Attach a photo; encoding runs on-device (CPU path for UI stability).</p>
+        <h2>Troubleshooting</h2>
+        <ul>
+          <li><strong>Slow tokens</strong> — smaller model, fewer threads contention, lower context</li>
+          <li><strong>OOM / crash on load</strong> — smaller quant or model</li>
+          <li><strong>Need network?</strong> — only for the download step</li>
+        </ul>
+        <h2 id="faq">FAQ</h2>
+<div class="faq-list">
+<details class="faq-item" open><summary>Do I need root?</summary><div class="ans">No. LlamaBox targets standard Android 7.0+ arm64 devices.</div></details>
+<details class="faq-item"><summary>Why is generation slow?</summary><div class="ans">Phone CPUs are limited. Use smaller models, lower context, and close background apps. GPU acceleration is not shipping yet.</div></details>
+<details class="faq-item"><summary>What if the app runs out of memory?</summary><div class="ans">Choose a smaller GGUF / heavier quantization, reduce context, and free RAM.</div></details>
+</div>
+
+      </div>
+    </section>
+
+
+    <section class="section">
+      <div class="wrap">
+        <div class="final reveal">
+          <div class="eyebrow" style="justify-content:center">Closed beta</div>
+          <h2>Try private offline AI on Android.</h2>
+          <p class="lead">Join the waitlist. No spam — beta access and release notes only.</p>
+          <div class="cta-row">
+            <a class="btn btn-primary" href="/waitlist.html">Join the waitlist</a>
+            <a class="btn btn-ghost" href="/download.html">Download status</a>
+            <a class="btn btn-ghost" href="https://github.com/llamabox-ai" rel="noopener">GitHub</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+  <footer class="footer">
+    <div class="wrap">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="wordmark">Llama<span>Box</span></div>
+          <p>Private offline AI chat for Android. On-device GGUF inference powered by llama.cpp.</p>
+        </div>
+        <div>
+          <h4>Product</h4>
+          <ul>
+            <li><a href="/waitlist.html">Waitlist</a></li>
+            <li><a href="/download.html">Download</a></li>
+            <li><a href="/#features">Features</a></li>
+            <li><a href="/#compare">Compare</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Guides</h4>
+          <ul>
+            <li><a href="/offline-ai-android.html">Offline AI Android</a></li>
+            <li><a href="/on-device-llm.html">On-device LLM</a></li>
+            <li><a href="/private-chatgpt-alternative.html">Private ChatGPT alt</a></li>
+            <li><a href="/gguf-android.html">GGUF on Android</a></li>
+            <li><a href="/how-to-run-llm-on-android.html">How-to guide</a></li>
+            <li><a href="/vs-chatgpt.html">vs ChatGPT</a></li>
+            <li><a href="/vs-ollama.html">vs Ollama</a></li>
+            <li><a href="/blog/">Blog</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Developers</h4>
+          <ul>
+            <li><a href="/architecture.html">Architecture</a></li>
+            <li><a href="/llms.txt">llms.txt</a></li>
+            <li><a href="/privacy.html">Privacy</a></li>
+            <li><a href="https://github.com/llamabox-ai" rel="noopener">GitHub</a></li>
+            <li><a href="mailto:aalhad.dev@gmail.com">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+      <p class="footer-legal">Source dual-licensed AGPL-3.0 (open-source) and a separate commercial license. “LlamaBox” is a reserved trademark. Full public source lands when closed beta ends. CPU-only inference today; GPU is roadmap.</p>
+      <div class="footer-bottom">
+        <span>© 2026 LlamaBox AI · Mythos Labs</span>
+        <span>Package com.llamabox · Android 7.0+</span>
+      </div>
+    </div>
+  </footer>
+  <script src="/assets/site.js"></script>
+
+</body>
+</html>

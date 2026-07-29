@@ -3,310 +3,661 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>LlamaBox — Private Offline AI Chat for Android</title>
-  <meta name="description" content="Run AI chat completely offline on your Android phone. Private, fast, and fully local with LlamaBox — no cloud, no accounts, no data collection.">
-
-  <meta property="og:title" content="LlamaBox — Offline AI Chat for Android">
-  <meta property="og:description" content="Fully private, on-device AI chat for Android. No cloud, no accounts, no tracking — just local LLM inference on your phone.">
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://llamabox-ai.github.io/">
-  <meta property="og:image" content="assets/screenshot-1-home.png">
-
-  <meta name="twitter:card" content="summary_large_image">
-
+  <title>LlamaBox — Private Offline AI Chat for Android | On-Device LLM</title>
+  <meta name="description" content="Run AI chat fully offline on Android. LlamaBox loads GGUF models via llama.cpp on your phone — no cloud, no accounts, no telemetry. Vision, TTS, model hub. Closed beta open.">
+  <meta name="keywords" content="offline AI Android, on-device LLM, private AI chat, llama.cpp mobile, GGUF Android, local AI phone, LlamaBox">
+  <meta name="author" content="LlamaBox AI">
+  <meta name="robots" content="index, follow, max-image-preview:large">
   <link rel="canonical" href="https://llamabox-ai.github.io/">
 
-  <script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","name":"LlamaBox","applicationCategory":"MobileApplication","operatingSystem":"ANDROID","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"description":"Run AI chat completely offline on your Android phone. Private, fast, and fully local.","author":{"@type":"Organization","name":"LlamaBox AI","url":"https://github.com/llamabox-ai","email":"aalhad.dev@gmail.com"}}</script>
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="LlamaBox">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:url" content="https://llamabox-ai.github.io/">
+  <meta property="og:title" content="LlamaBox — AI chat that never leaves your phone">
+  <meta property="og:description" content="On-device LLM inference for Android. Private, offline, auditable. GGUF + llama.cpp. No cloud. No accounts.">
+  <meta property="og:image" content="https://llamabox-ai.github.io/assets/screenshot-1-home.png">
+  <meta property="og:image:alt" content="LlamaBox Android app home screen">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="LlamaBox — Offline AI Chat for Android">
+  <meta name="twitter:description" content="Fully private on-device AI. No cloud, no accounts, no tracking.">
+  <meta name="twitter:image" content="https://llamabox-ai.github.io/assets/screenshot-1-home.png">
+
+  <meta name="theme-color" content="#080808">
+  <link rel="manifest" href="site.webmanifest">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='22' fill='%230F0F0F' stroke='%23D4A54A' stroke-width='4'/%3E%3Ctext x='50' y='68' font-family='Georgia,serif' font-size='48' font-weight='700' fill='%23D4A54A' text-anchor='middle'%3ELB%3C/text%3E%3C/svg%3E">
+  <link rel="apple-touch-icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180' viewBox='0 0 512 512'%3E%3Crect width='512' height='512' rx='112' fill='%230F0F0F' stroke='%23D4A54A' stroke-width='18'/%3E%3Ctext x='256' y='340' font-family='Georgia,serif' font-size='240' font-weight='700' text-anchor='middle' fill='%23D4A54A'%3ELB%3C/text%3E%3C/svg%3E">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="alternate" type="text/plain" title="LLM brief" href="https://llamabox-ai.github.io/llms.txt">
 
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
-      {"@type":"Question","name":"What is LlamaBox?","acceptedAnswer":{"@type":"Answer","text":"LlamaBox is a free, open-source Android app that runs AI chat entirely on your phone. It loads GGUF language models via llama.cpp and generates responses on-device — no cloud, no accounts, no data collection. It also analyzes images on-device with multimodal vision models."}},
-      {"@type":"Question","name":"Does LlamaBox need internet?","acceptedAnswer":{"@type":"Answer","text":"No. Once a model is downloaded, LlamaBox works fully offline — on a plane, in a basement, or anywhere off the grid. The only network use is the optional in-app model download from public repositories like Hugging Face."}},
-      {"@type":"Question","name":"Is my data private in LlamaBox?","acceptedAnswer":{"@type":"Answer","text":"Yes — completely. Conversations, prompts, and photos are processed locally and never leave the device. There is no server, no account, and no telemetry. Because inference runs on your phone, the privacy claim is auditable in the open-source code."}},
-      {"@type":"Question","name":"What models can I run in LlamaBox?","acceptedAnswer":{"@type":"Answer","text":"Any GGUF model that fits your phone's RAM — Q4_K_M quantization is recommended for the best speed/quality balance. Small models like Qwen2.5 0.5B and SmolLM2 360M run smoothly even on mid-range devices. Models are downloaded in-app or imported as custom weights."}},
-      {"@type":"Question","name":"Can LlamaBox analyze images?","acceptedAnswer":{"@type":"Answer","text":"Yes. With a vision-capable model (LLaVA, MiniCPM, Moondream and others), LlamaBox does on-device multimodal image analysis — take a photo or pick one from your gallery and the model describes it locally. The image encoder is forced onto CPU to keep the interface responsive."}},
-      {"@type":"Question","name":"Is LlamaBox free and open source?","acceptedAnswer":{"@type":"Answer","text":"Yes. LlamaBox is dual-licensed: AGPL-3.0 for free open-source use, plus a separate paid commercial license for closed-source commercial products. LlamaBox is a reserved trademark. The full source lands publicly when closed beta ends."}},
-      {"@type":"Question","name":"What Android versions does LlamaBox support?","acceptedAnswer":{"@type":"Answer","text":"Android 7.0 (API 24) and above, on arm64 devices. An iOS port is a future target. The app is built with React Native 0.81 on the New Architecture (Fabric + JSI/TurboModules)."}},
-      {"@type":"Question","name":"How fast is LlamaBox and does it use the GPU?","acceptedAnswer":{"@type":"Answer","text":"On a mid-range phone with a ~1B Q4_K_M model, expect 2–8 tokens/sec generation and 5–30 s model load. Inference is CPU-only today (4 threads, ARM NEON); GPU (OpenCL) acceleration with a device-diagnostics panel and engine selector is on the roadmap."}}
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://llamabox-ai.github.io/#org",
+        "name": "LlamaBox AI",
+        "url": "https://llamabox-ai.github.io/",
+        "email": "aalhad.dev@gmail.com",
+        "sameAs": ["https://github.com/llamabox-ai"]
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://llamabox-ai.github.io/#website",
+        "url": "https://llamabox-ai.github.io/",
+        "name": "LlamaBox",
+        "description": "Private offline AI chat for Android — on-device LLM inference with llama.cpp",
+        "publisher": { "@id": "https://llamabox-ai.github.io/#org" }
+      },
+      {
+        "@type": "SoftwareApplication",
+        "name": "LlamaBox",
+        "applicationCategory": "MobileApplication",
+        "operatingSystem": "Android 7.0+",
+        "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+        "description": "Free Android app that runs large language models entirely on-device using GGUF and llama.cpp. Offline, private, no accounts, multimodal vision support.",
+        "url": "https://llamabox-ai.github.io/",
+        "author": { "@id": "https://llamabox-ai.github.io/#org" },
+        "softwareVersion": "1.0",
+        "featureList": [
+          "Fully offline on-device inference",
+          "GGUF models via llama.cpp",
+          "Multimodal vision image analysis",
+          "Text-to-speech voice output",
+          "In-app model downloads and import",
+          "System resource monitor",
+          "No accounts or telemetry"
+        ]
+      },
+      {
+        "@type": "HowTo",
+        "name": "How to use LlamaBox for private offline AI chat",
+        "description": "Three steps to run an LLM fully on your Android phone.",
+        "step": [
+          { "@type": "HowToStep", "name": "Join the waitlist", "text": "Join the closed beta waitlist at https://llamabox-ai.github.io/waitlist.html and install LlamaBox on Android 7.0+ arm64." },
+          { "@type": "HowToStep", "name": "Download a GGUF model", "text": "Use the in-app model hub or import a local GGUF file. Q4_K_M quantizations are recommended." },
+          { "@type": "HowToStep", "name": "Chat offline", "text": "Turn on airplane mode if you want. Inference never leaves the device." }
+        ]
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "What is LlamaBox?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "LlamaBox is a free Android app that runs AI chat entirely on your phone. It loads GGUF language models via llama.cpp and generates responses on-device — no cloud, no accounts, no data collection. It also supports on-device multimodal vision."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Does LlamaBox need internet?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "No. Once a model is on the device, LlamaBox works fully offline. The only optional network use is downloading models from public repositories such as Hugging Face."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Is my data private?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. Conversations, prompts, and photos are processed locally and never leave the device. There is no server, no account, and no telemetry. Privacy is an architecture property, not a policy promise alone."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What models can I run?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Any GGUF model that fits your phone RAM. Q4_K_M is recommended. Small models like Qwen2.5 0.5B and SmolLM2 360M run well on mid-range devices. Vision models such as Gemma 3 4B Vision are supported with an mmproj file."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Does LlamaBox use the GPU today?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Inference is CPU-only today (ARM NEON, multi-threaded). GPU OpenCL acceleration is on the roadmap with an honest engine selector and diagnostics — not marketed as live until validated on real devices."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Is LlamaBox free and open source?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "LlamaBox is dual-licensed AGPL-3.0 for open-source use plus a commercial license. Full public source lands when closed beta ends. Contact aalhad.dev@gmail.com for commercial licensing or beta access."
+            }
+          }
+        ]
+      }
     ]
   }
   </script>
-
-  <link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20100%20100%22%3E%3Crect%20width%3D%22100%22%20height%3D%22100%22%20rx%3D%2222%22%20fill%3D%22%230F0F0F%22%20stroke%3D%22%23D4A54A%22%20stroke-width%3D%224%22%2F%3E%3Ctext%20x%3D%2250%22%20y%3D%2270%22%20font-family%3D%22Georgia%2Cserif%22%20font-size%3D%2252%22%20font-weight%3D%22bold%22%20fill%3D%22%23D4A54A%22%20text-anchor%3D%22middle%22%3ELB%3C%2Ftext%3E%3C%2Fsvg%3E">
-
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-
-  <link rel="stylesheet" href="style.css">
-<meta name="theme-color" content="#0F0F0F">
-<link rel="manifest" href="site.webmanifest">
-<link rel="apple-touch-icon" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22180%22%20height%3D%22180%22%20viewBox%3D%220%200%20512%20512%22%3E%3Crect%20width%3D%22512%22%20height%3D%22512%22%20rx%3D%22112%22%20fill%3D%22%230F0F0F%22%20stroke%3D%22%23D4A54A%22%20stroke-width%3D%2218%22%2F%3E%3Ctext%20x%3D%22256%22%20y%3D%22360%22%20font-family%3D%22Georgia%2Cserif%22%20font-size%3D%22260%22%20font-weight%3D%22700%22%20text-anchor%3D%22middle%22%20fill%3D%22%23D4A54A%22%3ELB%3C%2Ftext%3E%3C%2Fsvg%3E">
-<meta property="og:site_name" content="LlamaBox">
-<meta property="og:locale" content="en_US">
-<meta name="twitter:title" content="LlamaBox — Offline AI Chat for Android">
-<meta name="twitter:description" content="Run AI chat completely offline on your phone. Private, fast, and fully local.">
-<meta name="twitter:image" content="https://llamabox-ai.github.io/assets/screenshot-1-home.png">
 </head>
 <body>
-  <nav id="nav" class="nav">
-    <div class="wordmark">Llama<span class="gold">Box</span></div>
-    <div class="nav-links">
-      <a href="#features">Features</a>
-      <a href="#screenshots">Screenshots</a>
-      <a href="#faq">FAQ</a>
-      <a href="/architecture.html">Architecture</a>
-      <a href="https://github.com/llamabox-ai">GitHub</a>
-      <a href="mailto:aalhad.dev@gmail.com?subject=LlamaBox%20beta%20access" class="cta">Join the beta</a>
+  <div class="bg-mesh" aria-hidden="true"></div>
+  <div class="bg-noise" aria-hidden="true"></div>
+
+  <header class="nav" id="nav">
+    <div class="nav-inner">
+      <a href="/" class="wordmark" aria-label="LlamaBox home">Llama<span>Box</span></a>
+      <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="nav-links" id="navLinks" aria-label="Primary">
+        <a href="#use-cases">Use cases</a>
+        <a href="#features">Features</a>
+        <a href="#how">How it works</a>
+        <a href="#compare">Compare</a>
+        <a href="#faq">FAQ</a>
+        <a href="/guides.html">Guides</a>
+        <a href="/blog/">Blog</a>
+        <a href="/architecture.html">Architecture</a>
+        <a href="https://github.com/llamabox-ai" rel="noopener">GitHub</a>
+        <a class="btn btn-primary btn-sm" href="/waitlist.html">Join waitlist</a>
+      </nav>
     </div>
-  </nav>
+  </header>
 
-  <section id="hero" class="hero">
-    <div class="hero-glow-1" aria-hidden="true"></div>
-    <div class="hero-glow-2" aria-hidden="true"></div>
-
-    <div class="hero-grid">
-      <div class="hero-copy">
-        <span class="section-label">On-device AI · Android 7.0+</span>
-        <h1>AI chat that never <span class="text-gold-gradient">leaves your phone</span></h1>
-        <p class="subheadline">Run large language models entirely on your Android device. No cloud servers, no user accounts, and no data collection — just private, local conversation.</p>
-
-        <div class="cta-row">
-          <a href="mailto:aalhad.dev@gmail.com?subject=LlamaBox%20beta%20access" class="cta-primary">
-            Join the closed beta
-            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"/></svg>
-          </a>
-          <a href="https://github.com/llamabox-ai" class="cta-secondary">View on GitHub</a>
+  <main>
+    <!-- HERO -->
+    <section class="hero">
+      <div class="wrap hero-grid">
+        <div class="hero-copy reveal is-in">
+          <div class="hero-badge"><span class="dot" aria-hidden="true"></span> Closed beta · Android 7.0+ · arm64</div>
+          <h1>AI that <em class="gold-text">never</em> leaves your phone.</h1>
+          <p class="lead">LlamaBox runs large language models entirely on-device with llama.cpp. No cloud servers. No accounts. No telemetry. Private conversation — even on airplane mode.</p>
+          <div class="cta-row">
+            <a class="btn btn-primary" href="/waitlist.html">
+              Join the waitlist
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </a>
+            <a class="btn btn-ghost" href="#use-cases">See use cases</a>
+          </div>
+          <div class="hero-stats">
+            <div class="hero-stat"><div class="n">0</div><div class="l">Cloud servers</div></div>
+            <div class="hero-stat"><div class="n">0</div><div class="l">Accounts</div></div>
+            <div class="hero-stat"><div class="n">100%</div><div class="l">On-device</div></div>
+          </div>
         </div>
 
-        <div class="hero-stats">
-          <div class="hero-stat"><div class="v">0</div><div class="l">Servers</div></div>
-          <div class="hero-stat"><div class="v">0</div><div class="l">Accounts</div></div>
-          <div class="hero-stat"><div class="v">100%</div><div class="l">On-device</div></div>
-        </div>
-
-        <div class="badges">
-          <span class="badge">com.llamabox</span>
-          <span class="badge">Free</span>
-          <span class="badge">Open source</span>
-          <span class="badge">No accounts</span>
-          <span class="badge">Offline</span>
-        </div>
-      </div>
-
-      <div class="hero-visual" aria-hidden="true">
-        <div class="halo"></div>
-        <div class="frame">
-          <div class="inner">
-            <div class="honeycomb"></div>
-            <div class="corner-label"><span class="dot"></span>On-device · CPU</div>
-            <div class="phone">
-              <img src="assets/screenshot-1-home.png" alt="LlamaBox home screen">
-            </div>
-            <div class="visual-foot">
-              <div><div class="k">Privacy</div><div class="v">Fully offline</div></div>
-              <div style="text-align:right"><div class="k">Package</div><div class="v">com.llamabox</div></div>
+        <div class="hero-visual reveal reveal-d2 is-in" aria-hidden="true">
+          <div class="hero-orb"></div>
+          <div class="float-chip a">Offline · CPU</div>
+          <div class="float-chip b">com.llamabox</div>
+          <div class="phone">
+            <div class="phone-inner">
+              <div class="phone-notch"></div>
+              <img src="assets/screenshot-1-home.png" width="300" height="650" alt="LlamaBox home screen — manage local GGUF models on Android">
             </div>
           </div>
         </div>
       </div>
-    </div>
+    </section>
 
-    <div class="trust-banner">
-      The official Android app from <strong>@llamabox-ai</strong> — package <strong>com.llamabox</strong> — built for fully offline, on-device LLM chat.
-    </div>
-  </section>
-
-  <section id="why" class="block">
-    <span class="section-label">Why LlamaBox</span>
-    <h2>The privacy problem, solved.</h2>
-    <p class="section-subtitle">What typical AI apps get wrong — and how running the model on your phone fixes it.</p>
-
-    <div class="why-cards">
-      <div class="why-card glass-card glow-hover fade-in">
-        <div class="icon"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 11c0-1.657 1.343-3 3-3s3 1.343 3 3-1.343 3-3 3-3-1.343-3-3z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 11v3m0 0l-7 4 7 4 7-4-7-4z"/></svg></div>
-        <p class="problem-label">Other apps</p>
-        <p class="problem">Most AI apps send your messages to remote servers, creating a permanent data trail.</p>
-        <p class="solution-label">LlamaBox</p>
-        <p class="solution">The model runs entirely on your phone — your chats never leave the device.</p>
-      </div>
-
-      <div class="why-card glass-card glow-hover fade-in">
-        <div class="icon"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14c-4 0-7 2-7 5v1h14v-1c0-3-3-5-7-5z"/></svg></div>
-        <p class="problem-label">Other apps</p>
-        <p class="problem">Other apps force you to create accounts and track every interaction you have.</p>
-        <p class="solution-label">LlamaBox</p>
-        <p class="solution">No signup, no email, and absolutely no data collected.</p>
-      </div>
-
-      <div class="why-card glass-card glow-hover fade-in">
-        <div class="icon"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M21 16v-5l-9-5-9 5v5l9 5 9-5z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 11l9 5 9-5M3 16l9 5 9-5"/></svg></div>
-        <p class="problem-label">Other apps</p>
-        <p class="problem">Typical AI assistants stop working the instant you lose internet connectivity.</p>
-        <p class="solution-label">LlamaBox</p>
-        <p class="solution">Works fully offline — on a plane, in a basement, anywhere off the grid.</p>
+    <div class="marquee-wrap" aria-hidden="true">
+      <div class="marquee">
+        <span>On-device inference</span><span class="sep">◆</span>
+        <span>GGUF · llama.cpp</span><span class="sep">◆</span>
+        <span>No telemetry</span><span class="sep">◆</span>
+        <span>Vision multimodal</span><span class="sep">◆</span>
+        <span>Text-to-speech</span><span class="sep">◆</span>
+        <span>SQLite history</span><span class="sep">◆</span>
+        <span>AGPL-3.0</span><span class="sep">◆</span>
+        <span>Android 7.0+</span><span class="sep">◆</span>
+        <span>On-device inference</span><span class="sep">◆</span>
+        <span>GGUF · llama.cpp</span><span class="sep">◆</span>
+        <span>No telemetry</span><span class="sep">◆</span>
+        <span>Vision multimodal</span><span class="sep">◆</span>
+        <span>Text-to-speech</span><span class="sep">◆</span>
+        <span>SQLite history</span><span class="sep">◆</span>
+        <span>AGPL-3.0</span><span class="sep">◆</span>
+        <span>Android 7.0+</span><span class="sep">◆</span>
       </div>
     </div>
-  </section>
 
-  <section id="features" class="block">
-    <span class="section-label">Features</span>
-    <h2>Everything for private, on-device AI.</h2>
-    <p class="section-subtitle">A complete local-LLM toolkit — no cloud, no compromises.</p>
-
-    <div class="features-grid">
-      <div class="feature-card glass-card glow-hover fade-in">
-        <div class="icon"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 3l8 4v5c0 5-3.5 8-8 9-4.5-1-8-4-8-9V7l8-4z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12l2 2 4-4"/></svg></div>
-        <h3>Fully Offline</h3>
-        <p>Chat with AI without any internet connection; your data never leaves the device.</p>
+    <!-- MANIFESTO -->
+    <section class="section">
+      <div class="wrap manifesto reveal">
+        <p>Cloud AI asks you to <span class="gold-text">trust</span> a server.<br>LlamaBox lets you <span class="gold-text">verify</span> the device.</p>
+        <p class="sub">Privacy is not a policy paragraph — it is the architecture. Inference never phones home because there is nowhere to phone.</p>
       </div>
+    </section>
 
-      <div class="feature-card glass-card glow-hover fade-in">
-        <div class="icon"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 7h3l2-2h8l2 2h3v12H3V7z"/><circle cx="12" cy="13" r="3.5"/></svg></div>
-        <h3>Multimodal Vision</h3>
-        <p>Point your camera or pick a photo and let AI analyze it entirely on-device.</p>
+    <!-- USE CASES -->
+    <section class="section" id="use-cases">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <div class="eyebrow">Use cases</div>
+          <h2>Built for moments when the cloud is the risk.</h2>
+          <p class="lead">Not another chatbot wrapper. A local reasoning engine for people who need control, continuity, and silence.</p>
+        </div>
+        <div class="use-grid">
+          <article class="use-card glass reveal">
+            <div class="use-num">01</div>
+            <h3>Airplane &amp; offline travel</h3>
+            <p>Draft emails, summarize notes, and brainstorm when Wi‑Fi is a myth. Model stays on the handset.</p>
+            <div class="who">Travelers · digital nomads</div>
+          </article>
+          <article class="use-card glass reveal reveal-d1">
+            <div class="use-num">02</div>
+            <h3>Journalism &amp; sources</h3>
+            <p>Work with sensitive quotes and drafts without routing text through a third-party model API.</p>
+            <div class="who">Reporters · researchers</div>
+          </article>
+          <article class="use-card glass reveal reveal-d2">
+            <div class="use-num">03</div>
+            <h3>Student study buddy</h3>
+            <p>Explain concepts, quiz yourself, rewrite notes — without selling your study history to an ad stack.</p>
+            <div class="who">Students · lifelong learners</div>
+          </article>
+          <article class="use-card glass reveal reveal-d3">
+            <div class="use-num">04</div>
+            <h3>Vision on the go</h3>
+            <p>Photograph a whiteboard, receipt, or diagram. Multimodal models describe it locally on CPU.</p>
+            <div class="who">Field work · makers</div>
+          </article>
+          <article class="use-card glass reveal">
+            <div class="use-num">05</div>
+            <h3>Privacy-first personal AI</h3>
+            <p>Therapy-adjacent journaling, health questions, private plans — conversations that never become training data.</p>
+            <div class="who">Anyone who values silence</div>
+          </article>
+          <article class="use-card glass reveal reveal-d1">
+            <div class="use-num">06</div>
+            <h3>Developer sandbox</h3>
+            <p>Experiment with GGUF models, sampling knobs, and system prompts on real mobile hardware.</p>
+            <div class="who">ML tinkerers · OSS</div>
+          </article>
+          <article class="use-card glass reveal reveal-d2">
+            <div class="use-num">07</div>
+            <h3>Low-connectivity regions</h3>
+            <p>Useful AI where bandwidth is expensive or censored. Download once; think forever offline.</p>
+            <div class="who">Emerging markets · field ops</div>
+          </article>
+          <article class="use-card glass reveal reveal-d3">
+            <div class="use-num">08</div>
+            <h3>Hands-free voice readback</h3>
+            <p>Generate a reply, then listen with built-in TTS while you walk, cook, or drive (safely parked).</p>
+            <div class="who">Multitaskers</div>
+          </article>
+        </div>
       </div>
+    </section>
 
-      <div class="feature-card glass-card glow-hover fade-in">
-        <div class="icon"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M11 5L6 9H3v6h3l5 4V5z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M16 9c1.5 1 1.5 4 0 6M19 7c3 2 3 8 0 10"/></svg></div>
-        <h3>Voice Output</h3>
-        <p>Listen to AI responses aloud with built-in text-to-speech for hands-free conversations.</p>
+    <!-- FEATURES BENTO -->
+    <section class="section" id="features">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <div class="eyebrow">Product</div>
+          <h2>Everything for private, on-device AI.</h2>
+          <p class="lead">A complete local-LLM toolkit — models, chat, vision, voice, and visibility into what the phone is doing.</p>
+        </div>
+        <div class="bento">
+          <div class="bento-item glass span-6 tall reveal">
+            <div>
+              <div class="bento-icon" aria-hidden="true">
+                <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M12 3l8 4v5c0 5-3.5 8-8 9-4.5-1-8-4-8-9V7l8-4z"/><path d="M9 12l2 2 4-4"/></svg>
+              </div>
+              <div class="tag">Core</div>
+              <h3>Fully offline inference</h3>
+            </div>
+            <p>Once weights are stored, generation never requires the network. Airplane mode is a feature, not a failure state.</p>
+          </div>
+          <div class="bento-item glass span-6 tall reveal reveal-d1">
+            <div>
+              <div class="bento-icon" aria-hidden="true">
+                <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M3 7h3l2-2h8l2 2h3v12H3V7z"/><circle cx="12" cy="13" r="3.5"/></svg>
+              </div>
+              <div class="tag">Multimodal</div>
+              <h3>On-device vision</h3>
+            </div>
+            <p>Camera or gallery → local CLIP-style encode → answer. Image encoder forced to CPU so the UI stays alive.</p>
+          </div>
+          <div class="bento-item glass span-4 reveal">
+            <div class="bento-icon" aria-hidden="true">
+              <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M21 8l-9-5-9 5 9 5 9-5zM3 8v8l9 5 9-5V8"/></svg>
+            </div>
+            <h3>Model hub</h3>
+            <p>Download curated GGUF builds or import your own. Q4_K_M recommended for mobile speed/quality.</p>
+          </div>
+          <div class="bento-item glass span-4 reveal reveal-d1">
+            <div class="bento-icon" aria-hidden="true">
+              <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M11 5L6 9H3v6h3l5 4V5z"/><path d="M16 9c1.5 1 1.5 4 0 6"/></svg>
+            </div>
+            <h3>Voice output</h3>
+            <p>System TTS reads answers aloud for hands-free follow-through.</p>
+          </div>
+          <div class="bento-item glass span-4 reveal reveal-d2">
+            <div class="bento-icon" aria-hidden="true">
+              <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M4 20V10M9 20V4M14 20v-8M19 20v-5"/></svg>
+            </div>
+            <h3>System monitor</h3>
+            <p>Live RAM / CPU insight while a model is loaded — know what your phone is carrying.</p>
+          </div>
+          <div class="bento-item glass span-8 reveal">
+            <div class="tag">Engine</div>
+            <h3>llama.cpp · React Native New Architecture</h3>
+            <p>JSI/TurboModules for streaming tokens without legacy bridge tax. Zustand + SQLite + AsyncStorage — each store does one job well.</p>
+          </div>
+          <div class="bento-item glass span-4 reveal reveal-d1">
+            <div class="tag">Roadmap</div>
+            <h3>GPU later — honest</h3>
+            <p>CPU-only today. OpenCL / engine selector after real-device diagnostics. No fake GPU toggle.</p>
+          </div>
+        </div>
       </div>
+    </section>
 
-      <div class="feature-card glass-card glow-hover fade-in">
-        <div class="icon"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M21 8l-9-5-9 5 9 5 9-5zM3 8v8l9 5 9-5V8M12 13v8"/></svg></div>
-        <h3>Model Hub</h3>
-        <p>Download optimized GGUF models in-app, or import your own custom weights easily.</p>
+    <!-- HOW -->
+    <section class="section" id="how">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <div class="eyebrow">How it works</div>
+          <h2>Three steps. Then silence.</h2>
+          <p class="lead">From install to private chat without wiring your life to someone else’s GPU cluster.</p>
+        </div>
+        <div class="steps">
+          <div class="step glass reveal">
+            <div class="step-n">01</div>
+            <h3>Join the beta</h3>
+            <p>Android 7.0+ arm64. Request access — package <strong>com.llamabox</strong>.</p>
+          </div>
+          <div class="step glass reveal reveal-d1">
+            <div class="step-n">02</div>
+            <h3>Load a GGUF model</h3>
+            <p>In-app download or import. Start small (~0.5–1B Q4) on mid-range phones.</p>
+          </div>
+          <div class="step glass reveal reveal-d2">
+            <div class="step-n">03</div>
+            <h3>Chat offline</h3>
+            <p>Optional airplane mode. Tokens generate on-device; history stays in SQLite.</p>
+          </div>
+        </div>
       </div>
+    </section>
 
-      <div class="feature-card glass-card glow-hover fade-in">
-        <div class="icon"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M13 3L4 14h7l-1 7 9-11h-7l1-7z"/></svg></div>
-        <h3>GPU Acceleration</h3>
-        <p>Offload inference to Snapdragon and Mali GPUs for dramatically faster local generation.</p>
+    <!-- SCREENS -->
+    <section class="section" id="screenshots">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <div class="eyebrow">Product UI</div>
+          <h2>Private AI that lives on glass.</h2>
+          <p class="lead">Honeycomb dark chrome. Local models. Chat that does not stream to the sky.</p>
+        </div>
+        <div class="shot-rail">
+          <figure class="shot reveal">
+            <div class="shot-frame"><img src="assets/screenshot-1-home.png" alt="LlamaBox home — local model management" loading="lazy" width="280" height="560"></div>
+            <figcaption>Manage local models</figcaption>
+          </figure>
+          <figure class="shot reveal reveal-d1">
+            <div class="shot-frame"><img src="assets/screenshot-3-chat.png" alt="LlamaBox offline chat conversation" loading="lazy" width="280" height="560"></div>
+            <figcaption>Chat fully offline</figcaption>
+          </figure>
+          <figure class="shot reveal reveal-d2">
+            <div class="shot-frame"><img src="assets/screenshot-sidebar.png" alt="LlamaBox model sidebar" loading="lazy" width="280" height="560"></div>
+            <figcaption>Model sidebar</figcaption>
+          </figure>
+          <figure class="shot reveal reveal-d3">
+            <div class="shot-frame"><img src="assets/screenshot-settings.png" alt="LlamaBox generation settings" loading="lazy" width="280" height="560"></div>
+            <figcaption>Generation settings</figcaption>
+          </figure>
+        </div>
       </div>
+    </section>
 
-      <div class="feature-card glass-card glow-hover fade-in">
-        <div class="icon"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 20V10M9 20V4M14 20v-8M19 20v-5"/></svg></div>
-        <h3>System Monitor</h3>
-        <p>Watch live RAM, CPU, and GPU usage while chatting with your local models.</p>
+    <!-- SPECS -->
+    <section class="section" id="performance">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <div class="eyebrow">Performance · honesty</div>
+          <h2>Numbers without theater.</h2>
+          <p class="lead">Mid-range Android, ~1B Q4_K_M class model. Your silicon will vary — that is the point of on-device.</p>
+        </div>
+        <div class="specs">
+          <div class="spec-panel glass reveal">
+            <h3>Runtime today</h3>
+            <dl>
+              <div class="spec-row"><dt>Prompt processing</dt><dd>≈ 1–5 tok/s</dd></div>
+              <div class="spec-row"><dt>Token generation</dt><dd>≈ 2–8 tok/s</dd></div>
+              <div class="spec-row"><dt>Model load</dt><dd>≈ 5–30 s</dd></div>
+              <div class="spec-row"><dt>Peak memory</dt><dd>≈ 0.5–2 GB</dd></div>
+              <div class="spec-row"><dt>Context default</dt><dd>2048 (4096 vision)</dd></div>
+              <div class="spec-row"><dt>Compute</dt><dd>CPU · 4 threads · NEON</dd></div>
+            </dl>
+            <div class="note-roadmap">GPU (OpenCL) is on the roadmap with diagnostics + safe fallback — not claimed as live.</div>
+          </div>
+          <div class="spec-panel glass reveal reveal-d1">
+            <h3>Stack</h3>
+            <dl>
+              <div class="spec-row"><dt>App</dt><dd>React Native 0.81</dd></div>
+              <div class="spec-row"><dt>Architecture</dt><dd>Fabric + JSI</dd></div>
+              <div class="spec-row"><dt>Inference</dt><dd>llama.rn · llama.cpp</dd></div>
+              <div class="spec-row"><dt>Models</dt><dd>GGUF (Q4_K_M)</dd></div>
+              <div class="spec-row"><dt>State</dt><dd>Zustand + SQLite</dd></div>
+              <div class="spec-row"><dt>Package</dt><dd>com.llamabox</dd></div>
+            </dl>
+            <p style="margin:1.25rem 0 0;font-size:0.9rem;color:var(--text-dim)">Deep dive: <a href="/architecture.html" style="color:var(--gold-light)">architecture docs</a> · <a href="/llms-full.txt" style="color:var(--gold-light)">llms-full.txt</a> for AI agents.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- COMPARE -->
+    <section class="section" id="compare">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <div class="eyebrow">Positioning</div>
+          <h2>Why not just use ChatGPT?</h2>
+          <p class="lead">Cloud assistants win on raw model size. LlamaBox wins when the data must not leave the room.</p>
+        </div>
+        <div class="table-wrap reveal">
+          <table class="compare">
+            <thead>
+              <tr>
+                <th>Capability</th>
+                <th class="hl">LlamaBox</th>
+                <th>Typical cloud AI app</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Inference location</td>
+                <td class="hl">On your phone</td>
+                <td>Vendor servers</td>
+              </tr>
+              <tr>
+                <td>Works offline</td>
+                <td class="hl yes">Yes (after model download)</td>
+                <td class="no">No</td>
+              </tr>
+              <tr>
+                <td>Account required</td>
+                <td class="hl yes">No</td>
+                <td class="no">Usually yes</td>
+              </tr>
+              <tr>
+                <td>Telemetry / training risk</td>
+                <td class="hl yes">None by design</td>
+                <td>Policy-dependent</td>
+              </tr>
+              <tr>
+                <td>Auditable privacy</td>
+                <td class="hl yes">Architecture + AGPL intent</td>
+                <td class="no">Trust the vendor</td>
+              </tr>
+              <tr>
+                <td>Largest frontier models</td>
+                <td class="hl">Bounded by device RAM</td>
+                <td>Yes</td>
+              </tr>
+              <tr>
+                <td>Vision on-device</td>
+                <td class="hl yes">Supported (mmproj)</td>
+                <td>Cloud-only typical</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section" id="faq">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <div class="eyebrow">FAQ</div>
+          <h2>Questions, answered cleanly.</h2>
+          <p class="lead">Citable facts for humans — and for answer engines via schema + llms.txt.</p>
+        </div>
+        <div class="faq-list reveal">
+          <details class="faq-item" open>
+            <summary>What is LlamaBox?</summary>
+            <div class="ans">LlamaBox is a free Android app that runs AI chat entirely on your phone. It loads GGUF models via llama.cpp and generates tokens on-device — no cloud, no accounts, no data collection. Multimodal vision is supported with compatible models.</div>
+          </details>
+          <details class="faq-item">
+            <summary>Does LlamaBox need internet?</summary>
+            <div class="ans"><strong>No</strong> for chat once a model is installed. Optional network is only for downloading models from public hubs.</div>
+          </details>
+          <details class="faq-item">
+            <summary>Is my data private?</summary>
+            <div class="ans"><strong>Yes.</strong> Prompts, chats, and images stay on-device. No server, no account, no telemetry. Privacy is structural.</div>
+          </details>
+          <details class="faq-item">
+            <summary>What models can I run?</summary>
+            <div class="ans">Any GGUF that fits RAM. Prefer <strong>Q4_K_M</strong>. Small models (e.g. Qwen2.5 0.5B, SmolLM2 360M) suit mid-range phones. Vision needs base + mmproj (e.g. Gemma 3 4B Vision).</div>
+          </details>
+          <details class="faq-item">
+            <summary>Can it analyze images?</summary>
+            <div class="ans">Yes with a vision-capable model. Photo or gallery → local encoder (CPU) → text answer. Keeps the UI from freezing under GPU contention.</div>
+          </details>
+          <details class="faq-item">
+            <summary>Does it use the GPU?</summary>
+            <div class="ans"><strong>CPU-only today.</strong> GPU OpenCL is planned with diagnostics and fallback — we will not ship a decorative GPU switch.</div>
+          </details>
+          <details class="faq-item">
+            <summary>Is it free / open source?</summary>
+            <div class="ans">Dual-licensed: <strong>AGPL-3.0</strong> + commercial. “LlamaBox” is a reserved trademark. Public source lands when closed beta ends. Commercial: aalhad.dev@gmail.com.</div>
+          </details>
+          <details class="faq-item">
+            <summary>What Android versions?</summary>
+            <div class="ans"><strong>Android 7.0 (API 24)+</strong>, arm64-v8a. iOS is a future target.</div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- FINAL -->
+    <section class="section">
+      <div class="wrap">
+        <div class="final reveal">
+          <div class="eyebrow" style="justify-content:center">Closed beta</div>
+          <h2>Your next conversation doesn’t need a server.</h2>
+          <p class="lead">Request access. Bring a phone. Leave the cloud behind.</p>
+          <div class="cta-row">
+            <a class="btn btn-primary" href="/waitlist.html">Join the waitlist</a>
+            <a class="btn btn-ghost" href="/download.html">Download status</a>
+            <a class="btn btn-ghost" href="https://github.com/llamabox-ai" rel="noopener">GitHub org</a>
+            <a class="btn btn-ghost" href="/architecture.html">Read architecture</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="wordmark">Llama<span>Box</span></div>
+          <p>Private offline AI chat for Android. On-device GGUF inference powered by llama.cpp.</p>
+        </div>
+        <div>
+          <h4>Product</h4>
+          <ul>
+            <li><a href="/waitlist.html">Waitlist</a></li>
+            <li><a href="/download.html">Download</a></li>
+            <li><a href="#features">Features</a></li>
+            <li><a href="#use-cases">Use cases</a></li>
+            <li><a href="#how">How it works</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Guides</h4>
+          <ul>
+            <li><a href="/guides.html">All guides</a></li>
+            <li><a href="/offline-ai-android.html">Offline AI Android</a></li>
+            <li><a href="/how-to-run-llm-on-android.html">How-to</a></li>
+            <li><a href="/vs-chatgpt.html">vs ChatGPT</a></li>
+            <li><a href="/blog/">Blog</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Developers</h4>
+          <ul>
+            <li><a href="/architecture.html">Architecture</a></li>
+            <li><a href="/llms.txt">llms.txt</a></li>
+            <li><a href="/privacy.html">Privacy</a></li>
+            <li><a href="https://github.com/llamabox-ai" rel="noopener">GitHub</a></li>
+            <li><a href="mailto:aalhad.dev@gmail.com">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+      <p class="footer-legal">Source dual-licensed AGPL-3.0 (open-source) and a separate commercial license. “LlamaBox” is a reserved trademark. Full public source lands when closed beta ends.</p>
+      <div class="footer-bottom">
+        <span>© 2026 LlamaBox AI · Mythos Labs</span>
+        <span>Package com.llamabox · Android 7.0+</span>
       </div>
     </div>
-  </section>
-
-  <section id="screenshots" class="block">
-    <span class="section-label">In action</span>
-    <h2>Private AI that lives on your phone.</h2>
-    <p class="section-subtitle">Four views of the app — entirely offline, entirely on-device.</p>
-
-    <div class="screenshots-grid">
-      <div class="screenshot fade-in">
-        <div class="shot-frame"><div class="inner"><div class="phone"><img src="assets/screenshot-1-home.png" alt="LlamaBox home screen showing local model management interface"></div></div></div>
-        <p class="caption">Manage local models</p>
-      </div>
-
-      <div class="screenshot fade-in">
-        <div class="shot-frame"><div class="inner"><div class="phone"><img src="assets/screenshot-3-chat.png" alt="LlamaBox chat screen showing an active offline conversation"></div></div></div>
-        <p class="caption">Chat fully offline</p>
-      </div>
-
-      <div class="screenshot fade-in">
-        <div class="shot-frame"><div class="inner"><div class="phone"><img src="assets/screenshot-sidebar.png" alt="LlamaBox sidebar displaying downloaded models and quick settings"></div></div></div>
-        <p class="caption">Model sidebar view</p>
-      </div>
-
-      <div class="screenshot fade-in">
-        <div class="shot-frame"><div class="inner"><div class="phone"><img src="assets/screenshot-settings.png" alt="LlamaBox settings screen with generation and app preferences"></div></div></div>
-        <p class="caption">App settings panel</p>
-      </div>
-    </div>
-  </section>
-
-  <section id="faq" class="block">
-    <span class="section-label">FAQ</span>
-    <h2>Questions, answered.</h2>
-    <p class="section-subtitle">The short version of everything people ask about LlamaBox.</p>
-
-    <div class="faq">
-      <div class="faq-item glass-card fade-in">
-        <h3><span class="q-mark">Q</span>What is LlamaBox?</h3>
-        <p>LlamaBox is a <strong>free, open-source Android app that runs AI chat entirely on your phone</strong>. It loads GGUF language models via llama.cpp and generates responses on-device — no cloud, no accounts, no data collection. It also analyzes images on-device with multimodal vision models.</p>
-      </div>
-
-      <div class="faq-item glass-card fade-in">
-        <h3><span class="q-mark">Q</span>Does LlamaBox need internet?</h3>
-        <p><strong>No.</strong> Once a model is downloaded, LlamaBox works fully offline — on a plane, in a basement, or anywhere off the grid. The only network use is the optional in-app model download from public repositories like Hugging Face.</p>
-      </div>
-
-      <div class="faq-item glass-card fade-in">
-        <h3><span class="q-mark">Q</span>Is my data private?</h3>
-        <p><strong>Yes — completely.</strong> Conversations, prompts, and photos are processed locally and never leave the device. There is no server, no account, and no telemetry. Because inference runs on your phone, the privacy claim is auditable in the open-source code.</p>
-      </div>
-
-      <div class="faq-item glass-card fade-in">
-        <h3><span class="q-mark">Q</span>What models can I run?</h3>
-        <p><strong>Any GGUF model</strong> that fits your phone's RAM — Q4_K_M quantization is recommended for the best speed/quality balance. Small models like Qwen2.5 0.5B and SmolLM2 360M run smoothly even on mid-range devices. Models are downloaded in-app or imported as custom weights.</p>
-      </div>
-
-      <div class="faq-item glass-card fade-in">
-        <h3><span class="q-mark">Q</span>Can LlamaBox analyze images?</h3>
-        <p>Yes. With a vision-capable model (LLaVA, MiniCPM, Moondream and others), LlamaBox does <strong>on-device multimodal image analysis</strong> — take a photo or pick one from your gallery and the model describes it locally. The image encoder is forced onto CPU to keep the interface responsive.</p>
-      </div>
-
-      <div class="faq-item glass-card fade-in">
-        <h3><span class="q-mark">Q</span>Is LlamaBox free and open source?</h3>
-        <p><strong>Yes.</strong> LlamaBox is dual-licensed: AGPL-3.0 for free open-source use, plus a separate paid commercial license for closed-source commercial products. "LlamaBox" is a reserved trademark. The full source lands publicly when closed beta ends.</p>
-      </div>
-
-      <div class="faq-item glass-card fade-in">
-        <h3><span class="q-mark">Q</span>What Android versions are supported?</h3>
-        <p><strong>Android 7.0 (API 24) and above</strong>, on arm64 devices. An iOS port is a future target. The app is built with React Native 0.81 on the New Architecture (Fabric + JSI/TurboModules).</p>
-      </div>
-
-      <div class="faq-item glass-card fade-in">
-        <h3><span class="q-mark">Q</span>How fast is it? Does it use the GPU?</h3>
-        <p>On a mid-range phone with a ~1B Q4_K_M model, expect <strong>2–8 tokens/sec</strong> generation and 5–30 s model load. Inference is <strong>CPU-only today</strong> (4 threads, ARM NEON); GPU (OpenCL) acceleration with a device-diagnostics panel and engine selector is on the roadmap.</p>
-      </div>
-    </div>
-  </section>
-
-  <section id="tech" class="tech">
-    <div class="inner">
-      <span class="section-label">Built on open foundations</span>
-      <h2>Open source. Verifiably private.</h2>
-      <p>Built with React Native and Expo, powered by llama.cpp and llama.rn for on-device inference. Open source under AGPL-3.0, with a separate commercial license available. <a href="https://github.com/llamabox-ai">View on GitHub</a>.</p>
-    </div>
-  </section>
-
-  <footer>
-    <p class="license-notice">The source code is dual-licensed under AGPL-3.0 (free for open-source use) and a separate paid commercial license. For commercial licensing inquiries, contact <a href="mailto:aalhad.dev@gmail.com">aalhad.dev@gmail.com</a>.</p>
-    <p class="trademark-notice">"LlamaBox" is a reserved trademark of the LlamaBox project. The name may not be used to endorse or promote derived works without written permission.</p>
-
-    <div class="footer-links">
-      <a href="/architecture.html">Architecture</a>
-      <a href="/privacy.html">Privacy Policy</a>
-      <a href="https://github.com/llamabox-ai">GitHub</a>
-      <a href="mailto:aalhad.dev@gmail.com">Contact</a>
-    </div>
-
-    <p class="copyright">© 2026 LlamaBox. All rights reserved.</p>
   </footer>
 
   <script>
-    // Scroll-reveal fade-in
     (function () {
+      var nav = document.getElementById('nav');
+      var toggle = document.getElementById('navToggle');
+      var links = document.getElementById('navLinks');
+
+      function onScroll() {
+        if (window.scrollY > 12) nav.classList.add('is-scrolled');
+        else nav.classList.remove('is-scrolled');
+      }
+      onScroll();
+      window.addEventListener('scroll', onScroll, { passive: true });
+
+      if (toggle && links) {
+        toggle.addEventListener('click', function () {
+          var open = links.classList.toggle('is-open');
+          toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+        });
+        links.querySelectorAll('a').forEach(function (a) {
+          a.addEventListener('click', function () {
+            links.classList.remove('is-open');
+            toggle.setAttribute('aria-expanded', 'false');
+          });
+        });
+      }
+
       if (!('IntersectionObserver' in window) || window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-        document.querySelectorAll('.fade-in').forEach(function (el) { el.classList.add('is-visible'); });
+        document.querySelectorAll('.reveal').forEach(function (el) { el.classList.add('is-in'); });
         return;
       }
       var io = new IntersectionObserver(function (entries) {
         entries.forEach(function (e) {
-          if (e.isIntersecting) { e.target.classList.add('is-visible'); io.unobserve(e.target); }
+          if (e.isIntersecting) {
+            e.target.classList.add('is-in');
+            io.unobserve(e.target);
+          }
         });
-      }, { rootMargin: '0px 0px -8% 0px', threshold: 0.08 });
-      document.querySelectorAll('.fade-in').forEach(function (el) { io.observe(el); });
+      }, { rootMargin: '0px 0px -10% 0px', threshold: 0.08 });
+      document.querySelectorAll('.reveal').forEach(function (el) { io.observe(el); });
     })();
   </script>
 </body>
