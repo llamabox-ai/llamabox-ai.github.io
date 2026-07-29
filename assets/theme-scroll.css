@@ -80,6 +80,7 @@ body.is-hero-cinematic .bg-noise {
   background: #000;
   isolation: isolate;
 }
+.scroll-hero-poster,
 .scroll-hero-video {
   position: absolute;
   inset: 0;
@@ -89,23 +90,32 @@ body.is-hero-cinematic .bg-noise {
   object-position: center center;
   z-index: 0;
   background: #000;
-  transform: translateZ(0) scale(1.02);
-  will-change: transform, filter;
-  filter: contrast(1.06) brightness(0.96) saturate(1.05);
+  transform: translateZ(0) scale(1.01);
+  will-change: transform;
+  /* GPU layer */
+  backface-visibility: hidden;
+}
+.scroll-hero-video {
+  /* canvas paints; hide poster once first frame drawn */
+  opacity: 0;
+  transition: opacity 0.2s linear;
+  z-index: 1;
+}
+.scroll-hero.is-ready .scroll-hero-video {
+  opacity: 1;
+}
+.scroll-hero.is-ready .scroll-hero-poster {
+  opacity: 0;
+  pointer-events: none;
 }
 /* Idle breathing when user is not scrolling */
-.scroll-hero.is-idle .scroll-hero-video {
+.scroll-hero.is-idle .scroll-hero-video,
+.scroll-hero.is-idle .scroll-hero-poster {
   animation: hero-breathe 5.5s ease-in-out infinite;
 }
 @keyframes hero-breathe {
-  0%, 100% {
-    transform: translateZ(0) scale(1.02);
-    filter: contrast(1.06) brightness(0.94) saturate(1.05);
-  }
-  50% {
-    transform: translateZ(0) scale(1.055);
-    filter: contrast(1.1) brightness(1.0) saturate(1.12);
-  }
+  0%, 100% { transform: translateZ(0) scale(1.01); }
+  50% { transform: translateZ(0) scale(1.045); }
 }
 /* Soft RGB glow pulse idle overlay */
 .scroll-hero-idle-glow {

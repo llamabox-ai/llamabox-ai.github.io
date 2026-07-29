@@ -1,31 +1,44 @@
 /**
- * Cinematic scroll-scrub hero (first 6s).
+ * High-refresh scroll hero (60–120Hz via rAF).
+ * Scrubs a preloaded frame sequence on canvas — no video.currentTime seeks
+ * (those are why it felt inconsistent / low-fps).
  *
- * First scroll intent from the top → smooth auto-scroll through the full
- * film until the animation ends. If the user disturbs mid-flight (wheel /
- * touch / keys), auto-scroll cancels and they own the scroll.
+ * First scroll from top → auto-scroll through film; disturb → user owns scroll.
  */
 (function () {
   var section = document.getElementById("scrollHero");
-  var video = document.getElementById("heroVideo");
+  var canvas = document.getElementById("heroCanvas");
   var bar = document.getElementById("heroProgress");
-  if (!section || !video) return;
+  if (!section || !canvas) return;
 
-  var CAP = 6;
+  var ctx = canvas.getContext("2d", { alpha: false, desynchronized: true });
   var reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+  var FRAME_COUNT = 144;
+  var FPS = 24;
+  var SEQ_PREFIX = "assets/hero-video/seq/f_";
+  var SEQ_PAD = 4;
+  var SEQ_EXT = ".jpg";
+
+  /** @type {(ImageBitmap|HTMLImageElement)[]} */
+  var frames = new Array(FRAME_COUNT);
+  var loaded = 0;
   var ready = false;
-  var duration = CAP;
-  var lastDrawn = -1;
-  var lastScrollY = window.scrollY;
-  var lastMove = performance.now();
-  var idle = false;
-  var ticking = false;
+  var lastFrameIdx = -1;
 
   /** @type {'waiting'|'auto'|'free'} */
   var autoMode = "waiting";
   var autoRaf = null;
   var autoToken = 0;
   var touchStartY = 0;
+
+  var lastScrollY = window.pageYOffset;
+  var lastMove = performance.now();
+  var idle = false;
+  var dpr = Math.min(window.devicePixelRatio || 1, 2);
+
+  // Auto-scroll length (snappy; content still maps full 0→1)
+  var AUTO_MS = 4200;
 
   function clamp(n, a, b) {
     return Math.max(a, Math.min(b, n));
@@ -35,11 +48,21 @@
     return t < 0.5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2;
   }
 
+  function pad(n) {
+    var s = String(n);
+    while (s.length < SEQ_PAD) s = "0" + s;
+    return s;
+  }
+
+  function frameUrl(i) {
+    // files are 1-indexed: f_0001.jpg … f_0144.jpg
+    return SEQ_PREFIX + pad(i + 1) + SEQ_EXT;
+  }
+
   function progressFromScroll() {
     var rect = section.getBoundingClientRect();
     var total = Math.max(1, section.offsetHeight - window.innerHeight);
-    var scrolled = clamp(-rect.top, 0, total);
-    return scrolled / total;
+    return clamp(-rect.top, 0, total) / total;
   }
 
   function heroEndScrollY() {
@@ -66,23 +89,59 @@
     section.classList.toggle("is-idle", on);
   }
 
-  function seek(t) {
-    if (!ready || reduce) return;
-    t = clamp(t, 0, Math.min(duration, CAP) - 0.001);
-    if (Math.abs(t - lastDrawn) < 0.018) return;
-    if (video.seeking) return;
-    try {
-      if (typeof video.fastSeek === "function") {
-        try {
-          video.fastSeek(t);
-        } catch (e) {
-          video.currentTime = t;
-        }
-      } else {
-        video.currentTime = t;
-      }
-      lastDrawn = t;
-    } catch (e) {}
+  function resizeCanvas() {
+    var w = section.clientWidth || window.innerWidth;
+    var h = window.innerHeight;
+    var bw = Math.round(w * dpr);
+    var bh = Math.round(h * dpr);
+    if (canvas.width !== bw || canvas.height !== bh) {
+      canvas.width = bw;
+      canvas.height = bh;
+      canvas.style.width = w + "px";
+      canvas.style.height = h + "px";
+      lastFrameIdx = -1; // force redraw
+    }
+  }
+
+  function drawFrame(idx) {
+    idx = clamp(idx | 0, 0, FRAME_COUNT - 1);
+    var img = frames[idx];
+    if (!img) return;
+
+    var cw = canvas.width;
+    var ch = canvas.height;
+    var iw = img.width || img.naturalWidth || 1280;
+    var ih = img.height || img.naturalHeight || 720;
+
+    // object-fit: cover
+    var scale = Math.max(cw / iw, ch / ih);
+    var dw = iw * scale;
+    var dh = ih * scale;
+    var dx = (cw - dw) * 0.5;
+    var dy = (ch - dh) * 0.5;
+
+    ctx.fillStyle = "#000";
+    ctx.fillRect(0, 0, cw, ch);
+    ctx.imageSmoothingEnabled = true;
+    ctx.imageSmoothingQuality = "high";
+    ctx.drawImage(img, dx, dy, dw, dh);
+    lastFrameIdx = idx;
+    section.classList.add("is-ready");
+  }
+
+  function frameIndexFromProgress(p) {
+    // Map 0..1 → 0..FRAME_COUNT-1
+    return clamp(Math.round(p * (FRAME_COUNT - 1)), 0, FRAME_COUNT - 1);
+  }
+
+  function paint(p) {
+    resizeCanvas();
+    var idx = frameIndexFromProgress(p);
+    // Always paint when idle (breathe uses CSS transform on canvas parent)
+    // or when frame changes, or first paint
+    if (idx !== lastFrameIdx || lastFrameIdx < 0) {
+      drawFrame(idx);
+    }
   }
 
   function cancelAutoScroll() {
@@ -94,7 +153,6 @@
     section.classList.remove("is-autoplaying");
   }
 
-  /** User takes over — cancel auto and stay where we are. */
   function disturb() {
     if (autoMode === "auto") {
       cancelAutoScroll();
@@ -104,20 +162,22 @@
     }
   }
 
-  /**
-   * Smoothly drive scrollY from current → end of hero track.
-   * Duration ≈ film length so scrub feels 1:1 with the 6s cut.
-   */
+  function atTopForAuto() {
+    return window.pageYOffset < 40 && progressFromScroll() < 0.05;
+  }
+
+  function maybeResetWaiting() {
+    if (autoMode === "free" && atTopForAuto() && !autoRaf) {
+      autoMode = "waiting";
+    }
+  }
+
   function startAutoScroll() {
-    if (autoMode !== "waiting") return;
-    if (reduce) {
-      autoMode = "free";
+    if (autoMode !== "waiting" || reduce) {
+      if (reduce) autoMode = "free";
       return;
     }
-
-    var p0 = progressFromScroll();
-    // Already mid-film — don't hijack
-    if (p0 > 0.06 || window.pageYOffset > 48) {
+    if (!atTopForAuto() && progressFromScroll() > 0.06) {
       autoMode = "free";
       return;
     }
@@ -131,18 +191,25 @@
     var startY = window.pageYOffset;
     var endY = heroEndScrollY();
     var startT = performance.now();
-    // Slightly longer than 6s so eases don't feel rushed
-    var dur = 6200;
 
     function step(now) {
       if (token !== autoToken || autoMode !== "auto") return;
 
-      var t = clamp((now - startT) / dur, 0, 1);
-      var y = startY + (endY - startY) * easeInOutCubic(t);
+      var t = clamp((now - startT) / AUTO_MS, 0, 1);
+      var eased = easeInOutCubic(t);
+      var y = startY + (endY - startY) * eased;
+
+      // Instant jump each frame — never native smooth scroll (janky)
       window.scrollTo(0, y);
-      // scrub updates via main rAF loop reading scroll position
+
       lastMove = now;
       lastScrollY = y;
+
+      // Paint immediately from eased progress (don't wait for layout)
+      var p = eased;
+      setPhase(p);
+      if (bar) bar.style.width = (p * 100).toFixed(2) + "%";
+      paint(p);
 
       if (t < 1) {
         autoRaf = requestAnimationFrame(step);
@@ -150,124 +217,138 @@
         autoRaf = null;
         autoMode = "free";
         section.classList.remove("is-autoplaying");
-        // Snap cleanly to end of track
         window.scrollTo(0, heroEndScrollY());
+        paint(1);
+        setPhase(1);
+        if (bar) bar.style.width = "100%";
       }
     }
 
     autoRaf = requestAnimationFrame(step);
   }
 
-  function atTopForAuto() {
-    return window.pageYOffset < 40 && progressFromScroll() < 0.05;
-  }
-
-  function maybeResetWaiting() {
-    // Back at the top → first scroll can trigger auto again
-    if (autoMode === "free" && atTopForAuto() && !autoRaf) {
-      autoMode = "waiting";
-    }
-  }
-
-  function draw() {
-    ticking = false;
+  function tick(now) {
     var p = progressFromScroll();
-    setPhase(p);
-    if (bar) bar.style.width = (p * 100).toFixed(2) + "%";
 
-    seek(p * Math.min(duration, CAP));
+    if (autoMode !== "auto") {
+      setPhase(p);
+      if (bar) bar.style.width = (p * 100).toFixed(2) + "%";
+      paint(p);
 
-    var now = performance.now();
-    var y = window.pageYOffset;
-
-    // During auto, ignore idle; scroll is programmatic
-    if (autoMode === "auto") {
-      setIdle(false);
-      lastScrollY = y;
-      lastMove = now;
-      return;
+      var y = window.pageYOffset;
+      if (Math.abs(y - lastScrollY) > 0.5) {
+        lastScrollY = y;
+        lastMove = now;
+        setIdle(false);
+      } else if (
+        p < 0.9 &&
+        now - lastMove > 900 &&
+        document.body.classList.contains("is-hero-cinematic")
+      ) {
+        setIdle(true);
+      }
+      maybeResetWaiting();
     }
+    // When auto, step() already paints
 
-    if (Math.abs(y - lastScrollY) > 0.5) {
-      lastScrollY = y;
-      lastMove = now;
-      setIdle(false);
-    } else if (
-      p < 0.9 &&
-      now - lastMove > 900 &&
-      document.body.classList.contains("is-hero-cinematic")
-    ) {
-      setIdle(true);
-    }
-
-    maybeResetWaiting();
+    requestAnimationFrame(tick);
   }
 
-  function requestDraw() {
-    if (!ticking) {
-      ticking = true;
-      requestAnimationFrame(draw);
+  function loadFrames() {
+    var i = 0;
+    var concurrency = 8;
+
+    function worker() {
+      if (i >= FRAME_COUNT) return;
+      var idx = i++;
+      var url = frameUrl(idx);
+
+      // Prefer createImageBitmap (decode off main thread when possible)
+      fetch(url)
+        .then(function (r) {
+          return r.blob();
+        })
+        .then(function (blob) {
+          if (typeof createImageBitmap === "function") {
+            return createImageBitmap(blob).then(function (bmp) {
+              frames[idx] = bmp;
+            });
+          }
+          return new Promise(function (resolve, reject) {
+            var img = new Image();
+            img.decoding = "async";
+            img.onload = function () {
+              frames[idx] = img;
+              resolve();
+            };
+            img.onerror = reject;
+            img.src = URL.createObjectURL(blob);
+          });
+        })
+        .catch(function () {
+          // Fallback path via Image src
+          return new Promise(function (resolve) {
+            var img = new Image();
+            img.decoding = "async";
+            img.onload = function () {
+              frames[idx] = img;
+              resolve();
+            };
+            img.onerror = function () {
+              resolve();
+            };
+            img.src = url;
+          });
+        })
+        .then(function () {
+          loaded++;
+          if (loaded === 1 && frames[0]) {
+            ready = true;
+            resizeCanvas();
+            paint(0);
+          }
+          // Progressive: paint if user already scrolled
+          if (frames[idx] && idx === frameIndexFromProgress(progressFromScroll())) {
+            paint(progressFromScroll());
+          }
+          if (i < FRAME_COUNT) worker();
+        });
     }
+
+    for (var w = 0; w < concurrency; w++) worker();
   }
 
-  function onReady() {
-    var d = video.duration;
-    duration = d && isFinite(d) && d > 0 ? Math.min(d, CAP) : CAP;
-    ready = true;
-    video.pause();
-    try {
-      video.currentTime = 0.001;
-      lastDrawn = 0;
-    } catch (e) {}
-    requestDraw();
-  }
-
+  // —— Init ——
   if (!reduce) setCinematic(true);
 
   if (reduce) {
     section.classList.add("is-end");
     setCinematic(false);
     if (bar) bar.style.width = "100%";
-    video.addEventListener(
-      "loadeddata",
-      function () {
-        try {
-          video.currentTime = Math.min(video.duration || CAP, CAP) * 0.98;
-        } catch (e) {}
-      },
-      { once: true }
-    );
+    // Load only last frame
+    var img = new Image();
+    img.onload = function () {
+      frames[FRAME_COUNT - 1] = img;
+      ready = true;
+      resizeCanvas();
+      paint(1);
+    };
+    img.src = frameUrl(FRAME_COUNT - 1);
     return;
   }
 
-  video.muted = true;
-  video.playsInline = true;
-  video.preload = "auto";
-  video.setAttribute("playsinline", "");
-  video.setAttribute("webkit-playsinline", "");
-  video.pause();
-  video.disablePictureInPicture = true;
+  loadFrames();
+  requestAnimationFrame(tick);
 
-  if (video.readyState >= 1) onReady();
-  else {
-    video.addEventListener("loadedmetadata", onReady, { once: true });
-    video.addEventListener("loadeddata", onReady, { once: true });
-  }
-
-  // —— Intent: first scroll from top starts auto; later input disturbs ——
   window.addEventListener(
     "wheel",
     function (e) {
-      // Only care about scrolling down into the film from the top
       if (autoMode === "waiting" && atTopForAuto() && e.deltaY > 0) {
         e.preventDefault();
         startAutoScroll();
         return;
       }
-      if (autoMode === "auto") {
-        // User grabs the wheel → cancel auto, keep current place
-        disturb();
-      }
+      if (autoMode === "auto") disturb();
     },
     { passive: false }
   );
@@ -284,14 +365,12 @@
     "touchmove",
     function (e) {
       if (!e.touches || !e.touches[0]) return;
-      var dy = touchStartY - e.touches[0].clientY; // positive = finger up = scroll down
+      var dy = touchStartY - e.touches[0].clientY;
       if (autoMode === "waiting" && atTopForAuto() && dy > 10) {
         startAutoScroll();
         return;
       }
-      if (autoMode === "auto") {
-        disturb();
-      }
+      if (autoMode === "auto") disturb();
     },
     { passive: true }
   );
@@ -299,42 +378,28 @@
   window.addEventListener(
     "keydown",
     function (e) {
-      var keys = ["ArrowDown", "PageDown", " ", "Spacebar", "ArrowUp", "PageUp"];
-      if (keys.indexOf(e.key) === -1) return;
-
-      var down = e.key === "ArrowDown" || e.key === "PageDown" || e.key === " " || e.key === "Spacebar";
-
+      var down =
+        e.key === "ArrowDown" ||
+        e.key === "PageDown" ||
+        e.key === " " ||
+        e.key === "Spacebar";
       if (autoMode === "waiting" && atTopForAuto() && down) {
         e.preventDefault();
         startAutoScroll();
         return;
       }
-      if (autoMode === "auto") {
-        disturb();
-      }
+      if (autoMode === "auto") disturb();
     },
     { passive: false }
   );
 
-  // Trackpad gesture / scrollbar drag during auto
   window.addEventListener(
-    "scroll",
+    "resize",
     function () {
-      // If scroll jumps away from the auto path while autoplaying,
-      // a direct scrollbar drag counts as disturb (except our own scrollTo).
-      // We can't perfectly detect programmatic vs user scroll, so we only
-      // disturb when the user is also generating pointer/wheel (handled above).
-      requestDraw();
+      lastFrameIdx = -1;
+      resizeCanvas();
+      paint(progressFromScroll());
     },
     { passive: true }
   );
-
-  window.addEventListener("resize", requestDraw, { passive: true });
-
-  (function loop() {
-    var rect = section.getBoundingClientRect();
-    var near = rect.bottom > 0 && rect.top < window.innerHeight * 1.2;
-    if (near || autoMode === "auto") draw();
-    requestAnimationFrame(loop);
-  })();
 })();
