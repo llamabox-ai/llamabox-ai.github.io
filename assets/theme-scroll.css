@@ -55,16 +55,26 @@ body.is-hero-cinematic .bg-noise {
   pointer-events: none;
 }
 
+.after-hero-anchor {
+  height: 0;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+
 /* Scroll-scrub hero */
 .scroll-hero {
   position: relative;
-  /* Tall track for scrub; sticky panel is pure 100dvh black */
+  /* Tall track for manual scrub; sticky panel is pure 100dvh black */
   height: 340vh;
   margin: 0;
   padding: 0;
   z-index: 5;
   background: #000;
 }
+/* Tall track stays after auto so user can scrub back up to closed box */
 .scroll-hero-sticky {
   position: sticky;
   top: 0;
