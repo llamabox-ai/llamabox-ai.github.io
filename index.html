@@ -34,7 +34,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="assets/theme-scroll.css">
+  <link rel="stylesheet" href="assets/theme-scroll.css?v=2">
   <link rel="alternate" type="text/plain" title="LLM brief" href="https://llamabox-ai.github.io/llms.txt">
   <script>
     (function () {
@@ -155,7 +155,7 @@
   }
   </script>
 </head>
-<body>
+<body class="is-hero-cinematic">
   <div class="bg-mesh" aria-hidden="true"></div>
   <div class="bg-noise" aria-hidden="true"></div>
 
@@ -184,20 +184,22 @@
   </header>
 
   <main>
-    <!-- SCROLL-SCRUB HERO (first 6s of brand film) -->
-    <section class="scroll-hero" id="scrollHero" aria-label="LlamaBox brand film — scroll to play">
+    <!-- SCROLL-SCRUB HERO (first 6s) — box only, no nav, idle breathe when still -->
+    <section class="scroll-hero" id="scrollHero" aria-label="LlamaBox brand film — scroll to open the box">
       <div class="scroll-hero-sticky">
         <video
           class="scroll-hero-video"
           id="heroVideo"
           muted
           playsinline
+          webkit-playsinline
           preload="auto"
-          poster="assets/hero-video/poster.jpg"
+          poster="assets/hero-video/poster-start.jpg?v=2"
           aria-hidden="true"
         >
-          <source src="assets/hero-video/hero-6s.mp4" type="video/mp4">
+          <source src="assets/hero-video/hero-6s.mp4?v=2" type="video/mp4">
         </video>
+        <div class="scroll-hero-idle-glow" aria-hidden="true"></div>
         <div class="scroll-hero-vignette" aria-hidden="true"></div>
         <div class="scroll-hero-ui">
           <div class="scroll-hero-badge"><span class="dot" aria-hidden="true"></span> Closed beta · Android 7.0+ · arm64</div>
@@ -629,7 +631,7 @@
     </div>
   </footer>
 
-  <script src="assets/site.js"></script>
-  <script src="assets/scroll-hero.js"></script>
+  <script src="assets/site.js?v=2"></script>
+  <script src="assets/scroll-hero.js?v=2"></script>
 </body>
 </html>

@@ -38,14 +38,22 @@ html { scroll-behavior: smooth; }
   }
 }
 
+html {
+  background: #000;
+}
 body {
   margin: 0;
+  padding: 0;
   font-family: var(--sans);
   background: var(--bg);
   color: var(--text);
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
   overflow-x: hidden;
+}
+/* While cinematic hero owns the viewport, force pure black under the film */
+body.is-hero-cinematic {
+  background: #000;
 }
 
 ::selection { background: rgba(167, 139, 250, 0.4); color: #fff; }

@@ -1,4 +1,4 @@
-/* Theme light + scroll-scrub hero (loaded after style.css) */
+/* Theme light + cinematic scroll-scrub hero */
 
 html[data-theme="light"] {
   --bg: #F7F5FC;
@@ -27,21 +27,57 @@ html[data-theme="light"] .bg-mesh {
 }
 html[data-theme="light"] .bg-noise { opacity: 0.02; }
 
-/* Scroll-scrub hero video — 60fps via rAF */
+/* Nav: fixed so it does NOT consume scroll height (kills first-frame jump) */
+.nav {
+  position: fixed !important;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  z-index: 200;
+  transform: translate3d(0, 0, 0);
+  transition:
+    opacity 0.45s var(--ease),
+    visibility 0.45s,
+    background 0.35s var(--ease),
+    border-color 0.35s,
+    backdrop-filter 0.35s;
+}
+/* Hidden while box film is active — only the box fills the viewport */
+body.is-hero-cinematic .nav {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+body.is-hero-cinematic .bg-mesh,
+body.is-hero-cinematic .bg-noise {
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* Scroll-scrub hero */
 .scroll-hero {
   position: relative;
-  height: 320vh;
-  z-index: 1;
+  /* Tall track for scrub; sticky panel is pure 100dvh black */
+  height: 340vh;
+  margin: 0;
+  padding: 0;
+  z-index: 5;
+  background: #000;
 }
 .scroll-hero-sticky {
   position: sticky;
   top: 0;
+  left: 0;
+  width: 100%;
   height: 100vh;
   height: 100dvh;
+  margin: 0;
+  padding: 0;
   display: grid;
   place-items: center;
   overflow: hidden;
-  background: #050508;
+  background: #000;
   isolation: isolate;
 }
 .scroll-hero-video {
@@ -50,35 +86,102 @@ html[data-theme="light"] .bg-noise { opacity: 0.02; }
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: center center;
   z-index: 0;
-  transform: translateZ(0);
-  will-change: contents;
-  background: #050508;
+  background: #000;
+  transform: translateZ(0) scale(1.02);
+  will-change: transform, filter;
+  filter: contrast(1.06) brightness(0.96) saturate(1.05);
 }
+/* Idle breathing when user is not scrolling */
+.scroll-hero.is-idle .scroll-hero-video {
+  animation: hero-breathe 5.5s ease-in-out infinite;
+}
+@keyframes hero-breathe {
+  0%, 100% {
+    transform: translateZ(0) scale(1.02);
+    filter: contrast(1.06) brightness(0.94) saturate(1.05);
+  }
+  50% {
+    transform: translateZ(0) scale(1.055);
+    filter: contrast(1.1) brightness(1.0) saturate(1.12);
+  }
+}
+/* Soft RGB glow pulse idle overlay */
+.scroll-hero-idle-glow {
+  position: absolute;
+  inset: -10%;
+  z-index: 1;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.8s var(--ease);
+  background:
+    radial-gradient(ellipse 50% 40% at 50% 55%, rgba(167, 139, 250, 0.22), transparent 60%),
+    radial-gradient(ellipse 40% 35% at 40% 40%, rgba(34, 211, 238, 0.12), transparent 55%),
+    radial-gradient(ellipse 35% 30% at 60% 45%, rgba(232, 121, 249, 0.1), transparent 50%);
+  mix-blend-mode: screen;
+}
+.scroll-hero.is-idle .scroll-hero-idle-glow {
+  opacity: 1;
+  animation: glow-drift 7s ease-in-out infinite alternate;
+}
+@keyframes glow-drift {
+  from { transform: translate3d(-2%, -1%, 0) scale(1); }
+  to { transform: translate3d(2%, 2%, 0) scale(1.08); }
+}
+
 .scroll-hero-vignette {
   position: absolute;
   inset: 0;
-  z-index: 1;
+  z-index: 2;
   pointer-events: none;
   background:
-    radial-gradient(ellipse 70% 60% at 50% 50%, transparent 30%, rgba(5, 5, 8, 0.45) 100%),
-    linear-gradient(180deg, rgba(5, 5, 8, 0.35) 0%, transparent 18%, transparent 72%, rgba(7, 7, 11, 0.92) 100%);
+    radial-gradient(ellipse 55% 50% at 50% 48%, transparent 0%, transparent 42%, rgba(0, 0, 0, 0.55) 100%),
+    linear-gradient(180deg, rgba(0, 0, 0, 0.55) 0%, transparent 22%, transparent 58%, rgba(0, 0, 0, 0.75) 100%);
+  transition: opacity 0.4s var(--ease);
 }
+/* Stronger plate under copy so text never washes out on bright frames */
 .scroll-hero-ui {
   position: relative;
-  z-index: 2;
-  width: min(100% - 2.5rem, var(--max));
+  z-index: 3;
+  width: min(100% - 2rem, 40rem);
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
-  gap: 1rem;
-  padding-bottom: 8vh;
+  gap: 0.85rem;
+  padding: 1.75rem 1.5rem 2rem;
+  border-radius: 28px;
+  pointer-events: none;
+  /* Glass plate */
+  background: rgba(4, 2, 12, 0.55);
+  border: 1px solid rgba(167, 139, 250, 0.22);
+  box-shadow:
+    0 0 0 1px rgba(0, 0, 0, 0.4) inset,
+    0 24px 80px rgba(0, 0, 0, 0.55),
+    0 0 60px rgba(124, 58, 237, 0.15);
+  backdrop-filter: blur(18px) saturate(1.2);
+  -webkit-backdrop-filter: blur(18px) saturate(1.2);
+  opacity: 0;
+  transform: translate3d(0, 28px, 0) scale(0.98);
+  transition: opacity 0.55s var(--ease), transform 0.55s var(--ease);
+}
+.scroll-hero.is-end .scroll-hero-ui {
+  opacity: 1;
+  transform: translate3d(0, 0, 0) scale(1);
+  pointer-events: auto;
+}
+/* Mid: still hidden — only box visible until film completes */
+.scroll-hero.is-mid .scroll-hero-ui {
+  opacity: 0;
+  transform: translate3d(0, 20px, 0);
   pointer-events: none;
 }
+
 .scroll-hero-ui .cta-row {
   pointer-events: auto;
   justify-content: center;
+  margin-top: 0.35rem;
 }
 .scroll-hero-badge {
   display: inline-flex;
@@ -86,25 +189,20 @@ html[data-theme="light"] .bg-noise { opacity: 0.02; }
   gap: 0.5rem;
   padding: 0.4rem 0.85rem;
   border-radius: 999px;
-  border: 1px solid rgba(167, 139, 250, 0.35);
-  background: rgba(10, 8, 20, 0.55);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  font-size: 0.72rem;
+  border: 1px solid rgba(167, 139, 250, 0.4);
+  background: rgba(10, 8, 24, 0.75);
+  font-size: 0.7rem;
   font-weight: 600;
   letter-spacing: 0.14em;
   text-transform: uppercase;
-  color: #C4B5FD;
-  opacity: 0;
-  transform: translate3d(0, 12px, 0);
-  transition: opacity 0.45s var(--ease), transform 0.45s var(--ease);
+  color: #E9E0FF;
 }
 .scroll-hero-badge .dot {
   width: 7px;
   height: 7px;
   border-radius: 50%;
-  background: var(--accent-2, #22D3EE);
-  box-shadow: 0 0 12px var(--accent-2, #22D3EE);
+  background: #22D3EE;
+  box-shadow: 0 0 12px #22D3EE;
   animation: pulse-dot 1.6s ease-in-out infinite;
 }
 @keyframes pulse-dot {
@@ -112,50 +210,50 @@ html[data-theme="light"] .bg-noise { opacity: 0.02; }
   50% { opacity: 0.55; transform: scale(0.85); }
 }
 .scroll-hero h1 {
-  font-size: clamp(2.4rem, 6.5vw, 4.6rem);
-  max-width: 14ch;
-  color: #fff;
-  text-shadow: 0 8px 40px rgba(0, 0, 0, 0.55);
-  opacity: 0;
-  transform: translate3d(0, 18px, 0);
-  transition: opacity 0.5s var(--ease), transform 0.5s var(--ease);
+  font-size: clamp(2.15rem, 5.5vw, 3.6rem);
+  max-width: 12ch;
+  margin: 0;
+  color: #FFFFFF;
+  text-shadow:
+    0 2px 4px rgba(0, 0, 0, 0.9),
+    0 8px 32px rgba(0, 0, 0, 0.75);
+  line-height: 1.08;
+}
+.scroll-hero h1 .accent-text {
+  /* solid readable gradient, not washed */
+  background: linear-gradient(135deg, #F0E7FF 0%, #C4B5FD 35%, #5EEAD4 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.6));
 }
 .scroll-hero .lead {
-  color: rgba(244, 242, 250, 0.82);
-  max-width: 34rem;
-  margin-inline: auto;
-  opacity: 0;
-  transform: translate3d(0, 16px, 0);
-  transition: opacity 0.5s 0.05s var(--ease), transform 0.5s 0.05s var(--ease);
+  color: rgba(255, 255, 255, 0.88);
+  max-width: 32rem;
+  margin: 0;
+  font-size: clamp(0.95rem, 1.5vw, 1.08rem);
+  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.85);
 }
-.scroll-hero .cta-row {
-  opacity: 0;
-  transform: translate3d(0, 14px, 0);
-  transition: opacity 0.5s 0.1s var(--ease), transform 0.5s 0.1s var(--ease);
+.scroll-hero .btn-ghost {
+  border-color: rgba(255, 255, 255, 0.28);
+  color: #fff;
+  background: rgba(255, 255, 255, 0.06);
 }
-.scroll-hero.is-mid .scroll-hero-badge,
-.scroll-hero.is-mid h1,
-.scroll-hero.is-end .scroll-hero-badge,
-.scroll-hero.is-end h1,
-.scroll-hero.is-end .lead,
-.scroll-hero.is-end .cta-row {
-  opacity: 1;
-  transform: translate3d(0, 0, 0);
+.scroll-hero .btn-ghost:hover {
+  border-color: rgba(167, 139, 250, 0.55);
+  background: rgba(167, 139, 250, 0.12);
 }
-.scroll-hero.is-mid .lead,
-.scroll-hero.is-mid .cta-row {
-  opacity: 0.35;
-}
+
 .scroll-hero-progress {
   position: absolute;
   left: 50%;
-  bottom: 1.75rem;
+  bottom: max(1.25rem, env(safe-area-inset-bottom, 0px));
   transform: translateX(-50%);
-  z-index: 3;
-  width: min(200px, 40vw);
-  height: 3px;
+  z-index: 4;
+  width: min(180px, 36vw);
+  height: 2px;
   border-radius: 99px;
-  background: rgba(255, 255, 255, 0.12);
+  background: rgba(255, 255, 255, 0.1);
   overflow: hidden;
 }
 .scroll-hero-progress > i {
@@ -169,21 +267,28 @@ html[data-theme="light"] .bg-noise { opacity: 0.02; }
 }
 .scroll-hint {
   position: absolute;
-  bottom: 2.75rem;
+  bottom: max(2.4rem, calc(env(safe-area-inset-bottom, 0px) + 1.75rem));
   left: 50%;
   transform: translateX(-50%);
-  z-index: 3;
-  font-size: 0.72rem;
-  letter-spacing: 0.18em;
+  z-index: 4;
+  font-size: 0.68rem;
+  letter-spacing: 0.2em;
   text-transform: uppercase;
-  color: rgba(255, 255, 255, 0.45);
+  color: rgba(255, 255, 255, 0.5);
+  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.8);
   opacity: 1;
   transition: opacity 0.4s;
+  animation: hint-bob 2.4s ease-in-out infinite;
+}
+@keyframes hint-bob {
+  0%, 100% { transform: translateX(-50%) translateY(0); }
+  50% { transform: translateX(-50%) translateY(5px); }
 }
 .scroll-hero.is-mid .scroll-hint,
 .scroll-hero.is-end .scroll-hint {
   opacity: 0;
   pointer-events: none;
+  animation: none;
 }
 
 .reveal {
@@ -222,13 +327,20 @@ html[data-theme="light"] .bg-noise { opacity: 0.02; }
     height: auto;
     min-height: 100vh;
   }
-  .scroll-hero-badge,
-  .scroll-hero h1,
-  .scroll-hero .lead,
-  .scroll-hero .cta-row {
+  .scroll-hero-ui {
     opacity: 1 !important;
     transform: none !important;
+    pointer-events: auto !important;
+  }
+  .scroll-hero.is-idle .scroll-hero-video,
+  .scroll-hero.is-idle .scroll-hero-idle-glow {
+    animation: none !important;
   }
   .scroll-hint,
   .scroll-hero-progress { display: none; }
+  body.is-hero-cinematic .nav {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+  }
 }
