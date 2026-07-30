@@ -288,6 +288,7 @@ LlamaBox is **dual-licensed**:
 | https://llamabox-ai.github.io/chatgpt-android-offline.html | Offline ChatGPT alternative |
 | https://llamabox-ai.github.io/gguf-android.html | GGUF on Android |
 | https://llamabox-ai.github.io/llm-download.html | LLM download |
+| https://llamabox-ai.github.io/models.html | GGUF model hub for Android |
 | https://llamabox-ai.github.io/how-to-run-llm-on-android.html | Tutorial |
 | https://llamabox-ai.github.io/vs-chatgpt.html | Comparison |
 | https://llamabox-ai.github.io/vs-ollama.html | Ollama Android alternative / comparison |

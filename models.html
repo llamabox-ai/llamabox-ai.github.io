@@ -14,22 +14,22 @@
   <link rel="stylesheet" href="/style.css">
   <link rel="alternate" type="text/plain" title="LLM brief" href="https://llamabox-ai.github.io/llms.txt">
 
-  <title>Ollama Android alternative | LlamaBox local LLM on Android</title>
-  <meta name="description" content="No official Ollama Android app exists. LlamaBox is the Android alternative: offline GGUF chat on your phone. Same models, mobile-native UX.">
-  <link rel="canonical" href="https://llamabox-ai.github.io/vs-ollama.html">
+  <title>GGUF Models for Android | Local LLM Model Hub | LlamaBox</title>
+  <meta name="description" content="Browse GGUF models that run locally on Android with LlamaBox. Small LLMs, vision models, RAM guidance, and quantization tips for on-device AI.">
+  <link rel="canonical" href="https://llamabox-ai.github.io/models.html">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="LlamaBox">
   <meta property="og:locale" content="en_US">
-  <meta property="og:url" content="https://llamabox-ai.github.io/vs-ollama.html">
-  <meta property="og:title" content="Ollama Android alternative | LlamaBox local LLM on Android">
-  <meta property="og:description" content="No official Ollama Android app exists. LlamaBox is the Android alternative: offline GGUF chat on your phone. Same models, mobile-native UX.">
+  <meta property="og:url" content="https://llamabox-ai.github.io/models.html">
+  <meta property="og:title" content="GGUF Models for Android | Local LLM Model Hub | LlamaBox">
+  <meta property="og:description" content="Browse GGUF models that run locally on Android with LlamaBox. Small LLMs, vision models, RAM guidance, and quantization tips for on-device AI.">
   <meta property="og:image" content="https://llamabox-ai.github.io/assets/screenshot-1-home.png">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Ollama Android alternative | LlamaBox local LLM on Android">
-  <meta name="twitter:description" content="No official Ollama Android app exists. LlamaBox is the Android alternative: offline GGUF chat on your phone. Same models, mobile-native UX.">
+  <meta name="twitter:title" content="GGUF Models for Android | Local LLM Model Hub | LlamaBox">
+  <meta name="twitter:description" content="Browse GGUF models that run locally on Android with LlamaBox. Small LLMs, vision models, RAM guidance, and quantization tips for on-device AI.">
   <meta name="twitter:image" content="https://llamabox-ai.github.io/assets/screenshot-1-home.png">
   <script type="application/ld+json">
-  {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Can you run Ollama on Android?", "acceptedAnswer": {"@type": "Answer", "text": "Ollama is officially built for macOS, Linux, and Windows. It does not ship an Android app or APK. LlamaBox is the Android-native equivalent: it loads the same GGUF models with a mobile chat UI."}}, {"@type": "Question", "name": "Is there an Ollama Android app?", "acceptedAnswer": {"@type": "Answer", "text": "No official Ollama Android client exists. If you want local LLM chat on Android, LlamaBox is purpose-built for it — no terminal, no desktop dependency."}}, {"@type": "Question", "name": "Why use LlamaBox instead of Ollama on Android?", "acceptedAnswer": {"@type": "Answer", "text": "LlamaBox runs offline on stock Android phones using CPU-only inference. It is designed for mobile battery, touch UX, and APK distribution, not for a server you SSH into."}}, {"@type": "Question", "name": "Do LlamaBox and Ollama use the same models?", "acceptedAnswer": {"@type": "Answer", "text": "Yes — both use GGUF weights from the llama.cpp ecosystem. You can often load the same quantized models in both tools."}}]}
+  {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "What GGUF models work on Android?", "acceptedAnswer": {"@type": "Answer", "text": "Smaller quantized models generally work. Start with 0.5B–3B class Q4_K_M weights. Vision models need a base GGUF plus an mmproj file. LlamaBox detects presets from filename hints."}}, {"@type": "Question", "name": "Can I run Llama 3 on Android?", "acceptedAnswer": {"@type": "Answer", "text": "Yes, if you use a small enough GGUF quantization (for example a 1B–3B parameter variant). Larger 8B+ models usually need more RAM than mid-range phones offer."}}, {"@type": "Question", "name": "What is the best model for offline chat on a phone?", "acceptedAnswer": {"@type": "Answer", "text": "For most users, Qwen2.5 1.5B Q4_K_M or SmolLM2 360M/1.7B Q4_K_M are strong starting points: small, fast, and capable enough for drafting and问答."}}, {"@type": "Question", "name": "How much RAM does a model need?", "acceptedAnswer": {"@type": "Answer", "text": "A good rule of thumb: the GGUF file size plus 200 MB–1 GB runtime/KV overhead. A 1 GB model can run on a 4–6 GB RAM phone if background apps are closed."}}, {"@type": "Question", "name": "Where do I download models?", "acceptedAnswer": {"@type": "Answer", "text": "Use the LlamaBox in-app model hub, or import GGUF files you download from Hugging Face and other model hubs."}}]}
   </script>
 </head>
 <body>
@@ -56,46 +56,51 @@
 
     <section class="section page-hero">
       <div class="wrap narrow">
-        <div class="eyebrow">Compare</div>
-        <h1>LlamaBox vs Ollama — the Android question.</h1>
-        <p class="lead">Ollama owns the desktop/server local-LLM workflow. LlamaBox brings the same GGUF model world to Android phones. If you searched for an Ollama Android app, this is the answer.</p>
+        <div class="eyebrow">Models</div>
+        <h1>GGUF models that run on Android.</h1>
+        <p class="lead">A practical index of local LLM models for Android phones. Quantized GGUF weights, RAM estimates, and what works offline with LlamaBox.</p>
       </div>
     </section>
     <section class="section section-tight">
       <div class="wrap narrow prose reveal is-in">
 
-        <h2>The short answer</h2>
-        <p>There is no official <strong>Ollama Android</strong> release. Ollama's supported platforms are macOS, Linux, and Windows. If you need local LLM chat on Android, <strong>LlamaBox</strong> is built for exactly that: load a GGUF model, chat offline, no cloud inference.</p>
-        <h2>Why the comparison matters</h2>
-        <p>Users who discover local LLMs through Ollama naturally want the same experience on their phone. They search for "ollama android" and find workarounds — Termux, remote tunnels, or unofficial clients. LlamaBox is a real Android app with a mobile-first interface, designed for the phone's battery, RAM, and storage constraints.</p>
+        <h2>What is the LlamaBox model hub?</h2>
+        <p>The model hub inside LlamaBox is a curated list of GGUF models that fit Android phones. Each entry includes recommended quantization, estimated RAM use, and whether the model supports vision or TTS. You can download directly in the app or import a GGUF you already have.</p>
+        <h2>Quick-start model picks</h2>
         <div class="table-wrap">
           <table class="compare-table">
-            <thead><tr><th></th><th>LlamaBox</th><th>Ollama (typical)</th></tr></thead>
+            <thead><tr><th>Model family</th><th>Size class</th><th>Best for</th><th>Approx. RAM</th><th>Vision</th></tr></thead>
             <tbody>
-              <tr><td>Android app</td><td>Yes — built for Android 7+ arm64</td><td>No official Android app</td></tr>
-              <tr><td>Primary device</td><td>Android phone / tablet</td><td>Desktop / laptop / server</td></tr>
-              <tr><td>UX</td><td>Mobile chat app</td><td>CLI + apps ecosystem</td></tr>
-              <tr><td>Always with you</td><td>Yes</td><td>If the machine is with you</td></tr>
-              <tr><td>Power envelope</td><td>Phone SoC / battery</td><td>Wall power / desktops often</td></tr>
-              <tr><td>Model format</td><td>GGUF via llama.cpp stack</td><td>GGUF ecosystem</td></tr>
-              <tr><td>Offline use</td><td>Designed for offline chat</td><td>Local once set up, but not mobile</td></tr>
-              <tr><td>Best for</td><td>Private pocket AI</td><td>Dev workflows, heavier local models</td></tr>
+              <tr><td>Qwen2.5-Instruct</td><td>0.5B–3B Q4_K_M</td><td>General chat, drafting, coding help</td><td>0.5–2 GB</td><td>No</td></tr>
+              <tr><td>SmolLM2</td><td>360M–1.7B Q4_K_M</td><td>Fast answers on low-RAM phones</td><td>0.3–1 GB</td><td>No</td></tr>
+              <tr><td>Gemma 3 4B IT</td><td>4B Q4_K_M</td><td>Balanced quality on 8GB+ phones</td><td>1.5–3 GB</td><td>Yes (with mmproj)</td></tr>
+              <tr><td>MiniCPM-V / InternVL2</td><td>2B–4B Q4_K_M</td><td>On-device image understanding</td><td>1.5–3 GB</td><td>Yes (with mmproj)</td></tr>
             </tbody>
           </table>
         </div>
-        <h2>How to get local LLMs on Android today</h2>
-        <ol>
-          <li>Install LlamaBox from the Play Store or GitHub releases.</li>
-          <li>Download a small GGUF model (0.5B–3B Q4_K_M) over Wi-Fi.</li>
-          <li>Chat offline. No account, no API key, no desktop server.</li>
-        </ol>
-        <p>Many builders will use <strong>both</strong>: Ollama on a workstation, LlamaBox on the phone. Related: <a href="/gguf-android.html">GGUF on Android</a> · <a href="/on-device-llm.html">on-device LLM</a> · <a href="/offline-ai-android.html">offline AI Android</a>.</p>
+        <p>These are starting points, not guarantees. Real performance depends on free RAM, Android version, background apps, and the exact quantization. LlamaBox shows honest load-time and tok/s ranges per device.</p>
+        <h2>How to choose a quantization</h2>
+        <ul>
+          <li><strong>Q4_K_M</strong> — best default for mobile. Good quality at roughly half the float16 size.</li>
+          <li><strong>Q5_K_M / Q6_K</strong> — slightly better quality if you have RAM headroom.</li>
+          <li><strong>Q3_K_M / Q2_K</strong> — smaller but quality drops noticeably; use only when RAM is tight.</li>
+        </ul>
+        <h2>Vision models need an mmproj</h2>
+        <p>Vision-capable GGUF models also need a matching multimodal projector file (mmproj). LlamaBox pairs base and mmproj automatically when they share a filename prefix. See <a href="/gguf-android.html">GGUF on Android</a> for naming conventions.</p>
+        <h2>Where to get GGUF models</h2>
+        <ul>
+          <li><a href="https://huggingface.co" rel="noopener">Hugging Face</a> — largest collection of quantized models</li>
+          <li><a href="https://huggingface.co/models?library=gguf" rel="noopener">GGUF model catalog</a> — filter by GGUF format</li>
+          <li>In-app LlamaBox model hub (curated for Android RAM limits)</li>
+        </ul>
+        <p>Next: <a href="/llm-download.html">LLM download guide</a> · <a href="/how-to-run-llm-on-android.html">how to run an LLM on Android</a> · <a href="/gguf-android.html">GGUF on Android</a>.</p>
         <h2 id="faq">FAQ</h2>
 <div class="faq-list">
-<details class="faq-item" open><summary>Can you run Ollama on Android?</summary><div class="ans">Ollama is officially built for macOS, Linux, and Windows. It does not ship an Android app or APK. LlamaBox is the Android-native equivalent: it loads the same GGUF models with a mobile chat UI.</div></details>
-<details class="faq-item"><summary>Is there an Ollama Android app?</summary><div class="ans">No official Ollama Android client exists. If you want local LLM chat on Android, LlamaBox is purpose-built for it — no terminal, no desktop dependency.</div></details>
-<details class="faq-item"><summary>Why use LlamaBox instead of Ollama on Android?</summary><div class="ans">LlamaBox runs offline on stock Android phones using CPU-only inference. It is designed for mobile battery, touch UX, and APK distribution, not for a server you SSH into.</div></details>
-<details class="faq-item"><summary>Do LlamaBox and Ollama use the same models?</summary><div class="ans">Yes — both use GGUF weights from the llama.cpp ecosystem. You can often load the same quantized models in both tools.</div></details>
+<details class="faq-item" open><summary>What GGUF models work on Android?</summary><div class="ans">Smaller quantized models generally work. Start with 0.5B–3B class Q4_K_M weights. Vision models need a base GGUF plus an mmproj file. LlamaBox detects presets from filename hints.</div></details>
+<details class="faq-item"><summary>Can I run Llama 3 on Android?</summary><div class="ans">Yes, if you use a small enough GGUF quantization (for example a 1B–3B parameter variant). Larger 8B+ models usually need more RAM than mid-range phones offer.</div></details>
+<details class="faq-item"><summary>What is the best model for offline chat on a phone?</summary><div class="ans">For most users, Qwen2.5 1.5B Q4_K_M or SmolLM2 360M/1.7B Q4_K_M are strong starting points: small, fast, and capable enough for drafting and问答.</div></details>
+<details class="faq-item"><summary>How much RAM does a model need?</summary><div class="ans">A good rule of thumb: the GGUF file size plus 200 MB–1 GB runtime/KV overhead. A 1 GB model can run on a 4–6 GB RAM phone if background apps are closed.</div></details>
+<details class="faq-item"><summary>Where do I download models?</summary><div class="ans">Use the LlamaBox in-app model hub, or import GGUF files you download from Hugging Face and other model hubs.</div></details>
 </div>
 
       </div>

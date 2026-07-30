@@ -65,6 +65,7 @@ FOOTER = """  <footer class="footer">
             <li><a href="/chatgpt-android-offline.html">ChatGPT offline</a></li>
             <li><a href="/gguf-android.html">GGUF on Android</a></li>
             <li><a href="/llm-download.html">LLM download</a></li>
+            <li><a href="/models.html">Model hub</a></li>
             <li><a href="/how-to-run-llm-on-android.html">How-to guide</a></li>
             <li><a href="/vs-chatgpt.html">vs ChatGPT</a></li>
             <li><a href="/vs-ollama.html">vs Ollama</a></li>
@@ -323,6 +324,7 @@ def main():
           <a class="card-link glass" href="/chatgpt-android-offline.html"><strong>ChatGPT Android offline</strong><span>Why cloud ChatGPT can’t, and what does</span></a>
           <a class="card-link glass" href="/gguf-android.html"><strong>GGUF on Android</strong><span>Quantizations, RAM, imports</span></a>
           <a class="card-link glass" href="/llm-download.html"><strong>LLM download</strong><span>Get GGUF models for Android</span></a>
+          <a class="card-link glass" href="/models.html"><strong>Model hub</strong><span>GGUF models that run on Android</span></a>
           <a class="card-link glass" href="/how-to-run-llm-on-android.html"><strong>How to run an LLM on Android</strong><span>Step-by-step tutorial</span></a>
           <a class="card-link glass" href="/vs-chatgpt.html"><strong>LlamaBox vs ChatGPT</strong><span>Honest comparison table</span></a>
           <a class="card-link glass" href="/vs-ollama.html"><strong>LlamaBox vs Ollama</strong><span>Phone-native vs desktop local</span></a>
@@ -580,6 +582,58 @@ def main():
 """,
         ),
         extra_head=faq_schema(faqs_gguf),
+    )
+
+    faqs_models = [
+        ("What GGUF models work on Android?", "Smaller quantized models generally work. Start with 0.5B–3B class Q4_K_M weights. Vision models need a base GGUF plus an mmproj file. LlamaBox detects presets from filename hints."),
+        ("Can I run Llama 3 on Android?", "Yes, if you use a small enough GGUF quantization (for example a 1B–3B parameter variant). Larger 8B+ models usually need more RAM than mid-range phones offer."),
+        ("What is the best model for offline chat on a phone?", "For most users, Qwen2.5 1.5B Q4_K_M or SmolLM2 360M/1.7B Q4_K_M are strong starting points: small, fast, and capable enough for drafting and问答."),
+        ("How much RAM does a model need?", "A good rule of thumb: the GGUF file size plus 200 MB–1 GB runtime/KV overhead. A 1 GB model can run on a 4–6 GB RAM phone if background apps are closed."),
+        ("Where do I download models?", "Use the LlamaBox in-app model hub, or import GGUF files you download from Hugging Face and other model hubs."),
+    ]
+    page(
+        "models.html",
+        "GGUF Models for Android | Local LLM Model Hub | LlamaBox",
+        "Browse GGUF models that run locally on Android with LlamaBox. Small LLMs, vision models, RAM guidance, and quantization tips for on-device AI.",
+        article(
+            "Models",
+            "GGUF models that run on Android.",
+            "A practical index of local LLM models for Android phones. Quantized GGUF weights, RAM estimates, and what works offline with LlamaBox.",
+            f"""
+        <h2>What is the LlamaBox model hub?</h2>
+        <p>The model hub inside LlamaBox is a curated list of GGUF models that fit Android phones. Each entry includes recommended quantization, estimated RAM use, and whether the model supports vision or TTS. You can download directly in the app or import a GGUF you already have.</p>
+        <h2>Quick-start model picks</h2>
+        <div class="table-wrap">
+          <table class="compare-table">
+            <thead><tr><th>Model family</th><th>Size class</th><th>Best for</th><th>Approx. RAM</th><th>Vision</th></tr></thead>
+            <tbody>
+              <tr><td>Qwen2.5-Instruct</td><td>0.5B–3B Q4_K_M</td><td>General chat, drafting, coding help</td><td>0.5–2 GB</td><td>No</td></tr>
+              <tr><td>SmolLM2</td><td>360M–1.7B Q4_K_M</td><td>Fast answers on low-RAM phones</td><td>0.3–1 GB</td><td>No</td></tr>
+              <tr><td>Gemma 3 4B IT</td><td>4B Q4_K_M</td><td>Balanced quality on 8GB+ phones</td><td>1.5–3 GB</td><td>Yes (with mmproj)</td></tr>
+              <tr><td>MiniCPM-V / InternVL2</td><td>2B–4B Q4_K_M</td><td>On-device image understanding</td><td>1.5–3 GB</td><td>Yes (with mmproj)</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>These are starting points, not guarantees. Real performance depends on free RAM, Android version, background apps, and the exact quantization. LlamaBox shows honest load-time and tok/s ranges per device.</p>
+        <h2>How to choose a quantization</h2>
+        <ul>
+          <li><strong>Q4_K_M</strong> — best default for mobile. Good quality at roughly half the float16 size.</li>
+          <li><strong>Q5_K_M / Q6_K</strong> — slightly better quality if you have RAM headroom.</li>
+          <li><strong>Q3_K_M / Q2_K</strong> — smaller but quality drops noticeably; use only when RAM is tight.</li>
+        </ul>
+        <h2>Vision models need an mmproj</h2>
+        <p>Vision-capable GGUF models also need a matching multimodal projector file (mmproj). LlamaBox pairs base and mmproj automatically when they share a filename prefix. See <a href="/gguf-android.html">GGUF on Android</a> for naming conventions.</p>
+        <h2>Where to get GGUF models</h2>
+        <ul>
+          <li><a href="https://huggingface.co" rel="noopener">Hugging Face</a> — largest collection of quantized models</li>
+          <li><a href="https://huggingface.co/models?library=gguf" rel="noopener">GGUF model catalog</a> — filter by GGUF format</li>
+          <li>In-app LlamaBox model hub (curated for Android RAM limits)</li>
+        </ul>
+        <p>Next: <a href="/llm-download.html">LLM download guide</a> · <a href="/how-to-run-llm-on-android.html">how to run an LLM on Android</a> · <a href="/gguf-android.html">GGUF on Android</a>.</p>
+        {faq_html(faqs_models)}
+""",
+        ),
+        extra_head=faq_schema(faqs_models),
     )
 
     faqs_how = [
