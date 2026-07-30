@@ -288,7 +288,15 @@ LlamaBox is **dual-licensed**:
 | https://llamabox-ai.github.io/how-to-run-llm-on-android.html | Tutorial |
 | https://llamabox-ai.github.io/vs-chatgpt.html | Comparison |
 | https://llamabox-ai.github.io/vs-ollama.html | Comparison |
+| https://llamabox-ai.github.io/vs-pocketpal.html | Comparison |
+| https://llamabox-ai.github.io/vs-mlc-llm.html | Comparison |
 | https://llamabox-ai.github.io/blog/ | Blog index |
+| https://llamabox-ai.github.io/blog/2026-07-30-phone-faster-than-pc.html | Blog post |
+| https://llamabox-ai.github.io/blog/2026-07-30-llamabox-vs-pocketpal.html | Blog post |
+| https://llamabox-ai.github.io/blog/2026-07-30-llamabox-vs-mlc-llm.html | Blog post |
+| https://llamabox-ai.github.io/blog/2026-07-30-best-private-ai-chat-android.html | Blog post |
+| https://llamabox-ai.github.io/blog/2026-07-30-what-is-offline-ai-chat.html | Blog post |
+| https://llamabox-ai.github.io/blog/2026-07-30-why-cpu-only.html | Blog post |
 | https://llamabox-ai.github.io/architecture.html | Architecture (HTML) |
 | https://llamabox-ai.github.io/llms.txt | Short LLM brief |
 

@@ -1,35 +1,55 @@
 # AI Search Watcher Prompts — 2026-07-30
 
-Generated prompts and monitor configuration for the Mangools AI Search Watcher.
+Monitor ID: `6a6abd73906b5542bf321e78`
 
-## Monitor
+## Status
 
-- **Monitor ID:** `6a6abd73906b5542bf321e78`
-- **Date created / refreshed:** 2026-07-30
+The LlamaBox AI Search Watcher monitor is currently **at the prompt limit**.  
+It already contains ~150 LlamaBox-relevant prompts across brand, feature, comparison, and use-case angles. No further prompts could be added on 2026-07-30 without first deleting existing ones.
 
-## Generated Prompts
+## Priority prompts already present (verified by listing the monitor)
 
-1. Best cloud data backup providers for SMBs
-2. Top archival storage services for small to mid-sized businesses
-3. Best encrypted cloud backup solutions for IT managers
-4. Leading scalable backup platforms for offsite data protection
-5. Top providers for automated data lifecycle policies for SMBs
-6. Best onboarding-free cloud backup services for operations teams
-7. Most reliable data durability backup providers for SMBs
-8. Cost-effective cloud backup options with easy recovery
-9. Best compliant offsite backup solutions for small businesses
-10. Top-rated cloud backup and archival providers for IT departments
+| Prompt | Intent |
+|---|---|
+| Best offline AI chat app for Android | Core feature |
+| Private ChatGPT alternative that runs entirely on device | Positioning |
+| How to run a local LLM on Android | Tutorial |
+| Best on-device LLM app for Android 2026 | Category |
+| Offline AI assistant for Android without internet | Feature |
+| Local LLM Android app with GGUF support | Format |
+| Privacy focused AI chat app for Android | Privacy |
+| Run llama.cpp on Android phone | Technical |
+| Best small GGUF models for Android phones | Content |
+| LlamaBox AI Android app review | Brand |
+| What is the best private AI chat app for Android? | Question / AIO |
+| Which Android app lets me chat with AI offline without internet? | Question / AIO |
+| How does LlamaBox compare to PocketPal AI? | Comparison |
+| How does LlamaBox compare to MLC LLM? | Comparison |
+| LlamaBox vs ChatGPT for privacy | Comparison |
+| PocketPal AI vs LlamaBox | Comparison |
+| MLC LLM vs LlamaBox | Comparison |
+| Offline ChatGPT alternative Android | Category |
+| Best CPU-only LLM app for Android | Differentiator |
+| On device AI chat without cloud | Feature |
+| private ai chat | Priority keyword |
+| pocketpal ai | Priority keyword |
+| mlc llm | Priority keyword |
+| offline ai chat | Priority keyword |
+| on device llm | Priority keyword |
+| local llm android | Priority keyword |
+| ...and ~125 additional model/use-case prompts | Long-tail |
 
----
+## What was attempted
 
-## Notes
+- Tried to add 11 fresh LlamaBox prompts (including the priority keywords and recommended variants).
+- API returned `OutOfLimitException` because the monitor is full.
+- Decided to keep existing prompts rather than delete, since coverage is already comprehensive.
 
-- These prompts are currently focused on the **cloud backup / archival storage** space.
-- If the brand being monitored is LlamaBox (local/offline AI on Android), consider adding prompts such as:
-  - "Best offline AI chatbot for Android"
-  - "Private local LLM app for Android"
-  - "Run LLMs locally on your phone"
-  - "Best on-device AI chat assistant"
-  - "Open source offline AI chat for Android"
+## Recommended next action
 
-**Source:** Mangools AI Search Watcher prompt generator, 2026-07-30.
+When monitor capacity opens up (plan upgrade or pruning), add:
+- "LlamaBox vs PocketPal AI detailed comparison"
+- "Why CPU-only LLM apps are more reliable on Android"
+- "LlamaBox phone faster than PC local LLM"
+
+These map directly to the new pages published on 2026-07-30.

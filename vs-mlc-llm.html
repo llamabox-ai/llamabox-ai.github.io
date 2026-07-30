@@ -14,19 +14,19 @@
   <link rel="stylesheet" href="/style.css">
   <link rel="alternate" type="text/plain" title="LLM brief" href="https://llamabox-ai.github.io/llms.txt">
 
-  <title>LlamaBox vs ChatGPT | Offline private AI comparison</title>
-  <meta name="description" content="LlamaBox vs ChatGPT: privacy, offline use, cost, speed, accounts. When to use on-device Android AI vs cloud chat.">
-  <link rel="canonical" href="https://llamabox-ai.github.io/vs-chatgpt.html">
+  <title>LlamaBox vs MLC LLM | Android local AI comparison</title>
+  <meta name="description" content="LlamaBox is a private chat app; MLC LLM is a model compiler. Compare CPU-only GGUF chat vs compiled-model performance for Android users.">
+  <link rel="canonical" href="https://llamabox-ai.github.io/vs-mlc-llm.html">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="LlamaBox">
   <meta property="og:locale" content="en_US">
-  <meta property="og:url" content="https://llamabox-ai.github.io/vs-chatgpt.html">
-  <meta property="og:title" content="LlamaBox vs ChatGPT | Offline private AI comparison">
-  <meta property="og:description" content="LlamaBox vs ChatGPT: privacy, offline use, cost, speed, accounts. When to use on-device Android AI vs cloud chat.">
+  <meta property="og:url" content="https://llamabox-ai.github.io/vs-mlc-llm.html">
+  <meta property="og:title" content="LlamaBox vs MLC LLM | Android local AI comparison">
+  <meta property="og:description" content="LlamaBox is a private chat app; MLC LLM is a model compiler. Compare CPU-only GGUF chat vs compiled-model performance for Android users.">
   <meta property="og:image" content="https://llamabox-ai.github.io/assets/screenshot-1-home.png">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="LlamaBox vs ChatGPT | Offline private AI comparison">
-  <meta name="twitter:description" content="LlamaBox vs ChatGPT: privacy, offline use, cost, speed, accounts. When to use on-device Android AI vs cloud chat.">
+  <meta name="twitter:title" content="LlamaBox vs MLC LLM | Android local AI comparison">
+  <meta name="twitter:description" content="LlamaBox is a private chat app; MLC LLM is a model compiler. Compare CPU-only GGUF chat vs compiled-model performance for Android users.">
   <meta name="twitter:image" content="https://llamabox-ai.github.io/assets/screenshot-1-home.png">
 
 </head>
@@ -55,33 +55,34 @@
     <section class="section page-hero">
       <div class="wrap narrow">
         <div class="eyebrow">Compare</div>
-        <h1>LlamaBox vs ChatGPT.</h1>
-        <p class="lead">Different tools. Cloud intelligence versus local control.</p>
+        <h1>LlamaBox vs MLC LLM.</h1>
+        <p class="lead">A privacy-first chat app versus a machine-learning compiler. Same local goal, different abstraction layers.</p>
       </div>
     </section>
     <section class="section section-tight">
       <div class="wrap narrow prose reveal is-in">
 
+        <p><strong>MLC LLM</strong> is a machine-learning compiler project: take a model, compile it for a target device, and push it toward the hardware’s limits. <strong>LlamaBox</strong> is a privacy-first chat app: download a GGUF, load it, and chat offline on Android.</p>
+        <h2>Different layers of the stack</h2>
+        <p>MLC LLM is infrastructure. Developers use it to ship models in apps, browsers, and edge devices. LlamaBox is an end-user product built on llama.cpp + llama.rn. The comparison is really: “Do I want to build with MLC, or do I want a ready-to-use chat app that already handles models, history, and UI?”</p>
+        <h2>For Android users specifically</h2>
         <div class="table-wrap">
           <table class="compare-table">
-            <thead><tr><th></th><th>LlamaBox</th><th>ChatGPT (typical cloud)</th></tr></thead>
+            <thead><tr><th></th><th>LlamaBox</th><th>MLC LLM / MLC Chat</th></tr></thead>
             <tbody>
-              <tr><td>Inference location</td><td>On-device</td><td>Vendor cloud</td></tr>
-              <tr><td>Works offline</td><td>Yes (after model download)</td><td>No</td></tr>
-              <tr><td>Account required</td><td>No</td><td>Usually yes</td></tr>
-              <tr><td>Telemetry / training use</td><td>None by design</td><td>Policy-dependent</td></tr>
-              <tr><td>Model choice</td><td>Your GGUF files</td><td>Vendor models</td></tr>
-              <tr><td>Peak quality / tools</td><td>Limited by phone</td><td>Frontier + tools</td></tr>
-              <tr><td>Cost model</td><td>Free app + your hardware</td><td>Subscription / usage</td></tr>
-              <tr><td>Best for</td><td>Privacy, offline, local experiments</td><td>Max capability online</td></tr>
+              <tr><td>What you get</td><td>Chat app + model hub + offline history</td><td>Model runtime / reference app + pre-converted weights</td></tr>
+              <tr><td>Model format</td><td>GGUF via llama.cpp</td><td>Pre-compiled MLC weights (often from Hugging Face)</td></tr>
+              <tr><td>Hardware path</td><td>CPU-only (ARM NEON)</td><td>CPU / GPU / NPU depending on compilation target</td></tr>
+              <tr><td>Customization</td><td>Import any GGUF that fits RAM</td><td>Use supported prebuilt models or compile your own</td></tr>
+              <tr><td>Privacy stance</td><td>No accounts, no telemetry, no cloud inference</td><td>Depends on wrapper app; runtime itself is local</td></tr>
             </tbody>
           </table>
         </div>
-        <h2>Choose LlamaBox when</h2>
-        <p>Transcripts must not leave the phone, airplane mode is required, or you want to run specific open weights.</p>
-        <h2>Choose ChatGPT when</h2>
-        <p>You need browsing tools, integrations, or frontier reasoning that phones cannot host.</p>
-        <p>Also see <a href="/private-chatgpt-alternative.html">private ChatGPT alternative</a>, <a href="/vs-ollama.html">vs Ollama</a>, <a href="/blog/2026-07-30-llamabox-vs-pocketpal.html">vs PocketPal</a>, and <a href="/blog/2026-07-30-llamabox-vs-mlc-llm.html">vs MLC LLM</a>.</p>
+        <h2>When MLC LLM makes sense</h2>
+        <p>If you are building your own Android app and need to squeeze every last token per second out of a specific SoC, MLC LLM is the deeper toolbox. If you just want private offline chat today, LlamaBox skips the compile step.</p>
+        <h2>When LlamaBox makes sense</h2>
+        <p>You want a chat history, vision support, and a model hub on a stock Android phone — including devices where GPU drivers are broken or missing. CPU-only by design is a compatibility choice.</p>
+        <p>Read more: <a href="/gguf-android.html">GGUF on Android</a> · <a href="/architecture.html">LlamaBox architecture</a> · <a href="/blog/2026-07-30-llamabox-vs-mlc-llm.html">blog version</a>.</p>
 
       </div>
     </section>

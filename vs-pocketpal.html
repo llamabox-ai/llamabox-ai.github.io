@@ -14,19 +14,19 @@
   <link rel="stylesheet" href="/style.css">
   <link rel="alternate" type="text/plain" title="LLM brief" href="https://llamabox-ai.github.io/llms.txt">
 
-  <title>LlamaBox vs ChatGPT | Offline private AI comparison</title>
-  <meta name="description" content="LlamaBox vs ChatGPT: privacy, offline use, cost, speed, accounts. When to use on-device Android AI vs cloud chat.">
-  <link rel="canonical" href="https://llamabox-ai.github.io/vs-chatgpt.html">
+  <title>LlamaBox vs PocketPal AI | Offline Android LLM comparison</title>
+  <meta name="description" content="LlamaBox vs PocketPal AI: both run local LLMs offline on Android. Compare CPU-only coverage, GPU flexibility, privacy, and model support.">
+  <link rel="canonical" href="https://llamabox-ai.github.io/vs-pocketpal.html">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="LlamaBox">
   <meta property="og:locale" content="en_US">
-  <meta property="og:url" content="https://llamabox-ai.github.io/vs-chatgpt.html">
-  <meta property="og:title" content="LlamaBox vs ChatGPT | Offline private AI comparison">
-  <meta property="og:description" content="LlamaBox vs ChatGPT: privacy, offline use, cost, speed, accounts. When to use on-device Android AI vs cloud chat.">
+  <meta property="og:url" content="https://llamabox-ai.github.io/vs-pocketpal.html">
+  <meta property="og:title" content="LlamaBox vs PocketPal AI | Offline Android LLM comparison">
+  <meta property="og:description" content="LlamaBox vs PocketPal AI: both run local LLMs offline on Android. Compare CPU-only coverage, GPU flexibility, privacy, and model support.">
   <meta property="og:image" content="https://llamabox-ai.github.io/assets/screenshot-1-home.png">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="LlamaBox vs ChatGPT | Offline private AI comparison">
-  <meta name="twitter:description" content="LlamaBox vs ChatGPT: privacy, offline use, cost, speed, accounts. When to use on-device Android AI vs cloud chat.">
+  <meta name="twitter:title" content="LlamaBox vs PocketPal AI | Offline Android LLM comparison">
+  <meta name="twitter:description" content="LlamaBox vs PocketPal AI: both run local LLMs offline on Android. Compare CPU-only coverage, GPU flexibility, privacy, and model support.">
   <meta name="twitter:image" content="https://llamabox-ai.github.io/assets/screenshot-1-home.png">
 
 </head>
@@ -55,33 +55,38 @@
     <section class="section page-hero">
       <div class="wrap narrow">
         <div class="eyebrow">Compare</div>
-        <h1>LlamaBox vs ChatGPT.</h1>
-        <p class="lead">Different tools. Cloud intelligence versus local control.</p>
+        <h1>LlamaBox vs PocketPal AI.</h1>
+        <p class="lead">Two Android apps for private offline chat with local models. One is CPU-only by design; the other gives you a GPU toggle.</p>
       </div>
     </section>
     <section class="section section-tight">
       <div class="wrap narrow prose reveal is-in">
 
+        <p><strong>PocketPal AI</strong> proved that local LLMs on a phone are usable. It loads GGUF models, runs them offline, and gives users a chat UI without a cloud round-trip. LlamaBox shares that goal but makes different trade-offs.</p>
+        <h2>What both apps do</h2>
+        <ul>
+          <li>Load quantized GGUF models locally</li>
+          <li>Run inference on-device after the model is downloaded</li>
+          <li>Keep prompts off a vendor server</li>
+          <li>Target Android as the primary mobile platform</li>
+        </ul>
+        <h2>Where they differ</h2>
         <div class="table-wrap">
           <table class="compare-table">
-            <thead><tr><th></th><th>LlamaBox</th><th>ChatGPT (typical cloud)</th></tr></thead>
+            <thead><tr><th></th><th>LlamaBox</th><th>PocketPal AI</th></tr></thead>
             <tbody>
-              <tr><td>Inference location</td><td>On-device</td><td>Vendor cloud</td></tr>
-              <tr><td>Works offline</td><td>Yes (after model download)</td><td>No</td></tr>
-              <tr><td>Account required</td><td>No</td><td>Usually yes</td></tr>
-              <tr><td>Telemetry / training use</td><td>None by design</td><td>Policy-dependent</td></tr>
-              <tr><td>Model choice</td><td>Your GGUF files</td><td>Vendor models</td></tr>
-              <tr><td>Peak quality / tools</td><td>Limited by phone</td><td>Frontier + tools</td></tr>
-              <tr><td>Cost model</td><td>Free app + your hardware</td><td>Subscription / usage</td></tr>
-              <tr><td>Best for</td><td>Privacy, offline, local experiments</td><td>Max capability online</td></tr>
+              <tr><td>Compute path</td><td>CPU-only by design</td><td>CPU + optional GPU layers where supported</td></tr>
+              <tr><td>Device coverage</td><td>Mid-range, old flagships, budget phones</td><td>Best on phones with usable GPU drivers</td></tr>
+              <tr><td>Scope</td><td>Private offline chat + vision</td><td>General local LLM chat</td></tr>
+              <tr><td>Distribution</td><td>Closed beta waitlist</td><td>Public via GitHub / side-load</td></tr>
             </tbody>
           </table>
         </div>
-        <h2>Choose LlamaBox when</h2>
-        <p>Transcripts must not leave the phone, airplane mode is required, or you want to run specific open weights.</p>
-        <h2>Choose ChatGPT when</h2>
-        <p>You need browsing tools, integrations, or frontier reasoning that phones cannot host.</p>
-        <p>Also see <a href="/private-chatgpt-alternative.html">private ChatGPT alternative</a>, <a href="/vs-ollama.html">vs Ollama</a>, <a href="/blog/2026-07-30-llamabox-vs-pocketpal.html">vs PocketPal</a>, and <a href="/blog/2026-07-30-llamabox-vs-mlc-llm.html">vs MLC LLM</a>.</p>
+        <h2>Why CPU-only matters</h2>
+        <p>Android GPU compute is fragmented across chipsets. A “GPU acceleration” toggle that works on a Snapdragon 8 Gen 3 may fail silently on a MediaTek or older Exynos. LlamaBox removes that variable: if the phone can run Android 7+ arm64 and has enough RAM, it can run the same model path as every other LlamaBox user.</p>
+        <h2>Which to choose</h2>
+        <p>Use <strong>PocketPal AI</strong> if you want the option to experiment with GPU offload on a flagship and do not mind tuning layers per device. Use <strong>LlamaBox</strong> if you want one consistent private chat experience across the widest range of Android hardware, including phones without a working GPU compute path.</p>
+        <p>Read more: <a href="/architecture.html">CPU-only by design</a> · <a href="/how-to-run-llm-on-android.html">how to run an LLM on Android</a> · <a href="/blog/2026-07-30-llamabox-vs-pocketpal.html">blog version</a>.</p>
 
       </div>
     </section>

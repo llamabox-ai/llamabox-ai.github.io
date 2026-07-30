@@ -85,6 +85,18 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://llamabox-ai.github.io/vs-pocketpal.html</loc>
+    <lastmod>2026-07-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://llamabox-ai.github.io/vs-mlc-llm.html</loc>
+    <lastmod>2026-07-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://llamabox-ai.github.io/blog/</loc>
     <lastmod>2026-07-30</lastmod>
     <changefreq>weekly</changefreq>
@@ -110,6 +122,36 @@
   </url>
   <url>
     <loc>https://llamabox-ai.github.io/blog/2026-07-30-phone-faster-than-pc.html</loc>
+    <lastmod>2026-07-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://llamabox-ai.github.io/blog/2026-07-30-llamabox-vs-pocketpal.html</loc>
+    <lastmod>2026-07-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://llamabox-ai.github.io/blog/2026-07-30-llamabox-vs-mlc-llm.html</loc>
+    <lastmod>2026-07-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://llamabox-ai.github.io/blog/2026-07-30-best-private-ai-chat-android.html</loc>
+    <lastmod>2026-07-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://llamabox-ai.github.io/blog/2026-07-30-what-is-offline-ai-chat.html</loc>
+    <lastmod>2026-07-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://llamabox-ai.github.io/blog/2026-07-30-why-cpu-only.html</loc>
     <lastmod>2026-07-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>

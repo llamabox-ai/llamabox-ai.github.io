@@ -65,6 +65,8 @@ FOOTER = """  <footer class="footer">
             <li><a href="/how-to-run-llm-on-android.html">How-to guide</a></li>
             <li><a href="/vs-chatgpt.html">vs ChatGPT</a></li>
             <li><a href="/vs-ollama.html">vs Ollama</a></li>
+            <li><a href="/vs-pocketpal.html">vs PocketPal AI</a></li>
+            <li><a href="/vs-mlc-llm.html">vs MLC LLM</a></li>
             <li><a href="/blog/">Blog</a></li>
           </ul>
         </div>
@@ -300,6 +302,8 @@ def main():
           <a class="card-link glass" href="/how-to-run-llm-on-android.html"><strong>How to run an LLM on Android</strong><span>Step-by-step tutorial</span></a>
           <a class="card-link glass" href="/vs-chatgpt.html"><strong>LlamaBox vs ChatGPT</strong><span>Honest comparison table</span></a>
           <a class="card-link glass" href="/vs-ollama.html"><strong>LlamaBox vs Ollama</strong><span>Phone-native vs desktop local</span></a>
+          <a class="card-link glass" href="/vs-pocketpal.html"><strong>LlamaBox vs PocketPal AI</strong><span>Two offline Android LLM apps compared</span></a>
+          <a class="card-link glass" href="/vs-mlc-llm.html"><strong>LlamaBox vs MLC LLM</strong><span>Chat app vs model compiler</span></a>
           <a class="card-link glass" href="/blog/"><strong>Blog</strong><span>Models, engineering notes, updates</span></a>
         </div>
 """,
@@ -313,8 +317,8 @@ def main():
     ]
     page(
         "offline-ai-android.html",
-        "Offline AI for Android | On-device chat with LlamaBox",
-        "Run offline AI chat on Android. LlamaBox loads GGUF models with llama.cpp — no cloud, no accounts. Airplane mode friendly.",
+        "Offline AI Chat: Private Local LLM on Android | LlamaBox",
+        "Chat with AI without internet. LlamaBox runs local LLMs directly on your Android phone so your conversations stay private, offline, and fully under your control.",
         article(
             "Offline AI",
             "Offline AI chat for Android.",
@@ -354,8 +358,8 @@ def main():
     ]
     page(
         "on-device-llm.html",
-        "On-device LLM on Android | LlamaBox local inference",
-        "On-device LLM inference on Android with LlamaBox: GGUF models, llama.cpp, private chat, no cloud API for generation.",
+        "On-Device LLM for Android | Run Local Models with LlamaBox",
+        "Run an on-device LLM on Android. LlamaBox loads GGUF models locally with llama.cpp — private chat with no cloud inference.",
         article(
             "On-device LLM",
             "On-device LLM on your phone.",
@@ -388,8 +392,8 @@ def main():
     ]
     page(
         "private-chatgpt-alternative.html",
-        "Private ChatGPT alternative for Android | LlamaBox",
-        "Looking for a private ChatGPT-style chat? LlamaBox runs models on your Android phone — no cloud inference, no accounts, no telemetry.",
+        "Private AI Chat for Android | LlamaBox Local ChatGPT Alternative",
+        "Get private AI chat on Android. LlamaBox runs local LLMs on-device — no cloud inference, no accounts, no telemetry, fully offline after setup.",
         article(
             "Private alternative",
             "A private ChatGPT-style chat that stays on your phone.",
@@ -474,7 +478,7 @@ def main():
 
     page(
         "how-to-run-llm-on-android.html",
-        "How to run an LLM on Android offline | LlamaBox guide",
+        "How to Run an LLM on Android Offline | LlamaBox Setup Guide",
         "Step-by-step: run an LLM on Android offline with LlamaBox. Install, load GGUF, chat without cloud. Troubleshooting tips included.",
         article(
             "Tutorial",
@@ -537,7 +541,79 @@ def main():
         <p>Transcripts must not leave the phone, airplane mode is required, or you want to run specific open weights.</p>
         <h2>Choose ChatGPT when</h2>
         <p>You need browsing tools, integrations, or frontier reasoning that phones cannot host.</p>
-        <p>Also see <a href="/private-chatgpt-alternative.html">private ChatGPT alternative</a> and <a href="/vs-ollama.html">vs Ollama</a>.</p>
+        <p>Also see <a href="/private-chatgpt-alternative.html">private ChatGPT alternative</a>, <a href="/vs-ollama.html">vs Ollama</a>, <a href="/blog/2026-07-30-llamabox-vs-pocketpal.html">vs PocketPal</a>, and <a href="/blog/2026-07-30-llamabox-vs-mlc-llm.html">vs MLC LLM</a>.</p>
+""",
+        ),
+    )
+
+    page(
+        "vs-pocketpal.html",
+        "LlamaBox vs PocketPal AI | Offline Android LLM comparison",
+        "LlamaBox vs PocketPal AI: both run local LLMs offline on Android. Compare CPU-only coverage, GPU flexibility, privacy, and model support.",
+        article(
+            "Compare",
+            "LlamaBox vs PocketPal AI.",
+            "Two Android apps for private offline chat with local models. One is CPU-only by design; the other gives you a GPU toggle.",
+            """
+        <p><strong>PocketPal AI</strong> proved that local LLMs on a phone are usable. It loads GGUF models, runs them offline, and gives users a chat UI without a cloud round-trip. LlamaBox shares that goal but makes different trade-offs.</p>
+        <h2>What both apps do</h2>
+        <ul>
+          <li>Load quantized GGUF models locally</li>
+          <li>Run inference on-device after the model is downloaded</li>
+          <li>Keep prompts off a vendor server</li>
+          <li>Target Android as the primary mobile platform</li>
+        </ul>
+        <h2>Where they differ</h2>
+        <div class="table-wrap">
+          <table class="compare-table">
+            <thead><tr><th></th><th>LlamaBox</th><th>PocketPal AI</th></tr></thead>
+            <tbody>
+              <tr><td>Compute path</td><td>CPU-only by design</td><td>CPU + optional GPU layers where supported</td></tr>
+              <tr><td>Device coverage</td><td>Mid-range, old flagships, budget phones</td><td>Best on phones with usable GPU drivers</td></tr>
+              <tr><td>Scope</td><td>Private offline chat + vision</td><td>General local LLM chat</td></tr>
+              <tr><td>Distribution</td><td>Closed beta waitlist</td><td>Public via GitHub / side-load</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <h2>Why CPU-only matters</h2>
+        <p>Android GPU compute is fragmented across chipsets. A “GPU acceleration” toggle that works on a Snapdragon 8 Gen 3 may fail silently on a MediaTek or older Exynos. LlamaBox removes that variable: if the phone can run Android 7+ arm64 and has enough RAM, it can run the same model path as every other LlamaBox user.</p>
+        <h2>Which to choose</h2>
+        <p>Use <strong>PocketPal AI</strong> if you want the option to experiment with GPU offload on a flagship and do not mind tuning layers per device. Use <strong>LlamaBox</strong> if you want one consistent private chat experience across the widest range of Android hardware, including phones without a working GPU compute path.</p>
+        <p>Read more: <a href="/architecture.html">CPU-only by design</a> · <a href="/how-to-run-llm-on-android.html">how to run an LLM on Android</a> · <a href="/blog/2026-07-30-llamabox-vs-pocketpal.html">blog version</a>.</p>
+""",
+        ),
+    )
+
+    page(
+        "vs-mlc-llm.html",
+        "LlamaBox vs MLC LLM | Android local AI comparison",
+        "LlamaBox is a private chat app; MLC LLM is a model compiler. Compare CPU-only GGUF chat vs compiled-model performance for Android users.",
+        article(
+            "Compare",
+            "LlamaBox vs MLC LLM.",
+            "A privacy-first chat app versus a machine-learning compiler. Same local goal, different abstraction layers.",
+            """
+        <p><strong>MLC LLM</strong> is a machine-learning compiler project: take a model, compile it for a target device, and push it toward the hardware’s limits. <strong>LlamaBox</strong> is a privacy-first chat app: download a GGUF, load it, and chat offline on Android.</p>
+        <h2>Different layers of the stack</h2>
+        <p>MLC LLM is infrastructure. Developers use it to ship models in apps, browsers, and edge devices. LlamaBox is an end-user product built on llama.cpp + llama.rn. The comparison is really: “Do I want to build with MLC, or do I want a ready-to-use chat app that already handles models, history, and UI?”</p>
+        <h2>For Android users specifically</h2>
+        <div class="table-wrap">
+          <table class="compare-table">
+            <thead><tr><th></th><th>LlamaBox</th><th>MLC LLM / MLC Chat</th></tr></thead>
+            <tbody>
+              <tr><td>What you get</td><td>Chat app + model hub + offline history</td><td>Model runtime / reference app + pre-converted weights</td></tr>
+              <tr><td>Model format</td><td>GGUF via llama.cpp</td><td>Pre-compiled MLC weights (often from Hugging Face)</td></tr>
+              <tr><td>Hardware path</td><td>CPU-only (ARM NEON)</td><td>CPU / GPU / NPU depending on compilation target</td></tr>
+              <tr><td>Customization</td><td>Import any GGUF that fits RAM</td><td>Use supported prebuilt models or compile your own</td></tr>
+              <tr><td>Privacy stance</td><td>No accounts, no telemetry, no cloud inference</td><td>Depends on wrapper app; runtime itself is local</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <h2>When MLC LLM makes sense</h2>
+        <p>If you are building your own Android app and need to squeeze every last token per second out of a specific SoC, MLC LLM is the deeper toolbox. If you just want private offline chat today, LlamaBox skips the compile step.</p>
+        <h2>When LlamaBox makes sense</h2>
+        <p>You want a chat history, vision support, and a model hub on a stock Android phone — including devices where GPU drivers are broken or missing. CPU-only by design is a compatibility choice.</p>
+        <p>Read more: <a href="/gguf-android.html">GGUF on Android</a> · <a href="/architecture.html">LlamaBox architecture</a> · <a href="/blog/2026-07-30-llamabox-vs-mlc-llm.html">blog version</a>.</p>
 """,
         ),
     )
@@ -645,6 +721,140 @@ def main():
         <p>LlamaBox is built for that reach. Download a small GGUF, load it once, and the model stays in your pocket — no gaming PC required.</p>
 """,
         ),
+        (
+            "2026-07-30-llamabox-vs-pocketpal.html",
+            "2026-07-30",
+            "LlamaBox vs PocketPal: private offline AI on Android",
+            "Two Android apps run local LLMs offline. One is CPU-only by design for broad device support. See how LlamaBox compares to PocketPal AI.",
+            """
+        <p><strong>PocketPal AI</strong> proved that local LLMs on a phone are usable. It loads GGUF models, runs them offline, and gives users a chat UI without a cloud round-trip. LlamaBox shares that goal but makes different trade-offs.</p>
+        <h2>What both apps do</h2>
+        <ul>
+          <li>Load quantized GGUF models locally</li>
+          <li>Run inference on-device after the model is downloaded</li>
+          <li>Keep prompts off a vendor server</li>
+          <li>Target Android as the primary mobile platform</li>
+        </ul>
+        <h2>Where they differ</h2>
+        <table class="compare-table">
+          <thead><tr><th></th><th>LlamaBox</th><th>PocketPal AI</th></tr></thead>
+          <tbody>
+            <tr><td>Compute path</td><td>CPU-only by design</td><td>CPU + optional GPU layers where supported</td></tr>
+            <tr><td>Device coverage</td><td>Mid-range, old flagships, budget phones</td><td>Best on phones with usable GPU drivers</td></tr>
+            <tr><td>Scope</td><td>Private offline chat + vision</td><td>General local LLM chat</td></tr>
+            <tr><td>Distribution</td><td>Closed beta waitlist</td><td>Public via GitHub / side-load</td></tr>
+          </tbody>
+        </table>
+        <h2>Why CPU-only matters</h2>
+        <p>Android GPU compute is fragmented across chipsets. A “GPU acceleration” toggle that works on a Snapdragon 8 Gen 3 may fail silently on a MediaTek or older Exynos. LlamaBox removes that variable: if the phone can run Android 7+ arm64 and has enough RAM, it can run the same model path as every other LlamaBox user. That predictability is the feature.</p>
+        <h2>Which to choose</h2>
+        <p>Use <strong>PocketPal AI</strong> if you want the option to experiment with GPU offload on a flagship and do not mind tuning layers per device. Use <strong>LlamaBox</strong> if you want one consistent private chat experience across the widest range of Android hardware, including phones without a working GPU compute path.</p>
+        <p>Read more: <a href="/architecture.html">CPU-only by design</a> · <a href="/how-to-run-llm-on-android.html">how to run an LLM on Android</a>.</p>
+""",
+        ),
+        (
+            "2026-07-30-llamabox-vs-mlc-llm.html",
+            "2026-07-30",
+            "LlamaBox vs MLC LLM: CPU-only vs model-compiler approach",
+            "MLC LLM is a powerful model compiler for many devices. LlamaBox is a privacy-first Android chat app. Here is how the two compare for phone users.",
+            """
+        <p><strong>MLC LLM</strong> is a machine-learning compiler project: take a PyTorch/ONNX model, compile it for a target device, and push it toward the hardware’s limits. <strong>LlamaBox</strong> is a privacy-first chat app: download a GGUF, load it, and chat offline on Android.</p>
+        <h2>Different layers of the stack</h2>
+        <p>MLC LLM is infrastructure. Developers use it to ship models in apps, browsers, and edge devices. LlamaBox is an end-user product built on llama.cpp + llama.rn. The comparison is really: “Do I want to build with MLC, or do I want a ready-to-use chat app that already handles models, history, and UI?”</p>
+        <h2>For Android users specifically</h2>
+        <table class="compare-table">
+          <thead><tr><th></th><th>LlamaBox</th><th>MLC LLM / MLC Chat</th></tr></thead>
+          <tbody>
+            <tr><td>What you get</td><td>Chat app + model hub + offline history</td><td>Model runtime / reference app + pre-converted weights</td></tr>
+            <tr><td>Model format</td><td>GGUF via llama.cpp</td><td>Pre-compiled MLC weights (often from Hugging Face)</td></tr>
+            <tr><td>Hardware path</td><td>CPU-only (ARM NEON)</td><td>CPU / GPU / NPU depending on compilation target</td></tr>
+            <tr><td>Customization</td><td>Import any GGUF that fits RAM</td><td>Use supported prebuilt models or compile your own</td></tr>
+            <tr><td>Privacy stance</td><td>No accounts, no telemetry, no cloud inference</td><td>Depends on wrapper app; runtime itself is local</td></tr>
+          </tbody>
+        </table>
+        <h2>When MLC LLM makes sense</h2>
+        <p>If you are building your own Android app and need to squeeze every last token per second out of a specific SoC, MLC LLM is the deeper toolbox. If you just want private offline chat today, LlamaBox skips the compile step.</p>
+        <h2>When LlamaBox makes sense</h2>
+        <p>You want a chat history, vision support, and a model hub on a stock Android phone — including devices where GPU drivers are broken or missing. CPU-only by design is a compatibility choice, not a performance compromise.</p>
+        <p>Related: <a href="/gguf-android.html">GGUF on Android</a> · <a href="/architecture.html">LlamaBox architecture</a>.</p>
+""",
+        ),
+        (
+            "2026-07-30-best-private-ai-chat-android.html",
+            "2026-07-30",
+            "Best private AI chat apps for Android in 2026",
+            "A no-nonsense list of Android apps that keep AI chat local and private — plus what makes LlamaBox different.",
+            """
+        <p>Privacy-first AI chat on Android breaks into two camps: apps that promise not to read your messages, and apps that genuinely cannot. This list focuses on the second camp — local inference, no cloud round-trip.</p>
+        <h2>The shortlist</h2>
+        <ol>
+          <li><strong>LlamaBox</strong> — CPU-only offline chat for Android 7+ arm64. GGUF models, no GPU dependency, vision support.</li>
+          <li><strong>PocketPal AI</strong> — Open-source GGUF chat with optional GPU layers. Great for users comfortable side-loading and tuning.</li>
+          <li><strong>MLC Chat</strong> — Reference app for MLC LLM compiled models. Fast on supported hardware; narrower model selection.</li>
+          <li><strong>Duck.ai / Venice AI</strong> — Privacy-oriented cloud assistants. Not local, but marketed as privacy-first.</li>
+        </ol>
+        <h2>What to check before trusting “private”</h2>
+        <ul>
+          <li>Does inference happen on-device or on a server?</li>
+          <li>Is there an account requirement?</li>
+          <li>Are telemetry / crash reports opt-out or opt-in?</li>
+          <li>Can the app work in airplane mode after setup?</li>
+        </ul>
+        <h2>LlamaBox’s angle</h2>
+        <p>We do not ask for trust; we remove the need for it. CPU-only inference means LlamaBox runs on the widest range of Android devices, including phones without working accelerated compute. No GPU toggle, no driver lottery, no cloud path for prompts.</p>
+        <p>Get started: <a href="/how-to-run-llm-on-android.html">how to run an LLM on Android</a> · <a href="/waitlist.html">join the waitlist</a>.</p>
+""",
+        ),
+        (
+            "2026-07-30-what-is-offline-ai-chat.html",
+            "2026-07-30",
+            "What is offline AI chat?",
+            "Offline AI chat means the language model runs on your device, not a server. Here is how it works, what it can do, and where it still needs the internet.",
+            """
+        <p><strong>Offline AI chat</strong> is a chat interface where the language model executes locally on your phone, tablet, or laptop instead of on a vendor’s server. After the model file is downloaded, the app does not need the internet to generate responses.</p>
+        <h2>How it works</h2>
+        <p>A quantized model file (for LlamaBox, a GGUF) is stored on the device. The app loads it into memory, runs the transformer forward pass on the local processor, and streams tokens back to the chat UI. Every step stays on the device.</p>
+        <h2>What you can do offline</h2>
+        <ul>
+          <li>Draft, rephrase, summarize, and answer questions</li>
+          <li>Run roleplay or creative writing locally</li>
+          <li>Process local images with a vision-capable model</li>
+          <li>Keep a chat history that never leaves the handset</li>
+        </ul>
+        <h2>What still needs internet</h2>
+        <ul>
+          <li>Downloading a new model the first time</li>
+          <li>Web browsing, live search, or cloud-tool integrations</li>
+          <li>Frontier-scale reasoning models that do not fit device RAM</li>
+        </ul>
+        <h2>Why it matters</h2>
+        <p>Cloud chat requires you to trust the provider’s privacy policy, data retention, and security posture. Offline AI chat removes that dependency. The guarantee is architectural, not contractual.</p>
+        <p>LlamaBox runs offline AI chat on Android with GGUF models and CPU-only inference. <a href="/how-to-run-llm-on-android.html">Set it up</a> or read the <a href="/architecture.html">architecture</a>.</p>
+""",
+        ),
+        (
+            "2026-07-30-why-cpu-only.html",
+            "2026-07-30",
+            "Why LlamaBox is CPU-only by design",
+            "GPU acceleration sounds better on paper. For Android, CPU-only is the more honest default — and the one that reaches the most users.",
+            """
+        <p>Every local LLM project eventually faces the GPU question. On Android, the honest answer is that GPU compute is a gamble, not a guarantee.</p>
+        <h2>The driver lottery</h2>
+        <p>OpenCL support varies by chipset, vendor, Android version, and sometimes carrier build. A Snapdragon 8 Gen 3 may expose a compute path that a MediaTek Dimensity or an older Exynos does not. The same app, same model, same GGUF file can behave differently on two phones that look identical in a spec sheet.</p>
+        <h2>The user-visible cost</h2>
+        <p>A “GPU acceleration” toggle that fails silently is worse than no toggle at all. Users blame the app, leave a one-star review, and uninstall. The CPU path is predictable: slower tokens, but the same tokens on every supported device.</p>
+        <h2>What CPU-only actually means</h2>
+        <p>LlamaBox uses llama.cpp’s ARM NEON path with a fixed thread count. Mid-range phones, old flagships, and budget devices all run the same inference code. The trade-off is modest tok/s and smaller models, but the product works for the widest audience.</p>
+        <h2>Honest exceptions</h2>
+        <ul>
+          <li>Flagship users with working GPU drivers could get faster generation</li>
+          <li>Vision encoding stays on CPU anyway to keep the UI responsive</li>
+          <li>Future hardware may make a GPU path worth revisiting — but only after real-device validation</li>
+        </ul>
+        <h2>The bottom line</h2>
+        <p>CPU-only is not a temporary limitation. It is a scope decision that removes an entire class of device-specific bugs and lets LlamaBox target every Android 7+ arm64 phone with enough RAM. Read more in <a href="/architecture.html">architecture</a>.</p>
+""",
+        ),
     ]
 
     blog_cards = []
@@ -687,11 +897,18 @@ def main():
         ("/how-to-run-llm-on-android.html", "0.9", "weekly"),
         ("/vs-chatgpt.html", "0.8", "monthly"),
         ("/vs-ollama.html", "0.8", "monthly"),
+        ("/vs-pocketpal.html", "0.8", "monthly"),
+        ("/vs-mlc-llm.html", "0.8", "monthly"),
         ("/blog/", "0.75", "weekly"),
         ("/blog/2026-07-28-airplane-mode-ai.html", "0.7", "monthly"),
         ("/blog/2026-07-28-best-small-gguf-android.html", "0.7", "monthly"),
         ("/blog/2026-07-28-vision-encoder-cpu.html", "0.7", "monthly"),
         ("/blog/2026-07-30-phone-faster-than-pc.html", "0.7", "monthly"),
+        ("/blog/2026-07-30-llamabox-vs-pocketpal.html", "0.7", "monthly"),
+        ("/blog/2026-07-30-llamabox-vs-mlc-llm.html", "0.7", "monthly"),
+        ("/blog/2026-07-30-best-private-ai-chat-android.html", "0.7", "monthly"),
+        ("/blog/2026-07-30-what-is-offline-ai-chat.html", "0.7", "monthly"),
+        ("/blog/2026-07-30-why-cpu-only.html", "0.7", "monthly"),
         ("/llms.txt", "0.6", "monthly"),
         ("/llms-full.txt", "0.6", "monthly"),
     ]
