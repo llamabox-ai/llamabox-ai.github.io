@@ -1,0 +1,23 @@
+{
+  "domain": "llamabox-ai.github.io",
+  "competitor": "mlc.ai",
+  "location_id": 2840,
+  "total_gap_keywords": 238,
+  "returned": 100,
+  "top_relevant_gaps": [
+    {"keyword": "what is an llm in ai", "volume": 1600, "cpc": 3.73, "kd": null},
+    {"keyword": "what is a llm in ai", "volume": 720, "cpc": 7.77, "kd": null},
+    {"keyword": "free llms", "volume": 1300, "cpc": 6.30, "kd": null},
+    {"keyword": "webllm", "volume": 880, "cpc": 7.52, "kd": null},
+    {"keyword": "llm software", "volume": 590, "cpc": 9.38, "kd": 41},
+    {"keyword": "mlc-llm", "volume": 480, "cpc": 24.70, "kd": null},
+    {"keyword": "mlc chat", "volume": 390, "cpc": null, "kd": 34},
+    {"keyword": "gbnf", "volume": 390, "cpc": null, "kd": null},
+    {"keyword": "llm chat", "volume": 210, "cpc": 7.48, "kd": 23},
+    {"keyword": "llm download", "volume": 140, "cpc": 15.79, "kd": 39},
+    {"keyword": "free llm online", "volume": 110, "cpc": 7.49, "kd": 26},
+    {"keyword": "android local llm", "volume": 70, "cpc": null, "kd": 28},
+    {"keyword": "mlc chat android", "volume": 70, "cpc": 9.76, "kd": 37}
+  ],
+  "note": "mlc.ai ranks for 238 keywords that llamabox-ai.github.io does not. Highest-volume opportunities are educational/definitional ('what is an llm'), free-LLM listicles, and MLC-branded comparison terms."
+}

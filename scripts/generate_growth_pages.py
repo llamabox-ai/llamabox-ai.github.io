@@ -66,6 +66,8 @@ FOOTER = """  <footer class="footer">
             <li><a href="/gguf-android.html">GGUF on Android</a></li>
             <li><a href="/llm-download.html">LLM download</a></li>
             <li><a href="/models.html">Model hub</a></li>
+            <li><a href="/what-is-an-llm.html">What is an LLM?</a></li>
+            <li><a href="/free-llms.html">Free LLMs</a></li>
             <li><a href="/how-to-run-llm-on-android.html">How-to guide</a></li>
             <li><a href="/vs-chatgpt.html">vs ChatGPT</a></li>
             <li><a href="/vs-ollama.html">vs Ollama</a></li>
@@ -325,6 +327,8 @@ def main():
           <a class="card-link glass" href="/gguf-android.html"><strong>GGUF on Android</strong><span>Quantizations, RAM, imports</span></a>
           <a class="card-link glass" href="/llm-download.html"><strong>LLM download</strong><span>Get GGUF models for Android</span></a>
           <a class="card-link glass" href="/models.html"><strong>Model hub</strong><span>GGUF models that run on Android</span></a>
+          <a class="card-link glass" href="/what-is-an-llm.html"><strong>What is an LLM?</strong><span>Explained for Android local use</span></a>
+          <a class="card-link glass" href="/free-llms.html"><strong>Free LLMs</strong><span>Open models you can run locally</span></a>
           <a class="card-link glass" href="/how-to-run-llm-on-android.html"><strong>How to run an LLM on Android</strong><span>Step-by-step tutorial</span></a>
           <a class="card-link glass" href="/vs-chatgpt.html"><strong>LlamaBox vs ChatGPT</strong><span>Honest comparison table</span></a>
           <a class="card-link glass" href="/vs-ollama.html"><strong>LlamaBox vs Ollama</strong><span>Phone-native vs desktop local</span></a>
@@ -657,6 +661,113 @@ def main():
   }
   </script>
 """ + faq_schema(faqs_how)
+
+    faqs_what_llm = [
+        ("What is an LLM in AI?", "A Large Language Model (LLM) is a neural network trained to predict and generate human-like text. It can answer questions, draft prose, summarize, translate, and help with code based on patterns learned from training data."),
+        ("What is a local LLM?", "A local LLM runs on your own hardware instead of a remote API. With LlamaBox, the model file lives on your Android phone and inference happens on the device CPU."),
+        ("Can you run an LLM on Android?", "Yes. Quantized GGUF models — especially small 0.5B–3B parameter versions — can run on Android phones with enough free RAM. LlamaBox is built specifically for this."),
+        ("What does quantization mean?", "Quantization reduces the number of bits used to store model weights, shrinking file size and RAM use. Q4_K_M is a common mobile-friendly format that balances quality and speed."),
+        ("Why run an LLM locally on a phone?", "Local inference keeps prompts and answers private, works offline, needs no account, and avoids API costs or rate limits. The tradeoff is smaller models and phone-class speed."),
+    ]
+    page(
+        "what-is-an-llm.html",
+        "What is an LLM? | Local LLM on Android Explained | LlamaBox",
+        "What is an LLM? Learn what Large Language Models are and how LlamaBox runs them locally on Android — private, offline, no cloud inference.",
+        article(
+            "Explain",
+            "What is an LLM?",
+            "Large Language Models power ChatGPT, Claude, and Gemini. LlamaBox brings the same idea to your Android phone — locally.",
+            f"""
+        <h2>LLM definition (simple)</h2>
+        <p>An <strong>LLM (Large Language Model)</strong> is a machine-learning model trained on a huge corpus of text. It learns to predict the next token — roughly, the next word or sub-word — and in doing so it learns to answer questions, write, summarize, translate, and help with code.</p>
+        <p>Examples you may know: GPT-4, Claude, Gemini, Llama, Qwen, Mistral. Most people interact with them through cloud chat apps. LlamaBox lets you run compatible open-weight models directly on an Android phone.</p>
+        <h2>From cloud LLM to local LLM</h2>
+        <p>A <strong>local LLM</strong> is the same kind of model, but the file is stored on your device and inference happens on your hardware. LlamaBox loads a quantized GGUF file into app memory and runs it with llama.cpp on the phone CPU. Nothing is sent to a chat API.</p>
+        <h2>Key terms</h2>
+        <ul>
+          <li><strong>Parameters</strong> — the "size" of a model, often 0.5B, 1B, 3B, 7B, etc. More parameters usually means more capability but more RAM and slower inference.</li>
+          <li><strong>Quantization</strong> — compressing weights to fewer bits. Q4_K_M is a popular mobile format that keeps most quality while cutting size roughly in half versus float16.</li>
+          <li><strong>GGUF</strong> — the file format used by llama.cpp to store quantized model weights and metadata.</li>
+          <li><strong>Context window</strong> — how many tokens the model can "remember" at once. LlamaBox defaults to 2048.</li>
+        </ul>
+        <h2>What can a local LLM on Android do?</h2>
+        <ul>
+          <li>Draft notes, messages, and journal entries offline</li>
+          <li>Answer questions without sending data to a vendor</li>
+          <li>Summarize text you paste into the app</li>
+          <li>Help with coding questions in offline environments</li>
+          <li>Analyze images with a vision-capable model + mmproj</li>
+        </ul>
+        <h2>Tradeoffs vs cloud chatbots</h2>
+        <div class="table-wrap">
+          <table class="compare-table">
+            <thead><tr><th></th><th>Cloud LLM (ChatGPT, etc.)</th><th>Local LLM on Android (LlamaBox)</th></tr></thead>
+            <tbody>
+              <tr><td>Data leaves device</td><td>Yes</td><td>No</td></tr>
+              <tr><td>Works offline</td><td>No</td><td>Yes</td></tr>
+              <tr><td>Requires account</td><td>Usually yes</td><td>No</td></tr>
+              <tr><td>Model size</td><td>Huge frontier models</td><td>Small quantized models (0.5B–4B)</td></tr>
+              <tr><td>Speed</td><td>Fast (datacenter GPUs)</td><td>Slower (phone CPU)</td></tr>
+              <tr><td>Cost after setup</td><td>Subscription / per-token</td><td>Free (open weights)</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>Next: <a href="/models.html">GGUF models for Android</a> · <a href="/how-to-run-llm-on-android.html">how to run an LLM on Android</a> · <a href="/free-llms.html">free LLMs you can run locally</a> · <a href="/offline-ai-android.html">offline AI Android</a>.</p>
+        {faq_html(faqs_what_llm)}
+""",
+        ),
+        extra_head=faq_schema(faqs_what_llm),
+    )
+
+    faqs_free_llms = [
+        ("Are there free LLMs I can run locally?", "Yes. Many open-weight LLMs are released under permissive licenses and can be downloaded as GGUF files for free. You pay only with your own device RAM and electricity."),
+        ("What is the best free LLM for Android?", "For Android phones, small Q4_K_M models like Qwen2.5 1.5B, SmolLM2 1.7B, and Gemma 3 4B are popular free options that balance capability and RAM use."),
+        ("Do free local LLMs need an API key?", "No. Once you download the GGUF model file, inference is local. There is no API key, subscription, or token metering."),
+        ("Can free LLMs match ChatGPT?", "Not in raw capability. Free local models are smaller and run on phone CPUs. They excel at privacy, offline use, and cost — not at frontier reasoning or tool use."),
+        ("Where can I download free LLMs?", "Hugging Face hosts the largest catalog of GGUF models. LlamaBox also includes an in-app hub with curated, Android-tested models."),
+    ]
+    page(
+        "free-llms.html",
+        "Free LLMs You Can Run Locally on Android | LlamaBox",
+        "Discover free LLMs that run locally on Android with LlamaBox. Open-weight GGUF models, no API keys, no subscriptions, private offline chat.",
+        article(
+            "Free LLMs",
+            "Free LLMs you can run locally.",
+            "The best price for local AI is zero. These open-weight models run on Android phones with LlamaBox — no account, no cloud, no meter.",
+            f"""
+        <h2>Why free LLMs matter</h2>
+        <p>Open-weight LLMs let anyone download the model weights and run them locally. There is no per-token bill, no subscription gate, and no vendor sees your prompts. For Android users, that means a free, private AI chatbot that works offline after the model file is on the device.</p>
+        <h2>Best free LLMs for Android (2026)</h2>
+        <div class="table-wrap">
+          <table class="compare-table">
+            <thead><tr><th>Model</th><th>Size class</th><th>Best for</th><th>Approx. RAM</th><th>License</th></tr></thead>
+            <tbody>
+              <tr><td>Qwen2.5-Instruct</td><td>0.5B–3B Q4_K_M</td><td>General chat, coding help</td><td>0.5–2 GB</td><td>Apache 2.0 / Qwen License</td></tr>
+              <tr><td>SmolLM2</td><td>360M–1.7B Q4_K_M</td><td>Fast answers on low-RAM phones</td><td>0.3–1 GB</td><td>Apache 2.0</td></tr>
+              <tr><td>Gemma 3 4B IT</td><td>4B Q4_K_M</td><td>Balanced quality, vision capable</td><td>1.5–3 GB</td><td>Gemma Terms of Use</td></tr>
+              <tr><td>Llama 3.2 Instruct</td><td>1B–3B Q4_K_M</td><td>General instruction following</td><td>0.5–2 GB</td><td>Llama 3.2 License</td></tr>
+              <tr><td>Phi-3 / Phi-4 Mini</td><td>3.8B Q4_K_M</td><td>Strong reasoning for the size</td><td>1.5–2.5 GB</td><td>MIT</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>Always check the exact license for each GGUF upload before commercial use. License terms apply to the weights, not to LlamaBox itself.</p>
+        <h2>How to run these free LLMs on Android</h2>
+        <ol>
+          <li>Install LlamaBox from the waitlist or Play Store beta.</li>
+          <li>Open the in-app model hub or import a GGUF from Hugging Face.</li>
+          <li>Load the model and chat. No API key needed.</li>
+        </ol>
+        <h2>Free LLMs vs free cloud chatbots</h2>
+        <ul>
+          <li><strong>Free cloud tiers</strong> (ChatGPT, Claude, Gemini) are free to the user but still send your data to a vendor server.</li>
+          <li><strong>Free local LLMs</strong> are free and keep everything on your device. The cost is device RAM and some setup time.</li>
+        </ul>
+        <p>Related: <a href="/models.html">model hub</a> · <a href="/llm-download.html">LLM download</a> · <a href="/how-to-run-llm-on-android.html">how-to guide</a> · <a href="/what-is-an-llm.html">what is an LLM</a>.</p>
+        {faq_html(faqs_free_llms)}
+""",
+        ),
+        extra_head=faq_schema(faqs_free_llms),
+    )
 
     page(
         "how-to-run-llm-on-android.html",
@@ -1019,8 +1130,8 @@ def main():
     # --- business / monetization pages ---
     page(
         "enterprise.html",
-        "Enterprise offline AI for Android | LlamaBox",
-        "Deploy private, offline AI chat on Android devices for teams in journalism, healthcare, field work, education, and defense. No cloud inference.",
+        "Offline AI for enterprise teams | LlamaBox",
+        "Deploy private, offline AI chat on Android devices for enterprise teams in journalism, healthcare, field work, education, and defense. No cloud inference.",
         article(
             "Enterprise",
             "Offline AI for teams that cannot use cloud chat.",
@@ -1034,17 +1145,40 @@ def main():
           <li><strong>Education &amp; exam settings</strong> — AI assistance without internet or account requirements</li>
           <li><strong>Defense &amp; government edge</strong> — air-gapped deployment target on standard Android hardware</li>
         </ul>
-        <h2>What enterprise deployment looks like</h2>
+        <h2>Deployment options</h2>
         <ul>
-          <li>Private APK distribution or managed Play Store track</li>
-          <li>Curated GGUF model set per organization</li>
-          <li>Optional MDM integration and configuration profiles</li>
-          <li>Commercial license and support channel</li>
+          <li><strong>Private APK distribution</strong> — sideload or internal enterprise app store</li>
+          <li><strong>Managed Play Store track</strong> — closed testing for approved organization accounts</li>
+          <li><strong>Curated GGUF model set</strong> — per-organization model whitelist and defaults</li>
+          <li><strong>MDM-ready configuration</strong> — provisioning via managed app config</li>
+          <li><strong>Commercial license &amp; support</strong> — clear IP terms and an engineering channel</li>
         </ul>
         <h2>Why CPU-only is an enterprise feature</h2>
         <p>Accelerated compute on Android is a driver lottery across chipsets. CPU-only inference means the same model path works on every supported Android 7+ arm64 device in the fleet. Predictability beats peak tok/s when you are supporting hundreds of heterogeneous handsets.</p>
-        <h2>Talk to us</h2>
-        <p>Email <a href="mailto:aalhad.dev@gmail.com?subject=LlamaBox%20enterprise%20inquiry">aalhad.dev@gmail.com</a> or use the <a href="/waitlist.html">waitlist</a> and check “I’m interested in commercial / enterprise use.”</p>
+        <h2 id="contact">Contact us</h2>
+        <p>Tell us about your fleet, use case, and timeline. No pricing yet — we are prioritizing design partners and pilots.</p>
+        <form class="waitlist-form glass" action="mailto:aalhad.dev@gmail.com?subject=LlamaBox%20enterprise%20inquiry" method="POST" enctype="text/plain" style="margin-top:1rem">
+          <label>Name <span class="req">*</span>
+            <input required type="text" name="name" placeholder="Your name">
+          </label>
+          <label>Work email <span class="req">*</span>
+            <input required type="email" name="email" placeholder="you@organization.com" autocomplete="email">
+          </label>
+          <label>Company / organization <span class="req">*</span>
+            <input required type="text" name="company" placeholder="e.g. Mythos Labs">
+          </label>
+          <label>Role
+            <input type="text" name="role" placeholder="e.g. CTO, Product lead, Security officer">
+          </label>
+          <label>Estimated devices
+            <input type="text" name="devices" placeholder="e.g. 50–500">
+          </label>
+          <label>Use case (optional)
+            <textarea name="use_case" rows="3" placeholder="Journalism, healthcare, field work, education, defense, other..."></textarea>
+          </label>
+          <button type="submit" class="btn btn-primary" style="width:100%">Request enterprise info</button>
+          <p class="form-note">This opens your email client pre-filled with the inquiry. Prefer web mail? Send directly to <a href="mailto:aalhad.dev@gmail.com?subject=LlamaBox%20enterprise%20inquiry">aalhad.dev@gmail.com</a> or use the <a href="/waitlist.html">waitlist</a> and check “I’m interested in commercial / enterprise use.”</p>
+        </form>
 """,
         ),
     )

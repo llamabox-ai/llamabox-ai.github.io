@@ -9,7 +9,7 @@
 LlamaBox is a free, open-source, CPU-only, on-device LLM chat app for Android. Its core differentiators are radical privacy (no cloud, no account, no telemetry), broad hardware compatibility (Android 7+ arm64), and the ability to run GGUF models entirely offline. The product sits at the intersection of three fast-moving market currents:
 
 1. **Mainstream demand for private AI alternatives to ChatGPT** — users are actively searching for "private ChatGPT alternative Android," "offline AI chat," and "private AI chat."
-2. ** maturation of small, quantized, mobile-friendly LLMs** — July 2026 releases (PrismML Bonsai 27B, POCKET 35B, Qwen3 4B, Gemma 4) prove that local models are becoming practical for daily mobile use.
+2. **Maturation of small, quantized, mobile-friendly LLMs** — July 2026 releases (PrismML Bonsai 27B, POCKET 35B, Qwen3 4B, Gemma 4) prove that local models are becoming practical for daily mobile use.
 3. **Regulated and high-risk users who cannot trust cloud inference** — journalists, healthcare workers, defense/edge teams, NGOs, and privacy-phone users need auditable, offline AI.
 
 The strategy has four pillars:
@@ -94,10 +94,10 @@ Reddit is the primary discovery channel for local AI on Android. The strategy is
 | On-device LLM | [Running a Local LLM on Android](https://reddit.com/r/LocalLLM/comments/1s3jbgd/running_a_local_llm_on_android/) | r/LocalLLM | #3 SERP | Beginner setup outline; ask follow-up questions |
 | Local LLM Android | [24/7 Headless AI Server on Xiaomi 12 Pro](https://www.reddit.com/r/LocalLLaMA/comments/1sl6931/247_headless_ai_server_on_xiaomi_12_pro/) | r/LocalLLaMA | 929 upvotes, 235 comments | Engage on tooling improvements; link to CPU optimization content |
 | Local LLM Android | [Did Google hide the best version of Gemma 4?](https://www.reddit.com/r/LocalLLaMA/comments/1sru6zi/did_google_hide_the_best_version_of_gemma_4_e4b/) | r/LocalLLaMA | 131 upvotes, 44 comments | Android power-user thread; discuss model-runtime compatibility |
-| Local LLM Android | [Using Local LLM on Mobile in Mountain](https://reddit.com/r/LocalLLM/comments/1uiphvb/using_local_llm_on_mobile_in_mountain_no_internet/) | r/LocalLLM | 59 upvotes, 62 comments | Pure offline use case; suggest LlamaBox + small models |
+| Local LLM Android | [Using Local LLM on Mobile in Mountain](https://www.reddit.com/r/LocalLLM/comments/1uiphvb/using_local_llm_on_mobile_in_mountain_no_internet/) | r/LocalLLM | 59 upvotes, 62 comments | Pure offline use case; suggest LlamaBox + small models |
 | Private ChatGPT alt | [PokeClaw — Gemma 4 autonomously controls Android](https://www.reddit.com/r/LocalLLaMA/comments/1sdv3lo/pokeclaw_first_working_app_that_uses_gemma_4_to/) | r/LocalLLaMA | 335 upvotes, 175 comments | Local agent UI / privacy guarantees discussion |
 | Private ChatGPT alt | [Qwen3 4B ~20 tok/s on Galaxy S24](https://www.reddit.com/r/LocalLLaMA/comments/1knjm0s/qwen3_4b_running_at_20_toks_on_samsung_galaxy_24/) | r/LocalLLaMA | 123 upvotes, 14 comments | On-device speed vs ChatGPT; mention privacy-first alternative |
-| Offline AI Android | [Run LLMs locally — no API keys](https://reddit.com/r/androiddev/comments/1u2wclh/run_llms_locally_no_api_keys_or_hidden_fees_gemma/) | r/androiddev | 67 upvotes, 9 comments | Developer tooling / SDK adoption angle |
+| Offline AI Android | [Run LLMs locally — no API keys](https://www.reddit.com/r/androiddev/comments/1u2wclh/run_llms_locally_no_api_keys_or_hidden_fees_gemma/) | r/androiddev | 67 upvotes, 9 comments | Developer tooling / SDK adoption angle |
 | Offline AI Android | [Android audiobook reader with Kokoro TTS offline](https://www.reddit.com/r/LocalLLaMA/comments/1rop1rp/i_built_an_android_audiobook_reader_that_runs/) | r/LocalLLaMA | 90 upvotes | Multimodal offline AI / TTS use case |
 
 #### 2.2 Reddit Engagement Rules
@@ -300,3 +300,5 @@ LlamaBox should pursue a **dual-track revenue model:** enterprise/OEM first for 
 ---
 
 *End of document. Next review date: 2026-08-30.*
+
+File saved to: D:/coding/llamabox-ai.github.io/docs/business/visibility-monetization-strategy-2026-07-30.md
