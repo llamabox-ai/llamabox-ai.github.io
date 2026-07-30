@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <meta name="author" content="LlamaBox AI">
+  <meta name="theme-color" content="#080808">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='22' fill='%230F0F0F' stroke='%23D4A54A' stroke-width='4'/%3E%3Ctext x='50' y='68' font-family='Georgia,serif' font-size='48' font-weight='700' fill='%23D4A54A' text-anchor='middle'%3ELB%3C/text%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/style.css">
+  <link rel="alternate" type="text/plain" title="LLM brief" href="https://llamabox-ai.github.io/llms.txt">
+
+  <title>Private AI for Android | Offline AI Chatbot | LlamaBox</title>
+  <meta name="description" content="Get private AI on Android with LlamaBox. Local LLM chatbot runs offline on your phone — no cloud, no account, no data sharing.">
+  <link rel="canonical" href="https://llamabox-ai.github.io/private-ai-android.html">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="LlamaBox">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:url" content="https://llamabox-ai.github.io/private-ai-android.html">
+  <meta property="og:title" content="Private AI for Android | Offline AI Chatbot | LlamaBox">
+  <meta property="og:description" content="Get private AI on Android with LlamaBox. Local LLM chatbot runs offline on your phone — no cloud, no account, no data sharing.">
+  <meta property="og:image" content="https://llamabox-ai.github.io/assets/screenshot-1-home.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Private AI for Android | Offline AI Chatbot | LlamaBox">
+  <meta name="twitter:description" content="Get private AI on Android with LlamaBox. Local LLM chatbot runs offline on your phone — no cloud, no account, no data sharing.">
+  <meta name="twitter:image" content="https://llamabox-ai.github.io/assets/screenshot-1-home.png">
+  <script type="application/ld+json">
+  {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "What is private AI on Android?", "acceptedAnswer": {"@type": "Answer", "text": "Private AI on Android means the language model runs inference directly on your phone instead of sending prompts to a vendor server. Your data never leaves the device."}}, {"@type": "Question", "name": "Is LlamaBox a private AI chatbot for Android?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. LlamaBox loads a quantized GGUF model into app memory and runs it on the phone CPU. There is no cloud inference endpoint, account, or telemetry."}}, {"@type": "Question", "name": "How is local AI more private than cloud 'private mode'?", "acceptedAnswer": {"@type": "Answer", "text": "Cloud 'private mode' still sends tokens to a server with retention policies and subprocessors. Local AI removes the server from the chat path entirely."}}, {"@type": "Question", "name": "Can private AI work offline?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. Once a model is downloaded, LlamaBox works in airplane mode. Private AI and offline AI are the same architecture here."}}, {"@type": "Question", "name": "What models can I use with LlamaBox?", "acceptedAnswer": {"@type": "Answer", "text": "Any GGUF model that fits your phone's RAM. Start with small Q4_K_M quantizations (0.5B–3B class) and scale up on devices with more memory."}}, {"@type": "Question", "name": "Is LlamaBox open source?", "acceptedAnswer": {"@type": "Answer", "text": "The public codebase will be released under AGPL-3.0 when the closed beta ends. A separate commercial license is available for proprietary use."}}]}
+  </script>
+</head>
+<body>
+  <div class="bg-mesh" aria-hidden="true"></div>
+  <div class="bg-noise" aria-hidden="true"></div>
+  <header class="nav" id="nav">
+    <div class="nav-inner">
+      <a href="/" class="wordmark" aria-label="LlamaBox home">Llama<span>Box</span></a>
+      <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="nav-links" id="navLinks" aria-label="Primary">
+        <a href="/#features">Features</a>
+        <a href="/guides.html">Guides</a>
+        <a href="/blog/">Blog</a>
+        <a href="/architecture.html">Architecture</a>
+        <a href="https://github.com/llamabox-ai" rel="noopener">GitHub</a>
+        <a class="btn btn-primary btn-sm" href="/waitlist.html">Join waitlist</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+
+    <section class="section page-hero">
+      <div class="wrap narrow">
+        <div class="eyebrow">Private AI</div>
+        <h1>Private AI for Android.</h1>
+        <p class="lead">A private AI chatbot that runs on your phone, not in someone else's cloud. LlamaBox keeps prompts, answers, and history on-device.</p>
+      </div>
+    </section>
+    <section class="section section-tight">
+      <div class="wrap narrow prose reveal is-in">
+
+        <h2>What is private AI on Android?</h2>
+        <p><strong>Private AI on Android</strong> means the large language model runs inference directly on your phone. Your prompts, generated answers, and chat history never leave the device. There is no cloud API call, no vendor retention policy, and no account graph to trust.</p>
+        <h2>Why local beats cloud "private mode"</h2>
+        <p>Many chatbots offer a "private mode," but that usually means the vendor promises not to train on your data. The prompts still travel to a server, are subject to subpoenas and breaches, and rely on a privacy policy you cannot verify. LlamaBox removes the server from the path entirely.</p>
+        <ul>
+          <li><strong>Cloud private mode:</strong> data is encrypted in transit and stored under a vendor policy.</li>
+          <li><strong>LlamaBox local AI:</strong> data never leaves the device. The architecture is the privacy guarantee.</li>
+        </ul>
+        <h2>How LlamaBox keeps AI private</h2>
+        <ul>
+          <li>GGUF models load into app memory and run via llama.cpp on the phone CPU</li>
+          <li>No account required and no telemetry by architecture</li>
+          <li>Works offline after model download — airplane mode included</li>
+          <li>Open source under AGPL-3.0 (public release after closed beta)</li>
+          <li>Commercial license available for closed-source deployments</li>
+        </ul>
+        <h2>LlamaBox vs other private AI options</h2>
+        <div class="table-wrap">
+          <table class="compare-table">
+            <thead><tr><th></th><th>LlamaBox</th><th>Cloud private mode</th><th>Other local apps</th></tr></thead>
+            <tbody>
+              <tr><td>Runs on Android phone</td><td>Yes — native app</td><td>Web/app wrapper</td><td>Varies</td></tr>
+              <tr><td>Prompts leave device</td><td>No</td><td>Yes</td><td>Usually no</td></tr>
+              <tr><td>Works offline</td><td>Yes</td><td>No</td><td>Sometimes</td></tr>
+              <tr><td>Open weights / GGUF</td><td>Yes</td><td>Vendor model</td><td>Sometimes</td></tr>
+              <tr><td>No account required</td><td>Yes</td><td>No</td><td>Varies</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <h2>Use cases for private AI on Android</h2>
+        <ul>
+          <li><strong>Personal journaling and drafting</strong> — no cloud retention of intimate notes</li>
+          <li><strong>Healthcare and therapy notes</strong> — local inference reduces compliance surface area</li>
+          <li><strong>Journalism and sensitive sourcing</strong> — sources and drafts stay on-device</li>
+          <li><strong>Legal and finance drafts</strong> — client-confidential material never touches a vendor</li>
+          <li><strong>Travel and field work</strong> — private AI that works without internet</li>
+        </ul>
+        <h2>How to start</h2>
+        <ol>
+          <li>Join the LlamaBox beta waitlist for APK or Play Store access.</li>
+          <li>Download a small GGUF model (0.5B–3B Q4_K_M) over Wi-Fi.</li>
+          <li>Chat offline. No API key, no account, no cloud.</li>
+        </ol>
+        <p>Related: <a href="/private-chatgpt-alternative.html">private ChatGPT alternative</a> · <a href="/offline-ai-android.html">offline AI Android</a> · <a href="/on-device-llm.html">on-device AI</a> · <a href="/vs-chatgpt.html">vs ChatGPT</a> · <a href="/best-local-llm-apps-android.html">best local LLM apps</a>.</p>
+        <h2 id="faq">FAQ</h2>
+<div class="faq-list">
+<details class="faq-item" open><summary>What is private AI on Android?</summary><div class="ans">Private AI on Android means the language model runs inference directly on your phone instead of sending prompts to a vendor server. Your data never leaves the device.</div></details>
+<details class="faq-item"><summary>Is LlamaBox a private AI chatbot for Android?</summary><div class="ans">Yes. LlamaBox loads a quantized GGUF model into app memory and runs it on the phone CPU. There is no cloud inference endpoint, account, or telemetry.</div></details>
+<details class="faq-item"><summary>How is local AI more private than cloud 'private mode'?</summary><div class="ans">Cloud 'private mode' still sends tokens to a server with retention policies and subprocessors. Local AI removes the server from the chat path entirely.</div></details>
+<details class="faq-item"><summary>Can private AI work offline?</summary><div class="ans">Yes. Once a model is downloaded, LlamaBox works in airplane mode. Private AI and offline AI are the same architecture here.</div></details>
+<details class="faq-item"><summary>What models can I use with LlamaBox?</summary><div class="ans">Any GGUF model that fits your phone's RAM. Start with small Q4_K_M quantizations (0.5B–3B class) and scale up on devices with more memory.</div></details>
+<details class="faq-item"><summary>Is LlamaBox open source?</summary><div class="ans">The public codebase will be released under AGPL-3.0 when the closed beta ends. A separate commercial license is available for proprietary use.</div></details>
+</div>
+
+      </div>
+    </section>
+
+
+    <section class="section">
+      <div class="wrap">
+        <div class="final reveal">
+          <div class="eyebrow" style="justify-content:center">Closed beta</div>
+          <h2>Try private offline AI on Android.</h2>
+          <p class="lead">Join the waitlist. No spam — beta access and release notes only.</p>
+          <div class="cta-row">
+            <a class="btn btn-primary" href="/waitlist.html">Join the waitlist</a>
+            <a class="btn btn-ghost" href="/download.html">Download status</a>
+            <a class="btn btn-ghost" href="https://github.com/llamabox-ai" rel="noopener">GitHub</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+  <footer class="footer">
+    <div class="wrap">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="wordmark">Llama<span>Box</span></div>
+          <p>Private offline AI chat for Android. On-device GGUF inference powered by llama.cpp.</p>
+        </div>
+        <div>
+          <h4>Product</h4>
+          <ul>
+            <li><a href="/waitlist.html">Waitlist</a></li>
+            <li><a href="/download.html">Download</a></li>
+            <li><a href="/#features">Features</a></li>
+            <li><a href="/#compare">Compare</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Guides</h4>
+          <ul>
+            <li><a href="/offline-ai-android.html">Offline AI Android</a></li>
+            <li><a href="/on-device-llm.html">On-device LLM</a></li>
+            <li><a href="/private-chatgpt-alternative.html">Private ChatGPT alt</a></li>
+            <li><a href="/private-ai-android.html">Private AI Android</a></li>
+            <li><a href="/chatgpt-android-offline.html">ChatGPT offline</a></li>
+            <li><a href="/gguf-android.html">GGUF on Android</a></li>
+            <li><a href="/llm-download.html">LLM download</a></li>
+            <li><a href="/how-to-run-llm-on-android.html">How-to guide</a></li>
+            <li><a href="/vs-chatgpt.html">vs ChatGPT</a></li>
+            <li><a href="/vs-ollama.html">vs Ollama</a></li>
+            <li><a href="/vs-pocketpal.html">vs PocketPal AI</a></li>
+            <li><a href="/vs-mlc-llm.html">vs MLC LLM</a></li>
+            <li><a href="/best-local-llm-apps-android.html">Best local LLM apps</a></li>
+            <li><a href="/blog/">Blog</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Business</h4>
+          <ul>
+            <li><a href="/enterprise.html">Enterprise</a></li>
+            <li><a href="/commercial-license.html">Commercial license</a></li>
+            <li><a href="/partners.html">Partners</a></li>
+            <li><a href="/investors.html">Investors &amp; acquisitions</a></li>
+            <li><a href="/press-kit.html">Press kit</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Developers</h4>
+          <ul>
+            <li><a href="/architecture.html">Architecture</a></li>
+            <li><a href="/llms.txt">llms.txt</a></li>
+            <li><a href="/privacy.html">Privacy</a></li>
+            <li><a href="https://github.com/llamabox-ai" rel="noopener">GitHub</a></li>
+            <li><a href="mailto:aalhad.dev@gmail.com">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+      <p class="footer-legal">Source dual-licensed AGPL-3.0 (open-source) and a separate commercial license. “LlamaBox” is a reserved trademark. Full public source lands when closed beta ends. CPU-only inference by design.</p>
+      <div class="footer-bottom">
+        <span>© 2026 LlamaBox AI · Mythos Labs</span>
+        <span>Package com.llamabox · Android 7.0+</span>
+      </div>
+    </div>
+  </footer>
+  <script src="/assets/site.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,19 @@
+{
+  "keyword": "mlc chat android",
+  "location_id": 2840,
+  "platform_id": 1,
+  "serp_id": "e34ae14629661a967758a2b62f7de6d4",
+  "serp_snapshot_id": "e34ae14629661a967758a2b62f7de6d4.2026-07-30",
+  "total_organic": 8,
+  "serp_features": ["AI_OVERVIEW"],
+  "organic_results": [
+    {"position": 1, "domain": "mlc.ai", "url": "https://llm.mlc.ai/", "title": "MLC LLM | Home", "da": 39, "pa": 43, "cf": 41, "tf": 15, "rd": 330, "bl": 632},
+    {"position": 2, "domain": "github.com", "url": "https://github.com/mlc-ai/binary-mlc-llm-libs/releases", "title": "Releases · mlc-ai/binary-mlc-llm-libs", "da": 97, "pa": 63, "cf": 11, "tf": 12, "rd": 15, "bl": 58},
+    {"position": 3, "domain": "mlc.ai", "url": "https://llm.mlc.ai/docs/deploy/android.html", "title": "Android SDK — mlc-llm 0.1.0 documentation", "da": 39, "pa": 39, "cf": 35, "tf": 8, "rd": 28, "bl": 51},
+    {"position": 4, "domain": "reddit.com", "url": "https://www.reddit.com/r/LocalLLaMA/comments/13ctg4c/project_mlc_llm_for_android/", "title": "[Project] MLC LLM for Android : r/LocalLLaMA", "da": 92, "pa": 53, "rd": 1, "bl": 1},
+    {"position": 5, "domain": "apple.com", "url": "https://apps.apple.com/us/app/mlc-chat/id6448482937", "title": "MLC Chat - App Store - Apple", "da": 99, "pa": 67, "cf": 24, "tf": 13, "rd": 44, "bl": 206},
+    {"position": 6, "domain": "google.com", "url": "https://play.google.com/store/apps/details?id=in.llmchat", "title": "LLMChat - Apps on Google Play", "da": 99, "pa": 52, "rd": 1, "bl": 1},
+    {"position": 7, "domain": "mlc.ai", "url": "https://llm.mlc.ai/docs/get_started/quick_start", "title": "Quick Start — mlc-llm 0.1.0 documentation", "da": 39, "pa": 35, "cf": 40, "tf": 11, "rd": 27, "bl": 38},
+    {"position": 8, "domain": "updatestar.com", "url": "https://mlc-chat.updatestar.com/", "title": "MLC Chat - Download", "da": 60, "pa": 33, "cf": 1, "rd": 0, "bl": 0}
+  ]
+}

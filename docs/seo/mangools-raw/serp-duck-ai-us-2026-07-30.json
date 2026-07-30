@@ -1,0 +1,19 @@
+{
+  "keyword": "duck ai",
+  "location_id": 2840,
+  "platform_id": 1,
+  "serp_id": "e8d64c7e3dc636028ba5ad5b27a1a8bc",
+  "serp_snapshot_id": "e8d64c7e3dc636028ba5ad5b27a1a8bc.2026-07-30",
+  "total_organic": 8,
+  "serp_features": ["PEOPLE_ALSO_ASK"],
+  "organic_results": [
+    {"position": 1, "domain": "duck.ai", "url": "https://duck.ai/", "title": "Duck.ai by DuckDuckGo. Private AI chat. Free.", "da": 51, "pa": 50, "cf": 65, "tf": 87, "rd": 1490, "bl": 23563},
+    {"position": 2, "domain": "reddit.com", "url": "https://www.reddit.com/r/degoogle/comments/1p0sdn6/duck_ai/", "title": "Duck ai : r/degoogle", "da": 92, "pa": 58, "rd": 7, "bl": 17},
+    {"position": 3, "domain": "vice.com", "url": "https://www.vice.com/en/article/duckduckgo-duck-ai/", "title": "So… Is Duck.ai Worth It?", "da": 92, "pa": 56, "rd": 43, "bl": 121},
+    {"position": 4, "domain": "apple.com", "url": "https://apps.apple.com/us/app/duckduckgo-optional-duck-ai/id663592361", "title": "DuckDuckGo, optional Duck.ai - App Store - Apple", "da": 99, "pa": 62, "rd": 17, "bl": 62},
+    {"position": 5, "domain": "duckduckgo.com", "url": "https://duckduckgo.com/duckduckgo-help-pages/duckai", "title": "Duck.ai - DuckDuckGo Help Pages", "da": 91, "pa": 54, "rd": 217, "bl": 370},
+    {"position": 6, "domain": "facebook.com", "url": "https://www.facebook.com/duckduckgo/videos/most-ai-isnt-private-protect-yourself-from-prying-eyes-with-duckai-our-private-a/1070363612216120/", "title": "Most AI isn't private. Protect yourself from prying eyes with ...", "da": 96, "pa": 60, "rd": 1, "bl": 1},
+    {"position": 7, "domain": "zoftwarehub.com", "url": "https://zoftwarehub.com/products/duck-ai/features", "title": "Duck.ai Features, Capabilities & Use Cases", "da": 20, "pa": 33, "rd": 39, "bl": 40},
+    {"position": 8, "domain": "fastcompany.com", "url": "https://www.fastcompany.com/91505410/duck-ai-duckduckgo-best-chatbot-protect-data-safe-chatgpt-openai-llm-anthropic-claude-sonnet-gemini-meta-llama", "title": "Duck.ai is the best AI chatbot for protecting your data", "da": 92, "pa": 54, "rd": 61, "bl": 130}
+  ]
+}

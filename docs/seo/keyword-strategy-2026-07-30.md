@@ -70,6 +70,9 @@ Three additional keywords pulled fresh US desktop SERPs and competitor backlink 
 | `private ai` | 2200 | 31 | Venice.ai #1 (1,552 ref domains), Cloudera #2, Confer #3, Reddit r/privacy #4, Vellum listicle #7 (5 ref domains) | Create Android-specific private AI listicle; beat Vellum with focused mobile/offline angle |
 | `on device ai` | 520 | 33 | Samsung #1, Google Play app #2, Couchbase blog #3 (0 page backlinks), Reddit #4, Medium #5, Android dev #6, NovusASI #7 (DA=26) | Strengthen `/on-device-llm.html` with FAQ and real examples; beatable corporate blog slot |
 | `duck ai` / `duckduck ai` | 60,300 | 36/54 | DuckDuckGo AI chat product | Not a direct competitor but validates privacy-chat search volume; consider comparison content |
+| `private ai chatbot android` | — | 31 | Google Play "Private AI" #1, Reddit r/degoogle #2, Layla #3 (DA11/280RD), Uptodown #4, De.AI Play Store #5, Wondertools #6, Tom's Guide #7 | Dedicated Android page can outrank Layla and listicles; high conversion intent |
+| `mlc chat android` | 70 | 37 | MLC docs/home dominate; Reddit r/LocalLLaMA #4; UpdateStar #8 | Strengthen /vs-mlc-llm.html; intercept APK/download intent with real Android app |
+| `ollama android` | 180 | — | Reddit r/ollama #1, Ollama official #2, GitHub fork #3, Play Store client #4, dev.to #5, deepakness.com #6 | Comparison page `/vs-ollama.html` answers the core question: no official Ollama Android app |
 
 ### International SERP findings
 
@@ -121,12 +124,16 @@ Three additional keywords pulled fresh US desktop SERPs and competitor backlink 
 - ✅ Backlink profiles saved for `fritz.ai` and `ai-toolbox.co`; both show weak/PBN-inflated profiles.
 - ✅ Keyword details saved for high-value terms `private ai` (vol 2,200, KD 31) and `on device ai` (vol 520, KD 33); both have beatable slots in SERP.
 - ✅ Related-keyword compact summaries saved for `duck ai`, `private ai`, `on device ai`.
+- ✅ Fresh SERPs saved: `duck ai`, `private ai`, `mlc chat android`, `private ai chatbot android`.
+- ✅ Keyword details refreshed: `ollama android` (navigational, no official app), `mlc chat android` (vol 70, KD 37), `private ai chatbot android` (KD 31, Layla beatable).
+- ✅ `/vs-ollama.html` rewritten to target "Ollama Android" directly: title now "Ollama Android alternative | LlamaBox local LLM on Android", FAQ answers "Can you run Ollama on Android?" and "Is there an Ollama Android app?".
+- ✅ `/on-device-llm.html` rewritten to target "on device AI": title now "On-Device AI on Android | Local LLM with LlamaBox", expanded definition, use cases, and FAQ schema.
 
 ## Remaining Mangools quota snapshot
 
-- SERP lookups: 1,099 remaining
+- SERP lookups: ~1,095 remaining (4 used this batch)
 - Related-keyword lookups: 1,082 remaining
-- Keyword URL metrics: 850 remaining
+- Keyword URL metrics: ~847 remaining (3 successful details this batch; `duck ai` returned provider error)
 - LinkMiner URL metrics: 1,198,660 rows remaining
 - SiteProfiler overviews: 144 remaining
 - SERPWatcher tracked keywords: 1,230 remaining

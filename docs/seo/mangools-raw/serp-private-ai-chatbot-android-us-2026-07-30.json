@@ -1,0 +1,18 @@
+{
+  "keyword": "private ai chatbot android",
+  "location_id": 2840,
+  "platform_id": 1,
+  "serp_id": "666ee0bc0b0d98e326d370f3f539a419",
+  "serp_snapshot_id": "666ee0bc0b0d98e326d370f3f539a419.2026-07-30",
+  "total_organic": 7,
+  "serp_features": ["AI_OVERVIEW"],
+  "organic_results": [
+    {"position": 1, "domain": "google.com", "url": "https://play.google.com/store/apps/details?id=us.valkon.privateai", "title": "Private AI - Apps on Google Play", "da": 98, "pa": 64, "cf": 11, "rd": 25, "bl": 42},
+    {"position": 2, "domain": "reddit.com", "url": "https://www.reddit.com/r/degoogle/comments/1kx0nmo/what_private_ai_chat_do_you_use/", "title": "What private AI chat do you use? : r/degoogle", "da": 92, "pa": 53, "rd": 1, "bl": 1},
+    {"position": 3, "domain": "layla-network.ai", "url": "https://www.layla-network.ai/", "title": "Layla: Private Offline AI Assistant for Android & iOS", "da": 11, "pa": 39, "cf": 33, "tf": 10, "rd": 280, "bl": 1797},
+    {"position": 4, "domain": "uptodown.com", "url": "https://private-ai.en.uptodown.com/android", "title": "Private AI for Android - Download the APK from Uptodown", "da": 92, "pa": 38, "cf": 6, "rd": 0, "bl": 0},
+    {"position": 5, "domain": "google.com", "url": "https://play.google.com/store/apps/details?id=com.DAI.DAIapp", "title": "De.AI Personal Private AI - Apps on Google Play", "da": 99, "pa": 57, "rd": 2, "bl": 2},
+    {"position": 6, "domain": "substack.com", "url": "https://wondertools.substack.com/p/the-best-mobile-ai-apps", "title": "AI Mobile Apps Guide: ChatGPT, Claude, Gemini & Private AI", "da": 92, "pa": 56, "cf": 9, "tf": 8, "rd": 43, "bl": 145},
+    {"position": 7, "domain": "tomsguide.com", "url": "https://www.tomsguide.com/ai/i-put-3-local-ai-chatbots-to-the-test-on-my-phone-and-i-was-shocked-by-how-useful-they-are", "title": "I put 3 local AI chatbots to the test on my phone", "da": 89, "pa": 42, "rd": 2, "bl": 13}
+  ]
+}

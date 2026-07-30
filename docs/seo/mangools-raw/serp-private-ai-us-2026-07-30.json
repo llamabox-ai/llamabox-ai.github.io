@@ -1,0 +1,18 @@
+{
+  "keyword": "private ai",
+  "location_id": 2840,
+  "platform_id": 1,
+  "serp_id": "1db6ad35645d6d3dde75b518f9bcbbf5",
+  "serp_snapshot_id": "1db6ad35645d6d3dde75b518f9bcbbf5.2026-07-30",
+  "total_organic": 7,
+  "serp_features": ["AI_OVERVIEW", "PEOPLE_ALSO_ASK"],
+  "organic_results": [
+    {"position": 1, "domain": "venice.ai", "url": "https://venice.ai/", "title": "Venice | Private AI for Unlimited Creative Freedom", "da": 41, "pa": 50, "cf": 48, "tf": 32, "rd": 1552, "bl": 8478},
+    {"position": 2, "domain": "cloudera.com", "url": "https://www.cloudera.com/resources/faqs/private-ai.html", "title": "What Is Private AI?", "da": 79, "pa": 41, "cf": 18, "rd": 6, "bl": 6},
+    {"position": 3, "domain": "confer.to", "url": "https://confer.to/", "title": "Confer — Private AI. Speak freely.", "da": 34, "pa": 39, "cf": 38, "tf": 28, "rd": 320, "bl": 872},
+    {"position": 4, "domain": "reddit.com", "url": "https://www.reddit.com/r/privacy/comments/1i97fvn/are_there_any_truly_private_ai_assistants_seeking/", "title": "Are There Any Truly Private AI Assistants? Seeking Advice ...", "da": 92, "pa": 53, "rd": 1, "bl": 1},
+    {"position": 5, "domain": "getlimina.ai", "url": "https://www.getlimina.ai/", "title": "Limina AI", "da": 36, "pa": 25, "cf": 27, "tf": 12, "rd": 37, "bl": 58},
+    {"position": 6, "domain": "digitalrealty.com", "url": "https://www.digitalrealty.com/resources/blog/what-is-private-ai", "title": "What is Private AI? The Next Step in Privacy-First Innovation", "da": 61, "pa": 29, "cf": 15, "tf": 16, "rd": 2, "bl": 2},
+    {"position": 7, "domain": "vellum.ai", "url": "https://www.vellum.ai/blog/best-private-personal-ai-assistants", "title": "10 Best Private Personal AI Assistants in 2026 - Vellum", "da": 44, "pa": 32, "cf": 24, "tf": 9, "rd": 5, "bl": 7}
+  ]
+}

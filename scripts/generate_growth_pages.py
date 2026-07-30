@@ -61,6 +61,7 @@ FOOTER = """  <footer class="footer">
             <li><a href="/offline-ai-android.html">Offline AI Android</a></li>
             <li><a href="/on-device-llm.html">On-device LLM</a></li>
             <li><a href="/private-chatgpt-alternative.html">Private ChatGPT alt</a></li>
+            <li><a href="/private-ai-android.html">Private AI Android</a></li>
             <li><a href="/chatgpt-android-offline.html">ChatGPT offline</a></li>
             <li><a href="/gguf-android.html">GGUF on Android</a></li>
             <li><a href="/llm-download.html">LLM download</a></li>
@@ -318,6 +319,7 @@ def main():
           <a class="card-link glass" href="/offline-ai-android.html"><strong>Offline AI Android</strong><span>Airplane-mode chat that stays local</span></a>
           <a class="card-link glass" href="/on-device-llm.html"><strong>On-device LLM</strong><span>What “on-device” actually means</span></a>
           <a class="card-link glass" href="/private-chatgpt-alternative.html"><strong>Private ChatGPT alternative</strong><span>When cloud chat is the risk</span></a>
+          <a class="card-link glass" href="/private-ai-android.html"><strong>Private AI for Android</strong><span>Local AI chatbot with no cloud</span></a>
           <a class="card-link glass" href="/chatgpt-android-offline.html"><strong>ChatGPT Android offline</strong><span>Why cloud ChatGPT can’t, and what does</span></a>
           <a class="card-link glass" href="/gguf-android.html"><strong>GGUF on Android</strong><span>Quantizations, RAM, imports</span></a>
           <a class="card-link glass" href="/llm-download.html"><strong>LLM download</strong><span>Get GGUF models for Android</span></a>
@@ -475,6 +477,73 @@ def main():
 """,
         ),
         extra_head=faq_schema(faqs_priv),
+    )
+
+    faqs_private_ai = [
+        ("What is private AI on Android?", "Private AI on Android means the language model runs inference directly on your phone instead of sending prompts to a vendor server. Your data never leaves the device."),
+        ("Is LlamaBox a private AI chatbot for Android?", "Yes. LlamaBox loads a quantized GGUF model into app memory and runs it on the phone CPU. There is no cloud inference endpoint, account, or telemetry."),
+        ("How is local AI more private than cloud 'private mode'?", "Cloud 'private mode' still sends tokens to a server with retention policies and subprocessors. Local AI removes the server from the chat path entirely."),
+        ("Can private AI work offline?", "Yes. Once a model is downloaded, LlamaBox works in airplane mode. Private AI and offline AI are the same architecture here."),
+        ("What models can I use with LlamaBox?", "Any GGUF model that fits your phone's RAM. Start with small Q4_K_M quantizations (0.5B–3B class) and scale up on devices with more memory."),
+        ("Is LlamaBox open source?", "The public codebase will be released under AGPL-3.0 when the closed beta ends. A separate commercial license is available for proprietary use."),
+    ]
+    page(
+        "private-ai-android.html",
+        "Private AI for Android | Offline AI Chatbot | LlamaBox",
+        "Get private AI on Android with LlamaBox. Local LLM chatbot runs offline on your phone — no cloud, no account, no data sharing.",
+        article(
+            "Private AI",
+            "Private AI for Android.",
+            "A private AI chatbot that runs on your phone, not in someone else's cloud. LlamaBox keeps prompts, answers, and history on-device.",
+            f"""
+        <h2>What is private AI on Android?</h2>
+        <p><strong>Private AI on Android</strong> means the large language model runs inference directly on your phone. Your prompts, generated answers, and chat history never leave the device. There is no cloud API call, no vendor retention policy, and no account graph to trust.</p>
+        <h2>Why local beats cloud "private mode"</h2>
+        <p>Many chatbots offer a "private mode," but that usually means the vendor promises not to train on your data. The prompts still travel to a server, are subject to subpoenas and breaches, and rely on a privacy policy you cannot verify. LlamaBox removes the server from the path entirely.</p>
+        <ul>
+          <li><strong>Cloud private mode:</strong> data is encrypted in transit and stored under a vendor policy.</li>
+          <li><strong>LlamaBox local AI:</strong> data never leaves the device. The architecture is the privacy guarantee.</li>
+        </ul>
+        <h2>How LlamaBox keeps AI private</h2>
+        <ul>
+          <li>GGUF models load into app memory and run via llama.cpp on the phone CPU</li>
+          <li>No account required and no telemetry by architecture</li>
+          <li>Works offline after model download — airplane mode included</li>
+          <li>Open source under AGPL-3.0 (public release after closed beta)</li>
+          <li>Commercial license available for closed-source deployments</li>
+        </ul>
+        <h2>LlamaBox vs other private AI options</h2>
+        <div class="table-wrap">
+          <table class="compare-table">
+            <thead><tr><th></th><th>LlamaBox</th><th>Cloud private mode</th><th>Other local apps</th></tr></thead>
+            <tbody>
+              <tr><td>Runs on Android phone</td><td>Yes — native app</td><td>Web/app wrapper</td><td>Varies</td></tr>
+              <tr><td>Prompts leave device</td><td>No</td><td>Yes</td><td>Usually no</td></tr>
+              <tr><td>Works offline</td><td>Yes</td><td>No</td><td>Sometimes</td></tr>
+              <tr><td>Open weights / GGUF</td><td>Yes</td><td>Vendor model</td><td>Sometimes</td></tr>
+              <tr><td>No account required</td><td>Yes</td><td>No</td><td>Varies</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <h2>Use cases for private AI on Android</h2>
+        <ul>
+          <li><strong>Personal journaling and drafting</strong> — no cloud retention of intimate notes</li>
+          <li><strong>Healthcare and therapy notes</strong> — local inference reduces compliance surface area</li>
+          <li><strong>Journalism and sensitive sourcing</strong> — sources and drafts stay on-device</li>
+          <li><strong>Legal and finance drafts</strong> — client-confidential material never touches a vendor</li>
+          <li><strong>Travel and field work</strong> — private AI that works without internet</li>
+        </ul>
+        <h2>How to start</h2>
+        <ol>
+          <li>Join the LlamaBox beta waitlist for APK or Play Store access.</li>
+          <li>Download a small GGUF model (0.5B–3B Q4_K_M) over Wi-Fi.</li>
+          <li>Chat offline. No API key, no account, no cloud.</li>
+        </ol>
+        <p>Related: <a href="/private-chatgpt-alternative.html">private ChatGPT alternative</a> · <a href="/offline-ai-android.html">offline AI Android</a> · <a href="/on-device-llm.html">on-device AI</a> · <a href="/vs-chatgpt.html">vs ChatGPT</a> · <a href="/best-local-llm-apps-android.html">best local LLM apps</a>.</p>
+        {faq_html(faqs_private_ai)}
+""",
+        ),
+        extra_head=faq_schema(faqs_private_ai),
     )
 
     faqs_gguf = [

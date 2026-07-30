@@ -192,4 +192,28 @@
 - tracked_keywords: 1230 / 1651 remaining
 - links: 1,031,032 / 1,200,000 remaining
 
+## Continuation batch — content updates + fresh SERPs
+- Rewrote `/vs-ollama.html` to target "ollama android" directly: title "Ollama Android alternative | LlamaBox local LLM on Android", FAQ covers "Can you run Ollama on Android?" / "Is there an Ollama Android app?".
+- Rewrote `/on-device-llm.html` to target "on device ai": title "On-Device AI on Android | Local LLM with LlamaBox", expanded definition, use cases, and FAQ schema.
+- Regenerated site with `python scripts/generate_growth_pages.py`.
+- Updated `/llms.txt` and `/llms-full.txt` sitemap descriptions for `/vs-ollama.html` and `/on-device-llm.html`.
+- Committed and pushed updates (`0c8790a`).
+- Ran fresh US desktop SERPs: `duck ai`, `private ai`, `mlc chat android`, `private ai chatbot android`. Saved raw JSON.
+- Ran `kwfinder_get_keyword_details`: `ollama android` (navigational, no official Android app), `mlc chat android` (vol 70, KD 37), `private ai chatbot android` (KD 31). `duck ai` details returned `No available SERP provider`.
+- Saved raw SERP JSON to:
+  - `docs/seo/mangools-raw/serp-duck-ai-us-2026-07-30.json`
+  - `docs/seo/mangools-raw/serp-private-ai-us-2026-07-30.json`
+  - `docs/seo/mangools-raw/serp-mlc-chat-android-us-2026-07-30.json`
+  - `docs/seo/mangools-raw/serp-private-ai-chatbot-android-us-2026-07-30.json`
+- Updated `docs/seo/keyword-strategy-2026-07-30.md` with new SERP findings and implementation status.
+
+## Updated quota after continuation batch
+- serps: ~1095 / 1200 remaining (4 used)
+- related-keywords: 1082 / 1200 remaining
+- kw-url-metrics: ~847 / 1440 remaining (3 successful details)
+- lm-url-metrics: 1,198,660 / 1,200,000 remaining
+- sp-overview: 144 / 150 remaining
+- tracked_keywords: 1230 / 1651 remaining
+- links: 1,031,032 / 1,200,000 remaining
+
 *Last updated: 2026-07-30.*
