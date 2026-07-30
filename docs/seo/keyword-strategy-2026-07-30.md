@@ -77,9 +77,10 @@ Three additional keywords pulled fresh US desktop SERPs and competitor backlink 
 | `what is an llm in ai` | 1,600 | — | Educational/definitional; mlc.ai ranks via docs | Create `/what-is-an-llm.html` explainer with Android pivot |
 | `what is a llm in ai` | 720 | — | Misspelling/plural variant of above | Same page covers variant naturally |
 | `free llms` | 1,300 (12m avg) / 1,100 (current) | — | Listicle intent; no strong dedicated page | Create `/free-llms.html` listicle of open-weight GGUF models |
-| `webllm` | 880 (12m avg) / 850 (current) | — | MLC web runtime brand | Add comparison section on /vs-mlc-llm.html; target "webllm chat" (30 vol), "webllm models" (20 vol) |
-| `llm software` | 590 | 41 | Category term | Mention on /what-is-an-llm.html and /best-local-llm-apps-android.html |
-| `gbnf` | 390 | — | Technical structured-output term | Future blog/technical page opportunity |
+| `webllm` | 880 (12m avg) / 850 (current) | — | MLC web runtime brand; `webllm.org` DA=8/2 RD is beatable | Create `/webllm.html` comparison vs LlamaBox Android; target "webllm chat" (30 vol), "webllm models" (20 vol) |
+| `local llm app` | 40 | — | Desktop-heavy intent (LM Studio, Ollama, AnythingLLM) but includes "locally ai android" (20 vol), "anything llm android" (10 vol) | Add Android-specific section to `/best-local-llm-apps-android.html` and target "local llm app android" |
+| `llm software` | 590 (12m avg) / 560 (current) | 41 | Category term; SERP dominated by LM Studio, Ollama, AnythingLLM, open-source leaderboard pages | Create `/llm-software.html` category page focusing on CPU-only, offline Android LLM software |
+| `gbnf` | 390 (12m avg) / 410 (current) | 23 | `gbnf` SERP mixed with motorcycle slang; LLM grammar results are llama.cpp README, Medium article, gbnf.dev (DA=1) | Low priority; can cover in a technical blog post about structured outputs once feature ships |
 
 ### International SERP findings
 

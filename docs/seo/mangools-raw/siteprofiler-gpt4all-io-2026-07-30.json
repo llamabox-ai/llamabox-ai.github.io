@@ -1,0 +1,25 @@
+{
+  "url_id": "fcb8cd0b7ab0b1ca4eb1df319566be3b",
+  "domain": "gpt4all.io",
+  "domain_authority": 41,
+  "page_authority": 48,
+  "citation_flow": 38,
+  "trust_flow": 24,
+  "referring_ips": 1182,
+  "majestic_status": "Found",
+  "top_rank": 302451,
+  "facebook_shares": {
+    "l": 487,
+    "og": {
+      "description": "Run Large Language Models Locally: privacy-first and no internet required",
+      "title": "GPT4All - Private & Local AI Chatbot | Nomic",
+      "image": "https://homepage-gw3wguthh-nomic-ai.vercel.app/opengraph-image-gpt4all.png"
+    }
+  },
+  "history": {
+    "top_rank_points": 1088,
+    "majestic_points": 625,
+    "facebook_points": 131,
+    "note": "History time series omitted from the summary. Use full=true for the complete history."
+  }
+}

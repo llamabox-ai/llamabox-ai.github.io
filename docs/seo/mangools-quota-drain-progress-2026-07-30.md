@@ -281,4 +281,48 @@
 - tracked_keywords: 1230 / 1651 remaining
 - links: 1,031,032 / 1,200,000 remaining
 
+## Continuation batch — competitor domain authority + keyword detail deep dive
+- Ran `siteprofiler_get_overview` for strategic competitors / outreach targets:
+  - `anythingllm.com` (DA=39, 1,751 ref IPs)
+  - `venice.ai` (DA=41, 2,480 ref IPs)
+  - `privatemode.ai` (DA=25, 204 ref IPs)
+  - `duck.ai` (DA=51, 1,642 ref IPs)
+  - `pocketpal.ai` (DA=6, 10 ref IPs — very weak)
+  - `chatbotapp.ai` (DA=45, 797 ref IPs)
+  - `mlc.ai` (DA=39, 937 ref IPs)
+  - `ollama.com` (DA=59, 15,924 ref IPs)
+  - `lmstudio.ai` (DA=55, 6,000 ref IPs)
+  - `jan.ai` (DA=46, 2,092 ref IPs)
+  - `gpt4all.io` (DA=41, 1,182 ref IPs)
+  - `privacyguides.org` (DA=51, 3,266 ref IPs)
+  - `proton.me` (DA=77, 21,878 ref IPs)
+  - `signal.org` (DA=77, 17,017 ref IPs)
+  - `brave.com` (DA=88, 24,862 ref IPs)
+  - `e.foundation` (DA=56, 3,203 ref IPs)
+  - `grapheneos.org` (DA=51, 4,458 ref IPs)
+  - `xda-developers.com` (DA=92, 21,805 ref IPs)
+  - `wondertools.substack.com` (DA=92, 402 ref IPs)
+- Saved all overview summaries to `docs/seo/mangools-raw/siteprofiler-*-2026-07-30.json`.
+- Ran `kwfinder_get_keyword_details` (US) for:
+  - `free llms` (1,100 current vol, informational/listicle intent; Reddit #1, whytryai.com DA=23 #2)
+  - `what is an llm in ai` (1,600 vol, informational; IBM #1, Reddit #3, Stanford #8)
+  - `webllm` (850 current vol, navigational; webllm.mlc.ai #1, webllm.org DA=8 #3 — beatable)
+  - `gbnf` (410 current vol, mixed motorcycle slang + LLM grammar; gbnf.dev DA=1 #6)
+- Saved keyword detail raw JSON summaries.
+- Ran US desktop SERPs for `free llms`, `what is an llm in ai`, `webllm`; saved raw SERP JSON.
+- Ran related-keywords (US, compact) for `llm software`, `gbnf`, `local llm app`; saved raw summaries.
+  - `llm software`: related only `opensource llm` (2,500 vol) and itself.
+  - `gbnf`: mostly motorcycle-club slang; LLM-grammar subset tiny.
+  - `local llm app`: desktop-heavy (LM Studio, Ollama, AnythingLLM) but includes Android sub-niches (`locally ai android` 20 vol, `anything llm android` 10 vol).
+- Updated `docs/seo/keyword-strategy-2026-07-30.md` with new volume/notes for `free llms`, `webllm`, `llm software`, `gbnf`, `local llm app`.
+
+## Updated quota after competitor + details batch
+- serps: ~1084 / 1200 remaining (3 used)
+- related-keywords: ~1073 / 1200 remaining (5 used)
+- kw-url-metrics: ~845 / 1440 remaining (4 details + 1 failed)
+- lm-url-metrics: 1,198,660 / 1,200,000 remaining
+- sp-overview: 119 / 150 remaining (19 overviews used)
+- tracked_keywords: 1230 / 1651 remaining
+- links: 1,031,032 / 1,200,000 remaining
+
 *Last updated: 2026-07-30.*

@@ -1,0 +1,25 @@
+{
+  "url_id": "0ed1096102af57e820ad2f8ab3a86e87",
+  "domain": "lmstudio.ai",
+  "domain_authority": 55,
+  "page_authority": 60,
+  "citation_flow": 54,
+  "trust_flow": 38,
+  "referring_ips": 6000,
+  "majestic_status": "Found",
+  "top_rank": 16313,
+  "facebook_shares": {
+    "l": 1970,
+    "og": {
+      "description": "Run local AI models like gpt-oss, Llama, Gemma, Qwen, and DeepSeek privately on your computer.",
+      "title": "LM Studio Bionic - The Agent for Open Models",
+      "image": "https://files.lmstudio.ai/6-model-list-og.png"
+    }
+  },
+  "history": {
+    "top_rank_points": 909,
+    "majestic_points": 514,
+    "facebook_points": 135,
+    "note": "History time series omitted from the summary. Use full=true for the complete history."
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "url_id": "40ccc826f21b46c6eabfee591615c6f5",
+  "domain": "privatemode.ai",
+  "domain_authority": 25,
+  "page_authority": 31,
+  "citation_flow": 37,
+  "trust_flow": 27,
+  "referring_ips": 204,
+  "majestic_status": "Found",
+  "top_rank": {},
+  "facebook_shares": {
+    "l": 21,
+    "og": {
+      "description": "Privatemode is the first AI service that protects the confidentiality of your data end-to-end. Use AI without security and privacy worries.",
+      "title": "Privatemode AI: The always encrypted AI service",
+      "image": "https://cdn.prod.website-files.com/6788b5ab8b085eea2bbfe9e1/67a2242db3e20e586e207608_eef08e5d9b2aa00011c0f7bcba2c62a0_privatemode-social-preview.png"
+    }
+  },
+  "history": {
+    "top_rank_points": 0,
+    "majestic_points": 0,
+    "facebook_points": 3,
+    "note": "History time series omitted from the summary. Use full=true for the complete history."
+  }
+}

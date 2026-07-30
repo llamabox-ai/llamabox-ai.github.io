@@ -1,0 +1,25 @@
+{
+  "url_id": "93ae80746d46c6f985badb1ccadc73d7",
+  "domain": "xda-developers.com",
+  "domain_authority": 92,
+  "page_authority": 65,
+  "citation_flow": 53,
+  "trust_flow": 66,
+  "referring_ips": 21805,
+  "majestic_status": "Found",
+  "top_rank": 4672,
+  "facebook_shares": {
+    "l": 28632,
+    "og": {
+      "description": "The world's best source for computing news, reviews, editorials guides, and more.",
+      "title": "XDA",
+      "image": "https://static1.xdaimages.com/wordpress/wp-content/uploads/social/xda-og-img.png"
+    }
+  },
+  "history": {
+    "top_rank_points": 2488,
+    "majestic_points": 2417,
+    "facebook_points": 2079,
+    "note": "History time series omitted from the summary. Use full=true for the complete history."
+  }
+}

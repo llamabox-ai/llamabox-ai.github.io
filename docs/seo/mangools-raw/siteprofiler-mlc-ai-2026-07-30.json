@@ -1,0 +1,21 @@
+{
+  "url_id": "13ad290f7b6afdd37710551bb22a904b",
+  "domain": "mlc.ai",
+  "domain_authority": 39,
+  "page_authority": 43,
+  "citation_flow": 43,
+  "trust_flow": 23,
+  "referring_ips": 937,
+  "majestic_status": "Found",
+  "top_rank": 586066,
+  "facebook_shares": {
+    "l": null,
+    "og": null
+  },
+  "history": {
+    "top_rank_points": 367,
+    "majestic_points": 640,
+    "facebook_points": 398,
+    "note": "History time series omitted from the summary. Use full=true for the complete history."
+  }
+}

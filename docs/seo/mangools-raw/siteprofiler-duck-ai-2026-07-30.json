@@ -1,0 +1,21 @@
+{
+  "url_id": "13d9bc4946696f1da38af68437cc6d66",
+  "domain": "duck.ai",
+  "domain_authority": 51,
+  "page_authority": 50,
+  "citation_flow": 54,
+  "trust_flow": 77,
+  "referring_ips": 1642,
+  "majestic_status": "Found",
+  "top_rank": 27047,
+  "facebook_shares": {
+    "l": null,
+    "og": null
+  },
+  "history": {
+    "top_rank_points": 617,
+    "majestic_points": 280,
+    "facebook_points": 36,
+    "note": "History time series omitted from the summary. Use full=true for the complete history."
+  }
+}

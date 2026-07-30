@@ -1,0 +1,40 @@
+{
+  "seed": null,
+  "location": {
+    "_id": 2840,
+    "code": "us",
+    "label": "United States"
+  },
+  "language": {
+    "_id": 0,
+    "label": "Any Language",
+    "code": null
+  },
+  "total_keywords": 170,
+  "returned_keywords": 100,
+  "truncated": true,
+  "note": "Showing top 100 of 170 keywords by search volume. Most results are motorcycle-club slang ('gone but not forgotten'); only a handful are LLM-grammar related.",
+  "llm_related_keywords": [
+    {
+      "kw": "llama-cpp-python",
+      "search_volume": 860,
+      "search_volume_12m": 880
+    },
+    {
+      "kw": "gbnf",
+      "search_volume": 410,
+      "search_volume_12m": 390,
+      "kd": 23
+    },
+    {
+      "kw": "gbnf grammar",
+      "search_volume": 40,
+      "search_volume_12m": 40
+    },
+    {
+      "kw": "llama-cpp grammar",
+      "search_volume": 20,
+      "search_volume_12m": 30
+    }
+  ]
+}

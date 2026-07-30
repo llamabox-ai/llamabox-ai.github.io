@@ -1,0 +1,153 @@
+{
+  "serp_id": "61ac8d5004185cc992aed9bd7c216755",
+  "serp_snapshot_id": "61ac8d5004185cc992aed9bd7c216755.2026-07-30",
+  "keyword": "what is an llm in ai",
+  "location_id": 2840,
+  "platform_id": 1,
+  "snapshot_url": "https://s3.amazonaws.com/mangools-google-pages/61ac8d5004185cc992aed9bd7c216755.2026-07-30.html",
+  "serp_features": [
+    "AI_OVERVIEW",
+    "PEOPLE_ALSO_ASK"
+  ],
+  "total_organic": 8,
+  "returned_organic": 8,
+  "truncated": false,
+  "organic_results": [
+    {
+      "position": 1,
+      "url": "https://www.ibm.com/think/topics/large-language-models",
+      "title": "What Are Large Language Models (LLMs)?",
+      "domain": "ibm.com",
+      "ctr": 0.3014,
+      "screen_coverage": 0,
+      "visible_part": 0,
+      "metrics": {
+        "domain_authority": 93,
+        "page_authority": 68,
+        "citation_flow": 48,
+        "trust_flow": 32,
+        "referring_domains": 1249,
+        "backlinks": 2750
+      }
+    },
+    {
+      "position": 2,
+      "url": "https://toloka.ai/blog/difference-between-ai-ml-llm-and-generative-ai/",
+      "title": "Difference between AI, ML, LLM, and generative AI",
+      "domain": "toloka.ai",
+      "ctr": 0.185,
+      "screen_coverage": 0,
+      "visible_part": 0,
+      "metrics": {
+        "domain_authority": 51,
+        "page_authority": 44,
+        "citation_flow": 31,
+        "trust_flow": 2,
+        "referring_domains": 180,
+        "backlinks": 249
+      }
+    },
+    {
+      "position": 3,
+      "url": "https://www.reddit.com/r/explainlikeimfive/comments/1ik1v7j/eli5_what_is_the_difference_between_large/",
+      "title": "What is the difference between Large Language Models ...",
+      "domain": "reddit.com",
+      "ctr": 0.1124,
+      "screen_coverage": 0,
+      "visible_part": 0,
+      "metrics": {
+        "domain_authority": 92,
+        "page_authority": 55,
+        "citation_flow": 11,
+        "trust_flow": 0,
+        "referring_domains": 20,
+        "backlinks": 20
+      }
+    },
+    {
+      "position": 4,
+      "url": "https://azure.microsoft.com/en-us/resources/cloud-computing-dictionary/what-are-large-language-models-llms",
+      "title": "What are large language models (LLMs)?",
+      "domain": "microsoft.com",
+      "ctr": 0.0718,
+      "screen_coverage": 0,
+      "visible_part": 0,
+      "metrics": {
+        "domain_authority": 98,
+        "page_authority": 66,
+        "citation_flow": 50,
+        "trust_flow": 35,
+        "referring_domains": 66,
+        "backlinks": 637
+      }
+    },
+    {
+      "position": 5,
+      "url": "https://www.cloudflare.com/learning/ai/what-is-large-language-model/",
+      "title": "AI?What is a large language model",
+      "domain": "cloudflare.com",
+      "ctr": 0.0498,
+      "screen_coverage": 0,
+      "visible_part": 0,
+      "metrics": {
+        "domain_authority": 98,
+        "page_authority": 74,
+        "citation_flow": 39,
+        "trust_flow": 19,
+        "referring_domains": 572,
+        "backlinks": 1093
+      }
+    },
+    {
+      "position": 6,
+      "url": "https://cloud.google.com/ai/llms",
+      "title": "Large Language Models (LLMs) with Google AI",
+      "domain": "google.com",
+      "ctr": 0.0359,
+      "screen_coverage": 0,
+      "visible_part": 0,
+      "metrics": {
+        "domain_authority": 92,
+        "page_authority": 59,
+        "citation_flow": 32,
+        "trust_flow": 10,
+        "referring_domains": 141,
+        "backlinks": 208
+      }
+    },
+    {
+      "position": 7,
+      "url": "https://ask.library.arizona.edu/faq/407985",
+      "title": "What is a large language model (LLM)?",
+      "domain": "arizona.edu",
+      "ctr": 0.0259,
+      "screen_coverage": 0,
+      "visible_part": 0,
+      "metrics": {
+        "domain_authority": 90,
+        "page_authority": 57,
+        "citation_flow": 32,
+        "trust_flow": 18,
+        "referring_domains": 195,
+        "backlinks": 302
+      }
+    },
+    {
+      "position": 8,
+      "url": "https://uit.stanford.edu/service/techtraining/ai-demystified/llm",
+      "title": "AI Demystified: Introduction to large language models",
+      "domain": "stanford.edu",
+      "ctr": 0.0196,
+      "screen_coverage": 0,
+      "visible_part": 0,
+      "metrics": {
+        "domain_authority": 93,
+        "page_authority": 63,
+        "citation_flow": 33,
+        "trust_flow": 17,
+        "referring_domains": 223,
+        "backlinks": 415
+      }
+    }
+  ]
+}

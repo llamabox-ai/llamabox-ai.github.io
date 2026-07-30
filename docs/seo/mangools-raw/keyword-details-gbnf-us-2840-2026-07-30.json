@@ -1,0 +1,141 @@
+{
+  "keyword": "gbnf",
+  "location_id": 2840,
+  "platform_id": 1,
+  "search_intent": {
+    "6cafb4adabfc5d69140b4adebaac1174": [
+      "navigational",
+      "informational"
+    ]
+  },
+  "content_types": [
+    "MEDIUM_ARTICLES",
+    "REDDIT"
+  ],
+  "serp_features": [
+    "AI_OVERVIEW",
+    "PEOPLE_ALSO_ASK"
+  ],
+  "organic_results": [
+    {
+      "position": 1,
+      "url": "https://www.noslang.com/search/gbnf",
+      "title": "Definition & Meaning of \"GBNF\"",
+      "domain": "noslang.com",
+      "ctr": 0.3155,
+      "metrics": {
+        "domain_authority": 52,
+        "page_authority": 30,
+        "citation_flow": 19,
+        "trust_flow": 13,
+        "referring_domains": 0,
+        "backlinks": 0
+      }
+    },
+    {
+      "position": 2,
+      "url": "https://github.com/ggml-org/llama.cpp/blob/master/grammars/README.md",
+      "title": "llama.cpp/grammars/README.md at master · ggml-org ...",
+      "domain": "github.com",
+      "ctr": 0.1009,
+      "metrics": {
+        "domain_authority": 97,
+        "page_authority": 66,
+        "citation_flow": 27,
+        "trust_flow": 20,
+        "referring_domains": 132,
+        "backlinks": 272
+      }
+    },
+    {
+      "position": 3,
+      "url": "https://medium.com/@sridevi17j/gbnf-grammar-structure-your-llm-outputs-with-gbnf-0e71965e76f9",
+      "title": "GBNF Grammar: - Structure your LLM Outputs with GBNF",
+      "domain": "medium.com",
+      "ctr": 0.0435,
+      "metrics": {
+        "domain_authority": 95,
+        "page_authority": 48,
+        "citation_flow": 0,
+        "trust_flow": 0,
+        "referring_domains": 1,
+        "backlinks": 1
+      }
+    },
+    {
+      "position": 4,
+      "url": "https://www.jamesdrandall.com/posts/gbnf-constrained-generation/",
+      "title": "GBNF-Constrained Generation for a Custom 8-Bit CPU",
+      "domain": "jamesdrandall.com",
+      "ctr": 0.0278,
+      "metrics": {
+        "domain_authority": 22,
+        "page_authority": 24,
+        "citation_flow": 22,
+        "trust_flow": 7,
+        "referring_domains": 5,
+        "backlinks": 60
+      }
+    },
+    {
+      "position": 5,
+      "url": "https://www.reddit.com/r/LocalLLaMA/comments/17k5mcy/psa_gbnf_exists_use_it/",
+      "title": "PSA: GBNF exists. Use it. : r/LocalLLaMA",
+      "domain": "reddit.com",
+      "ctr": 0.0176,
+      "metrics": {
+        "domain_authority": 92,
+        "page_authority": 53,
+        "citation_flow": 0,
+        "trust_flow": 0,
+        "referring_domains": 1,
+        "backlinks": 1
+      }
+    },
+    {
+      "position": 6,
+      "url": "https://gbnf.dev/docs/",
+      "title": "Introduction - GBNF",
+      "domain": "gbnf.dev",
+      "ctr": 0.0123,
+      "metrics": {
+        "domain_authority": 1,
+        "page_authority": 10,
+        "citation_flow": 15,
+        "trust_flow": 1,
+        "referring_domains": 0,
+        "backlinks": 0
+      }
+    },
+    {
+      "position": 7,
+      "url": "https://www.youtube.com/watch?v=gjW1aHpfhm0",
+      "title": "GBNF",
+      "domain": "youtube.com",
+      "ctr": 0.0091,
+      "metrics": {
+        "domain_authority": 100,
+        "page_authority": 57,
+        "citation_flow": 0,
+        "trust_flow": 0,
+        "referring_domains": 1,
+        "backlinks": 1
+      }
+    },
+    {
+      "position": 8,
+      "url": "https://crates.io/crates/gbnf",
+      "title": "gbnf - crates.io: Rust Package Registry",
+      "domain": "crates.io",
+      "ctr": 0.0068,
+      "metrics": {
+        "domain_authority": 56,
+        "page_authority": 36,
+        "citation_flow": 0,
+        "trust_flow": 0,
+        "referring_domains": 1,
+        "backlinks": 1
+      }
+    }
+  ]
+}

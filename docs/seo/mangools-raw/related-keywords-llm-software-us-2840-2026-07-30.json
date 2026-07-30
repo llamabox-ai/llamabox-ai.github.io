@@ -1,0 +1,34 @@
+{
+  "seed": null,
+  "location": {
+    "_id": 2840,
+    "code": "us",
+    "label": "United States"
+  },
+  "language": {
+    "_id": 0,
+    "label": "Any Language",
+    "code": null
+  },
+  "total_keywords": 2,
+  "returned_keywords": 2,
+  "truncated": false,
+  "keywords": [
+    {
+      "kw": "opensource llm",
+      "search_volume": 2500,
+      "search_volume_12m": 2500,
+      "kd": 42,
+      "cpc": 6.13,
+      "ppc": 12
+    },
+    {
+      "kw": "llm software",
+      "search_volume": 560,
+      "search_volume_12m": 560,
+      "kd": 41,
+      "cpc": 9.2,
+      "ppc": 17
+    }
+  ]
+}

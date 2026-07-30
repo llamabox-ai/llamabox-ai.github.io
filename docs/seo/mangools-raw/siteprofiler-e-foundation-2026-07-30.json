@@ -1,0 +1,25 @@
+{
+  "url_id": "e68d861ea49e0f228ded78e92dd31737",
+  "domain": "e.foundation",
+  "domain_authority": 56,
+  "page_authority": 57,
+  "citation_flow": 51,
+  "trust_flow": 36,
+  "referring_ips": 3203,
+  "majestic_status": "Found",
+  "top_rank": 43159,
+  "facebook_shares": {
+    "l": 2218,
+    "og": {
+      "description": "Your data is YOUR data! \r\nWe build desirable, open source,\r\nprivacy-enabled smartphone operating systems.\r\nWe are /e/  Download and TRY!  Buy an /e/ Smartphone!        \r\nYour smartphone is harvesting your data all day long, capturing with great detail where you",
+      "title": "e Foundation - deGoogled unGoogled smartphone operating systems and online services - your data is your data",
+      "image": "https://e.foundation/wp-content/uploads/logo-noir_Plan-de-travail-1.png"
+    }
+  },
+  "history": {
+    "top_rank_points": 2487,
+    "majestic_points": 2086,
+    "facebook_points": 1708,
+    "note": "History time series omitted from the summary. Use full=true for the complete history."
+  }
+}

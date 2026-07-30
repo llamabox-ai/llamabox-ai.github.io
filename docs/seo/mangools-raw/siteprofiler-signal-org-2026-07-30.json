@@ -1,0 +1,25 @@
+{
+  "url_id": "8a42620d3855bf7108f036eb444572d5",
+  "domain": "signal.org",
+  "domain_authority": 77,
+  "page_authority": 68,
+  "citation_flow": 65,
+  "trust_flow": 51,
+  "referring_ips": 17017,
+  "majestic_status": "Found",
+  "top_rank": 2285,
+  "facebook_shares": {
+    "l": 428853,
+    "og": {
+      "description": "Say \"hello\" to a different messaging experience. An unexpected focus on privacy, combined with all of the features you expect.",
+      "title": "Signal Messenger: Speak Freely",
+      "image": "https://signal.org/assets/images/og/og-image.png"
+    }
+  },
+  "history": {
+    "top_rank_points": 2488,
+    "majestic_points": 2416,
+    "facebook_points": 1961,
+    "note": "History time series omitted from the summary. Use full=true for the complete history."
+  }
+}

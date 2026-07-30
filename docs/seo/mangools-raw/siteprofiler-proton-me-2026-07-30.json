@@ -1,0 +1,25 @@
+{
+  "url_id": "cf03f73ca7331f9dc884e9c50178d801",
+  "domain": "proton.me",
+  "domain_authority": 77,
+  "page_authority": 65,
+  "citation_flow": 66,
+  "trust_flow": 43,
+  "referring_ips": 21878,
+  "majestic_status": "Found",
+  "top_rank": 2992,
+  "facebook_shares": {
+    "l": 11016,
+    "og": {
+      "description": "Over 100 million people use Proton to stay private and secure online. Get a free Proton account and take back your privacy.",
+      "title": "Proton: Privacy by default",
+      "image": "https://proton.me/images/social/proton-og.png"
+    }
+  },
+  "history": {
+    "top_rank_points": 1498,
+    "majestic_points": 849,
+    "facebook_points": 475,
+    "note": "History time series omitted from the summary. Use full=true for the complete history."
+  }
+}

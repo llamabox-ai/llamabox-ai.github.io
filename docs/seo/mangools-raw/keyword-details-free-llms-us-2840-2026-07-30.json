@@ -1,0 +1,156 @@
+{
+  "keyword": "free llms",
+  "location_id": 2840,
+  "platform_id": 1,
+  "search_intent": {
+    "8853842d0287d7e5857830487c56cf17": [
+      "informational"
+    ]
+  },
+  "content_types": [
+    "REDDIT",
+    "LISTICLES",
+    "GUIDES"
+  ],
+  "serp_features": [
+    "AI_OVERVIEW",
+    "PEOPLE_ALSO_ASK"
+  ],
+  "organic_results": [
+    {
+      "position": 1,
+      "url": "https://www.reddit.com/r/n8n/comments/1o4q4vp/what_llm_do_you_use_for_free/",
+      "title": "What LLM do you use for free : r/n8n",
+      "domain": "reddit.com",
+      "ctr": 0.2975,
+      "metrics": {
+        "domain_authority": 92,
+        "page_authority": 53,
+        "citation_flow": 0,
+        "trust_flow": 0,
+        "referring_domains": 1,
+        "backlinks": 1
+      }
+    },
+    {
+      "position": 2,
+      "url": "https://www.whytryai.com/p/best-free-llms",
+      "title": "5 Best LLMs You Can Use for Free - by Daniel Nest",
+      "domain": "whytryai.com",
+      "ctr": 0.1246,
+      "metrics": {
+        "domain_authority": 23,
+        "page_authority": 29,
+        "citation_flow": 15,
+        "trust_flow": 11,
+        "referring_domains": 3,
+        "backlinks": 5
+      }
+    },
+    {
+      "position": 3,
+      "url": "https://github.com/cheahjs/free-llm-api-resources",
+      "title": "cheahjs/free-llm-api-resources",
+      "domain": "github.com",
+      "ctr": 0.0668,
+      "metrics": {
+        "domain_authority": 97,
+        "page_authority": 66,
+        "citation_flow": 36,
+        "trust_flow": 14,
+        "referring_domains": 384,
+        "backlinks": 6515
+      }
+    },
+    {
+      "position": 4,
+      "url": "https://www.instaclustr.com/education/open-source-ai/top-7-open-source-llms-for-2026/",
+      "title": "Top 7 open source LLMs for 2026",
+      "domain": "instaclustr.com",
+      "ctr": 0.0422,
+      "metrics": {
+        "domain_authority": 45,
+        "page_authority": 33,
+        "citation_flow": 22,
+        "trust_flow": 19,
+        "referring_domains": 13,
+        "backlinks": 21
+      }
+    },
+    {
+      "position": 5,
+      "url": "https://openrouter.ai/blog/tutorials/free-llm-apis-compared/",
+      "title": "Free LLM API in 2026: 13 Options Ranked and Compared",
+      "domain": "openrouter.ai",
+      "ctr": 0.0284,
+      "metrics": {
+        "domain_authority": 53,
+        "page_authority": 38,
+        "citation_flow": 31,
+        "trust_flow": 11,
+        "referring_domains": 60,
+        "backlinks": 123
+      }
+    },
+    {
+      "position": 6,
+      "url": "https://cloud.google.com/ai/llms",
+      "title": "Large Language Models (LLMs) with Google AI",
+      "domain": "google.com",
+      "ctr": 0.0208,
+      "metrics": {
+        "domain_authority": 92,
+        "page_authority": 59,
+        "citation_flow": 32,
+        "trust_flow": 10,
+        "referring_domains": 141,
+        "backlinks": 208
+      }
+    },
+    {
+      "position": 7,
+      "url": "https://www.aitoolssme.com/comparison/language-models",
+      "title": "The Best Free LLMs: The Ultimate Comparison",
+      "domain": "aitoolssme.com",
+      "ctr": 0.0151,
+      "metrics": {
+        "domain_authority": 33,
+        "page_authority": 24,
+        "citation_flow": 16,
+        "trust_flow": 4,
+        "referring_domains": 4,
+        "backlinks": 9
+      }
+    },
+    {
+      "position": 8,
+      "url": "https://freellmplayground.com/",
+      "title": "Free LLM Playground — test OpenAI, Claude, Gemini models ...",
+      "domain": "freellmplayground.com",
+      "ctr": 0.0115,
+      "metrics": {
+        "domain_authority": 7,
+        "page_authority": 20,
+        "citation_flow": 22,
+        "trust_flow": 2,
+        "referring_domains": 19,
+        "backlinks": 20
+      }
+    },
+    {
+      "position": 9,
+      "url": "https://inventwithpython.com/blog/free-llms.html",
+      "title": "List of Free LLM AIs for Coding (June 2026)",
+      "domain": "inventwithpython.com",
+      "ctr": 0.0091,
+      "metrics": {
+        "domain_authority": 55,
+        "page_authority": 32,
+        "citation_flow": 10,
+        "trust_flow": 6,
+        "referring_domains": 0,
+        "backlinks": 0
+      }
+    }
+  ]
+}

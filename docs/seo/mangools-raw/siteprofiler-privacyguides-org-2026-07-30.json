@@ -1,0 +1,25 @@
+{
+  "url_id": "e2d16bca42b291817f4f458c99f4aca0",
+  "domain": "privacyguides.org",
+  "domain_authority": 51,
+  "page_authority": 54,
+  "citation_flow": 55,
+  "trust_flow": 34,
+  "referring_ips": 3266,
+  "majestic_status": "Found",
+  "top_rank": 101026,
+  "facebook_shares": {
+    "l": 138,
+    "og": {
+      "description": "established in 2021, Privacy Guides is the most popular & trustworthy non-profit resource to find privacy tools and learn about protecting your digital life.",
+      "title": "Privacy Guides",
+        "image": "https://www.privacyguides.org/content/images/2024/01/cover-13.png"
+    }
+  },
+  "history": {
+    "top_rank_points": 1585,
+    "majestic_points": 956,
+    "facebook_points": 614,
+    "note": "History time series omitted from the summary. Use full=true for the complete history."
+  }
+}

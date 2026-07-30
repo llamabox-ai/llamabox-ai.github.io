@@ -1,0 +1,25 @@
+{
+  "url_id": "d8c3a9040ea749a1483df388274aa063",
+  "domain": "jan.ai",
+  "domain_authority": 46,
+  "page_authority": 52,
+  "citation_flow": 45,
+  "trust_flow": 26,
+  "referring_ips": 2092,
+  "majestic_status": "Found",
+  "top_rank": 147727,
+  "facebook_shares": {
+    "l": 743,
+    "og": {
+      "description": "Jan is building Open Superintelligence. It's the open-source ChatGPT alternative that leverages the best of open-source AI.",
+      "title": "Jan - Open-Source ChatGPT Replacement - Jan",
+      "image": "https://jan.ai/assets/images/general/og-image.png"
+    }
+  },
+  "history": {
+    "top_rank_points": 832,
+    "majestic_points": 493,
+    "facebook_points": 58,
+    "note": "History time series omitted from the summary. Use full=true for the complete history."
+  }
+}

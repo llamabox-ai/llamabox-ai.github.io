@@ -1,0 +1,189 @@
+{
+  "seed": null,
+  "location": {
+    "_id": 2840,
+    "code": "us",
+    "label": "United States"
+  },
+  "language": {
+    "_id": 0,
+    "label": "Any Language",
+    "code": null
+  },
+  "total_keywords": 173,
+  "returned_keywords": 100,
+  "truncated": true,
+  "note": "Top 100 of 173 keywords. Strong desktop/local LLM software intent; Android-specific sub-niches are small but present.",
+  "keywords": [
+    {
+      "kw": "ollama",
+      "search_volume": 139000,
+      "search_volume_12m": 135000,
+      "kd": 47,
+      "cpc": 6.7,
+      "ppc": 1
+    },
+    {
+      "kw": "lm studio",
+      "search_volume": 57500,
+      "search_volume_12m": 60500,
+      "kd": 43,
+      "cpc": 11.5,
+      "ppc": 2
+    },
+    {
+      "kw": "lm studio vs ollama",
+      "search_volume": 2700,
+      "search_volume_12m": 2900,
+      "kd": 15,
+      "cpc": 5.04,
+      "ppc": 3
+    },
+    {
+      "kw": "lm studio download",
+      "search_volume": 2000,
+      "search_volume_12m": 1900,
+      "cpc": 13.85,
+      "ppc": 3
+    },
+    {
+      "kw": "lm studio ai",
+      "search_volume": 1500,
+      "search_volume_12m": 1600,
+      "cpc": 12.43,
+      "ppc": 14
+    },
+    {
+      "kw": "ollama vs lm studio",
+      "search_volume": 1500,
+      "search_volume_12m": 1600,
+      "kd": 23,
+      "cpc": 0.98,
+      "ppc": 3
+    },
+    {
+      "kw": "llama cpp vs ollama",
+      "search_volume": 1000,
+      "search_volume_12m": 1000
+    },
+    {
+      "kw": "rag-anything",
+      "search_volume": 470,
+      "search_volume_12m": 480,
+      "cpc": 10.1,
+      "ppc": 12
+    },
+    {
+      "kw": "lm studio models",
+      "search_volume": 400,
+      "search_volume_12m": 390
+    },
+    {
+      "kw": "lm studio github",
+      "search_volume": 370,
+      "search_volume_12m": 390
+    },
+    {
+      "kw": "lm studio alternative",
+      "search_volume": 360,
+      "search_volume_12m": 390,
+      "cpc": 11.99,
+      "ppc": 16
+    },
+    {
+      "kw": "open source llm leaderboard",
+      "search_volume": 360,
+      "search_volume_12m": 390,
+      "kd": 39,
+      "cpc": 6.88,
+      "ppc": 7
+    },
+    {
+      "kw": "lm studio api",
+      "search_volume": 270,
+      "search_volume_12m": 260,
+      "cpc": 14.44,
+      "ppc": 6
+    },
+    {
+      "kw": "llama cpp vs vllm",
+      "search_volume": 270,
+      "search_volume_12m": 260
+    },
+    {
+      "kw": "locally ai app",
+      "search_volume": 200,
+      "search_volume_12m": 210,
+      "cpc": 2.86,
+      "ppc": 7
+    },
+    {
+      "kw": "run ai models locally",
+      "search_volume": 120,
+      "search_volume_12m": 110,
+      "cpc": 9.71,
+      "ppc": 32
+    },
+    {
+      "kw": "llama-cpp gui",
+      "search_volume": 110,
+      "search_volume_12m": 110
+    },
+    {
+      "kw": "open source llm models list",
+      "search_volume": 50,
+      "search_volume_12m": 50,
+      "cpc": 23.06,
+      "ppc": 18
+    },
+    {
+      "kw": "local llm app",
+      "search_volume": 40,
+      "search_volume_12m": 40
+    },
+    {
+      "kw": "local ai download",
+      "search_volume": 50,
+      "search_volume_12m": 50,
+      "cpc": 25.4,
+      "ppc": 24
+    },
+    {
+      "kw": "free local llm",
+      "search_volume": 50,
+      "search_volume_12m": 50
+    },
+    {
+      "kw": "locally ai android",
+      "search_volume": 20,
+      "search_volume_12m": 20
+    },
+    {
+      "kw": "local llm download",
+      "search_volume": 30,
+      "search_volume_12m": 30,
+      "cpc": 0.24,
+      "ppc": 16
+    },
+    {
+      "kw": "local ai model download",
+      "search_volume": 20,
+      "search_volume_12m": 20
+    },
+    {
+      "kw": "best local llm app",
+      "search_volume": 10,
+      "search_volume_12m": 20
+    },
+    {
+      "kw": "anything llm android",
+      "search_volume": 10,
+      "search_volume_12m": 20
+    },
+    {
+      "kw": "lm studio ai android",
+      "search_volume": 10,
+      "search_volume_12m": 10
+    }
+  ]
+}

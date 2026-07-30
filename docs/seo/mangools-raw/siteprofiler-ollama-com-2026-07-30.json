@@ -1,0 +1,18 @@
+{
+  "url_id": "3428a7aa843588f028bcbebe3ce89cf4",
+  "domain": "ollama.com",
+  "domain_authority": 59,
+  "page_authority": 66,
+  "citation_flow": 59,
+  "trust_flow": 39,
+  "referring_ips": 15924,
+  "majestic_status": "Found",
+  "top_rank": 4545,
+  "facebook_points": 93,
+  "history": {
+    "top_rank_points": 852,
+    "majestic_points": 507,
+    "facebook_points": 93,
+    "note": "History time series omitted from the summary. Use full=true for the complete history."
+  }
+}

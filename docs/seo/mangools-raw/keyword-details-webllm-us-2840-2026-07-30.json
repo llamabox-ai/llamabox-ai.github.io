@@ -1,0 +1,139 @@
+{
+  "keyword": "webllm",
+  "location_id": 2840,
+  "platform_id": 1,
+  "search_intent": {
+    "dec5cc097e3cff193d0a473562acfa0b": [
+      "navigational"
+    ]
+  },
+  "content_types": [
+    "HOMEPAGES",
+    "DOCUMENTATION"
+  ],
+  "serp_features": [
+    "PEOPLE_ALSO_ASK"
+  ],
+  "organic_results": [
+    {
+      "position": 1,
+      "url": "https://webllm.mlc.ai/",
+      "title": "WebLLM | Home",
+      "domain": "mlc.ai",
+      "ctr": 0.3155,
+      "metrics": {
+        "domain_authority": 39,
+        "page_authority": 44,
+        "citation_flow": 43,
+        "trust_flow": 17,
+        "referring_domains": 361,
+        "backlinks": 1115
+      }
+    },
+    {
+      "position": 2,
+      "url": "https://github.com/mlc-ai/web-llm",
+      "title": "mlc-ai/web-llm: High-performance In-browser ...",
+      "domain": "github.com",
+      "ctr": 0.1009,
+      "metrics": {
+        "domain_authority": 97,
+        "page_authority": 72,
+        "citation_flow": 42,
+        "trust_flow": 16,
+        "referring_domains": 471,
+        "backlinks": 1497
+      }
+    },
+    {
+      "position": 3,
+      "url": "https://www.webllm.org/",
+      "title": "WebLLM - Browser-Native AI Protocol",
+      "domain": "webllm.org",
+      "ctr": 0.0435,
+      "metrics": {
+        "domain_authority": 8,
+        "page_authority": 15,
+        "citation_flow": 27,
+        "trust_flow": 1,
+        "referring_domains": 2,
+        "backlinks": 3
+      }
+    },
+    {
+      "position": 4,
+      "url": "https://llm.mlc.ai/docs/deploy/webllm.html",
+      "title": "WebLLM Javascript SDK",
+      "domain": "mlc.ai",
+      "ctr": 0.0278,
+      "metrics": {
+        "domain_authority": 39,
+        "page_authority": 34,
+        "citation_flow": 35,
+        "trust_flow": 8,
+        "referring_domains": 22,
+        "backlinks": 53
+      }
+    },
+    {
+      "position": 5,
+      "url": "https://arxiv.org/html/2412.15803v2",
+      "title": "A High-Performance In-Browser LLM Inference Engine",
+      "domain": "arxiv.org",
+      "ctr": 0.0176,
+      "metrics": {
+        "domain_authority": 93,
+        "page_authority": 49,
+        "citation_flow": 7,
+        "trust_flow": 0,
+        "referring_domains": 7,
+        "backlinks": 15
+      }
+    },
+    {
+      "position": 6,
+      "url": "https://techhub.iodigital.com/articles/what-is-webllm",
+      "title": "What is WebLLM",
+      "domain": "iodigital.com",
+      "ctr": 0.0123,
+      "metrics": {
+        "domain_authority": 53,
+        "page_authority": 31,
+        "citation_flow": 20,
+        "trust_flow": 10,
+        "referring_domains": 5,
+        "backlinks": 22
+      }
+    },
+    {
+      "position": 7,
+      "url": "https://localaimaster.com/blog/webllm-browser-ai-guide",
+      "title": "WebLLM: Run LLMs in Your Browser at 80% Native Speed ...",
+      "domain": "localaimaster.com",
+      "ctr": 0.0091,
+      "metrics": {
+        "domain_authority": 20,
+        "page_authority": 24,
+        "citation_flow": 15,
+        "trust_flow": 4,
+        "referring_domains": 2,
+        "backlinks": 3
+      }
+    },
+    {
+      "position": 8,
+      "url": "https://chat.webllm.ai/",
+      "title": "WebLLM Chat",
+      "domain": "webllm.ai",
+      "ctr": 0.0068,
+      "metrics": {
+        "domain_authority": 18,
+        "page_authority": 30,
+        "citation_flow": 40,
+        "trust_flow": 13,
+        "referring_domains": 86,
+        "backlinks": 249
+      }
+    }
+  ]
+}

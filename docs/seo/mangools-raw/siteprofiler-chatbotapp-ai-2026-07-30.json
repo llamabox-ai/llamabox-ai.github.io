@@ -1,0 +1,25 @@
+{
+  "url_id": "d7a47b4023306318ffdb4db0568268ed",
+  "domain": "chatbotapp.ai",
+  "domain_authority": 45,
+  "page_authority": 43,
+  "citation_flow": 39,
+  "trust_flow": 25,
+  "referring_ips": 797,
+  "majestic_status": "Found",
+  "top_rank": 40521,
+  "facebook_shares": {
+    "l": 581,
+    "og": {
+      "description": "Experience the ultimate Chatbot App with AI features, AI Assistant tools, and seamless chatting. All-in-one solution to enhance productivity and creativity.",
+      "title": "Chatbot App - AI Chatbot",
+      "image": "https://framerusercontent.com/images/ZInahIUDzVIZN4KPtqAaumClqM.png"
+    }
+  },
+  "history": {
+    "top_rank_points": 819,
+    "majestic_points": 283,
+    "facebook_points": 74,
+    "note": "History time series omitted from the summary. Use full=true for the complete history."
+  }
+}

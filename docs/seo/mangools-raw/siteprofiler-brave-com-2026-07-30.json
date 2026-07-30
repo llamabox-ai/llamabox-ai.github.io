@@ -1,0 +1,25 @@
+{
+  "url_id": "5c1f8cb1ff2808f8073dc322cfcbbf11",
+  "domain": "brave.com",
+  "domain_authority": 88,
+  "page_authority": 71,
+  "citation_flow": 62,
+  "trust_flow": 65,
+  "referring_ips": 24862,
+  "majestic_status": "Found",
+  "top_rank": 429,
+  "facebook_shares": {
+    "l": 708964,
+    "og": {
+      "description": "The Brave browser is a fast, private and secure web browser for PC, Mac and mobile. Download now to enjoy a faster ad-free browsing experience that saves data and battery life by blocking tracking software.",
+      "title": "The browser that puts you first | Brave",
+      "image": "https://brave.com/home-assets/images/brave-home-og.png"
+    }
+  },
+  "history": {
+    "top_rank_points": 2488,
+    "majestic_points": 2416,
+    "facebook_points": 1963,
+    "note": "History time series omitted from the summary. Use full=true for the complete history."
+  }
+}

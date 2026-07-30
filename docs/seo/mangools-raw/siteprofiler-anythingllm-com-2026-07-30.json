@@ -1,0 +1,21 @@
+{
+  "url_id": "010db69bad9bdd73d6c74d46ec0b1e47",
+  "domain": "anythingllm.com",
+  "domain_authority": 39,
+  "page_authority": 50,
+  "citation_flow": 44,
+  "trust_flow": 31,
+  "referring_ips": 1751,
+  "majestic_status": "Found",
+  "top_rank": 171046,
+  "facebook_shares": {
+    "l": null,
+    "og": null
+  },
+  "history": {
+    "top_rank_points": 558,
+    "majestic_points": 277,
+    "facebook_points": 13,
+    "note": "History time series omitted from the summary. Use full=true for the complete history."
+  }
+}

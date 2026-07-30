@@ -1,0 +1,25 @@
+{
+  "url_id": "5ec4c23c818b65bee6946e689d9c424e",
+  "domain": "grapheneos.org",
+  "domain_authority": 51,
+  "page_authority": 59,
+  "citation_flow": 51,
+  "trust_flow": 35,
+  "referring_ips": 4458,
+  "majestic_status": "Found",
+  "top_rank": 25737,
+  "facebook_shares": {
+    "l": 2158,
+    "og": {
+      "description": "GrapheneOS is a security and privacy focused mobile OS with Android app compatibility.",
+      "title": "GrapheneOS: the private and secure mobile OS",
+      "image": "https://grapheneos.org/opengraph.png"
+    }
+  },
+  "history": {
+    "top_rank_points": 2104,
+    "majestic_points": 1399,
+    "facebook_points": 1373,
+    "note": "History time series omitted from the summary. Use full=true for the complete history."
+  }
+}
