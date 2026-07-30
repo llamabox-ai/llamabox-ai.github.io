@@ -1,0 +1,16 @@
+{
+  "seed": "free llms",
+  "location_id": 2840,
+  "total_keywords": 9,
+  "keywords": [
+    {"kw": "free llms", "search_volume": 1100, "search_volume_12m": 1300, "cpc": 6.3, "ppc": 37},
+    {"kw": "free llms with api", "search_volume": 10, "search_volume_12m": 20, "cpc": 8.48, "ppc": 47},
+    {"kw": "free llms reddit", "search_volume": 10, "search_volume_12m": 10, "cpc": null, "ppc": null},
+    {"kw": "free llms github", "search_volume": 10, "search_volume_12m": 10, "cpc": null, "ppc": 12},
+    {"kw": "free llms for coding", "search_volume": 10, "search_volume_12m": 10, "cpc": 14.87, "ppc": 38},
+    {"kw": "free llms for janitor ai", "search_volume": 10, "search_volume_12m": 10, "cpc": 6.4, "ppc": 24},
+    {"kw": "free llm download", "search_volume": 10, "search_volume_12m": 10, "cpc": 5.2, "ppc": 28},
+    {"kw": "free llm models api key", "search_volume": 10, "search_volume_12m": 10, "cpc": 7.35, "ppc": 59},
+    {"kw": "free llms for students", "search_volume": 10, "search_volume_12m": 10, "cpc": null, "ppc": 25}
+  ]
+}

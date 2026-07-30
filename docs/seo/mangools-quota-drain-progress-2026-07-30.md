@@ -264,4 +264,21 @@
 - tracked_keywords: 1230 / 1651 remaining
 - links: 1,031,032 / 1,200,000 remaining
 
+## Continuation batch — related keywords for educational / comparison seeds
+- Ran `kwfinder_search_related_keywords` (US, compact) for `free llms` (1,100 current vol, top gaps: `llama ai` 12.1K, `openai app` 8.1K, `llama 3.1` 4.4K, `llama model` 2.9K, `ai chatbot app` 2.4K, `free chatgpt` 2.4K, `local ai app` 110, `local ai chat` 80, `local llm app` 40, `llama mobile` 30, `local language model` 30).
+- Ran `kwfinder_search_related_keywords` (US, compact) for `webllm` (850 current vol, top gaps: `webllm chat` 30, `webllm models` 20, `local llm app` 40, `local ai app` 110, `pocketpal ai` 590, `llama.cpp` 5.4K, `mlc chat` 390).
+- Saved raw summaries:
+  - `docs/seo/mangools-raw/related-keywords-free-llms-us-2840-2026-07-30.json`
+  - `docs/seo/mangools-raw/related-keywords-webllm-us-2840-2026-07-30.json`
+- Updated `docs/seo/keyword-strategy-2026-07-30.md` with volume notes for `free llms` and `webllm`, plus related keyword opportunities (`webllm chat`, `webllm models`, `local ai app`, `llama mobile`).
+
+## Updated quota after related-keywords batch
+- serps: ~1095 / 1200 remaining
+- related-keywords: ~1078 / 1200 remaining (2 used)
+- kw-url-metrics: ~846 / 1440 remaining
+- lm-url-metrics: 1,198,660 / 1,200,000 remaining
+- sp-overview: 142 / 150 remaining
+- tracked_keywords: 1230 / 1651 remaining
+- links: 1,031,032 / 1,200,000 remaining
+
 *Last updated: 2026-07-30.*

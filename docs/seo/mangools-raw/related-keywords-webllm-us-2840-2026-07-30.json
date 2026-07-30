@@ -1,0 +1,16 @@
+{
+  "seed": "webllm",
+  "location_id": 2840,
+  "total_keywords": 9,
+  "keywords": [
+    {"kw": "webllm", "search_volume": 850, "search_volume_12m": 880, "cpc": 7.52, "ppc": 9},
+    {"kw": "webllm chat", "search_volume": 30, "search_volume_12m": 40, "cpc": 8.04, "ppc": 21},
+    {"kw": "webllm github", "search_volume": 20, "search_volume_12m": 20, "cpc": null, "ppc": 10},
+    {"kw": "webllm models", "search_volume": 20, "search_volume_12m": 20, "cpc": 19.55, "ppc": 20},
+    {"kw": "webllm ai", "search_volume": 10, "search_volume_12m": 10, "cpc": null, "ppc": 52},
+    {"kw": "webllm models list", "search_volume": 10, "search_volume_12m": 10, "cpc": 8.12, "ppc": 21},
+    {"kw": "webllm npm", "search_volume": 10, "search_volume_12m": 10, "cpc": null, "ppc": 14},
+    {"kw": "webllm extension", "search_volume": 10, "search_volume_12m": 10, "cpc": null, "ppc": null},
+    {"kw": "webllm demo", "search_volume": 10, "search_volume_12m": 10, "cpc": null, "ppc": 8}
+  ]
+}

@@ -76,8 +76,8 @@ Three additional keywords pulled fresh US desktop SERPs and competitor backlink 
 | `duck ai` | 60,300 | 36 | Duck.ai #1, Reddit r/degoogle #2, Vice #3, Apple App Store #4, DuckDuckGo help #5, FastCompany #8 | High brand navigational intent; target "duck ai alternative" / "duck ai android" with comparison content |
 | `what is an llm in ai` | 1,600 | — | Educational/definitional; mlc.ai ranks via docs | Create `/what-is-an-llm.html` explainer with Android pivot |
 | `what is a llm in ai` | 720 | — | Misspelling/plural variant of above | Same page covers variant naturally |
-| `free llms` | 1,300 | — | Listicle intent; no strong dedicated page | Create `/free-llms.html` listicle of open-weight GGUF models |
-| `webllm` | 880 | — | MLC web runtime brand | Add comparison section on /vs-mlc-llm.html |
+| `free llms` | 1,300 (12m avg) / 1,100 (current) | — | Listicle intent; no strong dedicated page | Create `/free-llms.html` listicle of open-weight GGUF models |
+| `webllm` | 880 (12m avg) / 850 (current) | — | MLC web runtime brand | Add comparison section on /vs-mlc-llm.html; target "webllm chat" (30 vol), "webllm models" (20 vol) |
 | `llm software` | 590 | 41 | Category term | Mention on /what-is-an-llm.html and /best-local-llm-apps-android.html |
 | `gbnf` | 390 | — | Technical structured-output term | Future blog/technical page opportunity |
 
