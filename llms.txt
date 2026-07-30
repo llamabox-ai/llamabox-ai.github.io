@@ -60,6 +60,7 @@ LlamaBox is a React Native Android application that runs LLMs (GGUF models via l
 - Commercial license: https://llamabox-ai.github.io/commercial-license.html
 - Partners: https://llamabox-ai.github.io/partners.html
 - Investors & acquisitions: https://llamabox-ai.github.io/investors.html
+- Press kit: https://llamabox-ai.github.io/press-kit.html
 - Blog: https://llamabox-ai.github.io/blog/
 - Blog — phone faster than PC: https://llamabox-ai.github.io/blog/2026-07-30-phone-faster-than-pc.html
 - Blog — vs PocketPal: https://llamabox-ai.github.io/blog/2026-07-30-llamabox-vs-pocketpal.html

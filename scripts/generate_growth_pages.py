@@ -79,6 +79,7 @@ FOOTER = """  <footer class="footer">
             <li><a href="/commercial-license.html">Commercial license</a></li>
             <li><a href="/partners.html">Partners</a></li>
             <li><a href="/investors.html">Investors &amp; acquisitions</a></li>
+            <li><a href="/press-kit.html">Press kit</a></li>
           </ul>
         </div>
         <div>
@@ -935,6 +936,77 @@ def main():
         ),
     )
 
+    page(
+        "press-kit.html",
+        "LlamaBox Press Kit | Facts, logos, and contacts",
+        "LlamaBox press kit: one-page facts for journalists, partners, and investors. Private offline AI chat for Android, CPU-only by design, open-core.",
+        article(
+            "Press kit",
+            "LlamaBox press kit.",
+            "Everything you need to write about, partner with, or evaluate LlamaBox — on one page.",
+            """
+        <h2>Boilerplate</h2>
+        <p>LlamaBox is a free Android app that runs large language models entirely on-device. It gives users private, offline AI chat with no cloud inference, no accounts, and no telemetry. Built with React Native and llama.cpp, LlamaBox is CPU-only by design so it works across the widest range of Android 7.0+ arm64 phones.</p>
+
+        <h2>Key facts</h2>
+        <ul>
+          <li><strong>Product</strong>: private offline AI chat for Android</li>
+          <li><strong>Stack</strong>: React Native 0.81, llama.rn wrapping llama.cpp, GGUF models</li>
+          <li><strong>Compute</strong>: CPU-only (ARM NEON, 4 threads); no GPU dependencies</li>
+          <li><strong>Features</strong>: chat, vision, TTS readback, model hub, system monitor, offline history</li>
+          <li><strong>Privacy</strong>: inference never leaves the device; no account required</li>
+          <li><strong>License</strong>: dual-licensed AGPL-3.0 + commercial license</li>
+          <li><strong>Status</strong>: closed beta (waitlist); package <code>com.llamabox</code></li>
+          <li><strong>Creator</strong>: Aalhad (Mythos Labs)</li>
+        </ul>
+
+        <h2>What makes it different</h2>
+        <p>Most "AI apps" send prompts to a vendor server. LlamaBox removes the server path entirely — the model runs on the phone. That makes it private by architecture, not by policy, and it works in airplane mode after the model file is downloaded.</p>
+
+        <h2>Angles for coverage</h2>
+        <ul>
+          <li><strong>Privacy / AI safety</strong>: an Android chat app that cannot leak prompts because it never sends them</li>
+          <li><strong>Hardware access</strong>: CPU-only inference reaches mid-range and older phones, not just flagships</li>
+          <li><strong>Offline / field use</strong>: journalists, travelers, students, healthcare workers, and defense edge cases</li>
+          <li><strong>Open core</strong>: AGPL-3.0 public source at beta end plus commercial licensing for OEMs and enterprises</li>
+          <li><strong>Comparison</strong>: how LlamaBox differs from PocketPal AI, MLC LLM, Ollama, and cloud assistants</li>
+        </ul>
+
+        <h2>Important caveats (please include)</h2>
+        <ul>
+          <li>LlamaBox is <strong>CPU-only by design</strong>; do not claim GPU acceleration.</li>
+          <li>Full public source lands when the closed beta ends.</li>
+          <li>Phone CPUs are not datacenter GPUs — quality and speed are model-size dependent.</li>
+        </ul>
+
+        <h2>Links to cite</h2>
+        <ul>
+          <li>Homepage: <a href="/">https://llamabox-ai.github.io/</a></li>
+          <li>Architecture: <a href="/architecture.html">https://llamabox-ai.github.io/architecture.html</a></li>
+          <li>LLM brief: <a href="/llms.txt">https://llamabox-ai.github.io/llms.txt</a></li>
+          <li>Waitlist: <a href="/waitlist.html">https://llamabox-ai.github.io/waitlist.html</a></li>
+          <li>Compare: <a href="/best-local-llm-apps-android.html">https://llamabox-ai.github.io/best-local-llm-apps-android.html</a></li>
+          <li>Enterprise: <a href="/enterprise.html">https://llamabox-ai.github.io/enterprise.html</a></li>
+          <li>Investors: <a href="/investors.html">https://llamabox-ai.github.io/investors.html</a></li>
+          <li>GitHub org: <a href="https://github.com/llamabox-ai" rel="noopener">https://github.com/llamabox-ai</a></li>
+        </ul>
+
+        <h2>Media assets</h2>
+        <ul>
+          <li>App screenshot: <a href="/assets/screenshot-1-home.png">/assets/screenshot-1-home.png</a></li>
+          <li>Favicon / logo SVG: in site header (data URI) or contact us for vector files</li>
+        </ul>
+
+        <h2>Contacts</h2>
+        <ul>
+          <li><strong>General / press</strong>: <a href="mailto:aalhad.dev@gmail.com?subject=LlamaBox%20press">aalhad.dev@gmail.com</a></li>
+          <li><strong>Enterprise / commercial</strong>: <a href="mailto:aalhad.dev@gmail.com?subject=LlamaBox%20enterprise">aalhad.dev@gmail.com</a></li>
+          <li><strong>Investors / acquisitions</strong>: <a href="mailto:aalhad.dev@gmail.com?subject=LlamaBox%20investor%20%2F%20acquisition">aalhad.dev@gmail.com</a></li>
+        </ul>
+""",
+        ),
+    )
+
     # --- blog ---
     posts = [
         (
@@ -1195,6 +1267,7 @@ def main():
         ("/commercial-license.html", "0.8", "monthly"),
         ("/partners.html", "0.8", "monthly"),
         ("/investors.html", "0.8", "monthly"),
+        ("/press-kit.html", "0.8", "monthly"),
         ("/blog/", "0.75", "weekly"),
         ("/blog/2026-07-28-airplane-mode-ai.html", "0.7", "monthly"),
         ("/blog/2026-07-28-best-small-gguf-android.html", "0.7", "monthly"),

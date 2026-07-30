@@ -133,6 +133,12 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://llamabox-ai.github.io/press-kit.html</loc>
+    <lastmod>2026-07-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://llamabox-ai.github.io/blog/</loc>
     <lastmod>2026-07-30</lastmod>
     <changefreq>weekly</changefreq>

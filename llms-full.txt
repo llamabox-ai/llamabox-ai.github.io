@@ -296,6 +296,7 @@ LlamaBox is **dual-licensed**:
 | https://llamabox-ai.github.io/commercial-license.html | Licensing |
 | https://llamabox-ai.github.io/partners.html | Partnerships |
 | https://llamabox-ai.github.io/investors.html | Investors |
+| https://llamabox-ai.github.io/press-kit.html | Press kit |
 | https://llamabox-ai.github.io/blog/ | Blog index |
 | https://llamabox-ai.github.io/blog/2026-07-30-phone-faster-than-pc.html | Blog post |
 | https://llamabox-ai.github.io/blog/2026-07-30-llamabox-vs-pocketpal.html | Blog post |
