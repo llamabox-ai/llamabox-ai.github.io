@@ -1,0 +1,20 @@
+{
+  "url": "https://deepakness.com/blog/ollama-in-android-linux/",
+  "total_links": 1,
+  "links": [
+    {
+      "source": "https://minifeed.net/blogs/liazt7mA",
+      "target": "https://deepakness.com/blog/ollama-in-android-linux",
+      "anchor": "original ↗",
+      "type": "TextLink",
+      "no_follow": false,
+      "source_trust_flow": 2,
+      "source_citation_flow": 9,
+      "title": "DeepakNess - Blog Posts | minifeed",
+      "lang": "en",
+      "first_seen": "2026-01-10",
+      "last_seen": "2026-06-01",
+      "deleted": false
+    }
+  ]
+}

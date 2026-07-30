@@ -73,6 +73,7 @@ Three additional keywords pulled fresh US desktop SERPs and competitor backlink 
 | `private ai chatbot android` | — | 31 | Google Play "Private AI" #1, Reddit r/degoogle #2, Layla #3 (DA11/280RD), Uptodown #4, De.AI Play Store #5, Wondertools #6, Tom's Guide #7 | Dedicated Android page can outrank Layla and listicles; high conversion intent |
 | `mlc chat android` | 70 | 37 | MLC docs/home dominate; Reddit r/LocalLLaMA #4; UpdateStar #8 | Strengthen /vs-mlc-llm.html; intercept APK/download intent with real Android app |
 | `ollama android` | 180 | — | Reddit r/ollama #1, Ollama official #2, GitHub fork #3, Play Store client #4, dev.to #5, deepakness.com #6 | Comparison page `/vs-ollama.html` answers the core question: no official Ollama Android app |
+| `duck ai` | 60,300 | 36 | Duck.ai #1, Reddit r/degoogle #2, Vice #3, Apple App Store #4, DuckDuckGo help #5, FastCompany #8 | High brand navigational intent; target "duck ai alternative" / "duck ai android" with comparison content |
 
 ### International SERP findings
 
@@ -88,8 +89,11 @@ Three additional keywords pulled fresh US desktop SERPs and competitor backlink 
 - **AnythingLLM.com**: 2,010 referring domains, 21,979 backlinks. Strong open-source community. Potential partner / comparison target.
 - **Fritz.ai**: DA=52, 500 total backlinks, but profile is polluted by legacy robotics identity (MIP Robotics) and recent PBN/spam. The specific `/chatgpt-android-offline/` page has only 1 backlink and the `/can-you-use-chatgpt-offline/` page has 0 external backlinks. Very beatable at the page level.
 - **AI-toolbox.co**: DA=20, 32 backlinks, mostly low-quality directories and PBN/Show-HN aggregators. Ranks in India for `chatgpt android offline` with thin content. Beatable with a single real editorial link.
-- **Deepakness.com**: DA=20, tiny site ranking for `ollama android`. Very beatable.
-- **Mobile-artificial-intelligence.com (Maid)**: DA=3, 0 backlinks, ranks #8 in UK for `ollama android`. Extremely beatable — a dedicated LlamaBox comparison page can outrank it quickly.
+- **Deepakness.com**: DA=20, 41 referring IPs, but the specific `/blog/ollama-in-android-linux/` page has only 1 backlink (from minifeed.net). Very beatable at the page level.
+- **Mobile-artificial-intelligence.com (Maid)**: DA=3, 1 referring IP, 0 backlinks, ranks #8 in UK for `ollama android`. Extremely beatable — a dedicated LlamaBox comparison page can outrank it quickly.
+- **Tom's Guide** (`/ai/i-put-3-local-ai-chatbots...`): DA=89 domain, but the specific page has only 2 referring domains and 13 backlinks. Pitching an updated 2026 version or LlamaBox inclusion is viable.
+- **Wondertools Substack** (`/p/the-best-mobile-ai-apps`): DA=92 domain, page has 43 referring domains and 145 backlinks; still reachable via direct newsletter outreach.
+- **Android Authority**: DA=91, 2,185 referring IPs. Major Android publication; ideal for a "best offline AI apps" or LlamaBox feature pitch.
 
 ## Implementation completed 2026-07-30
 
@@ -125,9 +129,10 @@ Three additional keywords pulled fresh US desktop SERPs and competitor backlink 
 - ✅ Keyword details saved for high-value terms `private ai` (vol 2,200, KD 31) and `on device ai` (vol 520, KD 33); both have beatable slots in SERP.
 - ✅ Related-keyword compact summaries saved for `duck ai`, `private ai`, `on device ai`.
 - ✅ Fresh SERPs saved: `duck ai`, `private ai`, `mlc chat android`, `private ai chatbot android`.
-- ✅ Keyword details refreshed: `ollama android` (navigational, no official app), `mlc chat android` (vol 70, KD 37), `private ai chatbot android` (KD 31, Layla beatable).
+- ✅ Keyword details refreshed: `ollama android` (navigational, no official app), `mlc chat android` (vol 70, KD 37), `private ai chatbot android` (KD 31, Layla beatable), `duck ai` (60,300 vol, KD 36).
 - ✅ `/vs-ollama.html` rewritten to target "Ollama Android" directly: title now "Ollama Android alternative | LlamaBox local LLM on Android", FAQ answers "Can you run Ollama on Android?" and "Is there an Ollama Android app?".
 - ✅ `/on-device-llm.html` rewritten to target "on device AI": title now "On-Device AI on Android | Local LLM with LlamaBox", expanded definition, use cases, and FAQ schema.
+- ✅ New landing page `/private-ai-android.html` created targeting `private ai` and `private ai chatbot android` with comparison table, use cases, and FAQ schema.
 
 ## Remaining Mangools quota snapshot
 

@@ -209,10 +209,37 @@
 
 ## Updated quota after continuation batch
 - serps: ~1095 / 1200 remaining (4 used)
-- related-keywords: 1082 / 1200 remaining
-- kw-url-metrics: ~847 / 1440 remaining (3 successful details)
+- related-keywords: ~1080 / 1200 remaining (2 attempted; 1 success, 1 provider error)
+- kw-url-metrics: ~846 / 1440 remaining (4 calls: 3 details + 1 retry success)
 - lm-url-metrics: 1,198,660 / 1,200,000 remaining
-- sp-overview: 144 / 150 remaining
+- sp-overview: 142 / 150 remaining (2 overviews used)
+- tracked_keywords: 1230 / 1651 remaining
+- links: 1,031,032 / 1,200,000 remaining
+
+## Continuation batch — competitor backlink + domain authority deep dive
+- Retried `kwfinder_get_keyword_details` for `duck ai` (succeeded; informational intent, 449M results, Duck.ai dominates SERP).
+- Saved `keyword-details-duck-ai-us-2840-2026-07-30.json`.
+- Ran related-keywords for `private ai android` (provider error), `duck ai alternative` (provider error), `ollama android alternative` (1 keyword, null volume).
+- Ran `siteprofiler_get_overview` for:
+  - `deepakness.com` (DA=20, 41 referring IPs)
+  - `mobile-artificial-intelligence.com` (DA=3, 1 referring IP)
+  - `androidauthority.com` (DA=91, 2,185 referring IPs)
+  - `tomsguide.com` (DA=89, 2,039 referring IPs)
+- Ran `linkminer_get_backlinks` (l100, links_per_domain=1) for:
+  - `deepakness.com/blog/ollama-in-android-linux/` (1 total link from minifeed.net)
+  - `mobile-artificial-intelligence.com/` (0 links)
+- Ran `serpchecker_get_url_metrics` for:
+  - Tom's Guide article "I put 3 local AI chatbots to the test" (PA=42, 2 ref domains, 13 backlinks)
+  - Wondertools Substack "The best mobile AI apps" (PA=56, 43 ref domains, 145 backlinks)
+- Saved all raw outputs to `docs/seo/mangools-raw/`.
+- Updated `docs/seo/keyword-strategy-2026-07-30.md` with new competitive findings.
+
+## Updated quota after backlink deep dive
+- serps: ~1095 / 1200 remaining
+- related-keywords: ~1080 / 1200 remaining
+- kw-url-metrics: ~846 / 1440 remaining
+- lm-url-metrics: 1,198,660 / 1,200,000 remaining
+- sp-overview: 142 / 150 remaining
 - tracked_keywords: 1230 / 1651 remaining
 - links: 1,031,032 / 1,200,000 remaining
 
