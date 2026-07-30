@@ -184,12 +184,75 @@ Thanks,
 - **Angle:** "Update your Spanish local inference guide to include LlamaBox as an Android example."
 - **Contact path:** Article author contact.
 
+### 19. MakeUseOf (makeuseof.com)
+- **URL that ranks for target:** https://www.makeuseof.com/you-can-and-should-run-a-tiny-llm-on-your-android-phone/
+- **Why target:** DA=91, ranks #2 for `open source llm android`. Huge Android/tech audience.
+- **Page to pitch:** `/best-local-llm-apps-android.html` or `/blog/2026-07-30-why-cpu-only.html`
+- **Angle:** "You covered tiny LLMs on Android. LlamaBox is a CPU-only open-source option that reaches mid-range phones too — possible follow-up angle."
+- **Contact path:** MakeUseOf contributor guidelines / editor contact.
+
+### 20. ItsFoss (itsfoss.com)
+- **URL that ranks for target:** https://itsfoss.com/android-on-device-ai/
+- **Why target:** DA=80, ranks #6 for `open source llm android`. Linux/open-source audience that values privacy and self-hosting.
+- **Page to pitch:** `/best-local-llm-apps-android.html` or `/architecture.html`
+- **Angle:** "Add LlamaBox to your on-device AI Android coverage as an AGPL-3.0 open-source option with a commercial license path."
+- **Contact path:** ItsFoss guest post / tip submission form.
+
+### 21. Fritz.ai (fritz.ai)
+- **URL that ranks for target:** https://fritz.ai/chatgpt-android-offline/
+- **Why target:** DA=52, ranks #1 for `chatgpt android offline`, but LinkMiner shows 0 backlinks to this page. The page itself is thin content. If we earn a single editorial backlink, LlamaBox can outrank it.
+- **Page to pitch:** `/chatgpt-android-offline.html`
+- **Angle:** "Your article claims there is no ChatGPT offline on Android. LlamaBox actually makes it work with local GGUF models — consider updating or adding it as the working alternative."
+- **Contact path:** Site contact / author byline.
+
+### 22. Tom's Guide (tomsguide.com)
+- **URL that ranks for target:** https://www.tomsguide.com/ai/what-is-chatgpt
+- **Why target:** DA=91, ranks #3 for `chatgpt android offline`. High authority but broad page. A targeted update pitch could add LlamaBox to a mobile/offline section.
+- **Page to pitch:** `/chatgpt-android-offline.html`
+- **Angle:** "Add a 'Can ChatGPT run offline on Android?' FAQ or sidebar mentioning LlamaBox as a working offline alternative."
+- **Contact path:** Editor contact / tips email.
+
+### 23. Android Authority (androidauthority.com)
+- **URL that ranks for target:** https://www.androidauthority.com/what-is-chatgpt-3311179/
+- **Why target:** DA=90, ranks #4 for `chatgpt android offline`. Android-specific audience; ideal placement for LlamaBox.
+- **Page to pitch:** `/chatgpt-android-offline.html` or `/best-local-llm-apps-android.html`
+- **Angle:** "Update your Android ChatGPT explainer with a short note: LlamaBox runs local LLMs offline on Android."
+- **Contact path:** Tips / editor contact form.
+
+### 24. XDA Developers (xda-developers.com)
+- **URL that ranks for target:** https://www.xda-developers.com/chatgpt-android/
+- **Why target:** DA=85, ranks #2 for `chatgpt android offline`. Android power-user community; comparison/list coverage would drive installs.
+- **Page to pitch:** `/best-local-llm-apps-android.html`
+- **Angle:** "Roundup idea: 'Best offline AI chat apps for Android' — LlamaBox as the local GGUF option."
+- **Contact path:** XDA writer contact / forum thread.
+
+### 25. dev.to / Ollama Android tutorials
+- **URL that ranks for target:** https://dev.to/drsilva/how-to-run-ollama-on-android-5aj8
+- **Why target:** DA=91, ranks #3 for `ollama android`. Users searching this term want Ollama on mobile but official Ollama has no Android client; LlamaBox is a direct alternative.
+- **Page to pitch:** `/vs-ollama.html`
+- **Angle:** "Mention LlamaBox in your tutorial as the Android-native alternative since Ollama doesn't ship a mobile app."
+- **Contact path:** dev.to comment / author message.
+
+### 26. Deepakness.com — "Run Ollama on Android"
+- **URL that ranks for target:** https://deepakness.com/run-ollama-on-android/
+- **Why target:** DA=36, ranks for `ollama android`. Small blog, very beatable. Outreach could swap/append a note about LlamaBox.
+- **Page to pitch:** `/vs-ollama.html`
+- **Angle:** "Your guide explains how to run Ollama on Android via workarounds. LlamaBox is purpose-built for that — worth mentioning."
+- **Contact path:** Site contact / Twitter.
+
+### 27. Android Police (androidpolice.com)
+- **Why target:** DA=86, Android-focused. They cover apps and privacy. No specific ranking URL yet, but a natural fit for a "best offline AI apps for Android" pitch.
+- **Page to pitch:** `/best-local-llm-apps-android.html`
+- **Angle:** "Pitch a listicle or app spotlight on LlamaBox as an offline, open-source AI chat app for Android."
+- **Contact path:** Tips email / editor contact.
+
 ## Next actions
 
 1. ✅ New pages are generated; commit + push to make live.
 2. Send 2–3 tier-1 outreach emails per week; do not blast all at once.
-3. Engage authentically in the three Reddit threads listed in `reddit-threads-to-engage-2026-07-30.md`.
+3. Engage authentically in the three Reddit threads listed in `reddit-threads-to-engage-2026-07-30.md` and new `chatgpt android offline` / `ollama android` threads.
 4. Submit LlamaBox to Privacy Guides and the AI tool directories that list Layla.
-5. Track responses in a simple spreadsheet or CRM column.
-6. Repurpose rejected pitches into HN / Reddit / X threads.
-7. Re-check backlink profiles in 30–60 days to see if any new competitor links appear.
+5. Pitch listicle updates to MakeUseOf, ItsFoss, Tom's Guide, XDA, Android Authority, Android Police.
+6. Track responses in a simple spreadsheet or CRM column.
+7. Repurpose rejected pitches into HN / Reddit / X threads.
+8. Re-check backlink profiles in 30–60 days to see if any new competitor links appear.

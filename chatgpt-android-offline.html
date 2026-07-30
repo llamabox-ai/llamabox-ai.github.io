@@ -14,21 +14,23 @@
   <link rel="stylesheet" href="/style.css">
   <link rel="alternate" type="text/plain" title="LLM brief" href="https://llamabox-ai.github.io/llms.txt">
 
-  <title>Commercial license | LlamaBox</title>
-  <meta name="description" content="Dual-licensed AGPL-3.0 + commercial. Get a commercial license to use LlamaBox in proprietary products, SaaS, or app stores without open-sourcing your code.">
-  <link rel="canonical" href="https://llamabox-ai.github.io/commercial-license.html">
+  <title>ChatGPT Android Offline: Why It Doesn’t Work & What Does | LlamaBox</title>
+  <meta name="description" content="ChatGPT cannot run offline on Android. LlamaBox is the offline alternative — local GGUF models, no cloud, no account, private chat on your phone.">
+  <link rel="canonical" href="https://llamabox-ai.github.io/chatgpt-android-offline.html">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="LlamaBox">
   <meta property="og:locale" content="en_US">
-  <meta property="og:url" content="https://llamabox-ai.github.io/commercial-license.html">
-  <meta property="og:title" content="Commercial license | LlamaBox">
-  <meta property="og:description" content="Dual-licensed AGPL-3.0 + commercial. Get a commercial license to use LlamaBox in proprietary products, SaaS, or app stores without open-sourcing your code.">
+  <meta property="og:url" content="https://llamabox-ai.github.io/chatgpt-android-offline.html">
+  <meta property="og:title" content="ChatGPT Android Offline: Why It Doesn’t Work & What Does | LlamaBox">
+  <meta property="og:description" content="ChatGPT cannot run offline on Android. LlamaBox is the offline alternative — local GGUF models, no cloud, no account, private chat on your phone.">
   <meta property="og:image" content="https://llamabox-ai.github.io/assets/screenshot-1-home.png">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Commercial license | LlamaBox">
-  <meta name="twitter:description" content="Dual-licensed AGPL-3.0 + commercial. Get a commercial license to use LlamaBox in proprietary products, SaaS, or app stores without open-sourcing your code.">
+  <meta name="twitter:title" content="ChatGPT Android Offline: Why It Doesn’t Work & What Does | LlamaBox">
+  <meta name="twitter:description" content="ChatGPT cannot run offline on Android. LlamaBox is the offline alternative — local GGUF models, no cloud, no account, private chat on your phone.">
   <meta name="twitter:image" content="https://llamabox-ai.github.io/assets/screenshot-1-home.png">
-
+  <script type="application/ld+json">
+  {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Can you use ChatGPT offline on Android?", "acceptedAnswer": {"@type": "Answer", "text": "No. ChatGPT and other cloud AI chatbots require an internet connection to send prompts to OpenAI's servers. There is no official offline ChatGPT mode."}}, {"@type": "Question", "name": "What is the best ChatGPT offline alternative for Android?", "acceptedAnswer": {"@type": "Answer", "text": "LlamaBox. It runs open-source GGUF models directly on your Android phone, so chat works without internet after the model is downloaded."}}, {"@type": "Question", "name": "Does ChatGPT have an offline APK?", "acceptedAnswer": {"@type": "Answer", "text": "No official offline APK exists. Any app claiming 'offline ChatGPT' is using a different model or misleading branding. Look for apps that explicitly run local LLMs, like LlamaBox."}}, {"@type": "Question", "name": "Is LlamaBox free?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. The app is free during closed beta and will be open-sourced under AGPL-3.0 when beta ends. A commercial license is available for OEMs and enterprises."}}]}
+  </script>
 </head>
 <body>
   <div class="bg-mesh" aria-hidden="true"></div>
@@ -54,32 +56,48 @@
 
     <section class="section page-hero">
       <div class="wrap narrow">
-        <div class="eyebrow">Licensing</div>
-        <h1>Commercial license for LlamaBox.</h1>
-        <p class="lead">The public codebase will be AGPL-3.0 when released. A separate commercial license is available for organizations that cannot use copyleft.</p>
+        <div class="eyebrow">Offline ChatGPT alternative</div>
+        <h1>ChatGPT offline on Android? Not yet.</h1>
+        <p class="lead">Cloud ChatGPT needs the network. LlamaBox is the offline alternative that keeps the model on your phone.</p>
       </div>
     </section>
     <section class="section section-tight">
       <div class="wrap narrow prose reveal is-in">
 
-        <h2>Who needs a commercial license</h2>
+        <h2>Why ChatGPT cannot work offline on Android</h2>
+        <p>ChatGPT is a cloud service. When you type a prompt, the app sends it to OpenAI's servers, the model runs there, and the answer travels back. That design needs an active internet connection. There is no official offline mode, no downloadable model, and no Android APK that lets you run the real ChatGPT weights locally.</p>
+
+        <h2>What “ChatGPT Android offline” searchers actually want</h2>
+        <p>Most people typing this do not need the exact ChatGPT model. They want a <strong>ChatGPT-like chat experience that works without internet</strong> — private, local, and available on their phone. That is exactly what on-device LLMs deliver.</p>
+
+        <h2>The real solution: a local LLM app for Android</h2>
+        <p>LlamaBox loads a quantized GGUF model onto your Android phone and runs inference with llama.cpp. After the one-time model download, you can chat in airplane mode. Your prompts never leave the device, no account is required, and no cloud privacy policy applies.</p>
         <ul>
-          <li>Companies shipping LlamaBox or derived code in a proprietary app</li>
-          <li>SaaS products that include LlamaBox inference as a backend component</li>
-          <li>OEMs pre-installing LlamaBox on devices without distributing source</li>
-          <li>Teams that need legal indemnity and a clear IP chain</li>
+          <li><strong>Model format</strong>: GGUF (Q4_K_M recommended)</li>
+          <li><strong>Compute</strong>: CPU-only by design, Android 7.0+ arm64</li>
+          <li><strong>Privacy</strong>: no cloud inference, no telemetry, no account</li>
+          <li><strong>Extras</strong>: vision, TTS readback, offline history, system monitor</li>
         </ul>
-        <h2>What the commercial license covers</h2>
-        <ul>
-          <li>Permission to use LlamaBox code without AGPL obligations</li>
-          <li>Access to closed-beta builds and priority support</li>
-          <li>Optional engineering consulting and custom feature development</li>
-          <li>“LlamaBox” trademark usage under defined terms</li>
-        </ul>
-        <h2>Pricing</h2>
-        <p>Pricing is negotiated per deployment: per-seat, per-device, or flat project license. We optimize for early partners and high-volume deployments.</p>
-        <h2>Request a quote</h2>
-        <p>Email <a href="mailto:aalhad.dev@gmail.com?subject=LlamaBox%20commercial%20license%20inquiry">aalhad.dev@gmail.com</a> with a short description of your use case, expected scale, and timeline.</p>
+
+        <h2>How it compares to "offline ChatGPT" apps in the Play Store</h2>
+        <p>Some store apps brand themselves as "offline ChatGPT" or "OfflineGPT." Read carefully: many are closed products with unclear models, ads, or cloud fallbacks. LlamaBox differs because you choose the open-source GGUF weights, the source code will be public, and the architecture has no server path for chat.</p>
+
+        <h2>How to set it up</h2>
+        <ol>
+          <li>Join the LlamaBox waitlist for the closed beta.</li>
+          <li>Install the APK for package <code>com.llamabox</code>.</li>
+          <li>Download a small Q4_K_M model from the in-app hub or import a GGUF.</li>
+          <li>Load the model and chat — toggle airplane mode to prove it is local.</li>
+        </ol>
+
+        <p>Related: <a href="/offline-ai-android.html">offline AI Android</a> · <a href="/private-chatgpt-alternative.html">private ChatGPT alternative</a> · <a href="/how-to-run-llm-on-android.html">how to run an LLM on Android</a> · <a href="/vs-chatgpt.html">LlamaBox vs ChatGPT</a>.</p>
+        <h2 id="faq">FAQ</h2>
+<div class="faq-list">
+<details class="faq-item" open><summary>Can you use ChatGPT offline on Android?</summary><div class="ans">No. ChatGPT and other cloud AI chatbots require an internet connection to send prompts to OpenAI's servers. There is no official offline ChatGPT mode.</div></details>
+<details class="faq-item"><summary>What is the best ChatGPT offline alternative for Android?</summary><div class="ans">LlamaBox. It runs open-source GGUF models directly on your Android phone, so chat works without internet after the model is downloaded.</div></details>
+<details class="faq-item"><summary>Does ChatGPT have an offline APK?</summary><div class="ans">No official offline APK exists. Any app claiming 'offline ChatGPT' is using a different model or misleading branding. Look for apps that explicitly run local LLMs, like LlamaBox.</div></details>
+<details class="faq-item"><summary>Is LlamaBox free?</summary><div class="ans">Yes. The app is free during closed beta and will be open-sourced under AGPL-3.0 when beta ends. A commercial license is available for OEMs and enterprises.</div></details>
+</div>
 
       </div>
     </section>

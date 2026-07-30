@@ -61,6 +61,7 @@ FOOTER = """  <footer class="footer">
             <li><a href="/offline-ai-android.html">Offline AI Android</a></li>
             <li><a href="/on-device-llm.html">On-device LLM</a></li>
             <li><a href="/private-chatgpt-alternative.html">Private ChatGPT alt</a></li>
+            <li><a href="/chatgpt-android-offline.html">ChatGPT offline</a></li>
             <li><a href="/gguf-android.html">GGUF on Android</a></li>
             <li><a href="/llm-download.html">LLM download</a></li>
             <li><a href="/how-to-run-llm-on-android.html">How-to guide</a></li>
@@ -317,6 +318,7 @@ def main():
           <a class="card-link glass" href="/offline-ai-android.html"><strong>Offline AI Android</strong><span>Airplane-mode chat that stays local</span></a>
           <a class="card-link glass" href="/on-device-llm.html"><strong>On-device LLM</strong><span>What “on-device” actually means</span></a>
           <a class="card-link glass" href="/private-chatgpt-alternative.html"><strong>Private ChatGPT alternative</strong><span>When cloud chat is the risk</span></a>
+          <a class="card-link glass" href="/chatgpt-android-offline.html"><strong>ChatGPT Android offline</strong><span>Why cloud ChatGPT can’t, and what does</span></a>
           <a class="card-link glass" href="/gguf-android.html"><strong>GGUF on Android</strong><span>Quantizations, RAM, imports</span></a>
           <a class="card-link glass" href="/llm-download.html"><strong>LLM download</strong><span>Get GGUF models for Android</span></a>
           <a class="card-link glass" href="/how-to-run-llm-on-android.html"><strong>How to run an LLM on Android</strong><span>Step-by-step tutorial</span></a>
@@ -608,6 +610,54 @@ def main():
         ("Can these apps run without internet?", "Yes, once a model is downloaded. LlamaBox, PocketPal AI, and MLC LLM all support offline inference after setup."),
         ("Do I need a flagship phone?", "No for LlamaBox. Its CPU-only path runs on Android 7.0+ arm64. Some competitors target newer hardware or require GPU tuning."),
     ]
+    faqs_chatgpt_offline = [
+        ("Can you use ChatGPT offline on Android?", "No. ChatGPT and other cloud AI chatbots require an internet connection to send prompts to OpenAI's servers. There is no official offline ChatGPT mode."),
+        ("What is the best ChatGPT offline alternative for Android?", "LlamaBox. It runs open-source GGUF models directly on your Android phone, so chat works without internet after the model is downloaded."),
+        ("Does ChatGPT have an offline APK?", "No official offline APK exists. Any app claiming 'offline ChatGPT' is using a different model or misleading branding. Look for apps that explicitly run local LLMs, like LlamaBox."),
+        ("Is LlamaBox free?", "Yes. The app is free during closed beta and will be open-sourced under AGPL-3.0 when beta ends. A commercial license is available for OEMs and enterprises."),
+    ]
+    page(
+        "chatgpt-android-offline.html",
+        "ChatGPT Android Offline: Why It Doesn’t Work & What Does | LlamaBox",
+        "ChatGPT cannot run offline on Android. LlamaBox is the offline alternative — local GGUF models, no cloud, no account, private chat on your phone.",
+        article(
+            "Offline ChatGPT alternative",
+            "ChatGPT offline on Android? Not yet.",
+            "Cloud ChatGPT needs the network. LlamaBox is the offline alternative that keeps the model on your phone.",
+            f"""
+        <h2>Why ChatGPT cannot work offline on Android</h2>
+        <p>ChatGPT is a cloud service. When you type a prompt, the app sends it to OpenAI's servers, the model runs there, and the answer travels back. That design needs an active internet connection. There is no official offline mode, no downloadable model, and no Android APK that lets you run the real ChatGPT weights locally.</p>
+
+        <h2>What “ChatGPT Android offline” searchers actually want</h2>
+        <p>Most people typing this do not need the exact ChatGPT model. They want a <strong>ChatGPT-like chat experience that works without internet</strong> — private, local, and available on their phone. That is exactly what on-device LLMs deliver.</p>
+
+        <h2>The real solution: a local LLM app for Android</h2>
+        <p>LlamaBox loads a quantized GGUF model onto your Android phone and runs inference with llama.cpp. After the one-time model download, you can chat in airplane mode. Your prompts never leave the device, no account is required, and no cloud privacy policy applies.</p>
+        <ul>
+          <li><strong>Model format</strong>: GGUF (Q4_K_M recommended)</li>
+          <li><strong>Compute</strong>: CPU-only by design, Android 7.0+ arm64</li>
+          <li><strong>Privacy</strong>: no cloud inference, no telemetry, no account</li>
+          <li><strong>Extras</strong>: vision, TTS readback, offline history, system monitor</li>
+        </ul>
+
+        <h2>How it compares to "offline ChatGPT" apps in the Play Store</h2>
+        <p>Some store apps brand themselves as "offline ChatGPT" or "OfflineGPT." Read carefully: many are closed products with unclear models, ads, or cloud fallbacks. LlamaBox differs because you choose the open-source GGUF weights, the source code will be public, and the architecture has no server path for chat.</p>
+
+        <h2>How to set it up</h2>
+        <ol>
+          <li>Join the LlamaBox waitlist for the closed beta.</li>
+          <li>Install the APK for package <code>com.llamabox</code>.</li>
+          <li>Download a small Q4_K_M model from the in-app hub or import a GGUF.</li>
+          <li>Load the model and chat — toggle airplane mode to prove it is local.</li>
+        </ol>
+
+        <p>Related: <a href="/offline-ai-android.html">offline AI Android</a> · <a href="/private-chatgpt-alternative.html">private ChatGPT alternative</a> · <a href="/how-to-run-llm-on-android.html">how to run an LLM on Android</a> · <a href="/vs-chatgpt.html">LlamaBox vs ChatGPT</a>.</p>
+        {faq_html(faqs_chatgpt_offline)}
+""",
+        ),
+        extra_head=faq_schema(faqs_chatgpt_offline),
+    )
+
     page(
         "best-local-llm-apps-android.html",
         "Best Local LLM Apps for Android 2026 | LlamaBox",
@@ -1255,6 +1305,7 @@ def main():
         ("/offline-ai-android.html", "0.85", "weekly"),
         ("/on-device-llm.html", "0.85", "weekly"),
         ("/private-chatgpt-alternative.html", "0.85", "weekly"),
+        ("/chatgpt-android-offline.html", "0.85", "weekly"),
         ("/gguf-android.html", "0.85", "weekly"),
         ("/llm-download.html", "0.85", "weekly"),
         ("/how-to-run-llm-on-android.html", "0.9", "weekly"),

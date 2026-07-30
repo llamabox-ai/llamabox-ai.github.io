@@ -1,0 +1,26 @@
+{
+  "keyword": "chatgpt android offline",
+  "date": "2026-07-30",
+  "location_id": 2840,
+  "platform_id": 1,
+  "serp_id": "1b1e96e75baa7721a8f82101e2483a5c",
+  "serp_features": ["AI_OVERVIEW", "PEOPLE_ALSO_ASK"],
+  "total_organic": 8,
+  "notes": [
+    "Reddit r/LocalLLaMA #1 — community validation that users want offline ChatGPT on Android.",
+    "Jan.ai post (#4, DA=46, 1 backlink) directly answers 'you can't run ChatGPT offline, do this instead'.",
+    "Fritz.ai (#6, DA=52, 0 backlinks) is very beatable with a focused page.",
+    "TomsGuide (#5, DA=89) and Medium/YouTube also rank — content + video opportunity.",
+    "Recommendation: create /chatgpt-android-offline.html or optimize /offline-ai-android.html for this query."
+  ],
+  "organic_results": [
+    {"position": 1, "url": "https://www.reddit.com/r/LocalLLaMA/comments/1lt98oq/wouldnt_it_be_great_if_we_have_a_local_offline/", "domain": "reddit.com", "title": "Wouldn't it be great if we have a local offline ChatGPT runs ...", "da": 92, "pa": 53},
+    {"position": 2, "url": "https://community.openai.com/t/offline-version-of-chatgpt/1374449", "domain": "openai.com", "title": "Offline Version of ChatGPT", "da": 92, "pa": 43},
+    {"position": 3, "url": "https://play.google.com/store/apps/details?id=com.karthek.android.v.aic", "domain": "google.com", "title": "OfflineGPT - Apps on Google Play", "da": 99, "pa": 55},
+    {"position": 4, "url": "https://jan.ai/post/offline-chatgpt-alternative", "domain": "jan.ai", "title": "You can't run ChatGPT offline, do this instead", "da": 46, "pa": 30, "rd": 1, "bl": 1},
+    {"position": 5, "url": "https://www.tomsguide.com/ai/i-replaced-chatgpt-with-offline-ai-on-my-phone-heres-what-actually-happened", "domain": "tomsguide.com", "title": "I replaced ChatGPT with Google's offline AI on my phone ...", "da": 89, "pa": 46, "rd": 19, "bl": 33},
+    {"position": 6, "url": "https://fritz.ai/can-you-use-chatgpt-offline/", "domain": "fritz.ai", "title": "Can You Use ChatGPT Offline?", "da": 52, "pa": 30},
+    {"position": 7, "url": "https://www.youtube.com/watch?v=3SIuDhy6Rdw", "domain": "youtube.com", "title": "Use ChatGPT Without Internet on Mobile", "da": 100, "pa": 60},
+    {"position": 8, "url": "https://medium.com/@desmondmutuma35/how-to-build-your-own-chatgpt-on-your-phone-works-100-offline-2026-fcb7e82d8323", "domain": "medium.com", "title": "How to Build Your Own ChatGPT on Your Phone (Works ...", "da": 95, "pa": 48}
+  ]
+}

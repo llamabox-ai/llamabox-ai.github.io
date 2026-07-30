@@ -1,0 +1,25 @@
+{
+  "keyword": "ollama android",
+  "date": "2026-07-30",
+  "location_id": 2840,
+  "platform_id": 1,
+  "serp_id": "b76153602b84d236367540e35978a9ce",
+  "serp_features": ["AI_OVERVIEW"],
+  "total_organic": 8,
+  "notes": [
+    "Reddit r/ollama owns #1 — users want to run Ollama on Android.",
+    "Ollama.com ranks #2; no official Android app yet.",
+    "deepakness.com (#6, DA=20, 1 backlink) is very beatable.",
+    "Our /vs-ollama.html page should be optimized for 'ollama android' intent."
+  ],
+  "organic_results": [
+    {"position": 1, "url": "https://www.reddit.com/r/ollama/comments/1qrkbsr/run_ollama_on_your_android/", "domain": "reddit.com", "title": "Run Ollama on your Android!", "da": 92, "pa": 55},
+    {"position": 2, "url": "https://ollama.com/", "domain": "ollama.com", "title": "Ollama", "da": 59, "pa": 66, "rd": 18128, "bl": 236226},
+    {"position": 3, "url": "https://github.com/SMuflhi/ollama-app-for-Android-", "domain": "github.com", "title": "SMuflhi/ollama-app-for-Android", "da": 97, "pa": 59, "rd": 3, "bl": 7},
+    {"position": 4, "url": "https://play.google.com/store/apps/details?id=com.charles.ollama.client.play", "domain": "google.com", "title": "Ollama AI Chat - Apps on Google Play", "da": 99, "pa": 55},
+    {"position": 5, "url": "https://dev.to/koolkamalkishor/running-llama-32-on-android-a-step-by-step-guide-using-ollama-54ig", "domain": "dev.to", "title": "Running Llama 3.2 on Android: A Step-by-Step Guide ...", "da": 85, "pa": 48, "rd": 10, "bl": 25},
+    {"position": 6, "url": "https://deepakness.com/blog/ollama-in-android-linux/", "domain": "deepakness.com", "title": "Running Ollama in Android Linux Terminal", "da": 20, "pa": 22, "rd": 1, "bl": 1},
+    {"position": 7, "url": "https://apt.izzysoft.de/fdroid/index/apk/com.freakurl.apps.ollama", "domain": "izzysoft.de", "title": "Ollama - IzzyOnDroid F-Droid Repository", "da": 47, "pa": 36, "rd": 9, "bl": 16},
+    {"position": 8, "url": "https://developer.android.com/studio/gemini/use-a-local-model", "domain": "android.com", "title": "Use a local model | Android Studio", "da": 93, "pa": 52, "rd": 39, "bl": 2729}
+  ]
+}

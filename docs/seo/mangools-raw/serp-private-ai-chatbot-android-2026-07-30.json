@@ -1,0 +1,25 @@
+{
+  "keyword": "private ai chatbot android",
+  "date": "2026-07-30",
+  "location_id": 2840,
+  "platform_id": 1,
+  "serp_id": "666ee0bc0b0d98e326d370f3f539a419",
+  "serp_features": ["AI_OVERVIEW"],
+  "total_organic": 7,
+  "notes": [
+    "Google Play store apps dominate positions #1 and #5 — app-store SEO matters for this query.",
+    "Layla ranks #3 with DA=11 and 280 referring domains — strong directory/backlink strategy.",
+    "Wondertools Substack #6 and TomsGuide #7 — editorial outreach targets.",
+    "Reddit r/degoogle #2 — privacy-conscious Android users; engage authentically.",
+    "Uptodown #4 — APK distribution matters for this audience."
+  ],
+  "organic_results": [
+    {"position": 1, "url": "https://play.google.com/store/apps/details?id=us.valkon.privateai", "domain": "google.com", "title": "Private AI - Apps on Google Play", "da": 98, "pa": 64, "rd": 25, "bl": 42},
+    {"position": 2, "url": "https://www.reddit.com/r/degoogle/comments/1kx0nmo/what_private_ai_chat_do_you_use/", "domain": "reddit.com", "title": "What private AI chat do you use? : r/degoogle", "da": 92, "pa": 53},
+    {"position": 3, "url": "https://www.layla-network.ai/", "domain": "layla-network.ai", "title": "Layla: Private Offline AI Assistant for Android & iOS", "da": 11, "pa": 39, "rd": 280, "bl": 1797},
+    {"position": 4, "url": "https://private-ai.en.uptodown.com/android", "domain": "uptodown.com", "title": "Private AI for Android - Download the APK from Uptodown", "da": 92, "pa": 38},
+    {"position": 5, "url": "https://play.google.com/store/apps/details?id=com.DAI.DAIapp", "domain": "google.com", "title": "De.AI Personal Private AI - Apps on Google Play", "da": 99, "pa": 57},
+    {"position": 6, "url": "https://wondertools.substack.com/p/the-best-mobile-ai-apps", "domain": "substack.com", "title": "AI Mobile Apps Guide: ChatGPT, Claude, Gemini & Private AI", "da": 92, "pa": 56, "rd": 43, "bl": 145},
+    {"position": 7, "url": "https://www.tomsguide.com/ai/i-put-3-local-ai-chatbots-to-the-test-on-my-phone-and-i-was-shocked-by-how-useful-they-are", "domain": "tomsguide.com", "title": "I put 3 local AI chatbots to the test on my phone", "da": 89, "pa": 42, "rd": 2, "bl": 13}
+  ]
+}

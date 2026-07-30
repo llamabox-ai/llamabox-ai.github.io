@@ -61,6 +61,12 @@
     <priority>0.85</priority>
   </url>
   <url>
+    <loc>https://llamabox-ai.github.io/chatgpt-android-offline.html</loc>
+    <lastmod>2026-07-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
     <loc>https://llamabox-ai.github.io/gguf-android.html</loc>
     <lastmod>2026-07-30</lastmod>
     <changefreq>weekly</changefreq>

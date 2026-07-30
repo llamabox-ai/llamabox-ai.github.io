@@ -152,13 +152,33 @@
 - Ran `linkminer_get_url_metrics` for `layla-network.ai` and `siteprofiler_get_overview` (DA=11, 223 referring IPs).
 - Ran `kwfinder_get_url_kd_metrics` for PromptQuorum page (lps=14 — very beatable).
 
+### Additional work completed (continuation session, post-context-reload)
+- Ran fresh US desktop SERPs for: `private ai chatbot android`, `chatgpt android offline`, `ollama android`. All succeeded and saved raw JSON.
+- Saved raw SERP JSON to:
+  - `docs/seo/mangools-raw/serp-private-ai-chatbot-android-2026-07-30.json`
+  - `docs/seo/mangools-raw/serp-chatgpt-android-offline-2026-07-30.json`
+  - `docs/seo/mangools-raw/serp-ollama-android-2026-07-30.json`
+- Ran related-keywords for `chatgpt android offline`, `private ai chatbot android`, `ollama android`; saved compact summaries.
+- Ran `linkminer_get_url_metrics` for `fritz.ai` and `toms-guide` SERP-derived domains.
+- Ran `kwfinder_get_url_kd_metrics` for Fritz.ai chatgpt-android-offline page (lps=19 — beatable).
+- Created new `/chatgpt-android-offline.html` landing page targeting the "chatgpt android offline" query where Fritz.ai ranks with DA=52/0 backlinks.
+- Regenerated site, updated `/llms.txt`, `/llms-full.txt`, `sitemap.xml`, footer + guides links.
+- Verified SERPWatcher US desktop tracking already contains `chatgpt android offline`, `ollama android`, `private ai chatbot android`, `open source llm android`; 45 keywords active.
+- Background workflow `w2pa1mpqh` still running.
+
+### Content + site updates driven by SERP data
+- New page: `/chatgpt-android-offline.html` — "ChatGPT Android Offline: Why It Doesn't Work & What Does | LlamaBox"
+  - Targets users searching for offline ChatGPT on Android.
+  - FAQ clarifies ChatGPT requires internet; LlamaBox is the offline alternative.
+  - Added to footer Guides column, `/guides.html` card grid, `/llms.txt`, `/llms-full.txt`, and `sitemap.xml`.
+
 ## Quota after continuation session
-- serps: 1122 / 1200 remaining (some provider errors, not all attempts consumed)
-- related-keywords: 1104 / 1200 remaining
-- kw-url-metrics: 852 / 1440 remaining
+- serps: 1112 / 1200 remaining
+- related-keywords: 1090 / 1200 remaining
+- kw-url-metrics: 850 / 1440 remaining
 - lm-url-metrics: 1,198,662 / 1,200,000 remaining
-- sp-overview: 148 / 150 remaining
-- tracked_keywords: 1234 / 1651 remaining
+- sp-overview: 146 / 150 remaining
+- tracked_keywords: 1230 / 1651 remaining
 - links: 1,032,696 / 1,200,000 remaining
 
 *Last updated: 2026-07-30.*

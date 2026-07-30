@@ -63,6 +63,10 @@ Three additional keywords pulled fresh US desktop SERPs and competitor backlink 
 | `mlc llm android` | 50 | — | Branded Android intent | Already covered by /vs-mlc-llm.html; track and improve |
 | `mlc chat app` | 30 | — | App-store style query | Add to /best-local-llm-apps-android.html |
 | `private llm android apk` | 10 | — | APK intent for private LLM | Mention LlamaBox beta APK path on relevant pages |
+| `chatgpt android offline` | 180 | 34 | Fritz.ai ranks #1, XDA #2, Tom's Guide #3, Android Authority #4, Reddit #5 | New `/chatgpt-android-offline.html` directly answers the misleading query; beatable due to weak dedicated pages |
+| `ollama android` | 180 | — | Reddit r/LocalLLaMA #1, Ollama official page clarifies no mobile client, dev.to #3, several GitHub forks | Target comparison/FAQ page; many users want Ollama on Android but it doesn't exist officially |
+| `private ai chatbot android` | — | 31 | Reddit r/privacy #1, Reddit r/LocalLLaMA #2, PrivacyTools #3, Layla #4, GitHub #5 | Optimize `/private-chatgpt-alternative.html` and consider standalone Android-specific chatbot page |
+| `open source llm android` | — | 32 | Reddit r/LocalLLaMA #1, MakeUseOf #2, GitHub #3, InfoQ #4, ItsFoss #6 | Already covered by `/best-local-llm-apps-android.html`; strong editorial backlink targets (MakeUseOf, ItsFoss, InfoQ) |
 
 ### Competitor backlink intelligence
 
@@ -94,17 +98,19 @@ Three additional keywords pulled fresh US desktop SERPs and competitor backlink 
   - `/best-local-llm-apps-android.html` → "Best Local LLM Apps for Android 2026 | LlamaBox"
 - ✅ `sitemap.xml` regenerated with all new URLs and `lastmod` bumped to 2026-07-30.
 - ✅ Backlink outreach list created: `/docs/seo/backlink-outreach-2026-07-30.md`
-- ✅ SERPWatcher: added 15 new keywords to US desktop tracking (`6a6ac171a4d7d442f2c49a40`), now 45 keywords monitored. Added: `llm download`, `mlc chat android`, `best offline ai assistant for android`, `on device llm`, `private chatgpt alternative android`, `offline ai android`, `android local llm`, `local ai android`, `private ai chatbot android`, `open source llm android`, `best local llm apps android`, `mlc chat apk`, `mlc llm android`, `mlc chat app`, `private llm android apk`.
+- ✅ SERPWatcher: US desktop tracking (`6a6ac171a4d7d442f2c49a40`) now monitors 45 keywords including: `llm download`, `mlc chat android`, `best offline ai assistant for android`, `on device llm`, `private chatgpt alternative android`, `offline ai android`, `android local llm`, `local ai android`, `private ai chatbot android`, `open source llm android`, `best local llm apps android`, `mlc chat apk`, `mlc llm android`, `mlc chat app`, `private llm android apk`, `chatgpt android offline`, `ollama android`.
 - ✅ AI Search Watcher: monitor is at prompt limit but already contains comprehensive LlamaBox prompts; no additions possible.
+- ✅ New landing page: `/chatgpt-android-offline.html` targeting `chatgpt android offline` (vol 180, KD 34). FAQ clarifies ChatGPT cannot run offline and positions LlamaBox as the working alternative.
+- ✅ Additional SERP raw files saved for `private ai chatbot android`, `chatgpt android offline`, `ollama android`, `open source llm android`.
 
 ## Remaining Mangools quota snapshot
 
-- SERP lookups: 1,122 remaining
-- Related-keyword lookups: 1,104 remaining
-- Keyword URL metrics: 852 remaining
+- SERP lookups: 1,112 remaining
+- Related-keyword lookups: 1,090 remaining
+- Keyword URL metrics: 850 remaining
 - LinkMiner URL metrics: 1,198,662 rows remaining
-- SiteProfiler overviews: 148 remaining
-- SERPWatcher tracked keywords: 1,234 remaining
+- SiteProfiler overviews: 146 remaining
+- SERPWatcher tracked keywords: 1,230 remaining
 - Backlink rows: 1,032,696 remaining
 
 *Last updated: 2026-07-30.*

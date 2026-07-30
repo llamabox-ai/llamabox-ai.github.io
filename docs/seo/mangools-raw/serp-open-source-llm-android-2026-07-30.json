@@ -1,0 +1,24 @@
+{
+  "keyword": "open source llm android",
+  "date": "2026-07-30",
+  "location_id": 2840,
+  "platform_id": 1,
+  "serp_id": "7a623026642f739c59fbb3e193cbaefc",
+  "serp_features": ["AI_OVERVIEW"],
+  "total_organic": 6,
+  "notes": [
+    "Reddit r/LocalLLaMA owns #1 — open-source Android LLM apps are a community-driven topic.",
+    "MakeUseOf (#2, DA=91) and ItsFoss (#6, DA=80) are high-authority editorial targets for guest posts or mentions.",
+    "GitHub LLM-Hub (#3) is an open-source competitor with 21 referring domains.",
+    "MostlyNerdless.de (#4, DA=28, 1 backlink) is very beatable.",
+    "AnythingLLM (#5) is desktop-first; LlamaBox is phone-native."
+  ],
+  "organic_results": [
+    {"position": 1, "url": "https://www.reddit.com/r/LocalLLaMA/comments/1jf0xgy/open_source_mobile_app_to_run_llms_on_android/", "domain": "reddit.com", "title": "Open Source Mobile App to run LLMs on Android?", "da": 92, "pa": 53},
+    {"position": 2, "url": "https://www.makeuseof.com/you-can-and-should-run-a-tiny-llm-on-your-android-phone/", "domain": "makeuseof.com", "title": "You can (and should) run a tiny LLM on your Android phone", "da": 91, "pa": 47, "rd": 7, "bl": 13},
+    {"position": 3, "url": "https://github.com/timmyy123/LLM-Hub", "domain": "github.com", "title": "LLM-Hub - Local AI Assistant on your phone", "da": 97, "pa": 59, "rd": 21, "bl": 45},
+    {"position": 4, "url": "https://mostlynerdless.de/blog/2025/11/05/running-an-llm-on-an-android-phone/", "domain": "mostlynerdless.de", "title": "Running an LLM on an Android Phone", "da": 28, "pa": 24, "rd": 4, "bl": 6},
+    {"position": 5, "url": "https://anythingllm.com/", "domain": "anythingllm.com", "title": "AnythingLLM — On-device AI for productivity | Local & Private", "da": 39, "pa": 50, "rd": 2010, "bl": 21979},
+    {"position": 6, "url": "https://itsfoss.com/android-on-device-ai/", "domain": "itsfoss.com", "title": "I Ran Local LLMs on My Android Phone", "da": 80, "pa": 43, "rd": 13, "bl": 39}
+  ]
+}
