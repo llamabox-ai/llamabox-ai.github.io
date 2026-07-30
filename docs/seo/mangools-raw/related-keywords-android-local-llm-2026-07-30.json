@@ -1,0 +1,14 @@
+{
+  "seed": "android local llm",
+  "date": "2026-07-30",
+  "location_id": 2840,
+  "total_keywords": 2,
+  "keywords": [
+    {"kw": "android local llm", "sv": 60, "sv_12m": 70, "kd": 28, "cpc": null, "ppc": null},
+    {"kw": "private llm android apk", "sv": 10, "sv_12m": 10, "kd": null, "cpc": null, "ppc": null}
+  ],
+  "notes": [
+    "Very low keyword expansion — exact match dominates. KD=28 means attainable.",
+    "SERP is dominated by Reddit, GitHub, XDA, and one directory page with DA=19 / 0 backlinks."
+  ]
+}

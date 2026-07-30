@@ -1,0 +1,38 @@
+{
+  "seed": "mlc chat android",
+  "date": "2026-07-30",
+  "location_id": 2840,
+  "total_keywords": 25,
+  "notes": [
+    "Strong branded cluster around MLC LLM. 'mlc chat android' sv=60, kd=37.",
+    "Many APK/download/play-store variants — users want to install MLC Chat on Android.",
+    "LlamaBox can intercept this intent with /vs-mlc-llm.html and a 'best local llm apps android' listicle."
+  ],
+  "keywords": [
+    {"kw": "mlc llm", "sv": 490, "sv_12m": 480, "kd": 37, "cpc": 24.7, "ppc": 9},
+    {"kw": "mlc chat apk", "sv": 80, "sv_12m": 90, "kd": null, "cpc": null, "ppc": null},
+    {"kw": "mlc chat android", "sv": 60, "sv_12m": 70, "kd": 37, "cpc": 9.76, "ppc": 2},
+    {"kw": "mlc-ai", "sv": 60, "sv_12m": 70, "kd": null, "cpc": 14.64, "ppc": 5},
+    {"kw": "mlc llm android", "sv": 50, "sv_12m": 50, "kd": null, "cpc": 8.95, "ppc": 11},
+    {"kw": "mlc chat app", "sv": 30, "sv_12m": 30, "kd": null, "cpc": null, "ppc": null},
+    {"kw": "mlc-llm github", "sv": 20, "sv_12m": 30, "kd": null, "cpc": 11.48, "ppc": 8},
+    {"kw": "mlc llm apk", "sv": 20, "sv_12m": 20, "kd": null, "cpc": 7.61, "ppc": 4},
+    {"kw": "mlc chat android apk", "sv": 10, "sv_12m": 20, "kd": null, "cpc": null, "ppc": null},
+    {"kw": "mlc chat android github", "sv": 10, "sv_12m": 10, "kd": null, "cpc": null, "ppc": null},
+    {"kw": "mlc chat android download", "sv": 10, "sv_12m": 10, "kd": null, "cpc": null, "ppc": null},
+    {"kw": "mlc chat app download", "sv": 10, "sv_12m": 10, "kd": null, "cpc": null, "ppc": null},
+    {"kw": "mlc chat app for android", "sv": 10, "sv_12m": 10, "kd": null, "cpc": null, "ppc": null},
+    {"kw": "mlc chat play store", "sv": 10, "sv_12m": 10, "kd": null, "cpc": null, "ppc": null},
+    {"kw": "mlc chat github", "sv": 10, "sv_12m": 10, "kd": null, "cpc": 5.07, "ppc": 6},
+    {"kw": "mlc chat ai", "sv": 10, "sv_12m": 10, "kd": null, "cpc": null, "ppc": null},
+    {"kw": "mlc-llm android github", "sv": 10, "sv_12m": 10, "kd": null, "cpc": null, "ppc": null},
+    {"kw": "mlc llm app", "sv": 10, "sv_12m": 10, "kd": null, "cpc": null, "ppc": 64},
+    {"kw": "mlc llm download", "sv": 10, "sv_12m": 10, "kd": null, "cpc": null, "ppc": null},
+    {"kw": "mlc chat apk latest version", "sv": 10, "sv_12m": 10, "kd": null, "cpc": null, "ppc": null},
+    {"kw": "mlc chat for android", "sv": 10, "sv_12m": 10, "kd": null, "cpc": null, "ppc": null},
+    {"kw": "mlc-llm models", "sv": 10, "sv_12m": 10, "kd": null, "cpc": null, "ppc": null},
+    {"kw": "mlc llm install", "sv": 10, "sv_12m": 10, "kd": null, "cpc": null, "ppc": null},
+    {"kw": "mlc github", "sv": 10, "sv_12m": 10, "kd": null, "cpc": null, "ppc": null},
+    {"kw": "mlc-ai mlc llm", "sv": 10, "sv_12m": 10, "kd": null, "cpc": null, "ppc": 40}
+  ]
+}

@@ -291,6 +291,7 @@ LlamaBox is **dual-licensed**:
 | https://llamabox-ai.github.io/vs-ollama.html | Comparison |
 | https://llamabox-ai.github.io/vs-pocketpal.html | Comparison |
 | https://llamabox-ai.github.io/vs-mlc-llm.html | Comparison |
+| https://llamabox-ai.github.io/best-local-llm-apps-android.html | Roundup |
 | https://llamabox-ai.github.io/enterprise.html | Enterprise |
 | https://llamabox-ai.github.io/commercial-license.html | Licensing |
 | https://llamabox-ai.github.io/partners.html | Partnerships |
