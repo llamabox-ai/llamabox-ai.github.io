@@ -1,0 +1,26 @@
+{
+  "keyword": "mlc chat android",
+  "date": "2026-07-30",
+  "location_id": 2840,
+  "platform_id": 1,
+  "serp_id": "e34ae14629661a967758a2b62f7de6d4",
+  "serp_features": ["AI_OVERVIEW"],
+  "total_organic": 8,
+  "notes": [
+    "MLC LLM owns the top results (site + docs + GitHub + App Store).",
+    "Reddit r/LocalLLaMA thread #4 — engage there when relevant.",
+    "Google Play 'LLMChat' app at #6 — direct competitor app.",
+    "UpdateStar download page at #8 (DA=60) — directory page; suggests download-intent queries include software-directory results.",
+    "LlamaBox /vs-mlc-llm.html should be optimized further for this query."
+  ],
+  "organic_results": [
+    {"position": 1, "url": "https://llm.mlc.ai/", "domain": "mlc.ai", "title": "MLC LLM | Home", "da": 39, "pa": 43, "rd": 330, "bl": 632},
+    {"position": 2, "url": "https://github.com/mlc-ai/binary-mlc-llm-libs/releases", "domain": "github.com", "title": "Releases · mlc-ai/binary-mlc-llm-libs", "da": 97, "pa": 63, "rd": 15, "bl": 58},
+    {"position": 3, "url": "https://llm.mlc.ai/docs/deploy/android.html", "domain": "mlc.ai", "title": "Android SDK — mlc-llm 0.1.0 documentation", "da": 39, "pa": 39, "rd": 28, "bl": 51},
+    {"position": 4, "url": "https://www.reddit.com/r/LocalLLaMA/comments/13ctg4c/project_mlc_llm_for_android/", "domain": "reddit.com", "title": "[Project] MLC LLM for Android : r/LocalLLaMA", "da": 92, "pa": 53},
+    {"position": 5, "url": "https://apps.apple.com/us/app/mlc-chat/id6448482937", "domain": "apple.com", "title": "MLC Chat - App Store - Apple", "da": 99, "pa": 67, "rd": 44, "bl": 206},
+    {"position": 6, "url": "https://play.google.com/store/apps/details?id=in.llmchat", "domain": "google.com", "title": "LLMChat - Apps on Google Play", "da": 99, "pa": 52, "rd": 1, "bl": 1},
+    {"position": 7, "url": "https://llm.mlc.ai/docs/get_started/quick_start", "domain": "mlc.ai", "title": "Quick Start — mlc-llm 0.1.0 documentation", "da": 39, "pa": 35, "rd": 27, "bl": 38},
+    {"position": 8, "url": "https://mlc-chat.updatestar.com/", "domain": "updatestar.com", "title": "MLC Chat - Download", "da": 60, "pa": 33}
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "keyword": "android local llm",
+  "date": "2026-07-30",
+  "location_id": 2840,
+  "platform_id": 1,
+  "serp_id": "f38e7a4c686d00781c34c0f0a3fc86b8",
+  "serp_features": ["AI_OVERVIEW"],
+  "total_organic": 9,
+  "notes": [
+    "Reddit r/LocalLLaMA owns #1 again — community answers are winning this SERP.",
+    "GitHub repo dineshsoudagar/local-llms-on-android at #2 — potential partnership or differentiation study.",
+    "XDA Developers #3 — major Android publication; outreach target for a guest post or review.",
+    "MostlyNerdless.de blog #5 (DA=28) and PromptQuorum.com #8 (DA=19, 0 backlinks) — both beatable with focused content + small backlink campaign.",
+    "Unsloth.ai docs #9 — potential partner/citation for phone deployment.",
+    "Conclusion: 'android local llm' is very attainable for LlamaBox."
+  ],
+  "organic_results": [
+    {"position": 1, "url": "https://www.reddit.com/r/LocalLLaMA/comments/1lwwuwq/help_me_find_the_best_android_app_for_running/", "domain": "reddit.com", "title": "Help me find the best Android app for running LLMs locally", "da": 92, "pa": 53},
+    {"position": 2, "url": "https://github.com/dineshsoudagar/local-llms-on-android", "domain": "github.com", "title": "dineshsoudagar/local-llms-on-android: Run ...", "da": 97, "pa": 57, "rd": 9, "bl": 11},
+    {"position": 3, "url": "https://www.xda-developers.com/ran-a-full-llm-on-my-phone-with-no-internet-and-more-useful-than-i-expected/", "domain": "xda-developers.com", "title": "I ran a full LLM on my phone with no internet, and it's more ...", "da": 92, "pa": 40, "rd": 7, "bl": 8},
+    {"position": 4, "url": "https://developers.google.com/edge/mediapipe/solutions/genai/llm_inference/android", "domain": "google.com", "title": "LLM Inference guide for Android | Google AI Edge", "da": 95, "pa": 52, "rd": 42, "bl": 62},
+    {"position": 5, "url": "https://mostlynerdless.de/blog/2025/11/05/running-an-llm-on-an-android-phone/", "domain": "mostlynerdless.de", "title": "Running an LLM on an Android Phone", "da": 28, "pa": 24, "rd": 4, "bl": 6},
+    {"position": 6, "url": "https://developer.android.com/studio/gemini/use-a-local-model", "domain": "android.com", "title": "Use a local model | Android Studio", "da": 93, "pa": 52, "rd": 39, "bl": 2729},
+    {"position": 7, "url": "https://play.google.com/store/apps/details?id=com.llmhub.llmhub", "domain": "google.com", "title": "LLM Hub - Local AI Assistant - Apps on Google Play", "da": 99, "pa": 58, "rd": 6, "bl": 10},
+    {"position": 8, "url": "https://www.promptquorum.com/power-local-llm/best-local-llm-apps-android-2026", "domain": "promptquorum.com", "title": "Android Local LLM Apps 2026: Speed, NPU & Setup Tested", "da": 19, "pa": 16, "rd": 0, "bl": 0},
+    {"position": 9, "url": "https://unsloth.ai/docs/basics/inference-and-deployment/deploy-llms-phone", "domain": "unsloth.ai", "title": "How to Run and Deploy LLMs on your iOS or Android Phone", "da": 43, "pa": 30, "rd": 3, "bl": 7}
+  ]
+}
