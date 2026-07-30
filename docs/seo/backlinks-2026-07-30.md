@@ -147,10 +147,73 @@ Backlinks captured for the three target domains: **pocketpal.ai**, **mlc.ai** an
 
 ---
 
+## layla-network.ai — 298 total links, top 100 sampled
+
+| # | Domain | TF | CF | Title | Anchor |
+|---:|---|---:|---:|---|---|
+| 1 | advanced-innovation.io | 24 | 27 | KI Tools - Advanced Innovation | image |
+| 2 | ilimit.com | 12 | 15 | Introducción a la inferencia con IA: guía práctica en local | layla |
+| 3 | prompt.cn | 10 | 11 | 爱派AiPy - PROMPT | layla Chinese listing |
+| 4 | contra.com | 10 | 7 | Annie, The AI Chatbot by Asim Das | completed work |
+| 5 | dev.to | 8 | 21 | How to Run a Private AI Assistant on Your Phone in 2026 | direct apk |
+| 6 | paage-ai.fr.uptodown.com | 7 | 21 | Paage.ai 1.3.1 pour Android - Uptodown | layla network.ai |
+| 7 | huggingface.co | 7 | 19 | aifeifei798/llama3-8B-DarkIdol | URL |
+| 8 | aigcsoft.site | 5 | 46 | AI聊天手机App下载 (安卓/iOS) | 直达 |
+| 9 | tyy.ai | 5 | 7 | Layla: Personal AI Assistant | open site |
+| 10 | similarlabs.com | 4 | 9 | Layla - World's First Private Offline AI | visit website |
+| 11 | aigo.tools | 3 | 10 | Best Entertainment Tools - AIGO.tools | layla listing |
+| 12 | mdpi.com | 3 | 7 | Empathy by Design paper | URL |
+| 13 | yperf.com | 2 | 24 | YPerf | layla |
+| 14 | aitools.xyz | 2 | 10 | The Best AI Assistants in 2026 | visit website |
+| 15 | seektool.ai | 2 | 10 | Chatly AI Chat | visit |
+| 16 | faxianai.com | 2 | 5 | Layla_ Layla AI 隐私离线AI助手 | 打开网站 |
+| 17–46 | seo-cartel-*.xyz | 1 | 16 | SEO Cartel PBN network | spam |
+| 47 | appglint.com | 1 | 11 | Layla - Google Play | URL |
+| 48 | chat-ai-bot.tchepai.com | 1 | 9 | Chat AI Bot-智能聊天助手 | 直达 |
+| 49 | zhuaqian.cn | 1 | 9 | 方舟 Agent Plan官网入口 | 抓钱AI导航 |
+| 50 | xix.ai | 1 | 7 | Layla：Layla AI Assistant | open site |
+| 51 | intooligence.ai | 0 | 17 | AI Tool Listings | layla |
+| 52 | findaichat.com | 0 | 16 | Layla Alternatives & Review (2026) | visit website |
+| 77 | unstore.io | 0 | 12 | Best apps for running local LLMs on Android | layla-network.ai |
+| 78 | meetaitools.com | 0 | 11 | AI Tools That Work In Rural Areas Offline | get layla ai free |
+| 79 | agentlocker.ai | 0 | 11 | Layla Reviews & Info | layla |
+| 73 | product.cards | 0 | 14 | AI Tool Listings | layla |
+
+**Note:** The remaining ~50 results are `alfa.seo-anomaly-*` PBN spam and `masslinker` junk. The actionable targets above are the real directories, blogs, app stores, and communities listing Layla.
+
+**Submission/contact URLs discovered (2026-07-30):**
+
+| Target | Submission / contact URL | Type |
+|---|---|---|
+| aigo.tools | https://aigo.tools/submit | AI directory |
+| aitools.xyz | https://aitools.xyz/submit-tool | AI directory |
+| seektool.ai | https://seektool.ai/en/pricing | AI directory (paid) |
+| similarlabs.com | https://similarlabs.com/submit | AI directory |
+| findaichat.com | https://findaichat.com/add-your-tool | AI directory |
+| agentlocker.ai | https://agentlocker.ai/submit-your-tool | AI directory |
+| meetaitools.com | https://meetaitools.com/submit-ai-tool/ | AI directory |
+| tyy.ai | https://tyy.ai/submit/ | AI directory |
+| faxianai.com | https://www.faxianai.com/contribute | Chinese AI directory |
+| aigcsoft.site | https://aigcsoft.site/submit | Chinese AI directory |
+| intooligence.ai | https://calendly.com/intooligence | AI directory / contact |
+| product.cards | https://calendly.com/intooligence | AI directory / contact |
+| unstore.io | https://unstore.io/about | Review list / contact |
+| appglint.com | (no submission found) | App directory |
+| yperf.com | mailto:xjconlyme@gmail.com | AI directory |
+| dev.to | https://dev.to/contact | Developer community |
+| huggingface.co | https://huggingface.co/support | ML community |
+| uptodown.com | https://www.uptodown.com/consola-de-desarrolladores | APK store console |
+| advanced-innovation.io | https://www.ki-suche.io/einreichen | German AI tools index |
+| ilimit.com | https://www.ilimit.com/en/contactus | Spanish tech blog |
+
+---
+
 ## Quality Observations
 
 - **pocketpal.ai** — 10 backlinks, but half are low-quality PBN links with identical anchor text. Three are from Chinese/Spanish tech blogs and directories; only a couple appear editorial.
 - **mlc.ai** — 100 backlinks, heavily dominated by an SEO-anomaly PBN network (city/location-spun domains). The handful of high-quality links (Simon Willison, HTTP Archive Web Almanac, InfoQ, Latent.Space, CMU, GitHub, Hacker News) provide most real authority.
 - **localllama.com** — 12 backlinks, almost entirely SEO directories and PBN-style "seo domain research" pages; very low editorial signal.
+- **layla-network.ai** — 298 links. Many are `seo-cartel` / `seo-anomaly` / `masslinker` PBN spam, but the clean minority gives a ready-made directory hit-list for LlamaBox (German, Spanish, Chinese, and English AI directories, plus Uptodown and dev.to).
+- **privatemode.ai/chat** — LinkMiner returned 0 links and only 1 referring IP; Privatemode's DA=25 appears to come from the root domain's small set of links, not the `/chat` page. Not a useful backlink model.
 
-**Source:** Mangools LinkMiner backlink lookup, 2026-07-30.
+**Source:** Mangools LinkMiner backlink lookup + WebFetch submission-page discovery, 2026-07-30.

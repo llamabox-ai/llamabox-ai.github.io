@@ -1,0 +1,12 @@
+{
+  "date": "2026-07-30",
+  "notes": "URL keyword-difficulty (link profile strength) scores for competitors ranking for 'free llms' and 'webllm', plus LlamaBox target pages. Low LPS = beatable.",
+  "results": [
+    {"url": "https://whytryai.com/", "lps": 33},
+    {"url": "https://localaimaster.com/", "lps": 31},
+    {"url": "https://freellmplayground.com/", "lps": 19},
+    {"url": "https://aitoolssme.com/", "lps": 29},
+    {"url": "https://llamabox-ai.github.io/free-llms.html", "lps": 1},
+    {"url": "https://llamabox-ai.github.io/webllm.html", "lps": 1}
+  ]
+}

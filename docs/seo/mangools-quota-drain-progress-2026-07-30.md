@@ -325,4 +325,39 @@
 - tracked_keywords: 1230 / 1651 remaining
 - links: 1,031,032 / 1,200,000 remaining
 
+## Continuation batch — Layla backlink profile → actionable directory targets
+
+- Re-ran `linkminer_get_backlinks` for `layla-network.ai` (298 total links, top 100 sampled). Extracted 99 unique referring domains; real targets are AI directories (advanced-innovation.io, aigo.tools, aitools.xyz, similarlabs.com, seektool.ai, faxianai.com, aigcsoft.site, agentlocker.ai, meetaitools.com, tyy.ai, xix.ai, unstore.io, product.cards, intooligence.ai, yperf.com, appglint.com), app stores (uptodown.com), dev communities (dev.to), and ML hub (huggingface.co). The rest is `seo-cartel` / `seo-anomaly` / `masslinker` PBN spam.
+- Fetched submission/contact URLs live via WebFetch for the clean directories and added them to `docs/seo/backlink-outreach-2026-07-30.md` as Tier 4.
+- `privatemode.ai/chat` LinkMiner returned 0 links (only 1 referring IP); confirmed not a useful backlink model.
+- Saved extracted Layla referring domains to `docs/seo/mangools-raw/layla-referring-domains-2026-07-30.md`.
+
+## Continuation batch — `llm software` keyword details + new SERP competitor deep dive
+
+- Retried `kwfinder_get_keyword_details` for `llm software` (US); succeeded. SERP: llmsoftware.com DA14 #1, LM Studio #2, Martin Fowler #3, Microsoft #4. Saved to `docs/seo/mangools-raw/keyword-details-llm-software-us-2840-2026-07-30.json`.
+- Ran `siteprofiler_get_overview` and `linkminer_get_backlinks` for `free llms` / `webllm` SERP competitors: whytryai.com, localaimaster.com, freellmplayground.com, aitoolssme.com.
+- Ran `kwfinder_get_url_kd_metrics` and `serpchecker_get_url_metrics` for these competitors plus LlamaBox `/free-llms.html` and `/webllm.html`.
+- Saved raw outputs:
+  - `siteprofiler-whytryai-com-2026-07-30.json`
+  - `siteprofiler-localaimaster-com-2026-07-30.json`
+  - `siteprofiler-freellmplayground-com-2026-07-30.json`
+  - `siteprofiler-aitoolssme-com-2026-07-30.json`
+  - `backlinks-whytryai-com-l100-2026-07-30.json`
+  - `backlinks-localaimaster-com-l100-2026-07-30.json`
+  - `backlinks-freellmplayground-com-l100-2026-07-30.json`
+  - `url-kd-metrics-free-llms-serp-competitors-2026-07-30.json`
+  - `url-metrics-free-llms-serp-competitors-2026-07-30.json`
+- Fetched submission/contact URLs for Tier 6 listicle targets and added them to `docs/seo/backlink-outreach-2026-07-30.md`.
+- Updated `docs/seo/keyword-strategy-2026-07-30.md` with `llm software` SERP insight and new competitor backlink intelligence.
+
+## Updated quota after continuation batch
+
+- serps: ~1,061 / 1200 remaining
+- related-keywords: ~1,053 / 1200 remaining
+- kw-url-metrics: ~850 / 1440 remaining
+- lm-url-metrics: ~1,198,660 / 1,200,000 remaining
+- sp-overview: ~88 / 150 remaining
+- tracked_keywords: ~1,221 / 1651 remaining
+- links: ~1,031,030 / 1,200,000 remaining
+
 *Last updated: 2026-07-30.*

@@ -79,10 +79,18 @@ Three additional keywords pulled fresh US desktop SERPs and competitor backlink 
 | `free llms` | 1,300 (12m avg) / 1,100 (current) | — | Listicle intent; no strong dedicated page | Create `/free-llms.html` listicle of open-weight GGUF models |
 | `webllm` | 880 (12m avg) / 850 (current) | — | MLC web runtime brand; `webllm.org` DA=8/2 RD is beatable | Create `/webllm.html` comparison vs LlamaBox Android; target "webllm chat" (30 vol), "webllm models" (20 vol) |
 | `local llm app` | 40 | — | Desktop-heavy intent (LM Studio, Ollama, AnythingLLM) but includes "locally ai android" (20 vol), "anything llm android" (10 vol) | Add Android-specific section to `/best-local-llm-apps-android.html` and target "local llm app android" |
-| `llm software` | 590 (12m avg) / 560 (current) | 41 | Category term; SERP dominated by LM Studio, Ollama, AnythingLLM, open-source leaderboard pages | Create `/llm-software.html` category page focusing on CPU-only, offline Android LLM software |
+| `llm software` | 590 (12m avg) / 560 (current) | 41 | Category term; **llmsoftware.com (DA14) ranks #1**, LM Studio #2, Martin Fowler #3, Microsoft #4. Page created. | Strengthen `/llm-software.html` with real backlinks from Android/dev communities |
 | `gbnf` | 390 (12m avg) / 410 (current) | 23 | `gbnf` SERP mixed with motorcycle slang; LLM grammar results are llama.cpp README, Medium article, gbnf.dev (DA=1) | Low priority; can cover in a technical blog post about structured outputs once feature ships |
 | `local llm android` | 80 | 27 | Reddit r/LocalLLaMA #1, GitHub repo #2, XDA #3, mostlynerdless.de DA=28 #4, Google AI Edge #5, PromptQuorum DA=19/0BL #6, Medium #7, Play Store LLM Hub #8 | `/best-local-llm-apps-android.html` already targets this; optimize title/H1 for exact phrase; beat PromptQuorum easily |
 | `private ai android` | 10 | 38 | Google Play "Private AI" #1, Reddit r/privacy #2, Uptodown #3, Layla DA=11/223RD #4, De.AI Play Store #5, Softonic #6, Bearly AI DA=30 #7 | `/private-ai-android.html` should win with real content + backlinks; Layla is beatable despite links because DA is low |
+| `private ai chat` | 950 | 30 | Privatemode DA=25 #1, NoTrack DA=43 #2, Reddit r/degoogle #3, Venice DA=41 #4, Confer DA=34 #5, xPrivo DA=15 #6, Secret-chat DA=6 #7, PrivacyGuides DA=51 #8, Google Play "Private AI" #9 | New `/private-ai-chat.html` targets exact phrase; beatable because most competitors are thin product pages or Reddit |
+| `offline ai chat` | 410 | 35 | Google Play "Offline AI Chat" #1, Reddit r/LocalLLaMA #2, Layla #3, Softonic #4, AI Tool Guru #5, OfflineGPT #6 | New `/offline-ai-chat.html` targets exact phrase; strong related terms include "offline ai chatbot free" (110), "offline ai chatbot for android" (50), "best offline ai chatbot" (30) |
+
+### Related-keyword expansion (new)
+
+- **offline ai chat** → 16 related terms; notable: "offline ai chatbot free" (110 vol), "offline ai chat roleplay" (70), "offline ai chatbot for android" (50), "best offline ai chatbot" (30), "offline ai chatbot apk" (20). Add these phrases naturally to `/offline-ai-chat.html` and `/offline-ai-android.html`.
+- **on device ai** → 4 related terms; "ai on device" (10 vol, KD 39). Strengthen `/on-device-llm.html` with both "on-device AI" and "AI on device" phrasing.
+- **local llm android** → 29 related terms; dominated by MLC Chat APK/download intent. Optimize `/best-local-llm-apps-android.html` and `/vs-mlc-llm.html` for APK/download wording.
 
 ### International SERP findings
 
@@ -103,6 +111,10 @@ Three additional keywords pulled fresh US desktop SERPs and competitor backlink 
 - **Tom's Guide** (`/ai/i-put-3-local-ai-chatbots...`): DA=89 domain, but the specific page has only 2 referring domains and 13 backlinks. Pitching an updated 2026 version or LlamaBox inclusion is viable.
 - **Wondertools Substack** (`/p/the-best-mobile-ai-apps`): DA=92 domain, page has 43 referring domains and 145 backlinks; still reachable via direct newsletter outreach.
 - **Android Authority**: DA=91, 2,185 referring IPs. Major Android publication; ideal for a "best offline AI apps" or LlamaBox feature pitch.
+- **WhyTryAI** (`/p/best-free-llms`): DA=23, ranks #2 for `free llms`; only 3 referring domains / 5 backlinks to the ranking page. A newsletter mention is very reachable.
+- **Free LLM Playground**: DA=7, ranks #8 for `free llms`; 19 referring IPs but half are PBN spam. The clean mentions come from listicles (analyticscampus.com, knowlab.in, tastytech.in). Pitch these listicles to add LlamaBox as the mobile/offline option.
+- **AI Tools SME** (`/comparison/language-models`): DA=33, ranks #7 for `free llms`; only 4 referring domains / 9 backlinks. Submission URL found: `/submit-your-tool`.
+- **Local AI Master** (`/blog/webllm-browser-ai-guide`): DA=20, ranks #7 for `webllm`; only 2 referring domains / 3 backlinks. Very beatable page; contact URL found: `/contact`.
 
 ## Implementation completed 2026-07-30
 
@@ -145,15 +157,18 @@ Three additional keywords pulled fresh US desktop SERPs and competitor backlink 
 - ✅ New landing page `/models.html` created as GGUF model hub for Android; targets "gguf models", "llm models", and serves as link magnet.
 - ✅ New landing page `/what-is-an-llm.html` created targeting `what is an llm in ai` (1,600 vol) and `what is a llm in ai` (720 vol).
 - ✅ New landing page `/free-llms.html` created targeting `free llms` (1,300 vol) with a listicle of open-weight GGUF models for Android.
+- ✅ New landing page `/private-ai-chat.html` created targeting `private ai chat` (950 vol, KD 30) with comparison table, use cases, and FAQ schema.
+- ✅ New landing page `/offline-ai-chat.html` created targeting `offline ai chat` (410 vol, KD 35) with comparison table, proof-of-offline steps, and FAQ schema.
+- ✅ Sitemap gaps fixed: added `/private-ai-android.html`, `/models.html`, `/what-is-an-llm.html`, `/free-llms.html`, `/private-ai-chat.html`, `/offline-ai-chat.html`.
 
 ## Remaining Mangools quota snapshot
 
-- SERP lookups: ~1,095 remaining (4 used this batch)
-- Related-keyword lookups: 1,082 remaining
-- Keyword URL metrics: ~847 remaining (3 successful details this batch; `duck ai` returned provider error)
-- LinkMiner URL metrics: 1,198,660 rows remaining
-- SiteProfiler overviews: 144 remaining
-- SERPWatcher tracked keywords: 1,230 remaining
-- Backlink rows: 1,031,032 remaining
+- SERP lookups: ~1,061 remaining
+- Related-keyword lookups: ~1,053 remaining
+- Keyword URL metrics: ~850 remaining
+- LinkMiner URL metrics: ~1,198,660 rows remaining
+- SiteProfiler overviews: ~88 remaining
+- SERPWatcher tracked keywords: ~1,221 remaining
+- Backlink rows: ~1,031,030 remaining
 
 *Last updated: 2026-07-30.*

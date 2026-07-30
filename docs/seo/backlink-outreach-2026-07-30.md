@@ -246,13 +246,228 @@ Thanks,
 - **Angle:** "Pitch a listicle or app spotlight on LlamaBox as an offline, open-source AI chat app for Android."
 - **Contact path:** Tips email / editor contact.
 
+## Tier 4 — AI directories with known submission URLs (Layla backlink profile)
+
+These directories already listed Layla. Submission URLs were fetched live on 2026-07-30. Prioritize free submissions first, paid directories second.
+
+### 28. AIGO.tools
+- **Submit URL:** https://aigo.tools/submit
+- **Page to pitch:** `/`
+- **Angle:** "LlamaBox is a private, offline AI chat app for Android. Request a free listing in the assistant/productivity category."
+- **Cost:** Free (assumed from /submit).
+
+### 29. AITools.xyz
+- **Submit URL:** https://aitools.xyz/submit-tool
+- **Page to pitch:** `/`
+- **Angle:** "Open-source, CPU-only Android LLM chat app — fits the best-assistant/tools section."
+- **Cost:** Free.
+
+### 30. SimilarLabs
+- **Submit URL:** https://similarlabs.com/submit
+- **Page to pitch:** `/`
+- **Angle:** "LlamaBox is a direct privacy-focused alternative to Layla and PocketPal AI for Android."
+- **Cost:** Free.
+
+### 31. Find AI Chat
+- **Submit URL:** https://findaichat.com/add-your-tool
+- **Page to pitch:** `/`
+- **Angle:** "Add LlamaBox as an offline AI chatbot for Android with no cloud inference."
+- **Cost:** Free.
+
+### 32. AgentLocker
+- **Submit URL:** https://agentlocker.ai/submit-your-tool
+- **Page to pitch:** `/`
+- **Angle:** "LlamaBox — open-source local LLM Android app with AGPL + commercial licensing."
+- **Cost:** Free.
+
+### 33. Meet AI Tools
+- **Submit URL:** https://meetaitools.com/submit-ai-tool/
+- **Page to pitch:** `/`
+- **Angle:** "Offline/rural-friendly AI assistant for Android."
+- **Cost:** Free.
+
+### 34. Tyy.AI
+- **Submit URL:** https://tyy.ai/submit/
+- **Page to pitch:** `/`
+- **Angle:** "Private AI assistant running entirely on-device (Android)."
+- **Cost:** Free.
+
+### 35. 发现AI (Faxian AI)
+- **Submit URL:** https://www.faxianai.com/contribute
+- **Page to pitch:** `/`
+- **Angle:** "隐私优先的 Android 离线 AI 聊天应用 — add to Chinese AI directory."
+- **Cost:** Free.
+
+### 36. AIGC软件库 (aigcsoft.site)
+- **Submit URL:** https://aigcsoft.site/submit
+- **Page to pitch:** `/`
+- **Angle:** "Android 本地大模型聊天应用，支持 GGUF，完全离线运行。"
+- **Cost:** Free.
+
+### 37. XIX.AI
+- **Submit URL:** (homepage returned 403; try contact / support link)
+- **Page to pitch:** `/`
+- **Angle:** "Layla alternative with open-source AGPL license and commercial options."
+- **Cost:** Unknown.
+
+### 38. Unstore.io
+- **Submit URL:** https://unstore.io/about
+- **Page to pitch:** `/best-local-llm-apps-android.html`
+- **Angle:** "You reviewed Layla as a local-LLM Android app. LlamaBox is CPU-only and open-source — consider adding it."
+- **Cost:** Free (editorial pitch).
+
+### 39. AppGlint
+- **Submit URL:** (none found; Google Play listing site — consider Play Store presence first)
+- **Page to pitch:** `/`
+- **Angle:** "Alternative offline AI chat app for Android to list alongside Layla."
+- **Cost:** Free.
+
+### 40. YPerf
+- **Submit URL:** mailto:xjconlyme@gmail.com
+- **Page to pitch:** `/`
+- **Angle:** "Privacy-first offline AI assistant for Android."
+- **Cost:** Free.
+
+### 41. Advanced Innovation / KI-Suche
+- **Submit URL:** https://www.ki-suche.io/einreichen
+- **Page to pitch:** `/`
+- **Angle:** "Deutschsprachiger Eintrag: offline, privater AI-Chat für Android (open-source, AGPL + Kommerziallizenz)."
+- **Cost:** Free.
+
+### 42. Uptodown
+- **Submit URL:** https://www.uptodown.com/consola-de-desarrolladores
+- **Page to pitch:** `/`
+- **Angle:** "Upload the LlamaBox APK to the Android app catalog; drives direct installs and a backlink."
+- **Cost:** Free (developer console).
+
+### 43. Hugging Face
+- **Submit URL:** https://huggingface.co/support
+- **Page to pitch:** `/architecture.html` or create a Space demo
+- **Angle:** "Create a Hugging Face Space or discussion post showing LlamaBox running GGUF models on Android; links back to project."
+- **Cost:** Free.
+
+### 44. dev.to / developer community
+- **Submit URL:** https://dev.to/contact (or publish directly)
+- **Page to pitch:** `/blog/2026-07-30-why-cpu-only.html`
+- **Angle:** "Publish a dev.to article 'How to run a private AI chat app on Android with llama.cpp and llama.rn' linking back to LlamaBox."
+- **Cost:** Free.
+
+---
+
+## Tier 5 — Direct app-store and community backlinks
+
+### 45. GitHub releases / README
+- **Action:** Ensure every release notes page and the main repo README link to https://llamabox-ai.github.io/ and to `/llm-download.html`.
+- **Why:** GitHub has DA=97 and is already a top result for open-source LLM queries.
+
+### 46. Reddit r/LocalLLaMA, r/privacy, r/androidapps
+- **Action:** Post comparison threads or answer questions in existing threads. See `reddit-threads-to-engage-2026-07-30.md`.
+- **Why:** Reddit threads often rank for "best offline AI chatbot android" and drive high-intent traffic.
+
+### 47. Product Hunt
+- **Action:** Prepare a Product Hunt launch when the next stable release ships.
+- **Why:** High DA, traffic spike, and AI-hunter audience; backlink from the launch page.
+
+## Tier 6 — Listicle / newsletter targets from `free llms` and `webllm` SERPs
+
+### 48. WhyTryAI (whytryai.com)
+- **URL that ranks:** https://www.whytryai.com/p/best-free-llms
+- **Why target:** Newsletter/Substack ranking #2 for `free llms` (1,100 vol). DA=23; a mention drives subscribers + backlink.
+- **Page to pitch:** `/free-llms.html`
+- **Angle:** "Add LlamaBox to your 'best free LLMs' follow-up as the Android option that runs open-weight models locally, no API needed."
+- **Contact path:** Substack reply / author contact. No public submission URL found.
+
+### 49. Free LLM Playground (freellmplayground.com)
+- **URL that ranks:** https://freellmplayground.com/
+- **Why target:** DA=7, ranks #8 for `free llms`. Same audience; can outrank or partner.
+- **Page to pitch:** `/free-llms.html`
+- **Angle:** "You cover browser playgrounds. LlamaBox is the same 'test LLMs for free' idea but on Android, offline, no GPU."
+- **Contact path:** No submission URL found; likely via langfa.st team / LinkedIn.
+
+### 50. AI Tools SME (aitoolssme.com)
+- **URL that ranks:** https://www.aitoolssme.com/comparison/language-models
+- **Why target:** DA=33, ranks #7 for `free llms`.
+- **Page to pitch:** `/`
+- **Angle:** "Submit LlamaBox to your AI tool comparison / language-models section as a free, open-source Android LLM runtime."
+- **Contact path:** https://aitoolssme.com/submit-your-tool
+
+### 51. Local AI Master (localaimaster.com)
+- **URL that ranks:** https://localaimaster.com/blog/webllm-browser-ai-guide
+- **Why target:** DA=20, ranks #7 for `webllm`. Weak backlink profile; easy to outrank.
+- **Page to pitch:** `/webllm.html`
+- **Angle:** "You wrote a WebLLM browser guide. LlamaBox achieves similar on-device privacy on Android without a browser."
+- **Contact path:** https://localaimaster.com/contact
+
+### 52. Analytics Campus
+- **URL that linked to competitor:** https://analyticscampus.com/5-free-instruments-to-experiment-with-llms-in-your-browser/
+- **Why target:** Already lists browser LLM tools; can add LlamaBox as mobile/offline alternative.
+- **Page to pitch:** `/free-llms.html`
+- **Angle:** "Update your '5 free LLM browser tools' list to include LlamaBox — the no-GPU, offline Android option."
+- **Contact path:** https://analyticscampus.com/contact-us-2/
+
+### 53. Knowlab
+- **URL that linked to competitor:** https://knowlab.in/no-gpu-no-problem-5-free-browser-tools-to-play-with-llms-today-🚀/
+- **Why target:** Title matches LlamaBox's value prop ('no GPU, no problem').
+- **Page to pitch:** `/free-llms.html`
+- **Angle:** "You covered browser tools for users without a GPU. LlamaBox runs LLMs on Android phones offline — perfect addition."
+- **Contact path:** knowlab.in@gmail.com
+
+### 54. TastyTech
+- **URL that linked to competitor:** https://tastytech.in/5-free-tools-to-experiment-with-llms-in-your-browser/
+- **Why target:** Already covers free LLM tools; Android/offline angle is a natural expansion.
+- **Page to pitch:** `/free-llms.html`
+- **Angle:** "Add LlamaBox as a mobile entry to your free LLM tools roundup."
+- **Contact path:** https://tastytech.in/contact-us-2/
+
+### 55. Free Intelligence / Local AI Pulse (freeintelligence.ai)
+- **URL that linked to competitor:** https://freeintelligence.ai/local-ai-pulse/
+- **Why target:** Mentions localaimaster.com; covers local AI community news.
+- **Page to pitch:** `/architecture.html`
+- **Angle:** "LlamaBox is a React Native + llama.cpp CPU-only Android local LLM app — fits your local-AI pulse coverage."
+- **Contact path:** hello@velab.org
+
+### 56. Local AI Hub (localaihub.net)
+- **URL that linked to competitor:** https://localaihub.net/de/tools/local-ai-master
+- **Why target:** German-language local-AI tool directory. Already listed Local AI Master.
+- **Page to pitch:** `/`
+- **Angle:** "Add LlamaBox as a privacy-focused, offline Android local-LLM tool."
+- **Contact path:** Site contact (no submission URL found).
+
+## Tier 7 — High-intent business / partnership targets
+
+### 57. AnythingLLM (anythingllm.com)
+- **Why target:** DA=39, 2,010 referring domains, strong open-source community. Possible integration partner or comparison target.
+- **Page to pitch:** `/architecture.html`
+- **Angle:** "Explore a future Android embedding or comparison — your desktop users ask for mobile."
+- **Contact path:** Discord / GitHub issue / team contact.
+
+### 58. Hugging Face (huggingface.co)
+- **Why target:** DA=84+ and ranks for `llm download`. LlamaBox relies on GGUF models hosted there.
+- **Page to pitch:** Create a Space or discussion post linking to `/llm-download.html` and `/models.html`.
+- **Angle:** "Show how to run popular Hugging Face GGUF models on Android with LlamaBox."
+- **Contact path:** https://huggingface.co/support
+
+### 59. Uptodown
+- **Why target:** Major APK store; already ranks for local-LLM Android terms and listed Layla.
+- **Page to pitch:** `/` (APK upload)
+- **Contact path:** https://www.uptodown.com/consola-de-desarrolladores
+
+### 60. GitHub open-llms list (github.com/eugeneyan/open-llms)
+- **Why target:** DA=97, ranks #4 for `llm download`; curated open-source LLM list.
+- **Page to pitch:** `/llm-download.html`
+- **Angle:** "Add a deployment note: LlamaBox for running open LLMs on Android."
+- **Contact path:** GitHub issue or PR.
+
 ## Next actions
 
 1. ✅ New pages are generated; commit + push to make live.
-2. Send 2–3 tier-1 outreach emails per week; do not blast all at once.
-3. Engage authentically in the three Reddit threads listed in `reddit-threads-to-engage-2026-07-30.md` and new `chatgpt android offline` / `ollama android` threads.
-4. Submit LlamaBox to Privacy Guides and the AI tool directories that list Layla.
-5. Pitch listicle updates to MakeUseOf, ItsFoss, Tom's Guide, XDA, Android Authority, Android Police.
-6. Track responses in a simple spreadsheet or CRM column.
-7. Repurpose rejected pitches into HN / Reddit / X threads.
-8. Re-check backlink profiles in 30–60 days to see if any new competitor links appear.
+2. Submit LlamaBox to all **free directory submission URLs** in Tier 4 within the next 48 hours (aigo.tools, aitools.xyz, similarlabs, findaichat, agentlocker, meetaitools, tyy.ai, faxianai, aigcsoft.site, ki-suche).
+3. Pitch **Tier 6 listicle updates** (Analytics Campus, Knowlab, TastyTech, Local AI Master) with the exact article URL and a one-line Android/offline angle.
+4. Reach out to **WhyTryAI** newsletter for a mention in a future "best free LLMs" issue.
+5. Upload APK to **Uptodown** if distribution bandwidth allows.
+6. Publish a **dev.to article** and a **Hugging Face discussion/Space** linking back.
+7. Send 2–3 tier-1 outreach emails per week; do not blast all at once.
+8. Engage authentically in the three Reddit threads listed in `reddit-threads-to-engage-2026-07-30.md` and new `chatgpt android offline` / `ollama android` threads.
+9. Pitch listicle updates to MakeUseOf, ItsFoss, Tom's Guide, XDA, Android Authority, Android Police.
+10. Track responses in a simple spreadsheet or CRM column.
+11. Re-check backlink profiles in 30–60 days to see if any new competitor links appear.

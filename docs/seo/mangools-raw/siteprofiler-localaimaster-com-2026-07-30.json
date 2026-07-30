@@ -1,0 +1,10 @@
+{
+  "domain": "localaimaster.com",
+  "domain_authority": 20,
+  "page_authority": 27,
+  "citation_flow": 33,
+  "trust_flow": 5,
+  "referring_ips": 9,
+  "majestic_status": "Found",
+  "notes": "Local AI blog/guide site ranking #7 for 'webllm'. Weak authority; backlink profile dominated by PBN spam plus one real directory (localaihub.net) and one mention on freeintelligence.ai."
+}

@@ -1,0 +1,10 @@
+{
+  "domain": "freellmplayground.com",
+  "domain_authority": 7,
+  "page_authority": 20,
+  "citation_flow": 22,
+  "trust_flow": 2,
+  "referring_ips": 18,
+  "majestic_status": "Found",
+  "notes": "Browser-based LLM playground ranking #8 for 'free llms'. Very low DA; half its links are PBN spam, the other half are genuine listicle mentions (analyticscampus.com, knowlab.in, tastytech.in, aihubnews.ru, etc.) pitching 'run LLMs on Android without GPU' updates."
+}

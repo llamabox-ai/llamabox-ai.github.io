@@ -1,0 +1,50 @@
+{
+  "date": "2026-07-30",
+  "notes": "Full URL metrics (Moz + Majestic) for pages ranking for 'free llms' and 'webllm'. Shows page-level backlink counts are tiny; LlamaBox can outrank these pages with a small number of real backlinks.",
+  "results": [
+    {
+      "url": "https://www.whytryai.com/p/best-free-llms",
+      "domain": "www.whytryai.com",
+      "domain_authority": 23,
+      "page_authority": 29,
+      "referring_domains": 3,
+      "backlinks": 5,
+      "ref_ips": 3,
+      "citation_flow": 15,
+      "trust_flow": 11
+    },
+    {
+      "url": "https://localaimaster.com/blog/webllm-browser-ai-guide",
+      "domain": "localaimaster.com",
+      "domain_authority": 20,
+      "page_authority": 24,
+      "referring_domains": 2,
+      "backlinks": 3,
+      "ref_ips": 2,
+      "citation_flow": 15,
+      "trust_flow": 4
+    },
+    {
+      "url": "https://freellmplayground.com/",
+      "domain": "freellmplayground.com",
+      "domain_authority": 7,
+      "page_authority": 20,
+      "referring_domains": 19,
+      "backlinks": 20,
+      "ref_ips": 18,
+      "citation_flow": 22,
+      "trust_flow": 2
+    },
+    {
+      "url": "https://www.aitoolssme.com/comparison/language-models",
+      "domain": "www.aitoolssme.com",
+      "domain_authority": 33,
+      "page_authority": 24,
+      "referring_domains": 4,
+      "backlinks": 9,
+      "ref_ips": 4,
+      "citation_flow": 16,
+      "trust_flow": 4
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "keyword": "llm software",
+  "location_id": 2840,
+  "platform_id": 1,
+  "search_intent": {
+    "0de64db5bba3ac6bc45d9cc8958d0767": ["commercial"]
+  },
+  "content_types": ["HOMEPAGES"],
+  "serp_features": ["AI_OVERVIEW", "PEOPLE_ALSO_ASK"],
+  "organic_results": [
+    {"position": 1, "url": "https://www.llmsoftware.com/", "title": "LLM Software: AI-Powered Platform & Automation ML Solutions", "domain": "llmsoftware.com", "ctr": 0.2975, "metrics": {"domain_authority": 14, "page_authority": 33, "citation_flow": 37, "trust_flow": 1, "referring_domains": 111, "backlinks": 215}},
+    {"position": 2, "url": "https://lmstudio.ai/", "title": "LM Studio Bionic - Agent for Work and Code", "domain": "lmstudio.ai", "ctr": 0.1246, "metrics": {"domain_authority": 55, "page_authority": 60, "citation_flow": 52, "trust_flow": 41, "referring_domains": 7530, "backlinks": 142843}},
+    {"position": 3, "url": "https://martinfowler.com/articles/202508-ai-thoughts.html", "title": "Some thoughts on LLMs and Software Development", "domain": "martinfowler.com", "ctr": 0.0668, "metrics": {"domain_authority": 76, "page_authority": 55, "citation_flow": 35, "trust_flow": 19, "referring_domains": 263, "backlinks": 685}},
+    {"position": 4, "url": "https://azure.microsoft.com/en-us/resources/cloud-computing-dictionary/what-are-large-language-models-llms", "title": "What are large language models (LLMs)?", "domain": "microsoft.com", "ctr": 0.0422, "metrics": {"domain_authority": 98, "page_authority": 66, "citation_flow": 50, "trust_flow": 35, "referring_domains": 66, "backlinks": 637}},
+    {"position": 5, "url": "https://in.linkedin.com/in/llmsoftware", "title": "LLM Software - Empowering the Future with LLM Technology", "domain": "linkedin.com", "ctr": 0.0284, "metrics": {"domain_authority": 99, "page_authority": 56, "citation_flow": 0, "trust_flow": 0, "referring_domains": 0, "backlinks": 0}},
+    {"position": 6, "url": "https://anythingllm.com/", "title": "AnythingLLM — On-device AI for productivity | Local & Private", "domain": "anythingllm.com", "ctr": 0.0208, "metrics": {"domain_authority": 39, "page_authority": 50, "citation_flow": 47, "trust_flow": 26, "referring_domains": 2010, "backlinks": 21979}},
+    {"position": 7, "url": "https://en.wikipedia.org/wiki/Large_language_model", "title": "Large language model", "domain": "wikipedia.org", "ctr": 0.0151, "metrics": {"domain_authority": 97, "page_authority": 81, "citation_flow": 48, "trust_flow": 45, "referring_domains": 4471, "backlinks": 264684}},
+    {"position": 8, "url": "https://www.capterra.com/p/10030576/LLM-Software/", "title": "LLM Software Pricing, Alternatives & More 2026", "domain": "capterra.com", "ctr": 0.0115, "metrics": {"domain_authority": 80, "page_authority": 37, "citation_flow": 9, "trust_flow": 2, "referring_domains": 9, "backlinks": 9}}
+  ],
+  "notes": "Keyword details succeeded on retry. SERP is commercial/homepage-heavy: llmsoftware.com (DA14) ranks #1, LM Studio #2, Martin Fowler #3, Microsoft #4. LlamaBox's /llm-software.html can compete for a mobile/offline angle if it earns a few real backlinks."
+}

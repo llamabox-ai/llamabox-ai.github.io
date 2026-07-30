@@ -1,0 +1,26 @@
+{
+  "target": "https://localaimaster.com",
+  "date": "2026-07-30",
+  "total_links": 11,
+  "returned_links": 11,
+  "truncated": false,
+  "links_per_domain": 1,
+  "notes": [
+    "Profile dominated by PBN spam (lydiaroyrealestate.com, plumeriamarketing.com, newsblogsports.site).",
+    "One real directory link: localaihub.net/de/tools/local-ai-master. One mention on freeintelligence.ai/local-ai-pulse/.",
+    "Site still ranks for 'webllm' with DA=20 because the SERP has few dedicated pages."
+  ],
+  "links": [
+    {"source": "https://lydiaroyrealestate.com/all/638/7.html", "target": "https://localaimaster.com/", "anchor": "high quality dofollow backlinks da 50 pa 40 premium pbn network service localaimaster.com rank first page google fast seo link building ...", "type": "TextLink", "no_follow": false, "source_trust_flow": 4, "source_citation_flow": 5, "title": "🏆🏆Boost your Google rankings with Premium PBN & Link Building🏆🏆", "lang": "en", "first_seen": "2026-07-11", "last_seen": "2026-07-11", "deleted": false},
+    {"source": "https://freeintelligence.ai/local-ai-pulse/", "target": "https://localaimaster.com/", "anchor": "localaimaster.com", "type": "TextLink", "no_follow": false, "source_trust_flow": 1, "source_citation_flow": 19, "title": "Local AI GPU Pulse - What the Community Said in the Last 30 Days (June 2026)", "lang": "en", "first_seen": "2026-07-04", "last_seen": "2026-07-04", "deleted": false},
+    {"source": "https://localaihub.net/de/tools/local-ai-master", "target": "https://localaimaster.com/", "anchor": "https://localaimaster.com", "type": "TextLink", "no_follow": false, "source_trust_flow": 0, "source_citation_flow": 12, "title": "Local AI Master - Local AI Hub", "lang": "de", "first_seen": "2026-02-16", "last_seen": "2026-07-26", "deleted": false},
+    {"source": "https://errorledger.com/insights/the-one-shot-video-illusion-automated", "target": "https://localaimaster.com/", "anchor": "ollama vram requirements 2026: table for every model (1b-405b)", "type": "TextLink", "no_follow": false, "source_trust_flow": 0, "source_citation_flow": 12, "title": "The Production Economics of AI Video Generation 2026", "lang": "en", "first_seen": "2026-07-24", "last_seen": "2026-07-24", "deleted": false},
+    {"source": "https://sites.jake.eu/share/97505", "target": "https://localaimaster.com/", "anchor": "localaimaster.com", "type": "TextLink", "no_follow": true, "source_trust_flow": 0, "source_citation_flow": 0, "title": "❤️ URL Shared ❤️", "lang": "en", "first_seen": "2026-04-18", "last_seen": "2026-04-18", "deleted": false},
+    {"source": "https://unanswered.io/guide/how-much-ram-does-ai-use", "target": "https://localaimaster.com/", "anchor": "how much ram does ai need? 8gb vs 16gb vs 32gb (2025 guide) | local ai master", "type": "TextLink", "no_follow": true, "source_trust_flow": 0, "source_citation_flow": 0, "title": "How Much RAM Does Local AI Really Need in 2026?", "lang": "en", "first_seen": "2026-02-19", "last_seen": "2026-05-13", "deleted": false},
+    {"source": "https://newsblogsports.site/all/302/3", "target": "https://localaimaster.com/", "anchor": "best pinterest tool sitetosocial.com to grow your website traffic fully automated", "type": "TextLink", "no_follow": false, "source_trust_flow": 0, "source_citation_flow": 0, "title": "Best Tool for Pinterest SiteToSocial Fully Automated AI Generated Pins Grow Your Website Traffic", "lang": "en", "first_seen": "2026-04-18", "last_seen": "2026-06-29", "deleted": false},
+    {"source": "https://drjack.world/report/97504", "target": "https://localaimaster.com/", "anchor": "localaimaster.com", "type": "TextLink", "no_follow": true, "source_trust_flow": 0, "source_citation_flow": 0, "title": "👲 Domain Report 👲", "lang": "en", "first_seen": "2026-05-13", "last_seen": "2026-05-13", "deleted": false},
+    {"source": "https://plumeriamarketing.com/all/638/7.html", "target": "https://localaimaster.com/", "anchor": "high quality dofollow backlinks da 50 pa 40 premium pbn network service localaimaster.com rank first page google fast seo link building ...", "type": "TextLink", "no_follow": false, "source_trust_flow": 0, "source_citation_flow": 0, "title": "🏆🏆Boost your Google rankings with Premium PBN & Link Building🏆🏆", "lang": "en", "first_seen": "2026-07-14", "last_seen": "2026-07-14", "deleted": false},
+    {"source": "https://domaindexer.com/XLIHZDO/26/", "target": "https://localaimaster.com/", "anchor": "localaimaster.com", "type": "TextLink", "no_follow": true, "source_trust_flow": 0, "source_citation_flow": 0, "title": "Domain Collection XLIHZDO - Item Page 26 - Domaindexer.com", "lang": "en", "first_seen": "2026-04-01", "last_seen": "2026-06-22", "deleted": false},
+    {"source": "https://www.globalnetwork.in/domains/163783/cfcf6b6d74e04fa6c37b85b24c0493aa/", "target": "https://localaimaster.com/", "anchor": "localaimaster.com", "type": "TextLink", "no_follow": true, "source_trust_flow": 0, "source_citation_flow": 0, "title": "Global Network", "lang": null, "first_seen": "2026-04-08", "last_seen": "2026-04-08", "deleted": false}
+  ]
+}

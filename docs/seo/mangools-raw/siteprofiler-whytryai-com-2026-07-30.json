@@ -1,1 +1,10 @@
-{"domain":"whytryai.com","domain_authority":23,"page_authority":36,"citation_flow":24,"trust_flow":11,"referring_ips":21}
+{
+  "domain": "whytryai.com",
+  "domain_authority": 23,
+  "page_authority": 36,
+  "citation_flow": 24,
+  "trust_flow": 11,
+  "referring_ips": 21,
+  "majestic_status": "Found",
+  "notes": "Newsletter/Substack site ranking #2 for 'free llms'. Good PR/backlink pitch target (not a directory). Backlink profile mixes a strong link from ai-supremacy.com (TF=18) with PBN spam and old GPTs store links."
+}
