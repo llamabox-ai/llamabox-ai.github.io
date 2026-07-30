@@ -243,4 +243,25 @@
 - tracked_keywords: 1230 / 1651 remaining
 - links: 1,031,032 / 1,200,000 remaining
 
+## Continuation batch — keyword gap analysis + high-volume educational pages
+- Ran `kwfinder_get_keyword_gap_analysis` for `llamabox-ai.github.io` vs `mlc.ai` (US). Found 238 gap keywords.
+- Saved compact summary as `docs/seo/mangools-raw/keyword-gap-llamabox-vs-mlc-ai-us-2026-07-30.json`.
+- Top relevant gaps identified:
+  - `what is an llm in ai` (1,600 vol), `what is a llm in ai` (720 vol)
+  - `free llms` (1,300 vol)
+  - `webllm` (880 vol), `llm software` (590 vol), `mlc chat` (390 vol), `gbnf` (390 vol)
+- Created `/what-is-an-llm.html` to target definitional LLM queries with Android pivot.
+- Created `/free-llms.html` to target listicle intent for free open-weight models on Android.
+- Added both pages to `/guides.html` card grid, footer Guides column, `/llms.txt`, `/llms-full.txt`, and `sitemap.xml`.
+- Regenerated site and pushed.
+
+## Updated quota after keyword gap + content batch
+- serps: ~1095 / 1200 remaining
+- related-keywords: ~1080 / 1200 remaining
+- kw-url-metrics: ~846 / 1440 remaining
+- lm-url-metrics: 1,198,660 / 1,200,000 remaining
+- sp-overview: 142 / 150 remaining
+- tracked_keywords: 1230 / 1651 remaining
+- links: 1,031,032 / 1,200,000 remaining
+
 *Last updated: 2026-07-30.*

@@ -74,6 +74,12 @@ Three additional keywords pulled fresh US desktop SERPs and competitor backlink 
 | `mlc chat android` | 70 | 37 | MLC docs/home dominate; Reddit r/LocalLLaMA #4; UpdateStar #8 | Strengthen /vs-mlc-llm.html; intercept APK/download intent with real Android app |
 | `ollama android` | 180 | — | Reddit r/ollama #1, Ollama official #2, GitHub fork #3, Play Store client #4, dev.to #5, deepakness.com #6 | Comparison page `/vs-ollama.html` answers the core question: no official Ollama Android app |
 | `duck ai` | 60,300 | 36 | Duck.ai #1, Reddit r/degoogle #2, Vice #3, Apple App Store #4, DuckDuckGo help #5, FastCompany #8 | High brand navigational intent; target "duck ai alternative" / "duck ai android" with comparison content |
+| `what is an llm in ai` | 1,600 | — | Educational/definitional; mlc.ai ranks via docs | Create `/what-is-an-llm.html` explainer with Android pivot |
+| `what is a llm in ai` | 720 | — | Misspelling/plural variant of above | Same page covers variant naturally |
+| `free llms` | 1,300 | — | Listicle intent; no strong dedicated page | Create `/free-llms.html` listicle of open-weight GGUF models |
+| `webllm` | 880 | — | MLC web runtime brand | Add comparison section on /vs-mlc-llm.html |
+| `llm software` | 590 | 41 | Category term | Mention on /what-is-an-llm.html and /best-local-llm-apps-android.html |
+| `gbnf` | 390 | — | Technical structured-output term | Future blog/technical page opportunity |
 
 ### International SERP findings
 
@@ -133,6 +139,9 @@ Three additional keywords pulled fresh US desktop SERPs and competitor backlink 
 - ✅ `/vs-ollama.html` rewritten to target "Ollama Android" directly: title now "Ollama Android alternative | LlamaBox local LLM on Android", FAQ answers "Can you run Ollama on Android?" and "Is there an Ollama Android app?".
 - ✅ `/on-device-llm.html` rewritten to target "on device AI": title now "On-Device AI on Android | Local LLM with LlamaBox", expanded definition, use cases, and FAQ schema.
 - ✅ New landing page `/private-ai-android.html` created targeting `private ai` and `private ai chatbot android` with comparison table, use cases, and FAQ schema.
+- ✅ New landing page `/models.html` created as GGUF model hub for Android; targets "gguf models", "llm models", and serves as link magnet.
+- ✅ New landing page `/what-is-an-llm.html` created targeting `what is an llm in ai` (1,600 vol) and `what is a llm in ai` (720 vol).
+- ✅ New landing page `/free-llms.html` created targeting `free llms` (1,300 vol) with a listicle of open-weight GGUF models for Android.
 
 ## Remaining Mangools quota snapshot
 
