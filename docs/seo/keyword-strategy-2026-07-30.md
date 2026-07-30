@@ -67,12 +67,26 @@ Three additional keywords pulled fresh US desktop SERPs and competitor backlink 
 | `ollama android` | 180 | — | Reddit r/LocalLLaMA #1, Ollama official page clarifies no mobile client, dev.to #3, several GitHub forks | Target comparison/FAQ page; many users want Ollama on Android but it doesn't exist officially |
 | `private ai chatbot android` | — | 31 | Reddit r/privacy #1, Reddit r/LocalLLaMA #2, PrivacyTools #3, Layla #4, GitHub #5 | Optimize `/private-chatgpt-alternative.html` and consider standalone Android-specific chatbot page |
 | `open source llm android` | — | 32 | Reddit r/LocalLLaMA #1, MakeUseOf #2, GitHub #3, InfoQ #4, ItsFoss #6 | Already covered by `/best-local-llm-apps-android.html`; strong editorial backlink targets (MakeUseOf, ItsFoss, InfoQ) |
+| `private ai` | 2200 | 31 | Venice.ai #1 (1,552 ref domains), Cloudera #2, Confer #3, Reddit r/privacy #4, Vellum listicle #7 (5 ref domains) | Create Android-specific private AI listicle; beat Vellum with focused mobile/offline angle |
+| `on device ai` | 520 | 33 | Samsung #1, Google Play app #2, Couchbase blog #3 (0 page backlinks), Reddit #4, Medium #5, Android dev #6, NovusASI #7 (DA=26) | Strengthen `/on-device-llm.html` with FAQ and real examples; beatable corporate blog slot |
+| `duck ai` / `duckduck ai` | 60,300 | 36/54 | DuckDuckGo AI chat product | Not a direct competitor but validates privacy-chat search volume; consider comparison content |
+
+### International SERP findings
+
+| Keyword | UK insight | India insight |
+|---|---|---|
+| `chatgpt android offline` | Reddit #1, OpenAI community #2, Tom's Guide #3, OfflineGPT Play Store #4, Jan.ai #5, Fritz #6 | Reddit #1, OpenAI community #2, ChatGPT Play Store #3, Jan.ai #4, Tom's Guide #5, ai-toolbox.co #6 (DA=20, very beatable), Android Authority #7 |
+| `ollama android` | Reddit r/ollama #1, GitHub fork #2, ollama.com #3, Play Store client #4, dev.to #5, deepakness.com #6, mobile-artificial-intelligence.com #8 (DA=3!) | GitHub fork #1, ollama.com #2, Reddit #3, Play Store client #4, dev.to #5, YouTube #6, deepakness.com #7, IzzyOnDroid #8, LocalMind Play Store #9 |
 
 ### Competitor backlink intelligence
 
 - **Layla-network.ai**: 298 backlinks, mostly AI tool directories and startup lists (German, Spanish, Chinese). Strategy: submit LlamaBox to the same global AI directories + privacy-focused Android blogs.
 - **MeetAITools.com**: Only 2 backlinks (one appears to be a PBN/spam link). Ranks with DA=1 because of thin content + some links. LlamaBox can outrank with legitimate content and a small number of real backlinks.
 - **AnythingLLM.com**: 2,010 referring domains, 21,979 backlinks. Strong open-source community. Potential partner / comparison target.
+- **Fritz.ai**: DA=52, 500 total backlinks, but profile is polluted by legacy robotics identity (MIP Robotics) and recent PBN/spam. The specific `/chatgpt-android-offline/` page has only 1 backlink and the `/can-you-use-chatgpt-offline/` page has 0 external backlinks. Very beatable at the page level.
+- **AI-toolbox.co**: DA=20, 32 backlinks, mostly low-quality directories and PBN/Show-HN aggregators. Ranks in India for `chatgpt android offline` with thin content. Beatable with a single real editorial link.
+- **Deepakness.com**: DA=20, tiny site ranking for `ollama android`. Very beatable.
+- **Mobile-artificial-intelligence.com (Maid)**: DA=3, 0 backlinks, ranks #8 in UK for `ollama android`. Extremely beatable — a dedicated LlamaBox comparison page can outrank it quickly.
 
 ## Implementation completed 2026-07-30
 
@@ -102,15 +116,20 @@ Three additional keywords pulled fresh US desktop SERPs and competitor backlink 
 - ✅ AI Search Watcher: monitor is at prompt limit but already contains comprehensive LlamaBox prompts; no additions possible.
 - ✅ New landing page: `/chatgpt-android-offline.html` targeting `chatgpt android offline` (vol 180, KD 34). FAQ clarifies ChatGPT cannot run offline and positions LlamaBox as the working alternative.
 - ✅ Additional SERP raw files saved for `private ai chatbot android`, `chatgpt android offline`, `ollama android`, `open source llm android`.
+- ✅ International SERP raw files saved: `chatgpt android offline` UK/India, `ollama android` UK/India.
+- ✅ URL metrics saved for beatable competitors: Fritz.ai, XDA, Tom's Guide, Android Authority, dev.to, deepakness.com.
+- ✅ Backlink profiles saved for `fritz.ai` and `ai-toolbox.co`; both show weak/PBN-inflated profiles.
+- ✅ Keyword details saved for high-value terms `private ai` (vol 2,200, KD 31) and `on device ai` (vol 520, KD 33); both have beatable slots in SERP.
+- ✅ Related-keyword compact summaries saved for `duck ai`, `private ai`, `on device ai`.
 
 ## Remaining Mangools quota snapshot
 
-- SERP lookups: 1,112 remaining
-- Related-keyword lookups: 1,090 remaining
+- SERP lookups: 1,099 remaining
+- Related-keyword lookups: 1,082 remaining
 - Keyword URL metrics: 850 remaining
-- LinkMiner URL metrics: 1,198,662 rows remaining
-- SiteProfiler overviews: 146 remaining
+- LinkMiner URL metrics: 1,198,660 rows remaining
+- SiteProfiler overviews: 144 remaining
 - SERPWatcher tracked keywords: 1,230 remaining
-- Backlink rows: 1,032,696 remaining
+- Backlink rows: 1,031,032 remaining
 
 *Last updated: 2026-07-30.*

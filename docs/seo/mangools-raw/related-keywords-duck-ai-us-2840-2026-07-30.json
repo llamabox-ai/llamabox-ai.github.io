@@ -1,0 +1,14 @@
+{
+  "seed": "duck ai",
+  "location": "us-2840",
+  "timestamp": "2026-07-30",
+  "note": "High-volume competitor/privacy AI search. 'duck ai' and 'duckduck ai' are DuckDuckGo's AI chat product. LlamaBox can position against these as a fully local, no-cloud alternative.",
+  "total_keywords": 25,
+  "keywords": [
+    {"kw": "duck ai", "search_volume": 60300, "kd": 54, "cpc": 2.97, "ppc": 3},
+    {"kw": "duckduck ai", "search_volume": 60300, "kd": 36, "cpc": 2.97, "ppc": 3},
+    {"kw": "uberduck", "search_volume": 3200, "kd": 34, "cpc": 1.23, "ppc": 13},
+    {"kw": "ai duck", "search_volume": 690, "kd": 33, "cpc": null, "ppc": 0},
+    {"kw": "rubber duck ai", "search_volume": 80, "kd": null, "cpc": null, "ppc": 1}
+  ]
+}

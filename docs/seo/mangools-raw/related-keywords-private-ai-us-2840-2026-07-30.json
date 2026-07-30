@@ -1,0 +1,13 @@
+{
+  "seed": "private ai",
+  "location": "us-2840",
+  "timestamp": "2026-07-30",
+  "note": "Broad privacy-AI intent. 'private ai' has 2,200 monthly searches and KD 31 — strong target for LlamaBox positioning as a private, offline Android chatbot.",
+  "total_keywords": 6,
+  "keywords": [
+    {"kw": "private ai", "search_volume": 2200, "kd": 31, "cpc": 3.22, "ppc": 10},
+    {"kw": "privateai", "search_volume": 2200, "kd": null, "cpc": 3.22, "ppc": 10},
+    {"kw": "openai private", "search_volume": 40, "kd": 40, "cpc": null, "ppc": 6},
+    {"kw": "secure and private ai", "search_volume": 10, "kd": null, "cpc": null, "ppc": 3}
+  ]
+}

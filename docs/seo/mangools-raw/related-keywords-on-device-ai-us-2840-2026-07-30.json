@@ -1,0 +1,12 @@
+{
+  "seed": "on device ai",
+  "location": "us-2840",
+  "timestamp": "2026-07-30",
+  "note": "Concept-level keyword directly aligned with LlamaBox's value prop. 'on device ai' has 520 monthly searches and KD 33. Page already exists at /on-device-llm.html.",
+  "total_keywords": 4,
+  "keywords": [
+    {"kw": "on device ai", "search_volume": 520, "kd": 33, "cpc": 3.35, "ppc": 2},
+    {"kw": "on device intelligence", "search_volume": 10, "kd": 29, "cpc": null, "ppc": 12},
+    {"kw": "ai on device", "search_volume": 10, "kd": 39, "cpc": 3.15, "ppc": 18}
+  ]
+}

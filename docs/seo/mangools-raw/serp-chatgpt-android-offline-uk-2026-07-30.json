@@ -1,0 +1,22 @@
+{
+  "kw": "chatgpt android offline",
+  "location": "gb-2826",
+  "platform": "desktop",
+  "timestamp": "2026-07-30",
+  "rank": 34,
+  "notes": "UK SERP is very similar to US. AI Overview dominates. Reddit r/LocalLLaMA ranks #1. Tom's Guide article on replacing ChatGPT with offline AI ranks #3. Google Play apps appear. The specific page fritz.ai/chatgpt-android-offline/ that ranks #1 in US is #6 in UK (fritz.ai/can-you-use-chatgpt-offline/ with 0 external backlinks).",
+  "organic_leaders": [
+    {"rank": 1, "domain": "reddit.com", "url": "https://www.reddit.com/r/LocalLLaMA/comments/1lt98oq/...", "pda": 92, "upa": 53},
+    {"rank": 2, "domain": "community.openai.com", "title": "Offline Version of ChatGPT", "pda": 92, "upa": 43},
+    {"rank": 3, "domain": "tomsguide.com", "title": "I replaced ChatGPT with Google's offline AI on my phone...", "pda": 89, "upa": 46, "majestic_ext_backlinks": 33, "beatability": "high — page-level links are weak"},
+    {"rank": 4, "domain": "play.google.com", "title": "OfflineGPT - Apps on Google Play", "pda": 99, "upa": 55},
+    {"rank": 5, "domain": "jan.ai", "title": "You can't run ChatGPT offline, do this instead", "pda": 46, "upa": 30},
+    {"rank": 6, "domain": "fritz.ai", "title": "Can You Use ChatGPT Offline?", "pda": 52, "upa": 30, "majestic_ext_backlinks": 0, "beatability": "very high"}
+  ],
+  "people_also_ask": [
+    "Is there an offline version of ChatGPT?",
+    "Why does ChatGPT keep going offline?",
+    "Can I use ChatGPT without WiFi?",
+    "Is there any offline AI chatbot for Android?"
+  ]
+}

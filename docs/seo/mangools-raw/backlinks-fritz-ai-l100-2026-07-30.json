@@ -1,0 +1,17 @@
+{
+  "url": "https://fritz.ai",
+  "timestamp": "2026-07-30",
+  "total_links": 500,
+  "sampled_links": 100,
+  "notes": "Fritz.ai has 500 total backlinks but the profile is heavily polluted by its previous identity (MIP Robotics, a French robotics startup) and recent PBN / backlink-spam campaigns. The AI-tools content ranks despite thin page-level links. LlamaBox can outrank specific pages with legitimate editorial links.",
+  "link_quality_breakdown": {
+    "high_trust_editorial": [
+      {"source": "techcrunch.com/feed/", "anchor": "fritz", "trust_flow": 50, "deleted": true},
+      {"source": "robots.ros.org/", "anchor": "website", "trust_flow": 22},
+      {"source": "freecodecamp.org/news/a-guide-to-object-detection-with-fritz...", "anchor": "fritz sdk", "trust_flow": 3},
+      {"source": "aithority.com/machine-learning/...", "anchor": "fritz ai", "trust_flow": 4}
+    ],
+    "pbn_spam_pattern": "Multiple 'how to write an article to be seo friendly' clones and 'visit site seo fritz.ai premium backlinks' pages detected. These inflate domain authority but do not help the specific ranking page.",
+    "legacy_robotics_links": "Many .fr/.edu links referencing MIP Robotics — not the current AI-tools site."
+  }
+}

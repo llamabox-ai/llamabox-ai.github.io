@@ -1,0 +1,32 @@
+{
+  "timestamp": "2026-07-30",
+  "query": "ollama android",
+  "note": "URL metrics for pages ranking for 'ollama android' (US desktop SERP). Official Ollama has no Android client; all top results are workarounds or community tutorials. LlamaBox can capture this intent with a comparison page.",
+  "urls": {
+    "dev.to/drsilva/how-to-run-ollama-on-android-5aj8": {
+      "domain": "dev.to",
+      "domain_authority": 85,
+      "page_authority": 39,
+      "moz_ueid": 0,
+      "majestic_ref_domains": 1,
+      "majestic_ext_backlinks": 1,
+      "majestic_trust_flow": 0,
+      "majestic_citation_flow": 0,
+      "toprank": 3812,
+      "serp_rank_for_keyword": 3,
+      "beatability": "moderate-high — dev.to domain is strong but page has almost no external links"
+    },
+    "deepakness.com/run-ollama-on-android/": {
+      "domain": "deepakness.com",
+      "domain_authority": 20,
+      "page_authority": 20,
+      "moz_ueid": 0,
+      "majestic_ref_domains": 1,
+      "majestic_ext_backlinks": 1,
+      "majestic_trust_flow": 0,
+      "majestic_citation_flow": 0,
+      "serp_rank_for_keyword": null,
+      "beatability": "very high — tiny site, very few links; can be outranked quickly"
+    }
+  }
+}

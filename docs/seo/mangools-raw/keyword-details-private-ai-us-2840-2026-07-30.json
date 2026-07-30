@@ -1,0 +1,22 @@
+{
+  "kw": "private ai",
+  "location": "us-2840",
+  "platform": "desktop",
+  "timestamp": "2026-07-30",
+  "search_volume": 2200,
+  "kd": 31,
+  "cpc": 3.22,
+  "intent": ["informational"],
+  "content_types": ["HOMEPAGES", "REDDIT"],
+  "serp_features": ["AI_OVERVIEW", "PEOPLE_ALSO_ASK"],
+  "notes": "Strong privacy-AI intent. Venice.ai dominates with DA=41 and 1,552 referring domains. Reddit r/privacy ranks #4. Vellum listicle ranks #7 with only 5 referring domains. Opportunity for an Android-specific private AI listicle from LlamaBox.",
+  "organic_leaders": [
+    {"position": 1, "domain": "venice.ai", "title": "Venice | Private AI for Unlimited Creative Freedom", "da": 41, "pa": 50, "ref_domains": 1552},
+    {"position": 2, "domain": "cloudera.com", "title": "What Is Private AI?", "da": 79, "pa": 41, "ref_domains": 6},
+    {"position": 3, "domain": "confer.to", "title": "Confer — Private AI. Speak freely.", "da": 34, "pa": 39, "ref_domains": 320},
+    {"position": 4, "domain": "reddit.com", "title": "Are There Any Truly Private AI Assistants?", "da": 92, "pa": 53, "ref_domains": 1},
+    {"position": 5, "domain": "getlimina.ai", "title": "Limina AI", "da": 36, "pa": 25, "ref_domains": 37},
+    {"position": 6, "domain": "digitalrealty.com", "title": "What is Private AI?", "da": 61, "pa": 29, "ref_domains": 2},
+    {"position": 7, "domain": "vellum.ai", "title": "10 Best Private Personal AI Assistants in 2026", "da": 44, "pa": 32, "ref_domains": 5, "beatability": "high — only 5 referring domains"}
+  ]
+}

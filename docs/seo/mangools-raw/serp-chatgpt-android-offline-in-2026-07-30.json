@@ -1,0 +1,24 @@
+{
+  "kw": "chatgpt android offline",
+  "location": "in-2356",
+  "platform": "desktop",
+  "timestamp": "2026-07-30",
+  "rank": 27,
+  "notes": "India SERP also dominated by AI Overview. Reddit #1, OpenAI community #2, Google Play ChatGPT #3, Jan.ai #4, Tom's Guide #5, ai-toolbox.co #6 (DA=20, PA=19, very beatable), Facebook/Android Authority #7, Uptodown ChatGPT APK #8.",
+  "organic_leaders": [
+    {"rank": 1, "domain": "reddit.com", "pda": 92, "upa": 53},
+    {"rank": 2, "domain": "community.openai.com", "pda": 92, "upa": 43},
+    {"rank": 3, "domain": "play.google.com", "title": "ChatGPT - Apps on Google Play", "pda": 99, "upa": 79},
+    {"rank": 4, "domain": "jan.ai", "title": "You can't run ChatGPT offline, do this instead", "pda": 46, "upa": 30},
+    {"rank": 5, "domain": "tomsguide.com", "title": "I replaced ChatGPT with Google's offline AI on my phone...", "pda": 89, "upa": 46},
+    {"rank": 6, "domain": "ai-toolbox.co", "title": "Can You Use ChatGPT Offline? Complete Guide (2026)", "pda": 20, "upa": 19, "majestic_ext_backlinks": 1, "beatability": "very high"},
+    {"rank": 7, "domain": "facebook.com", "title": "Free, offline ChatGPT on your phone? Technically possible...", "pda": 96, "upa": 60},
+    {"rank": 8, "domain": "uptodown.com", "title": "ChatGPT for Android - Download the APK from Uptodown", "pda": 92, "upa": 46}
+  ],
+  "people_also_ask": [
+    "Does ChatGPT mobile work offline?",
+    "How to run ChatGPT locally on Android?",
+    "Can I use ChatGPT without WiFi?",
+    "Is there any offline AI chatbot for Android?"
+  ]
+}

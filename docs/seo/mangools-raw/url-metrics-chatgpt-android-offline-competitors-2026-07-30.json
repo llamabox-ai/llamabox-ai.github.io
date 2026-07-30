@@ -1,0 +1,56 @@
+{
+  "timestamp": "2026-07-30",
+  "query": "chatgpt android offline",
+  "note": "URL metrics for pages ranking for 'chatgpt android offline' (US desktop SERP). All show strong domain authority but low page authority and very few external backlinks to the specific ranking page — beatable with targeted content + a small number of real editorial links.",
+  "urls": {
+    "fritz.ai/chatgpt-android-offline/": {
+      "domain": "fritz.ai",
+      "domain_authority": 52,
+      "page_authority": 27,
+      "moz_ueid": 0,
+      "majestic_ref_domains": 1,
+      "majestic_ext_backlinks": 1,
+      "majestic_trust_flow": 0,
+      "majestic_citation_flow": 0,
+      "toprank": 423594,
+      "serp_rank_for_keyword": 1,
+      "beatability": "very high — only 1 backlink to this page despite DA=52"
+    },
+    "www.xda-developers.com/chatgpt-android/": {
+      "domain": "www.xda-developers.com",
+      "domain_authority": 92,
+      "page_authority": 40,
+      "moz_ueid": 0,
+      "majestic_ref_domains": 1,
+      "majestic_ext_backlinks": 1,
+      "majestic_trust_flow": 0,
+      "majestic_citation_flow": 0,
+      "serp_rank_for_keyword": 2,
+      "beatability": "high — page has almost no external links; outrankable with focused Android content + outreach"
+    },
+    "www.tomsguide.com/ai/what-is-chatgpt": {
+      "domain": "www.tomsguide.com",
+      "domain_authority": 89,
+      "page_authority": 39,
+      "moz_ueid": 0,
+      "majestic_ref_domains": 1,
+      "majestic_ext_backlinks": 1,
+      "majestic_trust_flow": 0,
+      "majestic_citation_flow": 0,
+      "serp_rank_for_keyword": 3,
+      "beatability": "high — broad ChatGPT explainer, not specifically about offline Android; can be displaced by dedicated page"
+    },
+    "www.androidauthority.com/what-is-chatgpt-3311179/": {
+      "domain": "www.androidauthority.com",
+      "domain_authority": 91,
+      "page_authority": 39,
+      "moz_ueid": 0,
+      "majestic_ref_domains": 1,
+      "majestic_ext_backlinks": 1,
+      "majestic_trust_flow": 0,
+      "majestic_citation_flow": 0,
+      "serp_rank_for_keyword": 4,
+      "beatability": "high — same pattern as XDA/Tom's Guide; weak page-level link profile"
+    }
+  }
+}

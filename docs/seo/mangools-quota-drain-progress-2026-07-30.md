@@ -172,13 +172,24 @@
   - FAQ clarifies ChatGPT requires internet; LlamaBox is the offline alternative.
   - Added to footer Guides column, `/guides.html` card grid, `/llms.txt`, `/llms-full.txt`, and `sitemap.xml`.
 
-## Quota after continuation session
-- serps: 1112 / 1200 remaining
-- related-keywords: 1090 / 1200 remaining
+### Latest quota-burn batch (UK/India SERPs + keyword details + backlink profiles)
+- Ran UK desktop SERPs for `chatgpt android offline` and `ollama android`; saved summary raw JSON.
+- Ran India desktop SERPs for `chatgpt android offline` and `ollama android`; saved summary raw JSON.
+- Ran related-keywords for high-volume seeds `duck ai`, `private ai`, `on device ai`; saved compact summaries.
+- Ran `serpchecker_get_url_metrics` for Fritz.ai, XDA, Android Authority, Tom's Guide, dev.to, deepakness.com.
+- Ran `siteprofiler_get_overview` for `fritz.ai` (DA=52, 124 referring IPs).
+- Ran `kwfinder_get_keyword_details` for `private ai` (vol 2,200, KD 31) and `on device ai` (vol 520, KD 33).
+- Ran `linkminer_get_backlinks` (l100, links_per_domain=1) for `fritz.ai` (500 total links, profile dominated by legacy robotics + PBN spam) and `ai-toolbox.co` (32 links, mostly directories/PBN spam).
+- Saved backlink + keyword-detail raw JSON summaries.
+- Workflow `w2pa1mpqh` still running.
+
+## Quota after latest batch
+- serps: 1099 / 1200 remaining
+- related-keywords: 1082 / 1200 remaining
 - kw-url-metrics: 850 / 1440 remaining
-- lm-url-metrics: 1,198,662 / 1,200,000 remaining
-- sp-overview: 146 / 150 remaining
+- lm-url-metrics: 1,198,660 / 1,200,000 remaining
+- sp-overview: 144 / 150 remaining
 - tracked_keywords: 1230 / 1651 remaining
-- links: 1,032,696 / 1,200,000 remaining
+- links: 1,031,032 / 1,200,000 remaining
 
 *Last updated: 2026-07-30.*

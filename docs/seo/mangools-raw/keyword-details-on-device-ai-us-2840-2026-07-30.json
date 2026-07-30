@@ -1,0 +1,22 @@
+{
+  "kw": "on device ai",
+  "location": "us-2840",
+  "platform": "desktop",
+  "timestamp": "2026-07-30",
+  "search_volume": 520,
+  "kd": 33,
+  "cpc": 3.35,
+  "intent": ["transactional", "informational"],
+  "content_types": ["ANDROID", "CORPORATE_BLOG_POSTS", "REDDIT", "MEDIUM_ARTICLES"],
+  "serp_features": ["AI_OVERVIEW", "PEOPLE_ALSO_ASK"],
+  "notes": "Concept keyword directly aligned with LlamaBox. Samsung and Google Play dominate. Couchbase blog (DA=66, 0 backlinks to page) and NovusASI (DA=26, 3 backlinks) are beatable. LlamaBox /on-device-llm.html should be strengthened with FAQ and internal links.",
+  "organic_leaders": [
+    {"position": 1, "domain": "samsung.com", "title": "On-device AI | Technologies", "da": 94, "pa": 56, "ref_domains": 32},
+    {"position": 2, "domain": "google.com", "title": "On-Device AI - Apps on Google Play", "da": 99, "pa": 52, "ref_domains": 1},
+    {"position": 3, "domain": "couchbase.com", "title": "On-Device AI: Benefits, Use Cases, and Challenges", "da": 66, "pa": 34, "ref_domains": 0, "beatability": "very high — 0 backlinks"},
+    {"position": 4, "domain": "reddit.com", "title": "True On-Device Mobile AI is finally a reality...", "da": 92, "pa": 53, "ref_domains": 1},
+    {"position": 5, "domain": "medium.com", "title": "On Device AI: What It Is and How It Works?", "da": 95, "pa": 56, "ref_domains": 13},
+    {"position": 6, "domain": "android.com", "title": "Play for On-device AI (beta)", "da": 93, "pa": 53, "ref_domains": 21},
+    {"position": 7, "domain": "novusasi.com", "title": "On-Device AI: Power in the Palm of Your Hand", "da": 26, "pa": 23, "ref_domains": 3, "beatability": "very high"}
+  ]
+}

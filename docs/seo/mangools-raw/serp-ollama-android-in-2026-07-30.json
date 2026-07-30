@@ -1,0 +1,25 @@
+{
+  "kw": "ollama android",
+  "location": "in-2356",
+  "platform": "desktop",
+  "timestamp": "2026-07-30",
+  "rank": 34,
+  "notes": "India SERP: GitHub fork #1, ollama.com #2, Reddit r/ollama #3, Google Play 'Ollama Chat AI' #4, dev.to tutorial #5, YouTube #6, deepakness.com #7, IzzyOnDroid #8, LocalMind Play Store #9. Same pattern — most results are workarounds/server clients. mobile-artificial-intelligence.com did not rank in India top 9.",
+  "organic_leaders": [
+    {"rank": 1, "domain": "github.com", "url": "SMuflhi/ollama-app-for-Android-", "pda": 97, "upa": 59},
+    {"rank": 2, "domain": "ollama.com", "pda": 59, "upa": 66},
+    {"rank": 3, "domain": "reddit.com", "title": "Run Ollama on your Android!", "pda": 92, "upa": 55},
+    {"rank": 4, "domain": "play.google.com", "title": "Ollama Chat AI – Apps on Google Play", "pda": 99, "upa": 55},
+    {"rank": 5, "domain": "dev.to", "title": "How to Use Ollama From Your Android Phone in 2026...", "pda": 85, "upa": 41},
+    {"rank": 6, "domain": "youtube.com", "title": "RUN LLMs LOCALLY On ANDROID W/ Ollama: DeepSeek...", "pda": 100, "upa": 60},
+    {"rank": 7, "domain": "deepakness.com", "title": "Running Ollama in Android Linux Terminal", "pda": 20, "upa": 22, "beatability": "very high"},
+    {"rank": 8, "domain": "izzysoft.de", "title": "Ollama - IzzyOnDroid F-Droid Repository", "pda": 47, "upa": 36},
+    {"rank": 9, "domain": "play.google.com", "title": "LocalMind: Ollama & LM Studio - Apps on Google Play", "pda": 99, "upa": 52}
+  ],
+  "people_also_ask": [
+    "Can I use Ollama on Android?",
+    "Is Ollama a free AI?",
+    "Does Ollama have a phone app?",
+    "Can I use Ollama on Android?"
+  ]
+}

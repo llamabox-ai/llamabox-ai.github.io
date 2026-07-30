@@ -1,0 +1,23 @@
+{
+  "kw": "ollama android",
+  "location": "gb-2826",
+  "platform": "desktop",
+  "timestamp": "2026-07-30",
+  "rank": 28,
+  "notes": "UK SERP: Reddit r/ollama #1, GitHub fork #2, ollama.com #3, Google Play 'Ollama AI Chat' #4, dev.to tutorial #5, deepakness.com #6, IzzyOnDroid #7, mobile-artificial-intelligence.com (Maid) #8 (DA=3!). Many results are server-client workarounds, not on-device. Strong opportunity for LlamaBox /vs-ollama page.",
+  "organic_leaders": [
+    {"rank": 1, "domain": "reddit.com", "title": "Run Ollama on your Android!", "pda": 92, "upa": 55},
+    {"rank": 2, "domain": "github.com", "url": "SMuflhi/ollama-app-for-Android-", "pda": 97, "upa": 59},
+    {"rank": 3, "domain": "ollama.com", "pda": 59, "upa": 66},
+    {"rank": 4, "domain": "play.google.com", "title": "Ollama AI Chat – Apps on Google Play", "pda": 99, "upa": 55},
+    {"rank": 5, "domain": "dev.to", "title": "Running Llama 3.2 on Android: A Step-by-Step Guide Using Ollama", "pda": 85, "upa": 48},
+    {"rank": 6, "domain": "deepakness.com", "title": "Running Ollama in Android Linux Terminal", "pda": 20, "upa": 22, "beatability": "very high"},
+    {"rank": 7, "domain": "izzysoft.de", "title": "Ollama - IzzyOnDroid F-Droid Repository", "pda": 47, "upa": 36},
+    {"rank": 8, "domain": "mobile-artificial-intelligence.com", "title": "Use Ollama with Maid on Android — Setup Guide", "pda": 3, "upa": 17, "beatability": "extremely high — DA=3, no backlinks"}
+  ],
+  "people_also_ask": [
+    "Can I use Ollama on Android?",
+    "Is Ollama a free AI?",
+    "Does Ollama have a phone app?"
+  ]
+}

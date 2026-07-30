@@ -1,0 +1,20 @@
+{
+  "url": "https://www.ai-toolbox.co",
+  "timestamp": "2026-07-30",
+  "total_links": 32,
+  "sampled_links": 32,
+  "notes": "AI-toolbox.co ranks for 'chatgpt android offline' in India with DA=20 and only 32 backlinks. Profile is mostly low-quality directories, AppSumo, and PBN/duplicate 'Show HN' aggregator spam. Very beatable with real editorial links.",
+  "link_quality_breakdown": {
+    "notable_sources": [
+      {"source": "appsumo.com/products/ai-toolbox/", "anchor": "ai-toolbox.co", "trust_flow": 10},
+      {"source": "lilachbullock.com/chatgpt-power-user-workflow/", "anchor": "ai-toolbox.co", "trust_flow": 5},
+      {"source": "techbullion.com/transform-your-chatgpt-experience...", "anchor": "chatgpt toolbox", "trust_flow": 0}
+    ],
+    "directory_spam": [
+      "toolany.com", "toolbit.ai", "bestaitoolfinder.com", "goze.tools", "bot-ai.top", "seektool.ai"
+    ],
+    "pbn_aggregators": [
+      "triwei.ai", "shipit.news", "110010.art", "machinebrief.com", "hackernewsday.com"
+    ]
+  }
+}
