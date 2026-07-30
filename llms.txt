@@ -46,14 +46,14 @@ LlamaBox is a React Native Android application that runs LLMs (GGUF models via l
 - Download status: https://llamabox-ai.github.io/download.html
 - Guides hub: https://llamabox-ai.github.io/guides.html
 - Offline AI Android: https://llamabox-ai.github.io/offline-ai-android.html
-- On-device LLM: https://llamabox-ai.github.io/on-device-llm.html
+- On-device AI / on-device LLM: https://llamabox-ai.github.io/on-device-llm.html
 - Private ChatGPT alternative: https://llamabox-ai.github.io/private-chatgpt-alternative.html
 - ChatGPT Android offline: https://llamabox-ai.github.io/chatgpt-android-offline.html
 - GGUF on Android: https://llamabox-ai.github.io/gguf-android.html
 - LLM download: https://llamabox-ai.github.io/llm-download.html
 - How to run an LLM on Android: https://llamabox-ai.github.io/how-to-run-llm-on-android.html
 - vs ChatGPT: https://llamabox-ai.github.io/vs-chatgpt.html
-- vs Ollama: https://llamabox-ai.github.io/vs-ollama.html
+- vs Ollama / Ollama Android alternative: https://llamabox-ai.github.io/vs-ollama.html
 - vs PocketPal AI: https://llamabox-ai.github.io/vs-pocketpal.html
 - vs MLC LLM: https://llamabox-ai.github.io/vs-mlc-llm.html
 - Best local LLM apps Android: https://llamabox-ai.github.io/best-local-llm-apps-android.html

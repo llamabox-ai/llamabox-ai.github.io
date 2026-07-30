@@ -282,14 +282,14 @@ LlamaBox is **dual-licensed**:
 | https://llamabox-ai.github.io/download.html | Download / install status |
 | https://llamabox-ai.github.io/guides.html | Guides hub |
 | https://llamabox-ai.github.io/offline-ai-android.html | Offline AI Android |
-| https://llamabox-ai.github.io/on-device-llm.html | On-device LLM |
+| https://llamabox-ai.github.io/on-device-llm.html | On-device AI / on-device LLM |
 | https://llamabox-ai.github.io/private-chatgpt-alternative.html | Private ChatGPT alternative |
 | https://llamabox-ai.github.io/chatgpt-android-offline.html | Offline ChatGPT alternative |
 | https://llamabox-ai.github.io/gguf-android.html | GGUF on Android |
 | https://llamabox-ai.github.io/llm-download.html | LLM download |
 | https://llamabox-ai.github.io/how-to-run-llm-on-android.html | Tutorial |
 | https://llamabox-ai.github.io/vs-chatgpt.html | Comparison |
-| https://llamabox-ai.github.io/vs-ollama.html | Comparison |
+| https://llamabox-ai.github.io/vs-ollama.html | Ollama Android alternative / comparison |
 | https://llamabox-ai.github.io/vs-pocketpal.html | Comparison |
 | https://llamabox-ai.github.io/vs-mlc-llm.html | Comparison |
 | https://llamabox-ai.github.io/best-local-llm-apps-android.html | Roundup |

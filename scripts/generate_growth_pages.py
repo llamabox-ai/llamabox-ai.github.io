@@ -390,21 +390,26 @@ def main():
     )
 
     faqs_od = [
+        ("What is on-device AI?", "On-device AI runs machine learning inference directly on the user’s hardware — in LlamaBox’s case, an Android phone — instead of sending data to a cloud API."),
         ("What is an on-device LLM?", "A language model that runs inference on the user’s hardware — here, an Android phone — rather than on a remote API server."),
+        ("Is on-device AI the same as offline AI?", "Almost. On-device AI is local by architecture; if the model and app are fully self-contained, it also works offline. LlamaBox is both."),
         ("Is on-device slower?", "Usually yes versus frontier cloud APIs. Small Q4_K_M models on mid-range phones often land in a few tokens/sec. LlamaBox publishes honest ranges, not theater."),
-        ("Does on-device require special hardware?", "No. LlamaBox runs on standard Android CPUs with ARM NEON. No GPU or datacenter hardware is needed."),
+        ("Does on-device AI require special hardware?", "No. LlamaBox runs on standard Android CPUs with ARM NEON. No GPU, NPU, or datacenter hardware is needed."),
+        ("Why is on-device AI more private?", "Your prompts and generated answers never leave the device. There is no vendor inference endpoint, so there is no vendor retention policy or subprocessor list to trust."),
     ]
     page(
         "on-device-llm.html",
-        "On-Device LLM for Android | Run Local Models with LlamaBox",
-        "Run an on-device LLM on Android. LlamaBox loads GGUF models locally with llama.cpp — private chat with no cloud inference.",
+        "On-Device AI on Android | Local LLM with LlamaBox",
+        "On-device AI for Android: run a local LLM directly on your phone. LlamaBox loads GGUF models with llama.cpp — private, offline, no cloud inference.",
         article(
-            "On-device LLM",
-            "On-device LLM on your phone.",
-            "“On-device” is not a marketing synonym for “mobile app.” It means the weights run where you are.",
+            "On-device AI",
+            "On-device AI: the LLM runs on your phone.",
+            "“On-device” is not a marketing synonym for “mobile app.” It means the model weights and inference run where you are — on the Android SoC, not in a data center.",
             f"""
-        <h2>Definition</h2>
-        <p>An <strong>on-device LLM</strong> executes the forward pass on local hardware. For LlamaBox that is your Android SoC via llama.cpp, loading a quantized GGUF into app memory.</p>
+        <h2>What is on-device AI?</h2>
+        <p><strong>On-device AI</strong> means machine-learning inference happens locally on the user’s hardware. For LlamaBox, that is your Android phone running a quantized LLM through llama.cpp. The forward pass, the chat history, and the generated text all stay inside the app process.</p>
+        <h2>From on-device AI to on-device LLM</h2>
+        <p>An <strong>on-device LLM</strong> is the text-generation subset of on-device AI. Instead of calling ChatGPT, Gemini, or Claude over the network, you load a GGUF file into app memory and run inference on the phone CPU. The device becomes the AI endpoint.</p>
         <h2>Stack (short)</h2>
         <ul>
           <li>React Native 0.81 (New Architecture)</li>
@@ -413,10 +418,17 @@ def main():
           <li>Zustand + SQLite + AsyncStorage</li>
         </ul>
         <h2>Privacy property</h2>
-        <p>If generation never leaves the process, you do not need to “trust a privacy policy” for that step — you can reason about the architecture. See <a href="/architecture.html">architecture</a>.</p>
+        <p>If generation never leaves the process, you do not need to “trust a privacy policy” for that step — you can reason about the architecture. See <a href="/architecture.html">architecture</a> and <a href="/private-chatgpt-alternative.html">private ChatGPT alternative</a>.</p>
         <h2>Performance expectations</h2>
         <p>Mid-range phones with ~1B Q4_K_M models: roughly 1–5 tok/s prompt processing and 2–8 tok/s generation (device dependent). Load times 5–30s. Peak memory often ~0.5–2 GB for small models.</p>
-        <p>Next: <a href="/gguf-android.html">GGUF guide</a> · <a href="/offline-ai-android.html">offline AI</a>.</p>
+        <h2>Use cases for on-device AI on Android</h2>
+        <ul>
+          <li>Private drafts and journaling without cloud retention</li>
+          <li>Offline travel, field work, and low-connectivity environments</li>
+          <li>Sensitive professional notes (healthcare, legal, journalism, research)</li>
+          <li>Air-gapped or policy-controlled environments</li>
+        </ul>
+        <p>Next: <a href="/gguf-android.html">GGUF guide</a> · <a href="/offline-ai-android.html">offline AI</a> · <a href="/vs-ollama.html">Ollama Android alternative</a>.</p>
         {faq_html(faqs_od)}
 """,
         ),
@@ -834,31 +846,51 @@ def main():
         ),
     )
 
+    faqs_ollama = [
+        ("Can you run Ollama on Android?", "Ollama is officially built for macOS, Linux, and Windows. It does not ship an Android app or APK. LlamaBox is the Android-native equivalent: it loads the same GGUF models with a mobile chat UI."),
+        ("Is there an Ollama Android app?", "No official Ollama Android client exists. If you want local LLM chat on Android, LlamaBox is purpose-built for it — no terminal, no desktop dependency."),
+        ("Why use LlamaBox instead of Ollama on Android?", "LlamaBox runs offline on stock Android phones using CPU-only inference. It is designed for mobile battery, touch UX, and APK distribution, not for a server you SSH into."),
+        ("Do LlamaBox and Ollama use the same models?", "Yes — both use GGUF weights from the llama.cpp ecosystem. You can often load the same quantized models in both tools."),
+    ]
     page(
         "vs-ollama.html",
-        "LlamaBox vs Ollama | Mobile local LLM vs desktop",
-        "LlamaBox vs Ollama: Android on-device chat versus desktop/server local LLMs. Same GGUF world, different form factors.",
+        "Ollama Android alternative | LlamaBox local LLM on Android",
+        "No official Ollama Android app exists. LlamaBox is the Android alternative: offline GGUF chat on your phone. Same models, mobile-native UX.",
         article(
             "Compare",
-            "LlamaBox vs Ollama.",
-            "Both live in the local-GGUF universe. One is phone-native product UX; the other is the desktop/server operator’s toolkit.",
-            """
+            "LlamaBox vs Ollama — the Android question.",
+            "Ollama owns the desktop/server local-LLM workflow. LlamaBox brings the same GGUF model world to Android phones. If you searched for an Ollama Android app, this is the answer.",
+            f"""
+        <h2>The short answer</h2>
+        <p>There is no official <strong>Ollama Android</strong> release. Ollama's supported platforms are macOS, Linux, and Windows. If you need local LLM chat on Android, <strong>LlamaBox</strong> is built for exactly that: load a GGUF model, chat offline, no cloud inference.</p>
+        <h2>Why the comparison matters</h2>
+        <p>Users who discover local LLMs through Ollama naturally want the same experience on their phone. They search for "ollama android" and find workarounds — Termux, remote tunnels, or unofficial clients. LlamaBox is a real Android app with a mobile-first interface, designed for the phone's battery, RAM, and storage constraints.</p>
         <div class="table-wrap">
           <table class="compare-table">
             <thead><tr><th></th><th>LlamaBox</th><th>Ollama (typical)</th></tr></thead>
             <tbody>
-              <tr><td>Primary device</td><td>Android phone</td><td>Desktop / laptop / server</td></tr>
+              <tr><td>Android app</td><td>Yes — built for Android 7+ arm64</td><td>No official Android app</td></tr>
+              <tr><td>Primary device</td><td>Android phone / tablet</td><td>Desktop / laptop / server</td></tr>
               <tr><td>UX</td><td>Mobile chat app</td><td>CLI + apps ecosystem</td></tr>
               <tr><td>Always with you</td><td>Yes</td><td>If the machine is with you</td></tr>
               <tr><td>Power envelope</td><td>Phone SoC / battery</td><td>Wall power / desktops often</td></tr>
               <tr><td>Model format</td><td>GGUF via llama.cpp stack</td><td>GGUF ecosystem</td></tr>
+              <tr><td>Offline use</td><td>Designed for offline chat</td><td>Local once set up, but not mobile</td></tr>
               <tr><td>Best for</td><td>Private pocket AI</td><td>Dev workflows, heavier local models</td></tr>
             </tbody>
           </table>
         </div>
-        <p>Many builders will use <strong>both</strong>: Ollama on a workstation, LlamaBox on the phone. Related: <a href="/gguf-android.html">GGUF on Android</a>.</p>
+        <h2>How to get local LLMs on Android today</h2>
+        <ol>
+          <li>Install LlamaBox from the Play Store or GitHub releases.</li>
+          <li>Download a small GGUF model (0.5B–3B Q4_K_M) over Wi-Fi.</li>
+          <li>Chat offline. No account, no API key, no desktop server.</li>
+        </ol>
+        <p>Many builders will use <strong>both</strong>: Ollama on a workstation, LlamaBox on the phone. Related: <a href="/gguf-android.html">GGUF on Android</a> · <a href="/on-device-llm.html">on-device LLM</a> · <a href="/offline-ai-android.html">offline AI Android</a>.</p>
+        {faq_html(faqs_ollama)}
 """,
         ),
+        extra_head=faq_schema(faqs_ollama),
     )
 
     # --- business / monetization pages ---

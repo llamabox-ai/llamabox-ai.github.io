@@ -14,22 +14,22 @@
   <link rel="stylesheet" href="/style.css">
   <link rel="alternate" type="text/plain" title="LLM brief" href="https://llamabox-ai.github.io/llms.txt">
 
-  <title>On-Device LLM for Android | Run Local Models with LlamaBox</title>
-  <meta name="description" content="Run an on-device LLM on Android. LlamaBox loads GGUF models locally with llama.cpp — private chat with no cloud inference.">
+  <title>On-Device AI on Android | Local LLM with LlamaBox</title>
+  <meta name="description" content="On-device AI for Android: run a local LLM directly on your phone. LlamaBox loads GGUF models with llama.cpp — private, offline, no cloud inference.">
   <link rel="canonical" href="https://llamabox-ai.github.io/on-device-llm.html">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="LlamaBox">
   <meta property="og:locale" content="en_US">
   <meta property="og:url" content="https://llamabox-ai.github.io/on-device-llm.html">
-  <meta property="og:title" content="On-Device LLM for Android | Run Local Models with LlamaBox">
-  <meta property="og:description" content="Run an on-device LLM on Android. LlamaBox loads GGUF models locally with llama.cpp — private chat with no cloud inference.">
+  <meta property="og:title" content="On-Device AI on Android | Local LLM with LlamaBox">
+  <meta property="og:description" content="On-device AI for Android: run a local LLM directly on your phone. LlamaBox loads GGUF models with llama.cpp — private, offline, no cloud inference.">
   <meta property="og:image" content="https://llamabox-ai.github.io/assets/screenshot-1-home.png">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="On-Device LLM for Android | Run Local Models with LlamaBox">
-  <meta name="twitter:description" content="Run an on-device LLM on Android. LlamaBox loads GGUF models locally with llama.cpp — private chat with no cloud inference.">
+  <meta name="twitter:title" content="On-Device AI on Android | Local LLM with LlamaBox">
+  <meta name="twitter:description" content="On-device AI for Android: run a local LLM directly on your phone. LlamaBox loads GGUF models with llama.cpp — private, offline, no cloud inference.">
   <meta name="twitter:image" content="https://llamabox-ai.github.io/assets/screenshot-1-home.png">
   <script type="application/ld+json">
-  {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "What is an on-device LLM?", "acceptedAnswer": {"@type": "Answer", "text": "A language model that runs inference on the user’s hardware — here, an Android phone — rather than on a remote API server."}}, {"@type": "Question", "name": "Is on-device slower?", "acceptedAnswer": {"@type": "Answer", "text": "Usually yes versus frontier cloud APIs. Small Q4_K_M models on mid-range phones often land in a few tokens/sec. LlamaBox publishes honest ranges, not theater."}}, {"@type": "Question", "name": "Does on-device require special hardware?", "acceptedAnswer": {"@type": "Answer", "text": "No. LlamaBox runs on standard Android CPUs with ARM NEON. No GPU or datacenter hardware is needed."}}]}
+  {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "What is on-device AI?", "acceptedAnswer": {"@type": "Answer", "text": "On-device AI runs machine learning inference directly on the user’s hardware — in LlamaBox’s case, an Android phone — instead of sending data to a cloud API."}}, {"@type": "Question", "name": "What is an on-device LLM?", "acceptedAnswer": {"@type": "Answer", "text": "A language model that runs inference on the user’s hardware — here, an Android phone — rather than on a remote API server."}}, {"@type": "Question", "name": "Is on-device AI the same as offline AI?", "acceptedAnswer": {"@type": "Answer", "text": "Almost. On-device AI is local by architecture; if the model and app are fully self-contained, it also works offline. LlamaBox is both."}}, {"@type": "Question", "name": "Is on-device slower?", "acceptedAnswer": {"@type": "Answer", "text": "Usually yes versus frontier cloud APIs. Small Q4_K_M models on mid-range phones often land in a few tokens/sec. LlamaBox publishes honest ranges, not theater."}}, {"@type": "Question", "name": "Does on-device AI require special hardware?", "acceptedAnswer": {"@type": "Answer", "text": "No. LlamaBox runs on standard Android CPUs with ARM NEON. No GPU, NPU, or datacenter hardware is needed."}}, {"@type": "Question", "name": "Why is on-device AI more private?", "acceptedAnswer": {"@type": "Answer", "text": "Your prompts and generated answers never leave the device. There is no vendor inference endpoint, so there is no vendor retention policy or subprocessor list to trust."}}]}
   </script>
 </head>
 <body>
@@ -56,16 +56,18 @@
 
     <section class="section page-hero">
       <div class="wrap narrow">
-        <div class="eyebrow">On-device LLM</div>
-        <h1>On-device LLM on your phone.</h1>
-        <p class="lead">“On-device” is not a marketing synonym for “mobile app.” It means the weights run where you are.</p>
+        <div class="eyebrow">On-device AI</div>
+        <h1>On-device AI: the LLM runs on your phone.</h1>
+        <p class="lead">“On-device” is not a marketing synonym for “mobile app.” It means the model weights and inference run where you are — on the Android SoC, not in a data center.</p>
       </div>
     </section>
     <section class="section section-tight">
       <div class="wrap narrow prose reveal is-in">
 
-        <h2>Definition</h2>
-        <p>An <strong>on-device LLM</strong> executes the forward pass on local hardware. For LlamaBox that is your Android SoC via llama.cpp, loading a quantized GGUF into app memory.</p>
+        <h2>What is on-device AI?</h2>
+        <p><strong>On-device AI</strong> means machine-learning inference happens locally on the user’s hardware. For LlamaBox, that is your Android phone running a quantized LLM through llama.cpp. The forward pass, the chat history, and the generated text all stay inside the app process.</p>
+        <h2>From on-device AI to on-device LLM</h2>
+        <p>An <strong>on-device LLM</strong> is the text-generation subset of on-device AI. Instead of calling ChatGPT, Gemini, or Claude over the network, you load a GGUF file into app memory and run inference on the phone CPU. The device becomes the AI endpoint.</p>
         <h2>Stack (short)</h2>
         <ul>
           <li>React Native 0.81 (New Architecture)</li>
@@ -74,15 +76,25 @@
           <li>Zustand + SQLite + AsyncStorage</li>
         </ul>
         <h2>Privacy property</h2>
-        <p>If generation never leaves the process, you do not need to “trust a privacy policy” for that step — you can reason about the architecture. See <a href="/architecture.html">architecture</a>.</p>
+        <p>If generation never leaves the process, you do not need to “trust a privacy policy” for that step — you can reason about the architecture. See <a href="/architecture.html">architecture</a> and <a href="/private-chatgpt-alternative.html">private ChatGPT alternative</a>.</p>
         <h2>Performance expectations</h2>
         <p>Mid-range phones with ~1B Q4_K_M models: roughly 1–5 tok/s prompt processing and 2–8 tok/s generation (device dependent). Load times 5–30s. Peak memory often ~0.5–2 GB for small models.</p>
-        <p>Next: <a href="/gguf-android.html">GGUF guide</a> · <a href="/offline-ai-android.html">offline AI</a>.</p>
+        <h2>Use cases for on-device AI on Android</h2>
+        <ul>
+          <li>Private drafts and journaling without cloud retention</li>
+          <li>Offline travel, field work, and low-connectivity environments</li>
+          <li>Sensitive professional notes (healthcare, legal, journalism, research)</li>
+          <li>Air-gapped or policy-controlled environments</li>
+        </ul>
+        <p>Next: <a href="/gguf-android.html">GGUF guide</a> · <a href="/offline-ai-android.html">offline AI</a> · <a href="/vs-ollama.html">Ollama Android alternative</a>.</p>
         <h2 id="faq">FAQ</h2>
 <div class="faq-list">
-<details class="faq-item" open><summary>What is an on-device LLM?</summary><div class="ans">A language model that runs inference on the user’s hardware — here, an Android phone — rather than on a remote API server.</div></details>
+<details class="faq-item" open><summary>What is on-device AI?</summary><div class="ans">On-device AI runs machine learning inference directly on the user’s hardware — in LlamaBox’s case, an Android phone — instead of sending data to a cloud API.</div></details>
+<details class="faq-item"><summary>What is an on-device LLM?</summary><div class="ans">A language model that runs inference on the user’s hardware — here, an Android phone — rather than on a remote API server.</div></details>
+<details class="faq-item"><summary>Is on-device AI the same as offline AI?</summary><div class="ans">Almost. On-device AI is local by architecture; if the model and app are fully self-contained, it also works offline. LlamaBox is both.</div></details>
 <details class="faq-item"><summary>Is on-device slower?</summary><div class="ans">Usually yes versus frontier cloud APIs. Small Q4_K_M models on mid-range phones often land in a few tokens/sec. LlamaBox publishes honest ranges, not theater.</div></details>
-<details class="faq-item"><summary>Does on-device require special hardware?</summary><div class="ans">No. LlamaBox runs on standard Android CPUs with ARM NEON. No GPU or datacenter hardware is needed.</div></details>
+<details class="faq-item"><summary>Does on-device AI require special hardware?</summary><div class="ans">No. LlamaBox runs on standard Android CPUs with ARM NEON. No GPU, NPU, or datacenter hardware is needed.</div></details>
+<details class="faq-item"><summary>Why is on-device AI more private?</summary><div class="ans">Your prompts and generated answers never leave the device. There is no vendor inference endpoint, so there is no vendor retention policy or subprocessor list to trust.</div></details>
 </div>
 
       </div>
