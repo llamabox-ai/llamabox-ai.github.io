@@ -126,10 +126,70 @@ Thanks,
 
 ---
 
+## New targets from fresh SERPs (2026-07-30 continuation)
+
+### 11. Privacy Guides (privacyguides.org/en/ai-chat)
+- **URL that ranks for target:** https://www.privacyguides.org/en/ai-chat/
+- **Why target:** DA=51, ranks #3 for `private chatgpt alternative android`. Editorial recommendation list for private AI chat.
+- **Page to pitch:** `/private-chatgpt-alternative.html`
+- **Angle:** "LlamaBox meets your criteria: open-source, on-device inference, no account, fully offline after setup. Suggest it as an Android-specific option."
+- **Contact path:** Privacy Guides has a GitHub repo and contribution guidelines; open an issue or discussion.
+
+### 12. Wondertools / Substack (wondertools.substack.com)
+- **URL that ranks for target:** https://wondertools.substack.com/p/the-best-mobile-ai-apps
+- **Why target:** DA=92, ranks #5 for `private chatgpt alternative android`. Mobile AI apps guide.
+- **Page to pitch:** `/private-chatgpt-alternative.html` or `/offline-ai-android.html`
+- **Angle:** "Add LlamaBox to your mobile AI apps guide as the private, offline Android option."
+- **Contact path:** Substack reply or author contact in newsletter.
+
+### 13. Lindy.ai blog (lindy.ai/blog/chatgpt-alternative)
+- **URL that ranks for target:** https://www.lindy.ai/blog/chatgpt-alternative
+- **Why target:** DA=41, ranks #4 for `private chatgpt alternative android`. ChatGPT alternatives list.
+- **Page to pitch:** `/private-chatgpt-alternative.html`
+- **Angle:** "Update your ChatGPT alternatives post with LlamaBox as an Android-native, fully offline option."
+- **Contact path:** Author contact or LinkedIn.
+
+### 14. Proton / Lumo AI (proton.me/lumo/ai/chatgpt-alternative)
+- **URL that ranks for target:** https://proton.me/lumo/ai/chatgpt-alternative
+- **Why target:** DA=77, ranks #2 for `private chatgpt alternative android`. They are a competitor but also validate the market.
+- **Page to pitch:** `/vs-chatgpt.html` or `/private-chatgpt-alternative.html`
+- **Angle:** Not a backlink target (competitor), but monitor for comparison content opportunities. Could pitch a guest exchange if they cover open-source alternatives.
+- **Contact path:** N/A — competitive intelligence only.
+
+### 15. Hugging Face Forum (discuss.huggingface.co/t/download-llm-model/84813)
+- **URL that ranks for target:** https://discuss.huggingface.co/t/download-llm-model/84813
+- **Why target:** DA=84, ranks #2 for `llm download`. Community Q&A where beginners ask how to download LLMs.
+- **Page to pitch:** `/llm-download.html` or `/how-to-run-llm-on-android.html`
+- **Angle:** "Answer beginner questions and mention LlamaBox as a way to run downloaded GGUF models on Android without cloud inference."
+- **Contact path:** Post directly in the thread; be helpful, not promotional.
+
+### 16. GitHub open-llms list (github.com/eugeneyan/open-llms)
+- **URL that ranks for target:** https://github.com/eugeneyan/open-llms
+- **Why target:** DA=97, ranks #4 for `llm download`. Curated list of open LLMs for commercial use.
+- **Page to pitch:** `/llm-download.html`
+- **Angle:** "Suggest adding a 'deployment targets' note that mentions LlamaBox for running open LLMs on Android."
+- **Contact path:** Open a GitHub issue or pull request on the repo.
+
+### 17. Advanced Innovation (advanced-innovation.io/ki-tools)
+- **URL that linked to Layla:** https://www.advanced-innovation.io/ki-tools
+- **Why target:** TF=24, German-language AI tools directory. Listed Layla.
+- **Page to pitch:** `/`
+- **Angle:** "Request a listing for LlamaBox as a privacy-focused offline AI chat app for Android."
+- **Contact path:** Site contact form.
+
+### 18. Ilimit Labs (ilimit.com/es/blog/...inferencia-ia)
+- **URL that linked to Layla:** https://www.ilimit.com/es/blog/ilimitlabs-9/guia-inferencia-ia-67
+- **Why target:** TF=12, Spanish guide to local AI inference. Active link to Layla.
+- **Page to pitch:** `/blog/2026-07-30-what-is-offline-ai-chat.html`
+- **Angle:** "Update your Spanish local inference guide to include LlamaBox as an Android example."
+- **Contact path:** Article author contact.
+
 ## Next actions
 
-1. Wait until the new pages are live (commit + push done).
+1. ✅ New pages are generated; commit + push to make live.
 2. Send 2–3 tier-1 outreach emails per week; do not blast all at once.
-3. Track responses in a simple spreadsheet or CRM column.
-4. Repurpose rejected pitches into HN / Reddit / X threads.
-5. Re-check backlink profiles in 30–60 days to see if any new competitor links appear.
+3. Engage authentically in the three Reddit threads listed in `reddit-threads-to-engage-2026-07-30.md`.
+4. Submit LlamaBox to Privacy Guides and the AI tool directories that list Layla.
+5. Track responses in a simple spreadsheet or CRM column.
+6. Repurpose rejected pitches into HN / Reddit / X threads.
+7. Re-check backlink profiles in 30–60 days to see if any new competitor links appear.

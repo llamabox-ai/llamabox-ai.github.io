@@ -1,0 +1,16 @@
+{
+  "seed": "llm download",
+  "date": "2026-07-30",
+  "location_id": 2840,
+  "total_keywords": 35,
+  "truncated": true,
+  "notes": [
+    "Most related keywords are law-school LLM exam papers (India), not large-language-model download intent.",
+    "The only commercially relevant variant is the seed itself: 'llm download' (sv=140, kd=39, cpc=$15.79).",
+    "Recommendation: target 'llm download' with a guide page focused on downloading GGUF models for Android."
+  ],
+  "keywords": [
+    {"kw": "llm download", "sv": 140, "sv_12m": 140, "kd": 39, "cpc": 15.79, "ppc": 24},
+    {"kw": "llm books free download", "sv": 10, "sv_12m": 10, "kd": null, "cpc": null, "ppc": null}
+  ]
+}

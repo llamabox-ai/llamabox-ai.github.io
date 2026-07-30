@@ -1,0 +1,24 @@
+{
+  "keyword": "private chatgpt alternative android",
+  "date": "2026-07-30",
+  "location_id": 2840,
+  "platform_id": 1,
+  "serp_id": "eb0355e4a09c1c5f9815c671eeea6499",
+  "serp_features": ["AI_OVERVIEW", "PEOPLE_ALSO_ASK"],
+  "total_organic": 7,
+  "notes": [
+    "Reddit thread ranks #1 for this query — strong signal that community answers are winning.",
+    "Privacyguides.org (#3, DA=51) is an attainable editorial backlink target.",
+    "Substack wondertools (#5, DA=92) covers mobile AI apps — review/outreach target.",
+    "MeetAITools (#6) has DA=1 and ranks; LlamaBox can compete here with focused page."
+  ],
+  "organic_results": [
+    {"position": 1, "url": "https://www.reddit.com/r/privacy/comments/13k5xta/private_alternative_to_openais_chatgpt/", "domain": "reddit.com", "title": "Private alternative to OpenAI's ChatGPT : r/privacy", "da": 92, "pa": 53},
+    {"position": 2, "url": "https://proton.me/lumo/ai/chatgpt-alternative", "domain": "proton.me", "title": "A free ChatGPT alternative that doesn't train on your data", "da": 77, "pa": 35},
+    {"position": 3, "url": "https://www.privacyguides.org/en/ai-chat/", "domain": "privacyguides.org", "title": "Recommended AI Chat: Private ChatGPT Alternatives", "da": 51, "pa": 38},
+    {"position": 4, "url": "https://www.lindy.ai/blog/chatgpt-alternative", "domain": "lindy.ai", "title": "I Tested 15 ChatGPT Alternatives. These Are The Best in ...", "da": 41, "pa": 41},
+    {"position": 5, "url": "https://wondertools.substack.com/p/the-best-mobile-ai-apps", "domain": "substack.com", "title": "AI Mobile Apps Guide: ChatGPT, Claude, Gemini & Private AI", "da": 92, "pa": 56},
+    {"position": 6, "url": "https://meetaitools.com/best-chatgpt-alternative-app-for-android/", "domain": "meetaitools.com", "title": "Best ChatGPT Alternative App For Android 2026 - MeetAITools", "da": 1, "pa": 3},
+    {"position": 7, "url": "https://www.facebook.com/groups/DeepNetGroup/posts/520509488341938/", "domain": "facebook.com", "title": "What offline Android AI apps are available?", "da": 96, "pa": 60}
+  ]
+}

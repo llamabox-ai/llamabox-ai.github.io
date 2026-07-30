@@ -1,0 +1,26 @@
+{
+  "keyword": "llm download",
+  "date": "2026-07-30",
+  "location_id": 2840,
+  "platform_id": 1,
+  "serp_id": "a343ca860e9c0744791886de6af74518",
+  "serp_features": ["AI_OVERVIEW"],
+  "total_organic": 8,
+  "notes": [
+    "LM Studio dominates desktop 'download an LLM' intent.",
+    "Hugging Face forum thread at #2 — community Q&A; potential place to answer and link guides.",
+    "AnythingLLM (#3, DA=39, 2K RD) is a strong partner/competitor for local AI deployment.",
+    "GitHub open-llms list (#4) — suggest LlamaBox as a mobile deployment target.",
+    "YouTube tutorial at #7 — video content opportunity."
+  ],
+  "organic_results": [
+    {"position": 1, "url": "https://lmstudio.ai/", "domain": "lmstudio.ai", "title": "LM Studio Bionic - Agent for Work and Code", "da": 55, "pa": 60, "rd": 7530, "bl": 142843},
+    {"position": 2, "url": "https://discuss.huggingface.co/t/download-llm-model/84813", "domain": "huggingface.co", "title": "Download LLM Model - Beginners", "da": 84, "pa": 39},
+    {"position": 3, "url": "https://anythingllm.com/", "domain": "anythingllm.com", "title": "AnythingLLM — On-device AI for productivity | Local & Private", "da": 39, "pa": 50, "rd": 2010, "bl": 21979},
+    {"position": 4, "url": "https://github.com/eugeneyan/open-llms", "domain": "github.com", "title": "A list of open LLMs available for commercial use.", "da": 97, "pa": 71},
+    {"position": 5, "url": "https://www.reddit.com/r/LocalLLM/comments/1hwk8ao/suggestions_for_first_attempt_to_download_and/", "domain": "reddit.com", "title": "Suggestions for first attempt to download and experiment ...", "da": 92, "pa": 53},
+    {"position": 6, "url": "https://lmstudio.ai/docs/app/basics/download-model", "domain": "lmstudio.ai", "title": "Download an LLM", "da": 55, "pa": 42},
+    {"position": 7, "url": "https://www.youtube.com/watch?v=5iaxy8XbDlc", "domain": "youtube.com", "title": "How to Install a Local LLM for Free (No Coding Required)", "da": 100, "pa": 60},
+    {"position": 8, "url": "https://apps.microsoft.com/detail/xp9cvcbnft87jw?gl=US", "domain": "microsoft.com", "title": "LLM Portal - Download and install on Windows", "da": 98, "pa": 52}
+  ]
+}

@@ -285,11 +285,16 @@ LlamaBox is **dual-licensed**:
 | https://llamabox-ai.github.io/on-device-llm.html | On-device LLM |
 | https://llamabox-ai.github.io/private-chatgpt-alternative.html | Private ChatGPT alternative |
 | https://llamabox-ai.github.io/gguf-android.html | GGUF on Android |
+| https://llamabox-ai.github.io/llm-download.html | LLM download |
 | https://llamabox-ai.github.io/how-to-run-llm-on-android.html | Tutorial |
 | https://llamabox-ai.github.io/vs-chatgpt.html | Comparison |
 | https://llamabox-ai.github.io/vs-ollama.html | Comparison |
 | https://llamabox-ai.github.io/vs-pocketpal.html | Comparison |
 | https://llamabox-ai.github.io/vs-mlc-llm.html | Comparison |
+| https://llamabox-ai.github.io/enterprise.html | Enterprise |
+| https://llamabox-ai.github.io/commercial-license.html | Licensing |
+| https://llamabox-ai.github.io/partners.html | Partnerships |
+| https://llamabox-ai.github.io/investors.html | Investors |
 | https://llamabox-ai.github.io/blog/ | Blog index |
 | https://llamabox-ai.github.io/blog/2026-07-30-phone-faster-than-pc.html | Blog post |
 | https://llamabox-ai.github.io/blog/2026-07-30-llamabox-vs-pocketpal.html | Blog post |

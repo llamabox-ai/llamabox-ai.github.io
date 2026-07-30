@@ -62,12 +62,22 @@ FOOTER = """  <footer class="footer">
             <li><a href="/on-device-llm.html">On-device LLM</a></li>
             <li><a href="/private-chatgpt-alternative.html">Private ChatGPT alt</a></li>
             <li><a href="/gguf-android.html">GGUF on Android</a></li>
+            <li><a href="/llm-download.html">LLM download</a></li>
             <li><a href="/how-to-run-llm-on-android.html">How-to guide</a></li>
             <li><a href="/vs-chatgpt.html">vs ChatGPT</a></li>
             <li><a href="/vs-ollama.html">vs Ollama</a></li>
             <li><a href="/vs-pocketpal.html">vs PocketPal AI</a></li>
             <li><a href="/vs-mlc-llm.html">vs MLC LLM</a></li>
             <li><a href="/blog/">Blog</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Business</h4>
+          <ul>
+            <li><a href="/enterprise.html">Enterprise</a></li>
+            <li><a href="/commercial-license.html">Commercial license</a></li>
+            <li><a href="/partners.html">Partners</a></li>
+            <li><a href="/investors.html">Investors &amp; acquisitions</a></li>
           </ul>
         </div>
         <div>
@@ -223,6 +233,13 @@ def main():
           <label>Device + approximate RAM
             <input type="text" name="device" placeholder="e.g. Pixel 6a · 6 GB">
           </label>
+          <label>Company / organization (optional)
+            <input type="text" name="company" placeholder="e.g. Mythos Labs">
+          </label>
+          <label class="checkbox-label" style="display:flex;align-items:center;gap:0.5rem;margin:0.75rem 0">
+            <input type="checkbox" name="commercial_interest" value="yes">
+            <span>I’m interested in commercial / enterprise use</span>
+          </label>
           <label>Why offline AI? (optional)
             <textarea name="why" rows="3" placeholder="Privacy, travel, research…"></textarea>
           </label>
@@ -299,12 +316,17 @@ def main():
           <a class="card-link glass" href="/on-device-llm.html"><strong>On-device LLM</strong><span>What “on-device” actually means</span></a>
           <a class="card-link glass" href="/private-chatgpt-alternative.html"><strong>Private ChatGPT alternative</strong><span>When cloud chat is the risk</span></a>
           <a class="card-link glass" href="/gguf-android.html"><strong>GGUF on Android</strong><span>Quantizations, RAM, imports</span></a>
+          <a class="card-link glass" href="/llm-download.html"><strong>LLM download</strong><span>Get GGUF models for Android</span></a>
           <a class="card-link glass" href="/how-to-run-llm-on-android.html"><strong>How to run an LLM on Android</strong><span>Step-by-step tutorial</span></a>
           <a class="card-link glass" href="/vs-chatgpt.html"><strong>LlamaBox vs ChatGPT</strong><span>Honest comparison table</span></a>
           <a class="card-link glass" href="/vs-ollama.html"><strong>LlamaBox vs Ollama</strong><span>Phone-native vs desktop local</span></a>
           <a class="card-link glass" href="/vs-pocketpal.html"><strong>LlamaBox vs PocketPal AI</strong><span>Two offline Android LLM apps compared</span></a>
           <a class="card-link glass" href="/vs-mlc-llm.html"><strong>LlamaBox vs MLC LLM</strong><span>Chat app vs model compiler</span></a>
           <a class="card-link glass" href="/blog/"><strong>Blog</strong><span>Models, engineering notes, updates</span></a>
+          <a class="card-link glass" href="/enterprise.html"><strong>Enterprise</strong><span>Offline AI for teams and organizations</span></a>
+          <a class="card-link glass" href="/commercial-license.html"><strong>Commercial license</strong><span>Use LlamaBox in proprietary products</span></a>
+          <a class="card-link glass" href="/partners.html"><strong>Partners</strong><span>OEMs, model authors, distributors</span></a>
+          <a class="card-link glass" href="/investors.html"><strong>Investors &amp; acquisitions</strong><span>Strategic conversations welcome</span></a>
         </div>
 """,
         ),
@@ -314,24 +336,35 @@ def main():
         ("What is offline AI on Android?", "Offline AI means the model runs on the phone. After the model file is stored locally, chat works without a network — including airplane mode."),
         ("Is LlamaBox fully offline?", "Inference is fully offline. Optional internet is only for downloading models from public hubs like Hugging Face."),
         ("Does offline mean private?", "On-device inference means prompts and completions never hit a vendor server. LlamaBox adds no accounts or telemetry on top of that architecture."),
+        ("What is the best offline AI assistant for Android?", "The best offline AI assistant keeps inference on-device, supports open GGUF models, and needs no cloud account. LlamaBox is built exactly for that: local chat, vision, and TTS on Android 7.0+ arm64."),
+        ("Can ChatGPT work offline on Android?", "No. ChatGPT and other cloud assistants need an internet connection. LlamaBox is an offline ChatGPT alternative that runs the model directly on your phone."),
     ]
     page(
         "offline-ai-android.html",
-        "Offline AI Chat: Private Local LLM on Android | LlamaBox",
-        "Chat with AI without internet. LlamaBox runs local LLMs directly on your Android phone so your conversations stay private, offline, and fully under your control.",
+        "Offline AI Android: Best Local LLM Chat Assistant | LlamaBox",
+        "Looking for the best offline AI assistant for Android? LlamaBox runs local LLMs on-device — no internet, no cloud, no accounts. Private chat in airplane mode.",
         article(
             "Offline AI",
-            "Offline AI chat for Android.",
-            "Most “AI apps” die without signal. LlamaBox is built for the opposite: private conversation that never leaves the handset.",
+            "Offline AI for Android.",
+            "The best offline AI assistant is the one that works when the network does not. LlamaBox runs local LLMs on your phone — private, account-free, and airplane-mode ready.",
             f"""
-        <h2>Why offline AI matters</h2>
-        <p>Travel, fieldwork, sensitive drafting, classrooms with locked networks, and regions with expensive data all break cloud chat. Offline AI keeps the loop local: model in RAM, tokens on CPU, history in SQLite on device.</p>
+        <h2>What “offline AI Android” actually means</h2>
+        <p>Offline AI on Android is a chat assistant that loads a language model onto the phone and runs inference locally. Once the model file is stored, you can chat without Wi-Fi, mobile data, or a cloud account. For journalists, travelers, students, field workers, and privacy-conscious users, that changes everything.</p>
         <h2>How LlamaBox delivers offline AI</h2>
         <ul>
           <li>GGUF models via <strong>llama.cpp</strong> (through llama.rn on React Native)</li>
-          <li><strong>CPU-only</strong> inference by design (no GPU dependencies)</li>
-          <li>No account graph, no cloud inference endpoint</li>
-          <li>Optional vision with on-device multimodal models</li>
+          <li><strong>CPU-only</strong> inference by design — works on broad Android 7.0+ arm64 hardware</li>
+          <li>No account graph, no cloud inference endpoint, no telemetry</li>
+          <li>Optional vision with on-device multimodal models + mmproj</li>
+          <li>Local history in SQLite, TTS readback, and system monitoring</li>
+        </ul>
+        <h2>LlamaBox vs other offline AI Android options</h2>
+        <p>Several apps claim offline AI on Android. Here is how LlamaBox compares to the most-discussed alternatives:</p>
+        <ul>
+          <li><strong>Layla</strong> — private offline assistant for Android and iOS. LlamaBox differentiates with open-source GGUF weights, no vendor lock-in, and a CPU-only stack that targets older devices.</li>
+          <li><strong>Local AI</strong> (Google Play) — closed, store-distributed app. LlamaBox gives you model choice, local import, and full source transparency under AGPL-3.0 plus commercial licensing.</li>
+          <li><strong>OfflineLLM</strong> — open-source Android project. LlamaBox adds React Native portability, vision support, and a productized beta path for enterprises and OEMs.</li>
+          <li><strong>MeetAITools roundups</strong> — directory-style lists. LlamaBox is a real product, not a review farm, with direct downloads and an open GitHub organization.</li>
         </ul>
         <h2>What works without internet</h2>
         <ul>
@@ -341,10 +374,10 @@ def main():
           <li>TTS readback of local answers</li>
         </ul>
         <h2>What still needs a network (optional)</h2>
-        <p>Downloading a GGUF the first time. After that, disconnect freely.</p>
+        <p>Downloading a GGUF the first time. After that, disconnect freely — including airplane mode.</p>
         <h2>Who this is for</h2>
         <p>Privacy-first users, journalists, students, builders testing GGUF on real silicon, and anyone who wants ChatGPT-like chat without shipping transcripts to a data center.</p>
-        <p>Related: <a href="/on-device-llm.html">on-device LLM</a> · <a href="/how-to-run-llm-on-android.html">how-to</a> · <a href="/vs-chatgpt.html">vs ChatGPT</a>.</p>
+        <p>Related: <a href="/private-chatgpt-alternative.html">private ChatGPT alternative</a> · <a href="/on-device-llm.html">on-device LLM</a> · <a href="/how-to-run-llm-on-android.html">how-to</a> · <a href="/vs-chatgpt.html">vs ChatGPT</a> · <a href="/vs-pocketpal.html">vs PocketPal AI</a>.</p>
         {faq_html(faqs_offline)}
 """,
         ),
@@ -386,32 +419,41 @@ def main():
     )
 
     faqs_priv = [
-        ("Is LlamaBox a ChatGPT clone?", "It offers chat UX for local models. It is not a hosted OpenAI service and does not call ChatGPT APIs for inference."),
+        ("Is LlamaBox a private ChatGPT alternative for Android?", "Yes. It offers chat UX for local models on Android and does not call OpenAI or any cloud inference API."),
+        ("Can a private AI chatbot really run on Android?", "Yes. LlamaBox loads a quantized GGUF model into app memory and runs inference on the phone CPU. No server sees your prompts."),
         ("When should I still use ChatGPT?", "When you need frontier reasoning, tools, browsing, or speed that phone CPUs cannot match. Use LlamaBox when locality and privacy dominate."),
         ("Does private mean encrypted to a vendor?", "LlamaBox’s privacy story is stronger: no vendor inference path. Data stays on-device by design."),
     ]
     page(
         "private-chatgpt-alternative.html",
-        "Private AI Chat for Android | LlamaBox Local ChatGPT Alternative",
-        "Get private AI chat on Android. LlamaBox runs local LLMs on-device — no cloud inference, no accounts, no telemetry, fully offline after setup.",
+        "Private ChatGPT Alternative Android | LlamaBox Local AI Chatbot",
+        "Looking for a private ChatGPT alternative for Android? LlamaBox is a local AI chatbot that runs offline — no cloud inference, no accounts, no telemetry.",
         article(
             "Private alternative",
-            "A private ChatGPT-style chat that stays on your phone.",
-            "Cloud assistants are brilliant and extractive. LlamaBox is the offline lane: same impulse to chat, opposite data gravity.",
+            "Private ChatGPT alternative for Android.",
+            "A private AI chatbot that runs on your phone, not in someone else's data center. LlamaBox keeps prompts, answers, and history local.",
             f"""
-        <h2>The problem with “private mode” cloud chat</h2>
-        <p>If tokens are produced in a data center, you are trusting retention policies, subprocessors, and account graphs. That can be fine for many tasks. It is the wrong tool for sensitive drafts, offline travel, or adversarial threat models.</p>
-        <h2>What LlamaBox offers instead</h2>
+        <h2>Why users want a private ChatGPT alternative on Android</h2>
+        <p>Cloud assistants are brilliant and extractive. Even “private mode” sends tokens to a vendor server, which means retention policies, subprocessors, and account graphs still apply. For sensitive drafts, offline travel, healthcare notes, journalism sources, or adversarial threat models, the right answer is a <strong>private AI chatbot</strong> that runs inference locally on the phone.</p>
+        <h2>What LlamaBox offers</h2>
         <ul>
-          <li>Local GGUF models — you choose the weights</li>
-          <li>No account required</li>
-          <li>No telemetry by architecture</li>
+          <li>Local GGUF models — you choose the weights, not the vendor</li>
+          <li>No account required, no cloud inference endpoint</li>
+          <li>No telemetry by architecture; prompts never leave the device</li>
           <li>Vision and TTS on device when models allow</li>
+          <li>Open source under AGPL-3.0 plus a separate commercial license for OEMs and enterprises</li>
+        </ul>
+        <h2>How LlamaBox compares to other private ChatGPT alternatives</h2>
+        <p>Privacy-focused users often compare these options. LlamaBox is the only one built specifically for offline, open-weight chat on Android:</p>
+        <ul>
+          <li><strong>Proton AI / Lumo</strong> — privacy-first, but still cloud-hosted. LlamaBox removes the server entirely.</li>
+          <li><strong>Privacy Guides recommendations</strong> — excellent editorial list. LlamaBox matches their criteria: open source, local inference, no account.</li>
+          <li><strong>Lindy / Wondertools mobile AI roundups</strong> — comparison blogs. LlamaBox belongs in these lists because it is a real, shipping Android app, not a wrapper around a remote API.</li>
         </ul>
         <h2>Tradeoffs (read this)</h2>
-        <p>You give up frontier-scale quality and speed. Phone CPUs are not H100s. Start small (0.5B–3B class quantizations) and upgrade models as RAM allows.</p>
+        <p>You give up frontier-scale quality and speed. Phone CPUs are not H100s. Start small (0.5B–3B class quantizations) and upgrade models as RAM allows. The trade is control and privacy for raw capability.</p>
         <h2>Fair comparison</h2>
-        <p>See the full table on <a href="/vs-chatgpt.html">LlamaBox vs ChatGPT</a>.</p>
+        <p>See the full table on <a href="/vs-chatgpt.html">LlamaBox vs ChatGPT</a>. Also see <a href="/offline-ai-android.html">offline AI Android</a> and <a href="/on-device-llm.html">on-device LLM</a>.</p>
         {faq_html(faqs_priv)}
 """,
         ),
@@ -511,6 +553,51 @@ def main():
 """,
         ),
         extra_head=howto_schema,
+    )
+
+    faqs_dl = [
+        ("Where can I download an LLM for Android?", "The easiest path is the in-app hub inside LlamaBox, which lists compatible GGUF models. You can also import models from Hugging Face, GitHub releases, or your own storage."),
+        ("What file format does LlamaBox use?", "GGUF — the standard quantized format used by llama.cpp. Start with Q4_K_M for a balance of size and quality."),
+        ("Do I need an account to download models?", "No. Public model hubs do not require an account to download a GGUF, and LlamaBox adds no account layer of its own."),
+    ]
+    page(
+        "llm-download.html",
+        "LLM Download for Android | Get GGUF Models for LlamaBox",
+        "Download LLM models for Android. Find GGUF files, quantizations, and sources that work offline in LlamaBox. No cloud inference needed.",
+        article(
+            "Models",
+            "LLM download for Android.",
+            "Get the right GGUF model onto your phone, then chat offline for good.",
+            f"""
+        <h2>What “LLM download” means for Android</h2>
+        <p>Downloading an LLM for Android means getting a quantized model file (usually GGUF) onto your phone so a local app can load it. Unlike cloud chat apps, the download happens once; after that, inference works without internet.</p>
+        <h2>Recommended sources for GGUF models</h2>
+        <ul>
+          <li><strong>Hugging Face</strong> — thousands of GGUF uploads from model authors and the community; filter by “GGUF” and “arm64-friendly” sizes.</li>
+          <li><strong>GitHub releases</strong> — some converted models ship as release assets.</li>
+          <li><strong>LlamaBox in-app hub</strong> — curated, tested-on-phone models with recommended quantizations.</li>
+          <li><strong>Local import</strong> — transfer a GGUF via USB, cloud drive, or SD card and import it into LlamaBox.</li>
+        </ul>
+        <h2>Which quantization to download</h2>
+        <p>For phones, start with <strong>Q4_K_M</strong>. It is the best-known balance of quality, file size, and RAM use for small models (0.5B–3B parameters). Smaller quants run faster and use less memory; larger quants improve quality if you have headroom.</p>
+        <h2>Phone-size model guidance</h2>
+        <ul>
+          <li><strong>Entry phones (3–4 GB RAM)</strong> — 0.5B–1B Q4_K_M, context 512–1024</li>
+          <li><strong>Mid-range phones (6–8 GB RAM)</strong> — 1B–2B Q4_K_M, context 1024–2048</li>
+          <li><strong>Flagship phones (12 GB+ RAM)</strong> — 3B–7B Q4_K_M, context 2048+</li>
+        </ul>
+        <h2>How to load the downloaded model</h2>
+        <ol>
+          <li>Open LlamaBox and go to the model library.</li>
+          <li>Tap download from the hub, or import your local GGUF.</li>
+          <li>Wait for initialization (5–30s depending on model size).</li>
+          <li>Chat — airplane mode optional.</li>
+        </ol>
+        <p>Next: <a href="/how-to-run-llm-on-android.html">how to run an LLM on Android</a> · <a href="/gguf-android.html">GGUF on Android guide</a> · <a href="/offline-ai-android.html">offline AI Android</a>.</p>
+        {faq_html(faqs_dl)}
+""",
+        ),
+        extra_head=faq_schema(faqs_dl),
     )
 
     page(
@@ -641,6 +728,131 @@ def main():
           </table>
         </div>
         <p>Many builders will use <strong>both</strong>: Ollama on a workstation, LlamaBox on the phone. Related: <a href="/gguf-android.html">GGUF on Android</a>.</p>
+""",
+        ),
+    )
+
+    # --- business / monetization pages ---
+    page(
+        "enterprise.html",
+        "Enterprise offline AI for Android | LlamaBox",
+        "Deploy private, offline AI chat on Android devices for teams in journalism, healthcare, field work, education, and defense. No cloud inference.",
+        article(
+            "Enterprise",
+            "Offline AI for teams that cannot use cloud chat.",
+            "LlamaBox keeps language-model inference on the Android device. That property matters when regulation, connectivity, or operational security rule out hosted AI.",
+            """
+        <h2>Use cases</h2>
+        <ul>
+          <li><strong>Journalism &amp; sensitive sourcing</strong> — interviews and drafts never hit a vendor server</li>
+          <li><strong>Healthcare &amp; clinical notes</strong> — local inference reduces HIPAA/GDPR surface area for note drafting</li>
+          <li><strong>Field work &amp; disaster response</strong> — works offline in low-connectivity or denied-network environments</li>
+          <li><strong>Education &amp; exam settings</strong> — AI assistance without internet or account requirements</li>
+          <li><strong>Defense &amp; government edge</strong> — air-gapped deployment target on standard Android hardware</li>
+        </ul>
+        <h2>What enterprise deployment looks like</h2>
+        <ul>
+          <li>Private APK distribution or managed Play Store track</li>
+          <li>Curated GGUF model set per organization</li>
+          <li>Optional MDM integration and configuration profiles</li>
+          <li>Commercial license and support channel</li>
+        </ul>
+        <h2>Why CPU-only is an enterprise feature</h2>
+        <p>Accelerated compute on Android is a driver lottery across chipsets. CPU-only inference means the same model path works on every supported Android 7+ arm64 device in the fleet. Predictability beats peak tok/s when you are supporting hundreds of heterogeneous handsets.</p>
+        <h2>Talk to us</h2>
+        <p>Email <a href="mailto:aalhad.dev@gmail.com?subject=LlamaBox%20enterprise%20inquiry">aalhad.dev@gmail.com</a> or use the <a href="/waitlist.html">waitlist</a> and check “I’m interested in commercial / enterprise use.”</p>
+""",
+        ),
+    )
+
+    page(
+        "commercial-license.html",
+        "Commercial license | LlamaBox",
+        "Dual-licensed AGPL-3.0 + commercial. Get a commercial license to use LlamaBox in proprietary products, SaaS, or app stores without open-sourcing your code.",
+        article(
+            "Licensing",
+            "Commercial license for LlamaBox.",
+            "The public codebase will be AGPL-3.0 when released. A separate commercial license is available for organizations that cannot use copyleft.",
+            """
+        <h2>Who needs a commercial license</h2>
+        <ul>
+          <li>Companies shipping LlamaBox or derived code in a proprietary app</li>
+          <li>SaaS products that include LlamaBox inference as a backend component</li>
+          <li>OEMs pre-installing LlamaBox on devices without distributing source</li>
+          <li>Teams that need legal indemnity and a clear IP chain</li>
+        </ul>
+        <h2>What the commercial license covers</h2>
+        <ul>
+          <li>Permission to use LlamaBox code without AGPL obligations</li>
+          <li>Access to closed-beta builds and priority support</li>
+          <li>Optional engineering consulting and custom feature development</li>
+          <li>“LlamaBox” trademark usage under defined terms</li>
+        </ul>
+        <h2>Pricing</h2>
+        <p>Pricing is negotiated per deployment: per-seat, per-device, or flat project license. We optimize for early partners and high-volume deployments.</p>
+        <h2>Request a quote</h2>
+        <p>Email <a href="mailto:aalhad.dev@gmail.com?subject=LlamaBox%20commercial%20license%20inquiry">aalhad.dev@gmail.com</a> with a short description of your use case, expected scale, and timeline.</p>
+""",
+        ),
+    )
+
+    page(
+        "partners.html",
+        "Partner with LlamaBox",
+        "OEMs, device manufacturers, model authors, privacy organizations, and distributors: partner with LlamaBox to bring private offline AI to more users.",
+        article(
+            "Partners",
+            "Partner with LlamaBox.",
+            "We are building the default offline AI chat layer for Android. Partnerships accelerate distribution and deepen the ecosystem.",
+            """
+        <h2>Partnership models</h2>
+        <ul>
+          <li><strong>OEM / device pre-install</strong> — LlamaBox bundled on privacy-focused phones, rugged devices, or enterprise handsets</li>
+          <li><strong>Model author placement</strong> — featured, tested GGUF models in the LlamaBox model hub</li>
+          <li><strong>Distribution</strong> — app stores, side-load platforms, privacy-focused Android communities</li>
+          <li><strong>Privacy &amp; rights organizations</strong> — co-marketing and validation for offline-by-design AI</li>
+          <li><strong>Enterprise resellers</strong> — white-glove deployment and support for regulated customers</li>
+        </ul>
+        <h2>What we bring</h2>
+        <ul>
+          <li>React Native Android app with llama.cpp inference</li>
+          <li>CPU-only path for broad device compatibility</li>
+          <li>Vision, TTS, model hub, and offline history out of the box</li>
+          <li>Dual licensing for commercial flexibility</li>
+        </ul>
+        <h2>Get in touch</h2>
+        <p>Email <a href="mailto:aalhad.dev@gmail.com?subject=LlamaBox%20partnership">aalhad.dev@gmail.com</a> with your partnership idea and audience size.</p>
+""",
+        ),
+    )
+
+    page(
+        "investors.html",
+        "Investors &amp; acquisitions | LlamaBox",
+        "LlamaBox: private offline AI chat for Android. Closed beta, CPU-only by design, open-core model. Strategic acquisition or investment conversations welcome.",
+        article(
+            "Investors",
+            "LlamaBox is the offline AI layer for Android.",
+            "A small, focused team is building the privacy-first alternative to cloud chat. We are open to strategic investment, partnership, and acquisition discussions.",
+            """
+        <h2>What we built</h2>
+        <ul>
+          <li>React Native Android app running GGUF models via llama.cpp / llama.rn</li>
+          <li>CPU-only inference by design for maximum Android device coverage</li>
+          <li>Private chat, vision, TTS, model hub, and offline history</li>
+          <li>Closed beta with waitlist; dual-licensed AGPL-3.0 + commercial</li>
+        </ul>
+        <h2>Market opportunity</h2>
+        <ul>
+          <li>Privacy regulation and AI safety are pushing inference toward the edge</li>
+          <li>Android dominates global mobile; most local-LLM tooling is desktop/server-first</li>
+          <li>Competitors either require GPU drivers (PocketPal), compilation expertise (MLC), or cloud round-trips</li>
+          <li>LlamaBox is positioned as the ChatGPT alternative that genuinely cannot leak prompts</li>
+        </ul>
+        <h2>Strategic fit</h2>
+        <p>Ideal partners or acquirers: privacy-focused browsers/phones, secure messaging platforms, Android custom ROMs, on-device AI chipmakers, enterprise mobile security vendors, and AI-safety organizations that need a concrete, deployable local-AI product.</p>
+        <h2>Contact</h2>
+        <p>Email <a href="mailto:aalhad.dev@gmail.com?subject=LlamaBox%20investor%20%2F%20acquisition">aalhad.dev@gmail.com</a> for deck, demo, and discussion.</p>
 """,
         ),
     )
@@ -894,11 +1106,16 @@ def main():
         ("/on-device-llm.html", "0.85", "weekly"),
         ("/private-chatgpt-alternative.html", "0.85", "weekly"),
         ("/gguf-android.html", "0.85", "weekly"),
+        ("/llm-download.html", "0.85", "weekly"),
         ("/how-to-run-llm-on-android.html", "0.9", "weekly"),
         ("/vs-chatgpt.html", "0.8", "monthly"),
         ("/vs-ollama.html", "0.8", "monthly"),
         ("/vs-pocketpal.html", "0.8", "monthly"),
         ("/vs-mlc-llm.html", "0.8", "monthly"),
+        ("/enterprise.html", "0.85", "weekly"),
+        ("/commercial-license.html", "0.8", "monthly"),
+        ("/partners.html", "0.8", "monthly"),
+        ("/investors.html", "0.8", "monthly"),
         ("/blog/", "0.75", "weekly"),
         ("/blog/2026-07-28-airplane-mode-ai.html", "0.7", "monthly"),
         ("/blog/2026-07-28-best-small-gguf-android.html", "0.7", "monthly"),

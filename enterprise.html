@@ -14,23 +14,21 @@
   <link rel="stylesheet" href="/style.css">
   <link rel="alternate" type="text/plain" title="LLM brief" href="https://llamabox-ai.github.io/llms.txt">
 
-  <title>Run GGUF models on Android | LlamaBox + llama.cpp</title>
-  <meta name="description" content="Run GGUF models on Android with LlamaBox. Q4_K_M tips, RAM guidance, llama.cpp stack, vision mmproj notes.">
-  <link rel="canonical" href="https://llamabox-ai.github.io/gguf-android.html">
+  <title>Enterprise offline AI for Android | LlamaBox</title>
+  <meta name="description" content="Deploy private, offline AI chat on Android devices for teams in journalism, healthcare, field work, education, and defense. No cloud inference.">
+  <link rel="canonical" href="https://llamabox-ai.github.io/enterprise.html">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="LlamaBox">
   <meta property="og:locale" content="en_US">
-  <meta property="og:url" content="https://llamabox-ai.github.io/gguf-android.html">
-  <meta property="og:title" content="Run GGUF models on Android | LlamaBox + llama.cpp">
-  <meta property="og:description" content="Run GGUF models on Android with LlamaBox. Q4_K_M tips, RAM guidance, llama.cpp stack, vision mmproj notes.">
+  <meta property="og:url" content="https://llamabox-ai.github.io/enterprise.html">
+  <meta property="og:title" content="Enterprise offline AI for Android | LlamaBox">
+  <meta property="og:description" content="Deploy private, offline AI chat on Android devices for teams in journalism, healthcare, field work, education, and defense. No cloud inference.">
   <meta property="og:image" content="https://llamabox-ai.github.io/assets/screenshot-1-home.png">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Run GGUF models on Android | LlamaBox + llama.cpp">
-  <meta name="twitter:description" content="Run GGUF models on Android with LlamaBox. Q4_K_M tips, RAM guidance, llama.cpp stack, vision mmproj notes.">
+  <meta name="twitter:title" content="Enterprise offline AI for Android | LlamaBox">
+  <meta name="twitter:description" content="Deploy private, offline AI chat on Android devices for teams in journalism, healthcare, field work, education, and defense. No cloud inference.">
   <meta name="twitter:image" content="https://llamabox-ai.github.io/assets/screenshot-1-home.png">
-  <script type="application/ld+json">
-  {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "What is GGUF?", "acceptedAnswer": {"@type": "Answer", "text": "GGUF is a file format for quantized LLM weights commonly used with llama.cpp. It packs tensors and metadata for efficient local loading."}}, {"@type": "Question", "name": "Which quantization should I use?", "acceptedAnswer": {"@type": "Answer", "text": "Q4_K_M is a strong default balance of quality and size for mobile. Smaller quants save RAM; larger improve quality if you have headroom."}}, {"@type": "Question", "name": "Can I import my own GGUF?", "acceptedAnswer": {"@type": "Answer", "text": "Yes — LlamaBox supports in-app downloads and local import workflows for models that fit device memory."}}]}
-  </script>
+
 </head>
 <body>
   <div class="bg-mesh" aria-hidden="true"></div>
@@ -56,36 +54,33 @@
 
     <section class="section page-hero">
       <div class="wrap narrow">
-        <div class="eyebrow">GGUF</div>
-        <h1>Run GGUF models on Android.</h1>
-        <p class="lead">Builders already quantize for desktops. LlamaBox brings those GGUF files to arm64 phones without a cloud relay.</p>
+        <div class="eyebrow">Enterprise</div>
+        <h1>Offline AI for teams that cannot use cloud chat.</h1>
+        <p class="lead">LlamaBox keeps language-model inference on the Android device. That property matters when regulation, connectivity, or operational security rule out hosted AI.</p>
       </div>
     </section>
     <section class="section section-tight">
       <div class="wrap narrow prose reveal is-in">
 
-        <h2>Why GGUF on mobile</h2>
-        <p>GGUF + llama.cpp is the de facto portable stack for local LLMs. Android arm64 can run the same ecosystem — carefully — with smaller models and honest thread counts.</p>
-        <h2>Recommendations</h2>
+        <h2>Use cases</h2>
         <ul>
-          <li>Prefer <strong>Q4_K_M</strong> to start</li>
-          <li>Match model size to free RAM (leave headroom for OS + UI)</li>
-          <li>Context defaults to 2048 (configurable); vision may auto-raise</li>
-          <li>Vision models need base GGUF + <strong>mmproj</strong></li>
+          <li><strong>Journalism &amp; sensitive sourcing</strong> — interviews and drafts never hit a vendor server</li>
+          <li><strong>Healthcare &amp; clinical notes</strong> — local inference reduces HIPAA/GDPR surface area for note drafting</li>
+          <li><strong>Field work &amp; disaster response</strong> — works offline in low-connectivity or denied-network environments</li>
+          <li><strong>Education &amp; exam settings</strong> — AI assistance without internet or account requirements</li>
+          <li><strong>Defense &amp; government edge</strong> — air-gapped deployment target on standard Android hardware</li>
         </ul>
-        <h2>Workflow</h2>
-        <ol>
-          <li>Install LlamaBox beta</li>
-          <li>Download from the in-app hub or import a local GGUF</li>
-          <li>Load model · chat offline</li>
-        </ol>
-        <p>Deep stack notes: <a href="/architecture.html">architecture</a> · tutorial: <a href="/how-to-run-llm-on-android.html">how to run an LLM on Android</a>.</p>
-        <h2 id="faq">FAQ</h2>
-<div class="faq-list">
-<details class="faq-item" open><summary>What is GGUF?</summary><div class="ans">GGUF is a file format for quantized LLM weights commonly used with llama.cpp. It packs tensors and metadata for efficient local loading.</div></details>
-<details class="faq-item"><summary>Which quantization should I use?</summary><div class="ans">Q4_K_M is a strong default balance of quality and size for mobile. Smaller quants save RAM; larger improve quality if you have headroom.</div></details>
-<details class="faq-item"><summary>Can I import my own GGUF?</summary><div class="ans">Yes — LlamaBox supports in-app downloads and local import workflows for models that fit device memory.</div></details>
-</div>
+        <h2>What enterprise deployment looks like</h2>
+        <ul>
+          <li>Private APK distribution or managed Play Store track</li>
+          <li>Curated GGUF model set per organization</li>
+          <li>Optional MDM integration and configuration profiles</li>
+          <li>Commercial license and support channel</li>
+        </ul>
+        <h2>Why CPU-only is an enterprise feature</h2>
+        <p>Accelerated compute on Android is a driver lottery across chipsets. CPU-only inference means the same model path works on every supported Android 7+ arm64 device in the fleet. Predictability beats peak tok/s when you are supporting hundreds of heterogeneous handsets.</p>
+        <h2>Talk to us</h2>
+        <p>Email <a href="mailto:aalhad.dev@gmail.com?subject=LlamaBox%20enterprise%20inquiry">aalhad.dev@gmail.com</a> or use the <a href="/waitlist.html">waitlist</a> and check “I’m interested in commercial / enterprise use.”</p>
 
       </div>
     </section>

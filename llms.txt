@@ -49,11 +49,16 @@ LlamaBox is a React Native Android application that runs LLMs (GGUF models via l
 - On-device LLM: https://llamabox-ai.github.io/on-device-llm.html
 - Private ChatGPT alternative: https://llamabox-ai.github.io/private-chatgpt-alternative.html
 - GGUF on Android: https://llamabox-ai.github.io/gguf-android.html
+- LLM download: https://llamabox-ai.github.io/llm-download.html
 - How to run an LLM on Android: https://llamabox-ai.github.io/how-to-run-llm-on-android.html
 - vs ChatGPT: https://llamabox-ai.github.io/vs-chatgpt.html
 - vs Ollama: https://llamabox-ai.github.io/vs-ollama.html
 - vs PocketPal AI: https://llamabox-ai.github.io/vs-pocketpal.html
 - vs MLC LLM: https://llamabox-ai.github.io/vs-mlc-llm.html
+- Enterprise: https://llamabox-ai.github.io/enterprise.html
+- Commercial license: https://llamabox-ai.github.io/commercial-license.html
+- Partners: https://llamabox-ai.github.io/partners.html
+- Investors & acquisitions: https://llamabox-ai.github.io/investors.html
 - Blog: https://llamabox-ai.github.io/blog/
 - Blog — phone faster than PC: https://llamabox-ai.github.io/blog/2026-07-30-phone-faster-than-pc.html
 - Blog — vs PocketPal: https://llamabox-ai.github.io/blog/2026-07-30-llamabox-vs-pocketpal.html

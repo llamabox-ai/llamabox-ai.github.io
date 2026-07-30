@@ -47,9 +47,31 @@ Snapshot from Mangools KWFinder before access expires. Goal: turn remaining quot
 - Backlink rows: ~1,077,290
 - SiteProfiler overviews: 0 (resets soon)
 
+## New SERP findings (2026-07-30 continued session)
+
+Three additional keywords pulled fresh US desktop SERPs and competitor backlink data:
+
+| Keyword | Volume | KD | SERP leader insight | LlamaBox opportunity |
+|---|---|---|---|---|
+| `private chatgpt alternative android` | — | 31 | Reddit #1, PrivacyGuides #3, Lindy #4, Wondertools Substack #5, MeetAITools DA=1 at #6 | Build the most authoritative Android-specific page; outreach to PrivacyGuides + mobile AI newsletters |
+| `offline ai android` | 20 | 28 | Reddit r/LocalLLM #1, Google Play "Local AI" #2, Layla #3, OfflineLLM GitHub #4, MeetAITools #5 | Optimize `/offline-ai-android.html` with competitor comparison; engage r/LocalLLM authentically |
+| `llm download` | 140 | 39 | LM Studio #1, Hugging Face forum #2, AnythingLLM #3, GitHub open-llms #4, Reddit #5 | Create `/llm-download.html` for Android GGUF download intent |
+| `best offline ai assistant for android` | 10 | — | No strong dedicated page | FAQ + comparison on `/offline-ai-android.html` |
+| `mlc chat android` | 70 | — | New tracked keyword with search volume | Blog/landing comparison already exists; monitor rank |
+| `android local llm` | 60 | — | Low-competition variant of `local llm android` | Add to tracked keywords and internal anchor text |
+
+### Competitor backlink intelligence
+
+- **Layla-network.ai**: 298 backlinks, mostly AI tool directories and startup lists (German, Spanish, Chinese). Strategy: submit LlamaBox to the same global AI directories + privacy-focused Android blogs.
+- **MeetAITools.com**: Only 2 backlinks (one appears to be a PBN/spam link). Ranks with DA=1 because of thin content + some links. LlamaBox can outrank with legitimate content and a small number of real backlinks.
+- **AnythingLLM.com**: 2,010 referring domains, 21,979 backlinks. Strong open-source community. Potential partner / comparison target.
+
 ## Implementation completed 2026-07-30
 
 - ✅ New comparison landing pages: `/vs-pocketpal.html`, `/vs-mlc-llm.html`
+- ✅ New guide page: `/llm-download.html` (targets "llm download" + Android GGUF sourcing)
+- ✅ Updated `/offline-ai-android.html` title, description, and content to target "offline ai android" and "best offline ai assistant for android" with competitor comparison (Layla, Local AI, OfflineLLM, MeetAITools).
+- ✅ Updated `/private-chatgpt-alternative.html` title, description, and content to target "private chatgpt alternative android" with competitor comparison (Proton, PrivacyGuides, Lindy, Wondertools).
 - ✅ New blog posts:
   - `/blog/2026-07-30-phone-faster-than-pc.html`
   - `/blog/2026-07-30-llamabox-vs-pocketpal.html`
@@ -57,16 +79,26 @@ Snapshot from Mangools KWFinder before access expires. Goal: turn remaining quot
   - `/blog/2026-07-30-best-private-ai-chat-android.html`
   - `/blog/2026-07-30-what-is-offline-ai-chat.html`
   - `/blog/2026-07-30-why-cpu-only.html`
-- ✅ Internal links added to `/guides.html`, footer, and cross-page "Related" sections.
-- ✅ Title/description updates based on content optimizer:
-  - `/offline-ai-android.html` → "Offline AI Chat: Private Local LLM on Android | LlamaBox"
-  - `/private-chatgpt-alternative.html` → "Private AI Chat for Android | LlamaBox Local ChatGPT Alternative"
+- ✅ Internal links added to `/guides.html`, footer, `/llms.txt`, `/llms-full.txt`, and cross-page "Related" sections.
+- ✅ Title/description updates:
+  - `/offline-ai-android.html` → "Offline AI Android: Best Local LLM Chat Assistant | LlamaBox"
+  - `/private-chatgpt-alternative.html` → "Private ChatGPT Alternative Android | LlamaBox Local AI Chatbot"
   - `/on-device-llm.html` → "On-Device LLM for Android | Run Local Models with LlamaBox"
   - `/how-to-run-llm-on-android.html` → "How to Run an LLM on Android Offline | LlamaBox Setup Guide"
+  - `/llm-download.html` → "LLM Download for Android | Get GGUF Models for LlamaBox"
 - ✅ `sitemap.xml` regenerated with all new URLs and `lastmod` bumped to 2026-07-30.
-- ✅ `llms.txt` and `llms-full.txt` updated with new page links.
 - ✅ Backlink outreach list created: `/docs/seo/backlink-outreach-2026-07-30.md`
-- ✅ SERPWatcher: 6 existing trackings already cover priority keywords (US/UK/India × desktop/mobile); no new trackings needed.
+- ✅ SERPWatcher: added 10 new keywords to US desktop tracking (`6a6ac171a4d7d442f2c49a40`), now 40 keywords monitored. Keywords added: `llm download`, `mlc chat android`, `best offline ai assistant for android`, `on device llm`, `private chatgpt alternative android`, `offline ai android`, `android local llm`, `local ai android`, `private ai chatbot android`, `open source llm android`.
 - ✅ AI Search Watcher: monitor is at prompt limit but already contains comprehensive LlamaBox prompts; no additions possible.
+
+## Remaining Mangools quota snapshot
+
+- SERP lookups: 1,122 remaining
+- Related-keyword lookups: 1,104 remaining
+- Keyword URL metrics: 852 remaining
+- LinkMiner URL metrics: 1,198,662 rows remaining
+- SiteProfiler overviews: 148 remaining
+- SERPWatcher tracked keywords: 1,234 remaining
+- Backlink rows: 1,032,696 remaining
 
 *Last updated: 2026-07-30.*

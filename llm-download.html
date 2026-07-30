@@ -14,22 +14,22 @@
   <link rel="stylesheet" href="/style.css">
   <link rel="alternate" type="text/plain" title="LLM brief" href="https://llamabox-ai.github.io/llms.txt">
 
-  <title>Run GGUF models on Android | LlamaBox + llama.cpp</title>
-  <meta name="description" content="Run GGUF models on Android with LlamaBox. Q4_K_M tips, RAM guidance, llama.cpp stack, vision mmproj notes.">
-  <link rel="canonical" href="https://llamabox-ai.github.io/gguf-android.html">
+  <title>LLM Download for Android | Get GGUF Models for LlamaBox</title>
+  <meta name="description" content="Download LLM models for Android. Find GGUF files, quantizations, and sources that work offline in LlamaBox. No cloud inference needed.">
+  <link rel="canonical" href="https://llamabox-ai.github.io/llm-download.html">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="LlamaBox">
   <meta property="og:locale" content="en_US">
-  <meta property="og:url" content="https://llamabox-ai.github.io/gguf-android.html">
-  <meta property="og:title" content="Run GGUF models on Android | LlamaBox + llama.cpp">
-  <meta property="og:description" content="Run GGUF models on Android with LlamaBox. Q4_K_M tips, RAM guidance, llama.cpp stack, vision mmproj notes.">
+  <meta property="og:url" content="https://llamabox-ai.github.io/llm-download.html">
+  <meta property="og:title" content="LLM Download for Android | Get GGUF Models for LlamaBox">
+  <meta property="og:description" content="Download LLM models for Android. Find GGUF files, quantizations, and sources that work offline in LlamaBox. No cloud inference needed.">
   <meta property="og:image" content="https://llamabox-ai.github.io/assets/screenshot-1-home.png">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Run GGUF models on Android | LlamaBox + llama.cpp">
-  <meta name="twitter:description" content="Run GGUF models on Android with LlamaBox. Q4_K_M tips, RAM guidance, llama.cpp stack, vision mmproj notes.">
+  <meta name="twitter:title" content="LLM Download for Android | Get GGUF Models for LlamaBox">
+  <meta name="twitter:description" content="Download LLM models for Android. Find GGUF files, quantizations, and sources that work offline in LlamaBox. No cloud inference needed.">
   <meta name="twitter:image" content="https://llamabox-ai.github.io/assets/screenshot-1-home.png">
   <script type="application/ld+json">
-  {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "What is GGUF?", "acceptedAnswer": {"@type": "Answer", "text": "GGUF is a file format for quantized LLM weights commonly used with llama.cpp. It packs tensors and metadata for efficient local loading."}}, {"@type": "Question", "name": "Which quantization should I use?", "acceptedAnswer": {"@type": "Answer", "text": "Q4_K_M is a strong default balance of quality and size for mobile. Smaller quants save RAM; larger improve quality if you have headroom."}}, {"@type": "Question", "name": "Can I import my own GGUF?", "acceptedAnswer": {"@type": "Answer", "text": "Yes — LlamaBox supports in-app downloads and local import workflows for models that fit device memory."}}]}
+  {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Where can I download an LLM for Android?", "acceptedAnswer": {"@type": "Answer", "text": "The easiest path is the in-app hub inside LlamaBox, which lists compatible GGUF models. You can also import models from Hugging Face, GitHub releases, or your own storage."}}, {"@type": "Question", "name": "What file format does LlamaBox use?", "acceptedAnswer": {"@type": "Answer", "text": "GGUF — the standard quantized format used by llama.cpp. Start with Q4_K_M for a balance of size and quality."}}, {"@type": "Question", "name": "Do I need an account to download models?", "acceptedAnswer": {"@type": "Answer", "text": "No. Public model hubs do not require an account to download a GGUF, and LlamaBox adds no account layer of its own."}}]}
   </script>
 </head>
 <body>
@@ -56,35 +56,44 @@
 
     <section class="section page-hero">
       <div class="wrap narrow">
-        <div class="eyebrow">GGUF</div>
-        <h1>Run GGUF models on Android.</h1>
-        <p class="lead">Builders already quantize for desktops. LlamaBox brings those GGUF files to arm64 phones without a cloud relay.</p>
+        <div class="eyebrow">Models</div>
+        <h1>LLM download for Android.</h1>
+        <p class="lead">Get the right GGUF model onto your phone, then chat offline for good.</p>
       </div>
     </section>
     <section class="section section-tight">
       <div class="wrap narrow prose reveal is-in">
 
-        <h2>Why GGUF on mobile</h2>
-        <p>GGUF + llama.cpp is the de facto portable stack for local LLMs. Android arm64 can run the same ecosystem — carefully — with smaller models and honest thread counts.</p>
-        <h2>Recommendations</h2>
+        <h2>What “LLM download” means for Android</h2>
+        <p>Downloading an LLM for Android means getting a quantized model file (usually GGUF) onto your phone so a local app can load it. Unlike cloud chat apps, the download happens once; after that, inference works without internet.</p>
+        <h2>Recommended sources for GGUF models</h2>
         <ul>
-          <li>Prefer <strong>Q4_K_M</strong> to start</li>
-          <li>Match model size to free RAM (leave headroom for OS + UI)</li>
-          <li>Context defaults to 2048 (configurable); vision may auto-raise</li>
-          <li>Vision models need base GGUF + <strong>mmproj</strong></li>
+          <li><strong>Hugging Face</strong> — thousands of GGUF uploads from model authors and the community; filter by “GGUF” and “arm64-friendly” sizes.</li>
+          <li><strong>GitHub releases</strong> — some converted models ship as release assets.</li>
+          <li><strong>LlamaBox in-app hub</strong> — curated, tested-on-phone models with recommended quantizations.</li>
+          <li><strong>Local import</strong> — transfer a GGUF via USB, cloud drive, or SD card and import it into LlamaBox.</li>
         </ul>
-        <h2>Workflow</h2>
+        <h2>Which quantization to download</h2>
+        <p>For phones, start with <strong>Q4_K_M</strong>. It is the best-known balance of quality, file size, and RAM use for small models (0.5B–3B parameters). Smaller quants run faster and use less memory; larger quants improve quality if you have headroom.</p>
+        <h2>Phone-size model guidance</h2>
+        <ul>
+          <li><strong>Entry phones (3–4 GB RAM)</strong> — 0.5B–1B Q4_K_M, context 512–1024</li>
+          <li><strong>Mid-range phones (6–8 GB RAM)</strong> — 1B–2B Q4_K_M, context 1024–2048</li>
+          <li><strong>Flagship phones (12 GB+ RAM)</strong> — 3B–7B Q4_K_M, context 2048+</li>
+        </ul>
+        <h2>How to load the downloaded model</h2>
         <ol>
-          <li>Install LlamaBox beta</li>
-          <li>Download from the in-app hub or import a local GGUF</li>
-          <li>Load model · chat offline</li>
+          <li>Open LlamaBox and go to the model library.</li>
+          <li>Tap download from the hub, or import your local GGUF.</li>
+          <li>Wait for initialization (5–30s depending on model size).</li>
+          <li>Chat — airplane mode optional.</li>
         </ol>
-        <p>Deep stack notes: <a href="/architecture.html">architecture</a> · tutorial: <a href="/how-to-run-llm-on-android.html">how to run an LLM on Android</a>.</p>
+        <p>Next: <a href="/how-to-run-llm-on-android.html">how to run an LLM on Android</a> · <a href="/gguf-android.html">GGUF on Android guide</a> · <a href="/offline-ai-android.html">offline AI Android</a>.</p>
         <h2 id="faq">FAQ</h2>
 <div class="faq-list">
-<details class="faq-item" open><summary>What is GGUF?</summary><div class="ans">GGUF is a file format for quantized LLM weights commonly used with llama.cpp. It packs tensors and metadata for efficient local loading.</div></details>
-<details class="faq-item"><summary>Which quantization should I use?</summary><div class="ans">Q4_K_M is a strong default balance of quality and size for mobile. Smaller quants save RAM; larger improve quality if you have headroom.</div></details>
-<details class="faq-item"><summary>Can I import my own GGUF?</summary><div class="ans">Yes — LlamaBox supports in-app downloads and local import workflows for models that fit device memory.</div></details>
+<details class="faq-item" open><summary>Where can I download an LLM for Android?</summary><div class="ans">The easiest path is the in-app hub inside LlamaBox, which lists compatible GGUF models. You can also import models from Hugging Face, GitHub releases, or your own storage.</div></details>
+<details class="faq-item"><summary>What file format does LlamaBox use?</summary><div class="ans">GGUF — the standard quantized format used by llama.cpp. Start with Q4_K_M for a balance of size and quality.</div></details>
+<details class="faq-item"><summary>Do I need an account to download models?</summary><div class="ans">No. Public model hubs do not require an account to download a GGUF, and LlamaBox adds no account layer of its own.</div></details>
 </div>
 
       </div>

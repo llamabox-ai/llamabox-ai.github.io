@@ -118,3 +118,39 @@
 - links: 1,069,270 / 1,200,000 remaining (~8,020 consumed)
 - kw-url-metrics: 902 / 1440 remaining
 - lm-url-metrics: 1,198,666 / 1,200,000 remaining
+
+## Continuation session — 2026-07-30 (post-context-reload)
+
+### Actions taken
+- Refreshed full quota snapshot: serps 1122/1200, related-keywords 1104/1200, kw-url-metrics 852/1440, lm-url-metrics 1,198,662/1.2M, sp-overview 148/150, tracked_keywords 1234/1651, links 1,032,696/1.2M.
+- Ran fresh US desktop SERPs for: `private chatgpt alternative android`, `offline ai android`, `llm download` (3 succeeded; `android local llm` and `mlc chat android` hit `No available SERP provider` and will be retried).
+- Saved SERP raw JSON to:
+  - `docs/seo/mangools-raw/serp-private-chatgpt-alternative-android-2026-07-30.json`
+  - `docs/seo/mangools-raw/serp-offline-ai-android-2026-07-30.json`
+  - `docs/seo/mangools-raw/serp-llm-download-2026-07-30.json`
+- Ran related-keywords for `offline ai android`, `llm download`, `private chatgpt alternative android` and saved compact summaries.
+- Ran `linkminer_get_url_metrics` for `layla-network.ai` and `anythingllm.com`.
+- Ran `linkminer_get_backlinks` (l100, links_per_domain=1) for `layla-network.ai` (298 total links) and `meetaitools.com` (only 2 backlinks, one PBN spam).
+- Added 10 new keywords to existing US desktop SERPWatcher tracking `6a6ac171a4d7d442f2c49a40`, now monitoring 40 keywords.
+
+### Content + site updates driven by SERP data
+- Updated `/offline-ai-android.html` to target "best offline ai assistant for android" and added competitor comparison (Layla, Local AI, OfflineLLM, MeetAITools).
+- Updated `/private-chatgpt-alternative.html` to target "private chatgpt alternative android" and added competitor comparison (Proton, PrivacyGuides, Lindy, Wondertools).
+- Created new `/llm-download.html` guide targeting "llm download" intent with GGUF sourcing, quantizations, and phone-size guidance.
+- Added `/llm-download.html` to footer Guides column, `/guides.html` card grid, `/llms.txt`, `/llms-full.txt`, and `sitemap.xml`.
+- Regenerated the entire static site with `python scripts/generate_growth_pages.py`.
+- Updated `docs/seo/keyword-strategy-2026-07-30.md` with new SERP findings and implementation status.
+
+### Workflow status
+- Ultracode workflow `w2pa1mpqh` still running at time of writing.
+
+## Quota after continuation session
+- serps: 1122 / 1200 remaining (some provider errors, not all attempts consumed)
+- related-keywords: 1104 / 1200 remaining
+- kw-url-metrics: 852 / 1440 remaining
+- lm-url-metrics: 1,198,662 / 1,200,000 remaining
+- sp-overview: 148 / 150 remaining
+- tracked_keywords: 1234 / 1651 remaining
+- links: 1,032,696 / 1,200,000 remaining
+
+*Last updated: 2026-07-30.*

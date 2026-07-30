@@ -14,22 +14,22 @@
   <link rel="stylesheet" href="/style.css">
   <link rel="alternate" type="text/plain" title="LLM brief" href="https://llamabox-ai.github.io/llms.txt">
 
-  <title>Offline AI Chat: Private Local LLM on Android | LlamaBox</title>
-  <meta name="description" content="Chat with AI without internet. LlamaBox runs local LLMs directly on your Android phone so your conversations stay private, offline, and fully under your control.">
+  <title>Offline AI Android: Best Local LLM Chat Assistant | LlamaBox</title>
+  <meta name="description" content="Looking for the best offline AI assistant for Android? LlamaBox runs local LLMs on-device — no internet, no cloud, no accounts. Private chat in airplane mode.">
   <link rel="canonical" href="https://llamabox-ai.github.io/offline-ai-android.html">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="LlamaBox">
   <meta property="og:locale" content="en_US">
   <meta property="og:url" content="https://llamabox-ai.github.io/offline-ai-android.html">
-  <meta property="og:title" content="Offline AI Chat: Private Local LLM on Android | LlamaBox">
-  <meta property="og:description" content="Chat with AI without internet. LlamaBox runs local LLMs directly on your Android phone so your conversations stay private, offline, and fully under your control.">
+  <meta property="og:title" content="Offline AI Android: Best Local LLM Chat Assistant | LlamaBox">
+  <meta property="og:description" content="Looking for the best offline AI assistant for Android? LlamaBox runs local LLMs on-device — no internet, no cloud, no accounts. Private chat in airplane mode.">
   <meta property="og:image" content="https://llamabox-ai.github.io/assets/screenshot-1-home.png">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Offline AI Chat: Private Local LLM on Android | LlamaBox">
-  <meta name="twitter:description" content="Chat with AI without internet. LlamaBox runs local LLMs directly on your Android phone so your conversations stay private, offline, and fully under your control.">
+  <meta name="twitter:title" content="Offline AI Android: Best Local LLM Chat Assistant | LlamaBox">
+  <meta name="twitter:description" content="Looking for the best offline AI assistant for Android? LlamaBox runs local LLMs on-device — no internet, no cloud, no accounts. Private chat in airplane mode.">
   <meta name="twitter:image" content="https://llamabox-ai.github.io/assets/screenshot-1-home.png">
   <script type="application/ld+json">
-  {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "What is offline AI on Android?", "acceptedAnswer": {"@type": "Answer", "text": "Offline AI means the model runs on the phone. After the model file is stored locally, chat works without a network — including airplane mode."}}, {"@type": "Question", "name": "Is LlamaBox fully offline?", "acceptedAnswer": {"@type": "Answer", "text": "Inference is fully offline. Optional internet is only for downloading models from public hubs like Hugging Face."}}, {"@type": "Question", "name": "Does offline mean private?", "acceptedAnswer": {"@type": "Answer", "text": "On-device inference means prompts and completions never hit a vendor server. LlamaBox adds no accounts or telemetry on top of that architecture."}}]}
+  {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "What is offline AI on Android?", "acceptedAnswer": {"@type": "Answer", "text": "Offline AI means the model runs on the phone. After the model file is stored locally, chat works without a network — including airplane mode."}}, {"@type": "Question", "name": "Is LlamaBox fully offline?", "acceptedAnswer": {"@type": "Answer", "text": "Inference is fully offline. Optional internet is only for downloading models from public hubs like Hugging Face."}}, {"@type": "Question", "name": "Does offline mean private?", "acceptedAnswer": {"@type": "Answer", "text": "On-device inference means prompts and completions never hit a vendor server. LlamaBox adds no accounts or telemetry on top of that architecture."}}, {"@type": "Question", "name": "What is the best offline AI assistant for Android?", "acceptedAnswer": {"@type": "Answer", "text": "The best offline AI assistant keeps inference on-device, supports open GGUF models, and needs no cloud account. LlamaBox is built exactly for that: local chat, vision, and TTS on Android 7.0+ arm64."}}, {"@type": "Question", "name": "Can ChatGPT work offline on Android?", "acceptedAnswer": {"@type": "Answer", "text": "No. ChatGPT and other cloud assistants need an internet connection. LlamaBox is an offline ChatGPT alternative that runs the model directly on your phone."}}]}
   </script>
 </head>
 <body>
@@ -57,21 +57,30 @@
     <section class="section page-hero">
       <div class="wrap narrow">
         <div class="eyebrow">Offline AI</div>
-        <h1>Offline AI chat for Android.</h1>
-        <p class="lead">Most “AI apps” die without signal. LlamaBox is built for the opposite: private conversation that never leaves the handset.</p>
+        <h1>Offline AI for Android.</h1>
+        <p class="lead">The best offline AI assistant is the one that works when the network does not. LlamaBox runs local LLMs on your phone — private, account-free, and airplane-mode ready.</p>
       </div>
     </section>
     <section class="section section-tight">
       <div class="wrap narrow prose reveal is-in">
 
-        <h2>Why offline AI matters</h2>
-        <p>Travel, fieldwork, sensitive drafting, classrooms with locked networks, and regions with expensive data all break cloud chat. Offline AI keeps the loop local: model in RAM, tokens on CPU, history in SQLite on device.</p>
+        <h2>What “offline AI Android” actually means</h2>
+        <p>Offline AI on Android is a chat assistant that loads a language model onto the phone and runs inference locally. Once the model file is stored, you can chat without Wi-Fi, mobile data, or a cloud account. For journalists, travelers, students, field workers, and privacy-conscious users, that changes everything.</p>
         <h2>How LlamaBox delivers offline AI</h2>
         <ul>
           <li>GGUF models via <strong>llama.cpp</strong> (through llama.rn on React Native)</li>
-          <li><strong>CPU-only</strong> inference by design (no GPU dependencies)</li>
-          <li>No account graph, no cloud inference endpoint</li>
-          <li>Optional vision with on-device multimodal models</li>
+          <li><strong>CPU-only</strong> inference by design — works on broad Android 7.0+ arm64 hardware</li>
+          <li>No account graph, no cloud inference endpoint, no telemetry</li>
+          <li>Optional vision with on-device multimodal models + mmproj</li>
+          <li>Local history in SQLite, TTS readback, and system monitoring</li>
+        </ul>
+        <h2>LlamaBox vs other offline AI Android options</h2>
+        <p>Several apps claim offline AI on Android. Here is how LlamaBox compares to the most-discussed alternatives:</p>
+        <ul>
+          <li><strong>Layla</strong> — private offline assistant for Android and iOS. LlamaBox differentiates with open-source GGUF weights, no vendor lock-in, and a CPU-only stack that targets older devices.</li>
+          <li><strong>Local AI</strong> (Google Play) — closed, store-distributed app. LlamaBox gives you model choice, local import, and full source transparency under AGPL-3.0 plus commercial licensing.</li>
+          <li><strong>OfflineLLM</strong> — open-source Android project. LlamaBox adds React Native portability, vision support, and a productized beta path for enterprises and OEMs.</li>
+          <li><strong>MeetAITools roundups</strong> — directory-style lists. LlamaBox is a real product, not a review farm, with direct downloads and an open GitHub organization.</li>
         </ul>
         <h2>What works without internet</h2>
         <ul>
@@ -81,15 +90,17 @@
           <li>TTS readback of local answers</li>
         </ul>
         <h2>What still needs a network (optional)</h2>
-        <p>Downloading a GGUF the first time. After that, disconnect freely.</p>
+        <p>Downloading a GGUF the first time. After that, disconnect freely — including airplane mode.</p>
         <h2>Who this is for</h2>
         <p>Privacy-first users, journalists, students, builders testing GGUF on real silicon, and anyone who wants ChatGPT-like chat without shipping transcripts to a data center.</p>
-        <p>Related: <a href="/on-device-llm.html">on-device LLM</a> · <a href="/how-to-run-llm-on-android.html">how-to</a> · <a href="/vs-chatgpt.html">vs ChatGPT</a>.</p>
+        <p>Related: <a href="/private-chatgpt-alternative.html">private ChatGPT alternative</a> · <a href="/on-device-llm.html">on-device LLM</a> · <a href="/how-to-run-llm-on-android.html">how-to</a> · <a href="/vs-chatgpt.html">vs ChatGPT</a> · <a href="/vs-pocketpal.html">vs PocketPal AI</a>.</p>
         <h2 id="faq">FAQ</h2>
 <div class="faq-list">
 <details class="faq-item" open><summary>What is offline AI on Android?</summary><div class="ans">Offline AI means the model runs on the phone. After the model file is stored locally, chat works without a network — including airplane mode.</div></details>
 <details class="faq-item"><summary>Is LlamaBox fully offline?</summary><div class="ans">Inference is fully offline. Optional internet is only for downloading models from public hubs like Hugging Face.</div></details>
 <details class="faq-item"><summary>Does offline mean private?</summary><div class="ans">On-device inference means prompts and completions never hit a vendor server. LlamaBox adds no accounts or telemetry on top of that architecture.</div></details>
+<details class="faq-item"><summary>What is the best offline AI assistant for Android?</summary><div class="ans">The best offline AI assistant keeps inference on-device, supports open GGUF models, and needs no cloud account. LlamaBox is built exactly for that: local chat, vision, and TTS on Android 7.0+ arm64.</div></details>
+<details class="faq-item"><summary>Can ChatGPT work offline on Android?</summary><div class="ans">No. ChatGPT and other cloud assistants need an internet connection. LlamaBox is an offline ChatGPT alternative that runs the model directly on your phone.</div></details>
 </div>
 
       </div>
@@ -135,12 +146,22 @@
             <li><a href="/on-device-llm.html">On-device LLM</a></li>
             <li><a href="/private-chatgpt-alternative.html">Private ChatGPT alt</a></li>
             <li><a href="/gguf-android.html">GGUF on Android</a></li>
+            <li><a href="/llm-download.html">LLM download</a></li>
             <li><a href="/how-to-run-llm-on-android.html">How-to guide</a></li>
             <li><a href="/vs-chatgpt.html">vs ChatGPT</a></li>
             <li><a href="/vs-ollama.html">vs Ollama</a></li>
             <li><a href="/vs-pocketpal.html">vs PocketPal AI</a></li>
             <li><a href="/vs-mlc-llm.html">vs MLC LLM</a></li>
             <li><a href="/blog/">Blog</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Business</h4>
+          <ul>
+            <li><a href="/enterprise.html">Enterprise</a></li>
+            <li><a href="/commercial-license.html">Commercial license</a></li>
+            <li><a href="/partners.html">Partners</a></li>
+            <li><a href="/investors.html">Investors &amp; acquisitions</a></li>
           </ul>
         </div>
         <div>

@@ -1,0 +1,25 @@
+{
+  "keyword": "offline ai android",
+  "date": "2026-07-30",
+  "location_id": 2840,
+  "platform_id": 1,
+  "serp_id": "1efdbdaa930f31bef9ed5eecb4ec16e7",
+  "serp_features": ["AI_OVERVIEW", "PEOPLE_ALSO_ASK"],
+  "total_organic": 7,
+  "notes": [
+    "Reddit r/LocalLLM owns #1 — highest-leverage place to engage authentically.",
+    "Google Play store result at #2 means app-store SEO also matters for this query.",
+    "Layla (DA=11) ranks #3 with 280 referring domains — direct competitor for offline AI assistant positioning.",
+    "GitHub jegly/OfflineLLM (#4) is an open-source Android offline LLM project — potential partnership or differentiation study.",
+    "MeetAITools DA=1 ranks #5; thin-review sites are beatable."
+  ],
+  "organic_results": [
+    {"position": 1, "url": "https://www.reddit.com/r/LocalLLM/comments/1qwt27f/what_is_the_best_setup_for_offline_ai_on_android/", "domain": "reddit.com", "title": "What is the best setup for Offline AI on Android : r/LocalLLM", "da": 92, "pa": 53},
+    {"position": 2, "url": "https://play.google.com/store/apps/details?id=com.ishanvohra2.localai", "domain": "google.com", "title": "Local AI - Offline AI chatbot - Apps on Google Play", "da": 99, "pa": 59},
+    {"position": 3, "url": "https://www.layla-network.ai/", "domain": "layla-network.ai", "title": "Layla: Private Offline AI Assistant for Android & iOS", "da": 11, "pa": 39, "rd": 280, "bl": 1797},
+    {"position": 4, "url": "https://github.com/jegly/OfflineLLM", "domain": "github.com", "title": "jegly/OfflineLLM: Private on-device AI chat for Android — ...", "da": 97, "pa": 58},
+    {"position": 5, "url": "https://meetaitools.com/ai-chatbot-app-for-android-offline/", "domain": "meetaitools.com", "title": "Best AI Chatbot App For Android Offline 2026 — I Tested 13 ...", "da": 1, "pa": 3},
+    {"position": 6, "url": "https://medium.com/activated-thinker/how-to-run-ai-completely-offline-on-any-android-phone-94ae6c15f873", "domain": "medium.com", "title": "How to Run AI Completely Offline on Any Android Phone.", "da": 95, "pa": 48},
+    {"position": 7, "url": "https://ai-offline-assistant.en.softonic.com/android", "domain": "softonic.com", "title": "AI: Offline Assistant for Android - Download", "da": 92, "pa": 43}
+  ]
+}
