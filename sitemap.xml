@@ -61,6 +61,24 @@
     <priority>0.85</priority>
   </url>
   <url>
+    <loc>https://llamabox-ai.github.io/private-ai-android.html</loc>
+    <lastmod>2026-07-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://llamabox-ai.github.io/private-ai-chat.html</loc>
+    <lastmod>2026-07-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://llamabox-ai.github.io/offline-ai-chat.html</loc>
+    <lastmod>2026-07-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
     <loc>https://llamabox-ai.github.io/chatgpt-android-offline.html</loc>
     <lastmod>2026-07-30</lastmod>
     <changefreq>weekly</changefreq>
@@ -77,6 +95,24 @@
     <lastmod>2026-07-30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://llamabox-ai.github.io/models.html</loc>
+    <lastmod>2026-07-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://llamabox-ai.github.io/what-is-an-llm.html</loc>
+    <lastmod>2026-07-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://llamabox-ai.github.io/free-llms.html</loc>
+    <lastmod>2026-07-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://llamabox-ai.github.io/how-to-run-llm-on-android.html</loc>

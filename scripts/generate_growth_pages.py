@@ -62,6 +62,8 @@ FOOTER = """  <footer class="footer">
             <li><a href="/on-device-llm.html">On-device LLM</a></li>
             <li><a href="/private-chatgpt-alternative.html">Private ChatGPT alt</a></li>
             <li><a href="/private-ai-android.html">Private AI Android</a></li>
+            <li><a href="/private-ai-chat.html">Private AI chat</a></li>
+            <li><a href="/offline-ai-chat.html">Offline AI chat</a></li>
             <li><a href="/chatgpt-android-offline.html">ChatGPT offline</a></li>
             <li><a href="/gguf-android.html">GGUF on Android</a></li>
             <li><a href="/llm-download.html">LLM download</a></li>
@@ -325,6 +327,8 @@ def main():
           <a class="card-link glass" href="/on-device-llm.html"><strong>On-device LLM</strong><span>What “on-device” actually means</span></a>
           <a class="card-link glass" href="/private-chatgpt-alternative.html"><strong>Private ChatGPT alternative</strong><span>When cloud chat is the risk</span></a>
           <a class="card-link glass" href="/private-ai-android.html"><strong>Private AI for Android</strong><span>Local AI chatbot with no cloud</span></a>
+          <a class="card-link glass" href="/private-ai-chat.html"><strong>Private AI chat</strong><span>Conversations that never leave your phone</span></a>
+          <a class="card-link glass" href="/offline-ai-chat.html"><strong>Offline AI chat</strong><span>Chat without internet after model download</span></a>
           <a class="card-link glass" href="/chatgpt-android-offline.html"><strong>ChatGPT Android offline</strong><span>Why cloud ChatGPT can’t, and what does</span></a>
           <a class="card-link glass" href="/gguf-android.html"><strong>GGUF on Android</strong><span>Quantizations, RAM, imports</span></a>
           <a class="card-link glass" href="/llm-download.html"><strong>LLM download</strong><span>Get GGUF models for Android</span></a>
@@ -554,6 +558,140 @@ def main():
 """,
         ),
         extra_head=faq_schema(faqs_private_ai),
+    )
+
+    faqs_private_ai_chat = [
+        ("What is private AI chat?", "Private AI chat is a conversation with a language model where prompts, generated answers, and history stay on your device instead of being sent to a vendor server."),
+        ("Can AI chat be truly private on Android?", "Yes. LlamaBox loads a quantized GGUF model into app memory and runs inference on the phone CPU. There is no cloud inference endpoint, so the chat is private by architecture."),
+        ("Is private AI chat the same as offline AI chat?", "They overlap. Private AI chat removes the server from the conversation. Offline AI chat works without a network. LlamaBox does both because no data leaves the device."),
+        ("How is local AI chat more private than cloud 'private mode'?", "Cloud private mode still sends tokens to a server and relies on a privacy policy. Local AI chat never sends the conversation anywhere."),
+        ("What models work for private AI chat on Android?", "Any GGUF model that fits your phone's RAM. Start with small Q4_K_M quantizations (0.5B–3B class) for smooth private chat on mid-range phones."),
+        ("Does private AI chat need an account?", "No. LlamaBox requires no account, no API key, and no cloud subscription to chat privately."),
+    ]
+    page(
+        "private-ai-chat.html",
+        "Private AI Chat on Android | Local, Offline, No Cloud | LlamaBox",
+        "Get private AI chat on Android with LlamaBox. Local LLM conversations stay on your phone — no cloud, no account, no data sharing.",
+        article(
+            "Private chat",
+            "Private AI chat on Android.",
+            "A private AI chat app that runs on your phone, not in a cloud data center. LlamaBox keeps every conversation local.",
+            f"""
+        <h2>What is private AI chat?</h2>
+        <p><strong>Private AI chat</strong> means talking to a language model without sending your prompts to a remote server. Your questions, the model's answers, and your entire conversation history stay on the device. There is no vendor retention policy, no subprocessor chain, and no cloud account to compromise.</p>
+        <h2>Why cloud chat can never be fully private</h2>
+        <p>Even chat apps with a "private mode" or "no training" promise still route your text through the vendor's infrastructure. That creates several risks a local app removes:</p>
+        <ul>
+          <li><strong>Data in transit:</strong> encrypted, but still exposed to the provider.</li>
+          <li><strong>Retention and subpoenas:</strong> server-side logs can be retained or requested.</li>
+          <li><strong>Breaches and misconfigurations:</strong> central databases are high-value targets.</li>
+          <li><strong>Policy changes:</strong> today's privacy promise can change tomorrow.</li>
+        </ul>
+        <p>Private AI chat on Android removes the server from the loop entirely.</p>
+        <h2>How LlamaBox delivers private AI chat</h2>
+        <ul>
+          <li>GGUF models load into app memory and run via llama.cpp on the phone CPU</li>
+          <li>No cloud inference endpoint; prompts never leave the device</li>
+          <li>No account, no API key, no telemetry by architecture</li>
+          <li>Works offline after model download — airplane mode included</li>
+          <li>Chat history stored in a local SQLite database</li>
+        </ul>
+        <h2>Private AI chat vs cloud "private mode"</h2>
+        <div class="table-wrap">
+          <table class="compare-table">
+            <thead><tr><th></th><th>LlamaBox private AI chat</th><th>Cloud private mode</th></tr></thead>
+            <tbody>
+              <tr><td>Prompts leave device</td><td>No</td><td>Yes</td></tr>
+              <tr><td>Works offline</td><td>Yes</td><td>No</td></tr>
+              <tr><td>Account required</td><td>No</td><td>Usually yes</td></tr>
+              <tr><td>Auditable source</td><td>AGPL-3.0 + commercial license</td><td>Proprietary</td></tr>
+              <tr><td>Model choice</td><td>Any GGUF you choose</td><td>Vendor model</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <h2>Best use cases for private AI chat</h2>
+        <ul>
+          <li><strong>Personal journaling and drafts</strong> — intimate notes never touch a server</li>
+          <li><strong>Healthcare and therapy journaling</strong> — local inference reduces compliance and trust surface</li>
+          <li><strong>Journalism and sensitive sourcing</strong> — sources and rough drafts stay on-device</li>
+          <li><strong>Legal and client-confidential work</strong> — no vendor exposure</li>
+          <li><strong>Travel and field work</strong> — private chat that works without internet</li>
+        </ul>
+        <h2>How to start</h2>
+        <ol>
+          <li>Join the LlamaBox beta waitlist for APK or Play Store access.</li>
+          <li>Download a small GGUF model (0.5B–3B Q4_K_M) over Wi-Fi.</li>
+          <li>Open LlamaBox and chat. Toggle airplane mode to prove it is local and private.</li>
+        </ol>
+        <p>Related: <a href="/private-chatgpt-alternative.html">private ChatGPT alternative</a> · <a href="/private-ai-android.html">private AI Android</a> · <a href="/offline-ai-chat.html">offline AI chat</a> · <a href="/on-device-llm.html">on-device LLM</a> · <a href="/best-local-llm-apps-android.html">best local LLM apps</a>.</p>
+        {faq_html(faqs_private_ai_chat)}
+""",
+        ),
+        extra_head=faq_schema(faqs_private_ai_chat),
+    )
+
+    faqs_offline_ai_chat = [
+        ("What is offline AI chat?", "Offline AI chat is a conversation with a language model that works without an internet connection after the model file is stored locally on the device."),
+        ("Can I chat with AI offline on Android?", "Yes. LlamaBox loads a quantized GGUF model onto your phone and runs inference on the CPU. Once the model is downloaded, no network is needed."),
+        ("Is offline AI chat private?", "Yes. Because inference happens on-device, prompts and answers never travel to a cloud server. Offline and private are the same architecture in LlamaBox."),
+        ("What models work for offline AI chat?", "Any GGUF model that fits your phone's RAM. Start with small Q4_K_M quantizations (0.5B–3B class) for smooth offline chat on most Android phones."),
+        ("Does offline AI chat need an account or API key?", "No. LlamaBox requires no account, no API key, and no subscription to chat offline."),
+        ("How do I prove the chat is really offline?", "After downloading a model, enable airplane mode and start a new conversation. LlamaBox will continue generating answers because inference is local."),
+    ]
+    page(
+        "offline-ai-chat.html",
+        "Offline AI Chat on Android | Local LLM, No Internet | LlamaBox",
+        "Get offline AI chat on Android with LlamaBox. Run a local LLM on your phone — no internet, no cloud, no account. Chat in airplane mode.",
+        article(
+            "Offline chat",
+            "Offline AI chat on Android.",
+            "Chat with a local language model even when the network is off. LlamaBox keeps every conversation on your phone.",
+            f"""
+        <h2>What is offline AI chat?</h2>
+        <p><strong>Offline AI chat</strong> means having a conversation with a language model without an internet connection. The model file lives on your phone, and every token is generated locally by the CPU. Once the model is downloaded, you can chat in airplane mode, underground, abroad, or anywhere the network does not reach.</p>
+        <h2>Why offline AI chat matters</h2>
+        <p>Most chatbots stop working the moment you lose signal. Offline AI chat keeps working. That matters for:</p>
+        <ul>
+          <li><strong>Travel and flights</strong> — useful AI in airplane mode</li>
+          <li><strong>Remote and field work</strong> — no dependency on mobile data</li>
+          <li><strong>Low-connectivity regions</strong> — reliable access where networks are weak</li>
+          <li><strong>Privacy-sensitive situations</strong> — no data leaves the device</li>
+          <li><strong>Battery and cost</strong> — no continuous cloud round-trips</li>
+        </ul>
+        <h2>How LlamaBox runs offline AI chat</h2>
+        <ul>
+          <li>Download a GGUF model over Wi-Fi, then disconnect</li>
+          <li>LlamaBox loads the model into app memory</li>
+          <li>Inference runs via llama.cpp on the phone CPU</li>
+          <li>Prompts and answers are generated locally with no network call</li>
+          <li>Chat history is stored in a local SQLite database</li>
+        </ul>
+        <h2>Offline AI chat vs cloud chat</h2>
+        <div class="table-wrap">
+          <table class="compare-table">
+            <thead><tr><th></th><th>LlamaBox offline AI chat</th><th>Cloud chat (ChatGPT etc.)</th></tr></thead>
+            <tbody>
+              <tr><td>Needs internet</td><td>No after model download</td><td>Yes, every message</td></tr>
+              <tr><td>Data leaves device</td><td>No</td><td>Yes</td></tr>
+              <tr><td>Works in airplane mode</td><td>Yes</td><td>No</td></tr>
+              <tr><td>Account required</td><td>No</td><td>Usually yes</td></tr>
+              <tr><td>Model choice</td><td>Any GGUF you choose</td><td>Vendor model</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <h2>Proving it works offline</h2>
+        <p>The easiest test: download a small model, enable airplane mode, and start a chat. LlamaBox will keep answering because the model is on the phone. No trick, no cached response — live local inference.</p>
+        <h2>Getting started</h2>
+        <ol>
+          <li>Join the LlamaBox beta waitlist for APK or Play Store access.</li>
+          <li>Download a small Q4_K_M model (0.5B–3B class) while connected to Wi-Fi.</li>
+          <li>Toggle airplane mode and chat. The conversation is fully offline.</li>
+        </ol>
+        <p>Related: <a href="/offline-ai-android.html">offline AI Android</a> · <a href="/private-ai-chat.html">private AI chat</a> · <a href="/chatgpt-android-offline.html">ChatGPT Android offline</a> · <a href="/how-to-run-llm-on-android.html">how to run an LLM on Android</a> · <a href="/best-local-llm-apps-android.html">best local LLM apps</a>.</p>
+        {faq_html(faqs_offline_ai_chat)}
+""",
+        ),
+        extra_head=faq_schema(faqs_offline_ai_chat),
     )
 
     faqs_gguf = [
@@ -1704,9 +1842,15 @@ def main():
         ("/offline-ai-android.html", "0.85", "weekly"),
         ("/on-device-llm.html", "0.85", "weekly"),
         ("/private-chatgpt-alternative.html", "0.85", "weekly"),
+        ("/private-ai-android.html", "0.85", "weekly"),
+        ("/private-ai-chat.html", "0.85", "weekly"),
+        ("/offline-ai-chat.html", "0.85", "weekly"),
         ("/chatgpt-android-offline.html", "0.85", "weekly"),
         ("/gguf-android.html", "0.85", "weekly"),
         ("/llm-download.html", "0.85", "weekly"),
+        ("/models.html", "0.85", "weekly"),
+        ("/what-is-an-llm.html", "0.8", "monthly"),
+        ("/free-llms.html", "0.8", "monthly"),
         ("/how-to-run-llm-on-android.html", "0.9", "weekly"),
         ("/vs-chatgpt.html", "0.8", "monthly"),
         ("/vs-ollama.html", "0.8", "monthly"),

@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <meta name="author" content="LlamaBox AI">
+  <meta name="theme-color" content="#080808">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='22' fill='%230F0F0F' stroke='%23D4A54A' stroke-width='4'/%3E%3Ctext x='50' y='68' font-family='Georgia,serif' font-size='48' font-weight='700' fill='%23D4A54A' text-anchor='middle'%3ELB%3C/text%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/style.css">
+  <link rel="alternate" type="text/plain" title="LLM brief" href="https://llamabox-ai.github.io/llms.txt">
+
+  <title>Offline AI Chat on Android | Local LLM, No Internet | LlamaBox</title>
+  <meta name="description" content="Get offline AI chat on Android with LlamaBox. Run a local LLM on your phone — no internet, no cloud, no account. Chat in airplane mode.">
+  <link rel="canonical" href="https://llamabox-ai.github.io/offline-ai-chat.html">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="LlamaBox">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:url" content="https://llamabox-ai.github.io/offline-ai-chat.html">
+  <meta property="og:title" content="Offline AI Chat on Android | Local LLM, No Internet | LlamaBox">
+  <meta property="og:description" content="Get offline AI chat on Android with LlamaBox. Run a local LLM on your phone — no internet, no cloud, no account. Chat in airplane mode.">
+  <meta property="og:image" content="https://llamabox-ai.github.io/assets/screenshot-1-home.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Offline AI Chat on Android | Local LLM, No Internet | LlamaBox">
+  <meta name="twitter:description" content="Get offline AI chat on Android with LlamaBox. Run a local LLM on your phone — no internet, no cloud, no account. Chat in airplane mode.">
+  <meta name="twitter:image" content="https://llamabox-ai.github.io/assets/screenshot-1-home.png">
+  <script type="application/ld+json">
+  {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "What is offline AI chat?", "acceptedAnswer": {"@type": "Answer", "text": "Offline AI chat is a conversation with a language model that works without an internet connection after the model file is stored locally on the device."}}, {"@type": "Question", "name": "Can I chat with AI offline on Android?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. LlamaBox loads a quantized GGUF model onto your phone and runs inference on the CPU. Once the model is downloaded, no network is needed."}}, {"@type": "Question", "name": "Is offline AI chat private?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. Because inference happens on-device, prompts and answers never travel to a cloud server. Offline and private are the same architecture in LlamaBox."}}, {"@type": "Question", "name": "What models work for offline AI chat?", "acceptedAnswer": {"@type": "Answer", "text": "Any GGUF model that fits your phone's RAM. Start with small Q4_K_M quantizations (0.5B–3B class) for smooth offline chat on most Android phones."}}, {"@type": "Question", "name": "Does offline AI chat need an account or API key?", "acceptedAnswer": {"@type": "Answer", "text": "No. LlamaBox requires no account, no API key, and no subscription to chat offline."}}, {"@type": "Question", "name": "How do I prove the chat is really offline?", "acceptedAnswer": {"@type": "Answer", "text": "After downloading a model, enable airplane mode and start a new conversation. LlamaBox will continue generating answers because inference is local."}}]}
+  </script>
+</head>
+<body>
+  <div class="bg-mesh" aria-hidden="true"></div>
+  <div class="bg-noise" aria-hidden="true"></div>
+  <header class="nav" id="nav">
+    <div class="nav-inner">
+      <a href="/" class="wordmark" aria-label="LlamaBox home">Llama<span>Box</span></a>
+      <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="nav-links" id="navLinks" aria-label="Primary">
+        <a href="/#features">Features</a>
+        <a href="/guides.html">Guides</a>
+        <a href="/blog/">Blog</a>
+        <a href="/architecture.html">Architecture</a>
+        <a href="https://github.com/llamabox-ai" rel="noopener">GitHub</a>
+        <a class="btn btn-primary btn-sm" href="/waitlist.html">Join waitlist</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+
+    <section class="section page-hero">
+      <div class="wrap narrow">
+        <div class="eyebrow">Offline chat</div>
+        <h1>Offline AI chat on Android.</h1>
+        <p class="lead">Chat with a local language model even when the network is off. LlamaBox keeps every conversation on your phone.</p>
+      </div>
+    </section>
+    <section class="section section-tight">
+      <div class="wrap narrow prose reveal is-in">
+
+        <h2>What is offline AI chat?</h2>
+        <p><strong>Offline AI chat</strong> means having a conversation with a language model without an internet connection. The model file lives on your phone, and every token is generated locally by the CPU. Once the model is downloaded, you can chat in airplane mode, underground, abroad, or anywhere the network does not reach.</p>
+        <h2>Why offline AI chat matters</h2>
+        <p>Most chatbots stop working the moment you lose signal. Offline AI chat keeps working. That matters for:</p>
+        <ul>
+          <li><strong>Travel and flights</strong> — useful AI in airplane mode</li>
+          <li><strong>Remote and field work</strong> — no dependency on mobile data</li>
+          <li><strong>Low-connectivity regions</strong> — reliable access where networks are weak</li>
+          <li><strong>Privacy-sensitive situations</strong> — no data leaves the device</li>
+          <li><strong>Battery and cost</strong> — no continuous cloud round-trips</li>
+        </ul>
+        <h2>How LlamaBox runs offline AI chat</h2>
+        <ul>
+          <li>Download a GGUF model over Wi-Fi, then disconnect</li>
+          <li>LlamaBox loads the model into app memory</li>
+          <li>Inference runs via llama.cpp on the phone CPU</li>
+          <li>Prompts and answers are generated locally with no network call</li>
+          <li>Chat history is stored in a local SQLite database</li>
+        </ul>
+        <h2>Offline AI chat vs cloud chat</h2>
+        <div class="table-wrap">
+          <table class="compare-table">
+            <thead><tr><th></th><th>LlamaBox offline AI chat</th><th>Cloud chat (ChatGPT etc.)</th></tr></thead>
+            <tbody>
+              <tr><td>Needs internet</td><td>No after model download</td><td>Yes, every message</td></tr>
+              <tr><td>Data leaves device</td><td>No</td><td>Yes</td></tr>
+              <tr><td>Works in airplane mode</td><td>Yes</td><td>No</td></tr>
+              <tr><td>Account required</td><td>No</td><td>Usually yes</td></tr>
+              <tr><td>Model choice</td><td>Any GGUF you choose</td><td>Vendor model</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <h2>Proving it works offline</h2>
+        <p>The easiest test: download a small model, enable airplane mode, and start a chat. LlamaBox will keep answering because the model is on the phone. No trick, no cached response — live local inference.</p>
+        <h2>Getting started</h2>
+        <ol>
+          <li>Join the LlamaBox beta waitlist for APK or Play Store access.</li>
+          <li>Download a small Q4_K_M model (0.5B–3B class) while connected to Wi-Fi.</li>
+          <li>Toggle airplane mode and chat. The conversation is fully offline.</li>
+        </ol>
+        <p>Related: <a href="/offline-ai-android.html">offline AI Android</a> · <a href="/private-ai-chat.html">private AI chat</a> · <a href="/chatgpt-android-offline.html">ChatGPT Android offline</a> · <a href="/how-to-run-llm-on-android.html">how to run an LLM on Android</a> · <a href="/best-local-llm-apps-android.html">best local LLM apps</a>.</p>
+        <h2 id="faq">FAQ</h2>
+<div class="faq-list">
+<details class="faq-item" open><summary>What is offline AI chat?</summary><div class="ans">Offline AI chat is a conversation with a language model that works without an internet connection after the model file is stored locally on the device.</div></details>
+<details class="faq-item"><summary>Can I chat with AI offline on Android?</summary><div class="ans">Yes. LlamaBox loads a quantized GGUF model onto your phone and runs inference on the CPU. Once the model is downloaded, no network is needed.</div></details>
+<details class="faq-item"><summary>Is offline AI chat private?</summary><div class="ans">Yes. Because inference happens on-device, prompts and answers never travel to a cloud server. Offline and private are the same architecture in LlamaBox.</div></details>
+<details class="faq-item"><summary>What models work for offline AI chat?</summary><div class="ans">Any GGUF model that fits your phone's RAM. Start with small Q4_K_M quantizations (0.5B–3B class) for smooth offline chat on most Android phones.</div></details>
+<details class="faq-item"><summary>Does offline AI chat need an account or API key?</summary><div class="ans">No. LlamaBox requires no account, no API key, and no subscription to chat offline.</div></details>
+<details class="faq-item"><summary>How do I prove the chat is really offline?</summary><div class="ans">After downloading a model, enable airplane mode and start a new conversation. LlamaBox will continue generating answers because inference is local.</div></details>
+</div>
+
+      </div>
+    </section>
+
+
+    <section class="section">
+      <div class="wrap">
+        <div class="final reveal">
+          <div class="eyebrow" style="justify-content:center">Closed beta</div>
+          <h2>Try private offline AI on Android.</h2>
+          <p class="lead">Join the waitlist. No spam — beta access and release notes only.</p>
+          <div class="cta-row">
+            <a class="btn btn-primary" href="/waitlist.html">Join the waitlist</a>
+            <a class="btn btn-ghost" href="/download.html">Download status</a>
+            <a class="btn btn-ghost" href="https://github.com/llamabox-ai" rel="noopener">GitHub</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+  <footer class="footer">
+    <div class="wrap">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="wordmark">Llama<span>Box</span></div>
+          <p>Private offline AI chat for Android. On-device GGUF inference powered by llama.cpp.</p>
+        </div>
+        <div>
+          <h4>Product</h4>
+          <ul>
+            <li><a href="/waitlist.html">Waitlist</a></li>
+            <li><a href="/download.html">Download</a></li>
+            <li><a href="/#features">Features</a></li>
+            <li><a href="/#compare">Compare</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Guides</h4>
+          <ul>
+            <li><a href="/offline-ai-android.html">Offline AI Android</a></li>
+            <li><a href="/on-device-llm.html">On-device LLM</a></li>
+            <li><a href="/private-chatgpt-alternative.html">Private ChatGPT alt</a></li>
+            <li><a href="/private-ai-android.html">Private AI Android</a></li>
+            <li><a href="/private-ai-chat.html">Private AI chat</a></li>
+            <li><a href="/offline-ai-chat.html">Offline AI chat</a></li>
+            <li><a href="/chatgpt-android-offline.html">ChatGPT offline</a></li>
+            <li><a href="/gguf-android.html">GGUF on Android</a></li>
+            <li><a href="/llm-download.html">LLM download</a></li>
+            <li><a href="/models.html">Model hub</a></li>
+            <li><a href="/what-is-an-llm.html">What is an LLM?</a></li>
+            <li><a href="/free-llms.html">Free LLMs</a></li>
+            <li><a href="/how-to-run-llm-on-android.html">How-to guide</a></li>
+            <li><a href="/vs-chatgpt.html">vs ChatGPT</a></li>
+            <li><a href="/vs-ollama.html">vs Ollama</a></li>
+            <li><a href="/vs-pocketpal.html">vs PocketPal AI</a></li>
+            <li><a href="/vs-mlc-llm.html">vs MLC LLM</a></li>
+            <li><a href="/best-local-llm-apps-android.html">Best local LLM apps</a></li>
+            <li><a href="/webllm.html">WebLLM vs LlamaBox</a></li>
+            <li><a href="/llm-software.html">LLM software</a></li>
+            <li><a href="/blog/">Blog</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Business</h4>
+          <ul>
+            <li><a href="/enterprise.html">Enterprise</a></li>
+            <li><a href="/commercial-license.html">Commercial license</a></li>
+            <li><a href="/partners.html">Partners</a></li>
+            <li><a href="/investors.html">Investors &amp; acquisitions</a></li>
+            <li><a href="/press-kit.html">Press kit</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Developers</h4>
+          <ul>
+            <li><a href="/architecture.html">Architecture</a></li>
+            <li><a href="/llms.txt">llms.txt</a></li>
+            <li><a href="/privacy.html">Privacy</a></li>
+            <li><a href="https://github.com/llamabox-ai" rel="noopener">GitHub</a></li>
+            <li><a href="mailto:aalhad.dev@gmail.com">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+      <p class="footer-legal">Source dual-licensed AGPL-3.0 (open-source) and a separate commercial license. “LlamaBox” is a reserved trademark. Full public source lands when closed beta ends. CPU-only inference by design.</p>
+      <div class="footer-bottom">
+        <span>© 2026 LlamaBox AI · Mythos Labs</span>
+        <span>Package com.llamabox · Android 7.0+</span>
+      </div>
+    </div>
+  </footer>
+  <script src="/assets/site.js"></script>
+
+</body>
+</html>
