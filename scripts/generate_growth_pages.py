@@ -74,6 +74,8 @@ FOOTER = """  <footer class="footer">
             <li><a href="/vs-pocketpal.html">vs PocketPal AI</a></li>
             <li><a href="/vs-mlc-llm.html">vs MLC LLM</a></li>
             <li><a href="/best-local-llm-apps-android.html">Best local LLM apps</a></li>
+            <li><a href="/webllm.html">WebLLM vs LlamaBox</a></li>
+            <li><a href="/llm-software.html">LLM software</a></li>
             <li><a href="/blog/">Blog</a></li>
           </ul>
         </div>
@@ -335,6 +337,8 @@ def main():
           <a class="card-link glass" href="/vs-pocketpal.html"><strong>LlamaBox vs PocketPal AI</strong><span>Two offline Android LLM apps compared</span></a>
           <a class="card-link glass" href="/vs-mlc-llm.html"><strong>LlamaBox vs MLC LLM</strong><span>Chat app vs model compiler</span></a>
           <a class="card-link glass" href="/best-local-llm-apps-android.html"><strong>Best local LLM apps Android</strong><span>2026 comparison of on-device chat apps</span></a>
+          <a class="card-link glass" href="/webllm.html"><strong>WebLLM vs LlamaBox</strong><span>Browser AI versus native Android local LLM</span></a>
+          <a class="card-link glass" href="/llm-software.html"><strong>LLM software</strong><span>Local, offline, CPU-only LLM tools compared</span></a>
           <a class="card-link glass" href="/blog/"><strong>Blog</strong><span>Models, engineering notes, updates</span></a>
           <a class="card-link glass" href="/enterprise.html"><strong>Enterprise</strong><span>Offline AI for teams and organizations</span></a>
           <a class="card-link glass" href="/commercial-license.html"><strong>Commercial license</strong><span>Use LlamaBox in proprietary products</span></a>
@@ -1127,6 +1131,112 @@ def main():
         extra_head=faq_schema(faqs_ollama),
     )
 
+    faqs_webllm = [
+        ("What is WebLLM?", "WebLLM is MLC AI's project for running LLMs inside a web browser. It compiles models to WebGPU/WebAssembly so they can run without a server — as long as the browser and hardware support the required acceleration."),
+        ("Can WebLLM run offline?", "Only after the model and runtime have been cached by the browser. It still depends on a browser engine and WebGPU support. LlamaBox is a native Android app that runs the model directly on the phone CPU, even in airplane mode."),
+        ("Does WebLLM work on Android?", "WebLLM works in Android browsers that support WebGPU and have compatible GPU drivers. Many mid-range Android devices lack stable WebGPU compute, so results vary. LlamaBox uses CPU-only inference to avoid that driver lottery."),
+        ("Is WebLLM private?", "Inference happens locally in the browser tab, so prompts do not travel to a server. However, the page itself is still served from a website and may load analytics or update scripts. LlamaBox has no cloud inference path and no account requirement."),
+        ("Should I use WebLLM or LlamaBox?", "Use WebLLM if you want to experiment with in-browser LLMs on a desktop or supported flagship phone. Use LlamaBox if you want a native Android chat app that works offline on the widest range of phones, including devices without WebGPU or stable GPU drivers."),
+    ]
+    page(
+        "webllm.html",
+        "WebLLM vs LlamaBox | Browser AI vs Android Local LLM",
+        "WebLLM runs LLMs in your browser. LlamaBox runs GGUF models locally on Android — offline, CPU-only, no WebGPU required. Compare browser AI vs on-device chat.",
+        article(
+            "Compare",
+            "WebLLM vs LlamaBox.",
+            "Browser-native AI versus a native Android app. Both run models locally, but the context — desktop tab versus pocket device — changes everything.",
+            f"""
+        <h2>What WebLLM does</h2>
+        <p><strong>WebLLM</strong>, from MLC AI, compiles language models so they can run inside a web browser. The model weights load through the page, and inference executes in the browser using WebGPU or WebAssembly. The pitch is compelling: open a URL, and an LLM runs without installing anything.</p>
+        <h2>What LlamaBox does</h2>
+        <p><strong>LlamaBox</strong> is a native Android app that loads GGUF models and runs inference with llama.cpp on the phone CPU. It is built for offline, private chat — no browser dependency, no WebGPU check, no install friction beyond the APK.</p>
+        <h2>WebLLM vs LlamaBox comparison</h2>
+        <div class="table-wrap">
+          <table class="compare-table">
+            <thead><tr><th></th><th>WebLLM</th><th>LlamaBox</th></tr></thead>
+            <tbody>
+              <tr><td>Runtime</td><td>Web browser</td><td>Native Android app</td></tr>
+              <tr><td>Model format</td><td>Pre-compiled MLC / WebLLM weights</td><td>GGUF via llama.cpp</td></tr>
+              <tr><td>Hardware path</td><td>WebGPU / WebAssembly (GPU preferred)</td><td>CPU-only ARM NEON</td></tr>
+              <tr><td>Android support</td><td>Works where browser + WebGPU align</td><td>Android 7.0+ arm64, broad device coverage</td></tr>
+              <tr><td>Offline after setup</td><td>Yes, if cached</td><td>Yes — airplane mode ready</td></tr>
+              <tr><td>Account needed</td><td>No</td><td>No</td></tr>
+              <tr><td>Best for</td><td>Desktop browser experiments</td><td>Private pocket AI on Android</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <h2>Why the comparison matters</h2>
+        <p>Users searching "webllm" are often looking for a way to run an LLM locally without complex setup. WebLLM solves that in a browser. LlamaBox solves it on Android with a chat-first UI, offline history, and a CPU-only path that skips the GPU driver lottery.</p>
+        <h2>When to choose each</h2>
+        <ul>
+          <li><strong>Choose WebLLM</strong> when you want to try local LLMs from a desktop browser without installing software, and your browser supports WebGPU.</li>
+          <li><strong>Choose LlamaBox</strong> when you want the model in your pocket, working offline on a phone, with no dependence on browser technology or GPU drivers.</li>
+        </ul>
+        <p>Related: <a href="/vs-mlc-llm.html">LlamaBox vs MLC LLM</a> · <a href="/on-device-llm.html">on-device LLM</a> · <a href="/offline-ai-android.html">offline AI Android</a> · <a href="/models.html">GGUF models</a>.</p>
+        {faq_html(faqs_webllm)}
+""",
+        ),
+        extra_head=faq_schema(faqs_webllm),
+    )
+
+    faqs_llm_software = [
+        ("What is LLM software?", "LLM software is any application or runtime that loads a large language model and runs inference. It ranges from desktop tools like LM Studio and Ollama to mobile apps like LlamaBox that run models on-device."),
+        ("Can LLM software run offline?", "Some can. Desktop tools like LM Studio and Ollama run locally on a PC. LlamaBox runs locally on Android after the model file is downloaded. Cloud chat apps are not offline LLM software."),
+        ("What is the best LLM software for Android?", "For privacy and broad device support, LlamaBox. It is CPU-only by design, uses open GGUF models, and works offline on Android 7.0+ arm64."),
+        ("Is LlamaBox open-source LLM software?", "The public codebase will be released under AGPL-3.0 when the closed beta ends. A separate commercial license is available for proprietary products."),
+        ("Do I need a GPU for LLM software?", "Not with LlamaBox. Many desktop tools perform best with a GPU, but LlamaBox deliberately uses CPU inference to reach the widest range of Android devices."),
+    ]
+    page(
+        "llm-software.html",
+        "LLM Software for Local, Offline, CPU-Only Use | LlamaBox",
+        "Best LLM software for local inference compared: LlamaBox for Android, LM Studio, Ollama, AnythingLLM. CPU-only, offline, open-source options.",
+        article(
+            "Explain",
+            "LLM software that keeps inference local.",
+            "A quick guide to the software that loads language models and runs them on your own hardware — not someone else's cloud.",
+            f"""
+        <h2>What counts as LLM software?</h2>
+        <p><strong>LLM software</strong> is any program that can load a large language model and generate text. The category includes:</p>
+        <ul>
+          <li><strong>Desktop runtimes</strong> — LM Studio, Ollama, GPT4All, Jan, AnythingLLM</li>
+          <li><strong>Server / API tools</strong> — llama.cpp, vLLM, TGI, Ollama's API mode</li>
+          <li><strong>Mobile apps</strong> — LlamaBox, PocketPal AI, MLC Chat, Layla</li>
+          <li><strong>Browser runtimes</strong> — WebLLM and similar WebGPU-based inference</li>
+        </ul>
+        <h2>Local vs cloud LLM software</h2>
+        <p>Cloud chat apps send every prompt to a vendor server. Local LLM software keeps the model on your hardware. The trade-off is usually smaller models and slower generation in exchange for privacy, offline use, and no subscription meter.</p>
+        <h2>Popular local LLM software compared</h2>
+        <div class="table-wrap">
+          <table class="compare-table">
+            <thead><tr><th>Software</th><th>Platform</th><th>Model format</th><th>Best for</th></tr></thead>
+            <tbody>
+              <tr><td>LlamaBox</td><td>Android 7.0+ arm64</td><td>GGUF</td><td>Private offline chat on phones</td></tr>
+              <tr><td>LM Studio</td><td>macOS / Windows / Linux</td><td>GGUF</td><td>Desktop GUI with model hub</td></tr>
+              <tr><td>Ollama</td><td>macOS / Linux / Windows</td><td>GGUF ecosystem</td><td>CLI-first local LLM server</td></tr>
+              <tr><td>AnythingLLM</td><td>Desktop / server</td><td>GGUF + cloud fallback</td><td>RAG / document-chat workflows</td></tr>
+              <tr><td>PocketPal AI</td><td>Android (GPU option)</td><td>GGUF</td><td>GPU speed on supported flagships</td></tr>
+              <tr><td>MLC Chat / WebLLM</td><td>Android / browser</td><td>Pre-compiled MLC weights</td><td>Compiled model deployments</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <h2>Why LlamaBox is different</h2>
+        <p>Most LLM software targets desktops or servers. LlamaBox is purpose-built for Android phones, including mid-range and older devices. By staying <strong>CPU-only</strong>, it avoids the Android GPU driver lottery and reaches the largest possible device surface.</p>
+        <h2>How to choose</h2>
+        <ul>
+          <li><strong>Phone, offline, privacy-first</strong> → LlamaBox</li>
+          <li><strong>Desktop GUI with easy model switching</strong> → LM Studio</li>
+          <li><strong>CLI / API server on a workstation</strong> → Ollama</li>
+          <li><strong>Document Q&A with RAG</strong> → AnythingLLM</li>
+          <li><strong>Browser-based local inference</strong> → WebLLM</li>
+        </ul>
+        <p>Related: <a href="/what-is-an-llm.html">what is an LLM</a> · <a href="/free-llms.html">free LLMs</a> · <a href="/models.html">GGUF models for Android</a> · <a href="/vs-mlc-llm.html">vs MLC LLM</a> · <a href="/webllm.html">vs WebLLM</a>.</p>
+        {faq_html(faqs_llm_software)}
+""",
+        ),
+        extra_head=faq_schema(faqs_llm_software),
+    )
+
     # --- business / monetization pages ---
     page(
         "enterprise.html",
@@ -1602,6 +1712,8 @@ def main():
         ("/vs-ollama.html", "0.8", "monthly"),
         ("/vs-pocketpal.html", "0.8", "monthly"),
         ("/vs-mlc-llm.html", "0.8", "monthly"),
+        ("/webllm.html", "0.8", "monthly"),
+        ("/llm-software.html", "0.8", "monthly"),
         ("/best-local-llm-apps-android.html", "0.85", "weekly"),
         ("/enterprise.html", "0.85", "weekly"),
         ("/commercial-license.html", "0.8", "monthly"),

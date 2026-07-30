@@ -109,6 +109,18 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://llamabox-ai.github.io/webllm.html</loc>
+    <lastmod>2026-07-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://llamabox-ai.github.io/llm-software.html</loc>
+    <lastmod>2026-07-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://llamabox-ai.github.io/best-local-llm-apps-android.html</loc>
     <lastmod>2026-07-30</lastmod>
     <changefreq>weekly</changefreq>

@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <meta name="author" content="LlamaBox AI">
+  <meta name="theme-color" content="#080808">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='22' fill='%230F0F0F' stroke='%23D4A54A' stroke-width='4'/%3E%3Ctext x='50' y='68' font-family='Georgia,serif' font-size='48' font-weight='700' fill='%23D4A54A' text-anchor='middle'%3ELB%3C/text%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/style.css">
+  <link rel="alternate" type="text/plain" title="LLM brief" href="https://llamabox-ai.github.io/llms.txt">
+
+  <title>WebLLM vs LlamaBox | Browser AI vs Android Local LLM</title>
+  <meta name="description" content="WebLLM runs LLMs in your browser. LlamaBox runs GGUF models locally on Android — offline, CPU-only, no WebGPU required. Compare browser AI vs on-device chat.">
+  <link rel="canonical" href="https://llamabox-ai.github.io/webllm.html">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="LlamaBox">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:url" content="https://llamabox-ai.github.io/webllm.html">
+  <meta property="og:title" content="WebLLM vs LlamaBox | Browser AI vs Android Local LLM">
+  <meta property="og:description" content="WebLLM runs LLMs in your browser. LlamaBox runs GGUF models locally on Android — offline, CPU-only, no WebGPU required. Compare browser AI vs on-device chat.">
+  <meta property="og:image" content="https://llamabox-ai.github.io/assets/screenshot-1-home.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="WebLLM vs LlamaBox | Browser AI vs Android Local LLM">
+  <meta name="twitter:description" content="WebLLM runs LLMs in your browser. LlamaBox runs GGUF models locally on Android — offline, CPU-only, no WebGPU required. Compare browser AI vs on-device chat.">
+  <meta name="twitter:image" content="https://llamabox-ai.github.io/assets/screenshot-1-home.png">
+  <script type="application/ld+json">
+  {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "What is WebLLM?", "acceptedAnswer": {"@type": "Answer", "text": "WebLLM is MLC AI's project for running LLMs inside a web browser. It compiles models to WebGPU/WebAssembly so they can run without a server — as long as the browser and hardware support the required acceleration."}}, {"@type": "Question", "name": "Can WebLLM run offline?", "acceptedAnswer": {"@type": "Answer", "text": "Only after the model and runtime have been cached by the browser. It still depends on a browser engine and WebGPU support. LlamaBox is a native Android app that runs the model directly on the phone CPU, even in airplane mode."}}, {"@type": "Question", "name": "Does WebLLM work on Android?", "acceptedAnswer": {"@type": "Answer", "text": "WebLLM works in Android browsers that support WebGPU and have compatible GPU drivers. Many mid-range Android devices lack stable WebGPU compute, so results vary. LlamaBox uses CPU-only inference to avoid that driver lottery."}}, {"@type": "Question", "name": "Is WebLLM private?", "acceptedAnswer": {"@type": "Answer", "text": "Inference happens locally in the browser tab, so prompts do not travel to a server. However, the page itself is still served from a website and may load analytics or update scripts. LlamaBox has no cloud inference path and no account requirement."}}, {"@type": "Question", "name": "Should I use WebLLM or LlamaBox?", "acceptedAnswer": {"@type": "Answer", "text": "Use WebLLM if you want to experiment with in-browser LLMs on a desktop or supported flagship phone. Use LlamaBox if you want a native Android chat app that works offline on the widest range of phones, including devices without WebGPU or stable GPU drivers."}}]}
+  </script>
+</head>
+<body>
+  <div class="bg-mesh" aria-hidden="true"></div>
+  <div class="bg-noise" aria-hidden="true"></div>
+  <header class="nav" id="nav">
+    <div class="nav-inner">
+      <a href="/" class="wordmark" aria-label="LlamaBox home">Llama<span>Box</span></a>
+      <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="nav-links" id="navLinks" aria-label="Primary">
+        <a href="/#features">Features</a>
+        <a href="/guides.html">Guides</a>
+        <a href="/blog/">Blog</a>
+        <a href="/architecture.html">Architecture</a>
+        <a href="https://github.com/llamabox-ai" rel="noopener">GitHub</a>
+        <a class="btn btn-primary btn-sm" href="/waitlist.html">Join waitlist</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+
+    <section class="section page-hero">
+      <div class="wrap narrow">
+        <div class="eyebrow">Compare</div>
+        <h1>WebLLM vs LlamaBox.</h1>
+        <p class="lead">Browser-native AI versus a native Android app. Both run models locally, but the context — desktop tab versus pocket device — changes everything.</p>
+      </div>
+    </section>
+    <section class="section section-tight">
+      <div class="wrap narrow prose reveal is-in">
+
+        <h2>What WebLLM does</h2>
+        <p><strong>WebLLM</strong>, from MLC AI, compiles language models so they can run inside a web browser. The model weights load through the page, and inference executes in the browser using WebGPU or WebAssembly. The pitch is compelling: open a URL, and an LLM runs without installing anything.</p>
+        <h2>What LlamaBox does</h2>
+        <p><strong>LlamaBox</strong> is a native Android app that loads GGUF models and runs inference with llama.cpp on the phone CPU. It is built for offline, private chat — no browser dependency, no WebGPU check, no install friction beyond the APK.</p>
+        <h2>WebLLM vs LlamaBox comparison</h2>
+        <div class="table-wrap">
+          <table class="compare-table">
+            <thead><tr><th></th><th>WebLLM</th><th>LlamaBox</th></tr></thead>
+            <tbody>
+              <tr><td>Runtime</td><td>Web browser</td><td>Native Android app</td></tr>
+              <tr><td>Model format</td><td>Pre-compiled MLC / WebLLM weights</td><td>GGUF via llama.cpp</td></tr>
+              <tr><td>Hardware path</td><td>WebGPU / WebAssembly (GPU preferred)</td><td>CPU-only ARM NEON</td></tr>
+              <tr><td>Android support</td><td>Works where browser + WebGPU align</td><td>Android 7.0+ arm64, broad device coverage</td></tr>
+              <tr><td>Offline after setup</td><td>Yes, if cached</td><td>Yes — airplane mode ready</td></tr>
+              <tr><td>Account needed</td><td>No</td><td>No</td></tr>
+              <tr><td>Best for</td><td>Desktop browser experiments</td><td>Private pocket AI on Android</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <h2>Why the comparison matters</h2>
+        <p>Users searching "webllm" are often looking for a way to run an LLM locally without complex setup. WebLLM solves that in a browser. LlamaBox solves it on Android with a chat-first UI, offline history, and a CPU-only path that skips the GPU driver lottery.</p>
+        <h2>When to choose each</h2>
+        <ul>
+          <li><strong>Choose WebLLM</strong> when you want to try local LLMs from a desktop browser without installing software, and your browser supports WebGPU.</li>
+          <li><strong>Choose LlamaBox</strong> when you want the model in your pocket, working offline on a phone, with no dependence on browser technology or GPU drivers.</li>
+        </ul>
+        <p>Related: <a href="/vs-mlc-llm.html">LlamaBox vs MLC LLM</a> · <a href="/on-device-llm.html">on-device LLM</a> · <a href="/offline-ai-android.html">offline AI Android</a> · <a href="/models.html">GGUF models</a>.</p>
+        <h2 id="faq">FAQ</h2>
+<div class="faq-list">
+<details class="faq-item" open><summary>What is WebLLM?</summary><div class="ans">WebLLM is MLC AI's project for running LLMs inside a web browser. It compiles models to WebGPU/WebAssembly so they can run without a server — as long as the browser and hardware support the required acceleration.</div></details>
+<details class="faq-item"><summary>Can WebLLM run offline?</summary><div class="ans">Only after the model and runtime have been cached by the browser. It still depends on a browser engine and WebGPU support. LlamaBox is a native Android app that runs the model directly on the phone CPU, even in airplane mode.</div></details>
+<details class="faq-item"><summary>Does WebLLM work on Android?</summary><div class="ans">WebLLM works in Android browsers that support WebGPU and have compatible GPU drivers. Many mid-range Android devices lack stable WebGPU compute, so results vary. LlamaBox uses CPU-only inference to avoid that driver lottery.</div></details>
+<details class="faq-item"><summary>Is WebLLM private?</summary><div class="ans">Inference happens locally in the browser tab, so prompts do not travel to a server. However, the page itself is still served from a website and may load analytics or update scripts. LlamaBox has no cloud inference path and no account requirement.</div></details>
+<details class="faq-item"><summary>Should I use WebLLM or LlamaBox?</summary><div class="ans">Use WebLLM if you want to experiment with in-browser LLMs on a desktop or supported flagship phone. Use LlamaBox if you want a native Android chat app that works offline on the widest range of phones, including devices without WebGPU or stable GPU drivers.</div></details>
+</div>
+
+      </div>
+    </section>
+
+
+    <section class="section">
+      <div class="wrap">
+        <div class="final reveal">
+          <div class="eyebrow" style="justify-content:center">Closed beta</div>
+          <h2>Try private offline AI on Android.</h2>
+          <p class="lead">Join the waitlist. No spam — beta access and release notes only.</p>
+          <div class="cta-row">
+            <a class="btn btn-primary" href="/waitlist.html">Join the waitlist</a>
+            <a class="btn btn-ghost" href="/download.html">Download status</a>
+            <a class="btn btn-ghost" href="https://github.com/llamabox-ai" rel="noopener">GitHub</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+  <footer class="footer">
+    <div class="wrap">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="wordmark">Llama<span>Box</span></div>
+          <p>Private offline AI chat for Android. On-device GGUF inference powered by llama.cpp.</p>
+        </div>
+        <div>
+          <h4>Product</h4>
+          <ul>
+            <li><a href="/waitlist.html">Waitlist</a></li>
+            <li><a href="/download.html">Download</a></li>
+            <li><a href="/#features">Features</a></li>
+            <li><a href="/#compare">Compare</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Guides</h4>
+          <ul>
+            <li><a href="/offline-ai-android.html">Offline AI Android</a></li>
+            <li><a href="/on-device-llm.html">On-device LLM</a></li>
+            <li><a href="/private-chatgpt-alternative.html">Private ChatGPT alt</a></li>
+            <li><a href="/private-ai-android.html">Private AI Android</a></li>
+            <li><a href="/chatgpt-android-offline.html">ChatGPT offline</a></li>
+            <li><a href="/gguf-android.html">GGUF on Android</a></li>
+            <li><a href="/llm-download.html">LLM download</a></li>
+            <li><a href="/models.html">Model hub</a></li>
+            <li><a href="/what-is-an-llm.html">What is an LLM?</a></li>
+            <li><a href="/free-llms.html">Free LLMs</a></li>
+            <li><a href="/how-to-run-llm-on-android.html">How-to guide</a></li>
+            <li><a href="/vs-chatgpt.html">vs ChatGPT</a></li>
+            <li><a href="/vs-ollama.html">vs Ollama</a></li>
+            <li><a href="/vs-pocketpal.html">vs PocketPal AI</a></li>
+            <li><a href="/vs-mlc-llm.html">vs MLC LLM</a></li>
+            <li><a href="/best-local-llm-apps-android.html">Best local LLM apps</a></li>
+            <li><a href="/webllm.html">WebLLM vs LlamaBox</a></li>
+            <li><a href="/llm-software.html">LLM software</a></li>
+            <li><a href="/blog/">Blog</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Business</h4>
+          <ul>
+            <li><a href="/enterprise.html">Enterprise</a></li>
+            <li><a href="/commercial-license.html">Commercial license</a></li>
+            <li><a href="/partners.html">Partners</a></li>
+            <li><a href="/investors.html">Investors &amp; acquisitions</a></li>
+            <li><a href="/press-kit.html">Press kit</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Developers</h4>
+          <ul>
+            <li><a href="/architecture.html">Architecture</a></li>
+            <li><a href="/llms.txt">llms.txt</a></li>
+            <li><a href="/privacy.html">Privacy</a></li>
+            <li><a href="https://github.com/llamabox-ai" rel="noopener">GitHub</a></li>
+            <li><a href="mailto:aalhad.dev@gmail.com">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+      <p class="footer-legal">Source dual-licensed AGPL-3.0 (open-source) and a separate commercial license. “LlamaBox” is a reserved trademark. Full public source lands when closed beta ends. CPU-only inference by design.</p>
+      <div class="footer-bottom">
+        <span>© 2026 LlamaBox AI · Mythos Labs</span>
+        <span>Package com.llamabox · Android 7.0+</span>
+      </div>
+    </div>
+  </footer>
+  <script src="/assets/site.js"></script>
+
+</body>
+</html>
