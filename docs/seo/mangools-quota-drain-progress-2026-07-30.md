@@ -137,12 +137,20 @@
 - Updated `/offline-ai-android.html` to target "best offline ai assistant for android" and added competitor comparison (Layla, Local AI, OfflineLLM, MeetAITools).
 - Updated `/private-chatgpt-alternative.html` to target "private chatgpt alternative android" and added competitor comparison (Proton, PrivacyGuides, Lindy, Wondertools).
 - Created new `/llm-download.html` guide targeting "llm download" intent with GGUF sourcing, quantizations, and phone-size guidance.
-- Added `/llm-download.html` to footer Guides column, `/guides.html` card grid, `/llms.txt`, `/llms-full.txt`, and `sitemap.xml`.
+- Created new `/best-local-llm-apps-android.html` roundup targeting "best local llm apps android" / "android local llm" listicle intent with comparison table.
+- Added new pages to footer Guides column, `/guides.html` card grid, `/llms.txt`, `/llms-full.txt`, and `sitemap.xml`.
 - Regenerated the entire static site with `python scripts/generate_growth_pages.py`.
 - Updated `docs/seo/keyword-strategy-2026-07-30.md` with new SERP findings and implementation status.
 
 ### Workflow status
 - Ultracode workflow `w2pa1mpqh` still running at time of writing.
+
+### Additional Mangools work after first push
+- Retried failed SERPs: `android local llm` and `mlc chat android` succeeded on second attempt.
+- Saved raw SERP JSON for both keywords.
+- Ran related-keywords for `android local llm` and `mlc chat android`; saved compact summaries.
+- Ran `linkminer_get_url_metrics` for `layla-network.ai` and `siteprofiler_get_overview` (DA=11, 223 referring IPs).
+- Ran `kwfinder_get_url_kd_metrics` for PromptQuorum page (lps=14 — very beatable).
 
 ## Quota after continuation session
 - serps: 1122 / 1200 remaining (some provider errors, not all attempts consumed)

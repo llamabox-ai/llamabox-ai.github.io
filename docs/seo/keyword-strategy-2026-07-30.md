@@ -57,8 +57,12 @@ Three additional keywords pulled fresh US desktop SERPs and competitor backlink 
 | `offline ai android` | 20 | 28 | Reddit r/LocalLLM #1, Google Play "Local AI" #2, Layla #3, OfflineLLM GitHub #4, MeetAITools #5 | Optimize `/offline-ai-android.html` with competitor comparison; engage r/LocalLLM authentically |
 | `llm download` | 140 | 39 | LM Studio #1, Hugging Face forum #2, AnythingLLM #3, GitHub open-llms #4, Reddit #5 | Create `/llm-download.html` for Android GGUF download intent |
 | `best offline ai assistant for android` | 10 | — | No strong dedicated page | FAQ + comparison on `/offline-ai-android.html` |
-| `mlc chat android` | 70 | — | New tracked keyword with search volume | Blog/landing comparison already exists; monitor rank |
-| `android local llm` | 60 | — | Low-competition variant of `local llm android` | Add to tracked keywords and internal anchor text |
+| `mlc chat android` | 70 | 37 | MLC dominates; Reddit r/LocalLLaMA #4; UpdateStar #8 | Optimize /vs-mlc-llm.html; intercept APK/download intent |
+| `android local llm` | 60/70 | 28 | Reddit #1, GitHub #2, XDA #3, PromptQuorum DA=19/0BL at #8 | Create /best-local-llm-apps-android.html; very beatable |
+| `mlc chat apk` | 80 | — | Strong download intent around MLC Chat | Mention in /vs-mlc-llm.html and /best-local-llm-apps-android.html |
+| `mlc llm android` | 50 | — | Branded Android intent | Already covered by /vs-mlc-llm.html; track and improve |
+| `mlc chat app` | 30 | — | App-store style query | Add to /best-local-llm-apps-android.html |
+| `private llm android apk` | 10 | — | APK intent for private LLM | Mention LlamaBox beta APK path on relevant pages |
 
 ### Competitor backlink intelligence
 
@@ -70,6 +74,7 @@ Three additional keywords pulled fresh US desktop SERPs and competitor backlink 
 
 - ✅ New comparison landing pages: `/vs-pocketpal.html`, `/vs-mlc-llm.html`
 - ✅ New guide page: `/llm-download.html` (targets "llm download" + Android GGUF sourcing)
+- ✅ New roundup page: `/best-local-llm-apps-android.html` (targets "best local llm apps android", "android local llm", and listicle intent; beats PromptQuorum DA=19/0 backlinks)
 - ✅ Updated `/offline-ai-android.html` title, description, and content to target "offline ai android" and "best offline ai assistant for android" with competitor comparison (Layla, Local AI, OfflineLLM, MeetAITools).
 - ✅ Updated `/private-chatgpt-alternative.html` title, description, and content to target "private chatgpt alternative android" with competitor comparison (Proton, PrivacyGuides, Lindy, Wondertools).
 - ✅ New blog posts:
@@ -86,9 +91,10 @@ Three additional keywords pulled fresh US desktop SERPs and competitor backlink 
   - `/on-device-llm.html` → "On-Device LLM for Android | Run Local Models with LlamaBox"
   - `/how-to-run-llm-on-android.html` → "How to Run an LLM on Android Offline | LlamaBox Setup Guide"
   - `/llm-download.html` → "LLM Download for Android | Get GGUF Models for LlamaBox"
+  - `/best-local-llm-apps-android.html` → "Best Local LLM Apps for Android 2026 | LlamaBox"
 - ✅ `sitemap.xml` regenerated with all new URLs and `lastmod` bumped to 2026-07-30.
 - ✅ Backlink outreach list created: `/docs/seo/backlink-outreach-2026-07-30.md`
-- ✅ SERPWatcher: added 10 new keywords to US desktop tracking (`6a6ac171a4d7d442f2c49a40`), now 40 keywords monitored. Keywords added: `llm download`, `mlc chat android`, `best offline ai assistant for android`, `on device llm`, `private chatgpt alternative android`, `offline ai android`, `android local llm`, `local ai android`, `private ai chatbot android`, `open source llm android`.
+- ✅ SERPWatcher: added 15 new keywords to US desktop tracking (`6a6ac171a4d7d442f2c49a40`), now 45 keywords monitored. Added: `llm download`, `mlc chat android`, `best offline ai assistant for android`, `on device llm`, `private chatgpt alternative android`, `offline ai android`, `android local llm`, `local ai android`, `private ai chatbot android`, `open source llm android`, `best local llm apps android`, `mlc chat apk`, `mlc llm android`, `mlc chat app`, `private llm android apk`.
 - ✅ AI Search Watcher: monitor is at prompt limit but already contains comprehensive LlamaBox prompts; no additions possible.
 
 ## Remaining Mangools quota snapshot
