@@ -15,7 +15,7 @@ Cloud AI requires trust. LlamaBox runs the model on your phone so privacy is **a
 - No accounts  
 - No telemetry  
 - Vision + TTS + model hub  
-- CPU today (GPU roadmap, honest)
+- CPU-only by design
 
 ## Guides (SEO)
 

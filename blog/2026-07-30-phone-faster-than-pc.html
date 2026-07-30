@@ -14,19 +14,19 @@
   <link rel="stylesheet" href="/style.css">
   <link rel="alternate" type="text/plain" title="LLM brief" href="https://llamabox-ai.github.io/llms.txt">
 
-  <title>Best small GGUF models for mid-range Android | LlamaBox Blog</title>
-  <meta name="description" content="Model size guidance for mid-range phones: start tiny, measure RAM, then climb. Q4_K_M defaults and vision caveats.">
-  <link rel="canonical" href="https://llamabox-ai.github.io/blog/2026-07-28-best-small-gguf-android.html">
+  <title>Phone vs PC for local LLMs: why fit beats raw power | LlamaBox Blog</title>
+  <meta name="description" content="A desktop with a GPU should win on paper. In practice, the device that fits the workflow often wins. Why CPU-only Android can be the better tool.">
+  <link rel="canonical" href="https://llamabox-ai.github.io/blog/2026-07-30-phone-faster-than-pc.html">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="LlamaBox">
   <meta property="og:locale" content="en_US">
-  <meta property="og:url" content="https://llamabox-ai.github.io/blog/2026-07-28-best-small-gguf-android.html">
-  <meta property="og:title" content="Best small GGUF models for mid-range Android | LlamaBox Blog">
-  <meta property="og:description" content="Model size guidance for mid-range phones: start tiny, measure RAM, then climb. Q4_K_M defaults and vision caveats.">
+  <meta property="og:url" content="https://llamabox-ai.github.io/blog/2026-07-30-phone-faster-than-pc.html">
+  <meta property="og:title" content="Phone vs PC for local LLMs: why fit beats raw power | LlamaBox Blog">
+  <meta property="og:description" content="A desktop with a GPU should win on paper. In practice, the device that fits the workflow often wins. Why CPU-only Android can be the better tool.">
   <meta property="og:image" content="https://llamabox-ai.github.io/assets/screenshot-1-home.png">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Best small GGUF models for mid-range Android | LlamaBox Blog">
-  <meta name="twitter:description" content="Model size guidance for mid-range phones: start tiny, measure RAM, then climb. Q4_K_M defaults and vision caveats.">
+  <meta name="twitter:title" content="Phone vs PC for local LLMs: why fit beats raw power | LlamaBox Blog">
+  <meta name="twitter:description" content="A desktop with a GPU should win on paper. In practice, the device that fits the workflow often wins. Why CPU-only Android can be the better tool.">
   <meta name="twitter:image" content="https://llamabox-ai.github.io/assets/screenshot-1-home.png">
 
 </head>
@@ -54,24 +54,32 @@
 
     <section class="section page-hero">
       <div class="wrap narrow">
-        <div class="eyebrow">Blog · 2026-07-28</div>
-        <h1>Best small GGUF models for mid-range Android</h1>
-        <p class="lead">Model size guidance for mid-range phones: start tiny, measure RAM, then climb. Q4_K_M defaults and vision caveats.</p>
+        <div class="eyebrow">Blog · 2026-07-30</div>
+        <h1>Phone vs PC for local LLMs: why fit beats raw power</h1>
+        <p class="lead">A desktop with a GPU should win on paper. In practice, the device that fits the workflow often wins. Why CPU-only Android can be the better tool.</p>
       </div>
     </section>
     <section class="section section-tight">
       <div class="wrap narrow prose reveal is-in">
 
-        <p>Mid-range Android is not a 64 GB desktop. Treat model choice like packing a backpack.</p>
-        <h2>Start here</h2>
+        <p>A recent XDA piece made the observation that the author’s iPhone runs local LLMs faster than their gaming PC. It sounds wrong until you actually use both setups for real work.</p>
+        <p>The desktop is faster on paper. The phone is faster in context. And context is where most LLM work actually happens.</p>
+        <h2>The desktop is stretched, not slow</h2>
+        <p>My desktop has a discrete GPU with finite VRAM, LM Studio open, a browser, Figma, Obsidian, and whatever else I need. If the 9B model I want to use does not fit entirely in VRAM, some layers get pushed to system RAM and CPU, and generation speed collapses. To keep the machine usable, I leave headroom, which means fewer GPU layers, which means slower tokens. The hardware is not the bottleneck — the multi-purpose workload is.</p>
+        <h2>The phone is already focused</h2>
+        <p>On a phone the model is the app. There is no browser battle for VRAM, no GPU layer slider to tune, no ten-second load because the app remembers the last model. You open it, type, and tokens appear. First-token latency often beats cloud chat because there is no network round-trip at all.</p>
+        <p>Modern small models are also built for this. A 0.5B–1B Q4_K_M model is not a brute-forced desktop weights file; it is a smartphone deployment target. Quality has compressed faster than the parameter count suggests.</p>
+        <h2>This applies to Android too — without GPU</h2>
+        <p>The XDA example uses an iPhone with Metal and unified memory. That is one path. LlamaBox takes a different one: <strong>CPU-only on Android</strong>. No GPU dependency means it runs on mid-range devices, old flagships, and budget phones that have no usable compute driver path at all. The trade-off is smaller models and modest tok/s, but the <em>fit</em> is the same: the device you already have, the workflow you are already in, no setup tax.</p>
+        <h2>Honest limits</h2>
         <ul>
-          <li>Sub-1B to ~1B class instruct models in <strong>Q4_K_M</strong></li>
-          <li>Examples people commonly try: Qwen2.5 0.5B-class, SmolLM2 360M-class (availability changes — verify licenses and cards)</li>
-          <li>Leave headroom for the OS; do not fill RAM to the brim</li>
+          <li>Context length fills up fast on small models</li>
+          <li>Sustained generation can thermal-throttle</li>
+          <li>Heavy reasoning or document parsing still belongs on a desktop with RAM to spare</li>
         </ul>
-        <h2>Then scale</h2>
-        <p>If load succeeds and tokens are usable, try larger instruct models carefully. Vision stacks need base + mmproj and more patience.</p>
-        <p>Details: <a href="/gguf-android.html">GGUF on Android</a>.</p>
+        <h2>The real comparison</h2>
+        <p>The phone does not beat the PC at everything. It beats the PC at the small, frequent, interruptible tasks that make up most LLM use: rephrase this, summarize that, draft a reply, check this claim. The tool you reach for is the one that removes friction, not the one with the best benchmark.</p>
+        <p>LlamaBox is built for that reach. Download a small GGUF, load it once, and the model stays in your pocket — no gaming PC required.</p>
 <p class="post-nav"><a href="/blog/">← All posts</a></p>
       </div>
     </section>

@@ -14,19 +14,19 @@
   <link rel="stylesheet" href="/style.css">
   <link rel="alternate" type="text/plain" title="LLM brief" href="https://llamabox-ai.github.io/llms.txt">
 
-  <title>Why we force the vision encoder on CPU | LlamaBox Blog</title>
-  <meta name="description" content="Engineering note: multimodal image encoding on CPU keeps the LlamaBox UI responsive. GPU is roadmap — not a fake toggle.">
+  <title>Why we keep the vision encoder on CPU | LlamaBox Blog</title>
+  <meta name="description" content="Engineering note: multimodal image encoding stays on CPU in LlamaBox so the UI remains responsive on every Android device.">
   <link rel="canonical" href="https://llamabox-ai.github.io/blog/2026-07-28-vision-encoder-cpu.html">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="LlamaBox">
   <meta property="og:locale" content="en_US">
   <meta property="og:url" content="https://llamabox-ai.github.io/blog/2026-07-28-vision-encoder-cpu.html">
-  <meta property="og:title" content="Why we force the vision encoder on CPU | LlamaBox Blog">
-  <meta property="og:description" content="Engineering note: multimodal image encoding on CPU keeps the LlamaBox UI responsive. GPU is roadmap — not a fake toggle.">
+  <meta property="og:title" content="Why we keep the vision encoder on CPU | LlamaBox Blog">
+  <meta property="og:description" content="Engineering note: multimodal image encoding stays on CPU in LlamaBox so the UI remains responsive on every Android device.">
   <meta property="og:image" content="https://llamabox-ai.github.io/assets/screenshot-1-home.png">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Why we force the vision encoder on CPU | LlamaBox Blog">
-  <meta name="twitter:description" content="Engineering note: multimodal image encoding on CPU keeps the LlamaBox UI responsive. GPU is roadmap — not a fake toggle.">
+  <meta name="twitter:title" content="Why we keep the vision encoder on CPU | LlamaBox Blog">
+  <meta name="twitter:description" content="Engineering note: multimodal image encoding stays on CPU in LlamaBox so the UI remains responsive on every Android device.">
   <meta name="twitter:image" content="https://llamabox-ai.github.io/assets/screenshot-1-home.png">
 
 </head>
@@ -55,17 +55,17 @@
     <section class="section page-hero">
       <div class="wrap narrow">
         <div class="eyebrow">Blog · 2026-07-28</div>
-        <h1>Why we force the vision encoder on CPU</h1>
-        <p class="lead">Engineering note: multimodal image encoding on CPU keeps the LlamaBox UI responsive. GPU is roadmap — not a fake toggle.</p>
+        <h1>Why we keep the vision encoder on CPU</h1>
+        <p class="lead">Engineering note: multimodal image encoding stays on CPU in LlamaBox so the UI remains responsive on every Android device.</p>
       </div>
     </section>
     <section class="section section-tight">
       <div class="wrap narrow prose reveal is-in">
 
-        <p>Multimodal models tempt every mobile AI app to “enable GPU” in a settings switch. We refuse decorative switches.</p>
+        <p>Multimodal models tempt many mobile AI apps to reach for GPU acceleration. LlamaBox is CPU-only by design.</p>
         <p>Today LlamaBox runs text generation on CPU threads and keeps the <strong>vision encoder on CPU</strong> so the interface stays responsive under memory pressure. A frozen UI is a product bug, not a benchmark flex.</p>
-        <h2>Roadmap honesty</h2>
-        <p>GPU / OpenCL paths need diagnostics and fallback. When they ship, they will be measured — not marketed ahead of reality. Read <a href="/architecture.html">architecture</a> and <a href="/llms.txt">llms.txt</a>.</p>
+        <h2>CPU-only scope</h2>
+        <p>Keeping inference on CPU removes driver fragmentation and lets LlamaBox target the widest range of Android devices. Read <a href="/architecture.html">architecture</a> and <a href="/llms.txt">llms.txt</a>.</p>
 <p class="post-nav"><a href="/blog/">← All posts</a></p>
       </div>
     </section>
@@ -127,7 +127,7 @@
           </ul>
         </div>
       </div>
-      <p class="footer-legal">Source dual-licensed AGPL-3.0 (open-source) and a separate commercial license. “LlamaBox” is a reserved trademark. Full public source lands when closed beta ends. CPU-only inference today; GPU is roadmap.</p>
+      <p class="footer-legal">Source dual-licensed AGPL-3.0 (open-source) and a separate commercial license. “LlamaBox” is a reserved trademark. Full public source lands when closed beta ends. CPU-only inference by design.</p>
       <div class="footer-bottom">
         <span>© 2026 LlamaBox AI · Mythos Labs</span>
         <span>Package com.llamabox · Android 7.0+</span>

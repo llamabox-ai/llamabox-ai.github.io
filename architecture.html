@@ -129,7 +129,7 @@
       <li><strong>Platform:</strong> Android 7.0+ (arm64). iOS is a future target.</li>
       <li><strong>Framework:</strong> React Native 0.81, New Architecture (JSI/TurboModules)</li>
       <li><strong>Inference:</strong> llama.rn 0.12.0-rc.8 wrapping llama.cpp</li>
-      <li><strong>Compute today:</strong> CPU-only (4 threads, ARM NEON)</li>
+      <li><strong>Compute:</strong> CPU-only by design (4 threads, ARM NEON)</li>
       <li><strong>State:</strong> Zustand (UI) · SQLite (history) · AsyncStorage (settings)</li>
     </ul>
 
@@ -146,9 +146,9 @@
 
     <div class="why"><h3>React Native + New Architecture</h3><p>One TypeScript codebase runs on Android today and can target iOS later. The New Architecture (JSI) matters specifically here: inference calls pass large token buffers between JS and native, and JSI avoids the legacy async bridge's serialization cost.</p></div>
 
-    <div class="why"><h3>CPU-only today (GPU is planned)</h3><p>On every device tested, GPU detection returns none. The current build uses llama.rn's prebuilt binaries, whose Java loader only attempts the OpenCL-capable library when a Hexagon DSP is also detected — coupling two independent backends. The roadmap: a GPU diagnostics panel, decoupling OpenCL from Hexagon, and an Auto/CPU/GPU selector with a per-device smoke test. Until that is validated, CPU-only is the honest default.</p></div>
+    <div class="why"><h3>CPU-only by design</h3><p>Accelerated mobile compute is fragmented across chipsets and drivers. To reach the widest range of devices, LlamaBox keeps inference strictly CPU-only. This is a scope decision, not a temporary limitation. It removes an entire class of device-specific fallback work and keeps the app predictable.</p></div>
 
-    <div class="why"><h3>Vision encoder forced to CPU</h3><p>Vision encoding is a one-shot burst that saturates GPU memory. On Android, running the CLIP-style encoder on the GPU can freeze the system UI for seconds. Forcing <code>use_gpu: false</code> for the encoder — while the text decoder can still use GPU layers — keeps the interface responsive. The encoder runs once per image; the decoder runs continuously.</p></div>
+    <div class="why"><h3>Vision encoder on CPU</h3><p>Vision encoding is a one-shot burst. Running it on the CPU keeps the interface responsive during image processing and avoids device-specific graphics driver issues. The encoder runs once per image; the text decoder runs continuously.</p></div>
 
     <div class="why"><h3>No Reanimated</h3><p>Reanimated crashes with the New Architecture in this setup. Every animation uses RN's built-in <code>Animated</code> API with <code>useNativeDriver: true</code>. New animation code must follow this or the app crashes.</p></div>
 
@@ -185,8 +185,8 @@
 
     <h2><span class="num">8.</span>Limitations &amp; roadmap</h2>
     <ul>
-      <li><strong>Today:</strong> CPU-only; KV cache not persisted; one model at a time; Android-first.</li>
-      <li><strong>Planned:</strong> GPU (OpenCL) enablement with diagnostics + engine selector; expanded model presets; plugin/tool-use system; more vision preset packs; auto context sizing; iOS port.</li>
+      <li><strong>Today:</strong> CPU-only by design; KV cache not persisted; one model at a time; Android-first.</li>
+      <li><strong>Planned:</strong> Expanded model presets; plugin/tool-use system; more vision preset packs; auto context sizing; iOS port.</li>
     </ul>
 
     <div class="note">This page is the human-readable reference. The same document is also available as <a href="/architecture.md">markdown (architecture.md)</a> for developer tools and generative engines, and as an <a href="https://github.com/llamabox-ai/llamabox/blob/main/docs/ARCHITECTURE.md">editable source on GitHub</a>.</div>

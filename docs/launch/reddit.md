@@ -20,8 +20,8 @@ Built **LlamaBox** — an Android app for fully on-device chat with GGUF models 
 - Package: `com.llamabox` · Android 7.0+ arm64
 
 **Honest limits**
-- CPU-only today (GPU/OpenCL is roadmap)
-- Phone speeds ≠ desktop GPU — start with small Q4_K_M models
+- CPU-only by design (no GPU dependencies)
+- Phone speeds ≠ desktop — start with small Q4_K_M models
 
 **Links**
 - Site: https://llamabox-ai.github.io/

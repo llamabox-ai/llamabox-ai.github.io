@@ -12,7 +12,7 @@ This document explains **what LlamaBox is** and **why it is built the way it is*
 
 ## 1. What LlamaBox is
 
-LlamaBox is a **React Native Android application that runs large language models (LLMs) entirely on-device**, with no network calls for inference and no cloud dependency. You download a quantized GGUF model, the app loads it into RAM, and llama.cpp generates tokens directly on your phone's CPU (and, in future, GPU).
+LlamaBox is a **React Native Android application that runs large language models (LLMs) entirely on-device**, with no network calls for inference and no cloud dependency. You download a quantized GGUF model, the app loads it into RAM, and llama.cpp generates tokens directly on your phone's CPU.
 
 The product goal is simple: **private, offline AI chat.** Your conversations, prompts, and images never leave the device.
 
@@ -83,16 +83,11 @@ Privacy is the product. The moment inference touches a server, the privacy claim
 ### Why React Native + the New Architecture?
 A single TypeScript codebase runs on Android today and can target iOS later. The New Architecture (Fabric + JSI/TurboModules) matters specifically here: inference calls pass large token buffers between JS and native, and JSI avoids the legacy async bridge's serialization overhead. For a hot path like token streaming, that is the difference between smooth and janky.
 
-### Why CPU-only today? (and the GPU plan)
-On every device tested so far, GPU detection returns none. The current build uses `llama.rn`'s **prebuilt binaries**, which ship an OpenCL-capable library, but the Java loader only attempts that library when a Qualcomm Hexagon DSP is also detected — an overly strict condition that couples two independent backends. The roadmap is to:
-1. Add a **GPU diagnostics** panel so we can see exactly which library loads and why OpenCL probes fail per device.
-2. Decouple OpenCL from Hexagon in the loader (via a `patch-package` patch or a fork of `llama.rn`).
-3. Ship a user-facing **Inference Engine** selector (Auto / CPU / GPU) with a GPU smoke test in Settings, defaulting to safe CPU fallback.
-
-Until that is validated across real devices, CPU-only is the honest, stable default. We will not ship a "GPU" toggle that does not work.
+### Why CPU-only by design?
+Accelerated mobile compute is fragmented: drivers, library availability, and thermal behavior vary wildly between chipsets. To reach the widest range of devices — not just flagships with a working accelerated compute path — LlamaBox keeps inference strictly CPU-only. This is a scope decision, not a temporary limitation. It also removes an entire class of device-specific fallback and diagnostics work, keeping the app simpler and more predictable.
 
 ### Why is the vision encoder forced onto CPU?
-Vision encoding is a one-shot burst that consumes significant GPU memory. On Android devices with limited GPU bandwidth, running the CLIP-style encoder on the GPU can **freeze the system UI for several seconds**. Forcing `use_gpu: false` for the vision encoder — while the text model can still use GPU layers when available — keeps the interface responsive during image processing. The text decoder is the long-running part; the encoder runs once per image.
+Vision encoding is a one-shot burst. Running it on the CPU keeps the interface responsive during image processing and avoids device-specific graphics driver issues. The text decoder is the long-running part; the encoder runs once per image.
 
 ### Why no Reanimated?
 Reanimated crashes with the New Architecture in this specific setup. The app uses React Native's built-in `Animated` API with `useNativeDriver: true` for every animation (sidebar slide, download progress, pill toggle, chevron rotation). This is a deliberate constraint, not an oversight — any new animation must follow it or the app will crash.
@@ -146,7 +141,7 @@ A privacy-first app that is closed source asks you to *trust* its privacy claim.
 |---|---|---|
 | `n_ctx` | 2048 (4096 vision) | Max tokens the model can attend to |
 | `n_threads` | 4 | CPU threads for matrix ops (1–8) |
-| `n_gpu_layers` | 0 | GPU offload layers (always 0 today) |
+| `n_gpu_layers` | 0 | Not used; CPU-only by design |
 | `use_mmap` | true | Memory-map weights instead of loading to RAM |
 | `use_mlock` | false | Do not pin pages in RAM |
 | `ctx_shift` | true (false for vision) | Slide context window when full |
@@ -254,18 +249,17 @@ OOM during `initLlama` is caught and surfaced as a friendly "try a smaller model
 ## 10. Current limitations & roadmap
 
 **Limitations today**
-- CPU-only inference (GPU enablement in progress — see §3).
+- CPU-only inference by design (no GPU dependencies).
 - KV cache is not persisted; resuming long chats is slower to first token.
 - One model loaded at a time.
 - Android-first; iOS not yet built.
 
 **Roadmap (tentative)**
-- GPU (OpenCL) enablement with a device diagnostics panel and an Auto/CPU/GPU engine selector.
 - Expanded model presets and one-click custom GGUF import.
 - Plugin / tool-use system (calculator, code execution, retrieval).
 - More vision model preset packs (DeepSeek, Qwen, Gemma families).
 - Automatic context-window sizing based on available RAM.
-- iOS port and Apple Silicon GPU acceleration research.
+- iOS port.
 
 ---
 
@@ -298,4 +292,4 @@ LlamaBox is **dual-licensed**:
 | https://llamabox-ai.github.io/architecture.html | Architecture (HTML) |
 | https://llamabox-ai.github.io/llms.txt | Short LLM brief |
 
-*Last updated: 2026-07-28. This document describes the architecture as of the closed beta; specifics may evolve before and after public source release.*
+*Last updated: 2026-07-30. This document describes the architecture as of the closed beta; specifics may evolve before and after public source release.*

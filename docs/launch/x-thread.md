@@ -13,7 +13,7 @@ If tokens never leave the device, you don’t need to trust a data center for th
 3/ Stack (honest):
 • Android 7+ arm64
 • GGUF + llama.cpp (llama.rn)
-• CPU-only today (GPU is roadmap — we won’t ship a fake switch)
+• CPU-only by design (no GPU dependencies — broad Android coverage)
 
 4/ Start small: Q4_K_M models that fit mid-range RAM.
 Vision works with mmproj; encoder stays on CPU so the UI doesn’t freeze.

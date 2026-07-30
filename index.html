@@ -135,10 +135,10 @@
           },
           {
             "@type": "Question",
-            "name": "Does LlamaBox use the GPU today?",
+            "name": "Does LlamaBox use the GPU?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Inference is CPU-only today (ARM NEON, multi-threaded). GPU OpenCL acceleration is on the roadmap with an honest engine selector and diagnostics — not marketed as live until validated on real devices."
+              "text": "No. Inference is CPU-only by design (ARM NEON, multi-threaded). This keeps LlamaBox compatible with the widest range of Android devices, including phones without a usable accelerated compute path."
             }
           },
           {
@@ -367,9 +367,9 @@
             <p>JSI/TurboModules for streaming tokens without legacy bridge tax. Zustand + SQLite + AsyncStorage — each store does one job well.</p>
           </div>
           <div class="bento-item glass span-4 reveal reveal-d1">
-            <div class="tag">Roadmap</div>
-            <h3>GPU later — honest</h3>
-            <p>CPU-only today. OpenCL / engine selector after real-device diagnostics. No fake GPU toggle.</p>
+            <div class="tag">Scope</div>
+            <h3>CPU-only by design</h3>
+            <p>No GPU dependencies. We target as many Android devices as possible, not just flagship phones with working accelerated compute.</p>
           </div>
         </div>
       </div>
@@ -381,7 +381,7 @@
         <div class="section-head reveal">
           <div class="eyebrow">How it works</div>
           <h2>Three steps. Then silence.</h2>
-          <p class="lead">From install to private chat without wiring your life to someone else’s GPU cluster.</p>
+          <p class="lead">From install to private chat without wiring your life to someone else’s compute cluster.</p>
         </div>
         <div class="steps">
           <div class="step glass reveal">
@@ -451,7 +451,7 @@
               <div class="spec-row"><dt>Context default</dt><dd>2048 (4096 vision)</dd></div>
               <div class="spec-row"><dt>Compute</dt><dd>CPU · 4 threads · NEON</dd></div>
             </dl>
-            <div class="note-roadmap">GPU (OpenCL) is on the roadmap with diagnostics + safe fallback — not claimed as live.</div>
+            <div class="note-roadmap">CPU-only by design — no GPU dependencies, so it runs on the widest range of Android devices.</div>
           </div>
           <div class="spec-panel glass reveal reveal-d1">
             <h3>Stack</h3>
@@ -555,11 +555,11 @@
           </details>
           <details class="faq-item">
             <summary>Can it analyze images?</summary>
-            <div class="ans">Yes with a vision-capable model. Photo or gallery → local encoder (CPU) → text answer. Keeps the UI from freezing under GPU contention.</div>
+            <div class="ans">Yes with a vision-capable model. Photo or gallery → local encoder (CPU) → text answer. Keeps the UI responsive by avoiding graphics contention.</div>
           </details>
           <details class="faq-item">
             <summary>Does it use the GPU?</summary>
-            <div class="ans"><strong>CPU-only today.</strong> GPU OpenCL is planned with diagnostics and fallback — we will not ship a decorative GPU switch.</div>
+            <div class="ans"><strong>No.</strong> LlamaBox is CPU-only by design so it works on the widest range of Android devices, not just flagships with usable accelerated compute.</div>
           </details>
           <details class="faq-item">
             <summary>Is it free / open source?</summary>

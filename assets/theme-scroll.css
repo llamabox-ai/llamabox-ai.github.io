@@ -102,7 +102,7 @@ body.is-hero-cinematic .bg-noise {
   background: #000;
   transform: translateZ(0) scale(1.01);
   will-change: transform;
-  /* GPU layer */
+  /* compositor layer */
   backface-visibility: hidden;
 }
 .scroll-hero-video {

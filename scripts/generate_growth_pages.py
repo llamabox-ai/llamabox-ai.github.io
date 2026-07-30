@@ -79,7 +79,7 @@ FOOTER = """  <footer class="footer">
           </ul>
         </div>
       </div>
-      <p class="footer-legal">Source dual-licensed AGPL-3.0 (open-source) and a separate commercial license. “LlamaBox” is a reserved trademark. Full public source lands when closed beta ends. CPU-only inference today; GPU is roadmap.</p>
+      <p class="footer-legal">Source dual-licensed AGPL-3.0 (open-source) and a separate commercial license. “LlamaBox” is a reserved trademark. Full public source lands when closed beta ends. CPU-only inference by design.</p>
       <div class="footer-bottom">
         <span>© 2026 LlamaBox AI · Mythos Labs</span>
         <span>Package com.llamabox · Android 7.0+</span>
@@ -325,7 +325,7 @@ def main():
         <h2>How LlamaBox delivers offline AI</h2>
         <ul>
           <li>GGUF models via <strong>llama.cpp</strong> (through llama.rn on React Native)</li>
-          <li><strong>CPU-only</strong> inference today (honest limits; GPU is roadmap)</li>
+          <li><strong>CPU-only</strong> inference by design (no GPU dependencies)</li>
           <li>No account graph, no cloud inference endpoint</li>
           <li>Optional vision with on-device multimodal models</li>
         </ul>
@@ -349,8 +349,8 @@ def main():
 
     faqs_od = [
         ("What is an on-device LLM?", "A language model that runs inference on the user’s hardware — here, an Android phone — rather than on a remote API server."),
-        ("Is on-device slower?", "Usually yes versus frontier cloud GPUs. Small Q4_K_M models on mid-range phones often land in a few tokens/sec. LlamaBox publishes honest ranges, not theater."),
-        ("Does on-device require a datacenter GPU?", "No. LlamaBox targets CPU with ARM NEON today. Phone GPU acceleration is planned, not claimed as shipping."),
+        ("Is on-device slower?", "Usually yes versus frontier cloud APIs. Small Q4_K_M models on mid-range phones often land in a few tokens/sec. LlamaBox publishes honest ranges, not theater."),
+        ("Does on-device require special hardware?", "No. LlamaBox runs on standard Android CPUs with ARM NEON. No GPU or datacenter hardware is needed."),
     ]
     page(
         "on-device-llm.html",
@@ -452,7 +452,7 @@ def main():
 
     faqs_how = [
         ("Do I need root?", "No. LlamaBox targets standard Android 7.0+ arm64 devices."),
-        ("Why is generation slow?", "Phone CPUs are limited. Use smaller models, lower context, and close background apps. GPU acceleration is not shipping yet."),
+        ("Why is generation slow?", "Phone CPUs are limited. Use smaller models, lower context, and close background apps. LlamaBox is CPU-only by design."),
         ("What if the app runs out of memory?", "Choose a smaller GGUF / heavier quantization, reduce context, and free RAM."),
     ]
     howto_schema = """  <script type="application/ld+json">
@@ -558,7 +558,7 @@ def main():
               <tr><td>Primary device</td><td>Android phone</td><td>Desktop / laptop / server</td></tr>
               <tr><td>UX</td><td>Mobile chat app</td><td>CLI + apps ecosystem</td></tr>
               <tr><td>Always with you</td><td>Yes</td><td>If the machine is with you</td></tr>
-              <tr><td>Power envelope</td><td>Phone SoC / battery</td><td>Wall power / larger GPUs often</td></tr>
+              <tr><td>Power envelope</td><td>Phone SoC / battery</td><td>Wall power / desktops often</td></tr>
               <tr><td>Model format</td><td>GGUF via llama.cpp stack</td><td>GGUF ecosystem</td></tr>
               <tr><td>Best for</td><td>Private pocket AI</td><td>Dev workflows, heavier local models</td></tr>
             </tbody>
@@ -610,13 +610,39 @@ def main():
         (
             "2026-07-28-vision-encoder-cpu.html",
             "2026-07-28",
-            "Why we force the vision encoder on CPU",
-            "Engineering note: multimodal image encoding on CPU keeps the LlamaBox UI responsive. GPU is roadmap — not a fake toggle.",
+            "Why we keep the vision encoder on CPU",
+            "Engineering note: multimodal image encoding stays on CPU in LlamaBox so the UI remains responsive on every Android device.",
             """
-        <p>Multimodal models tempt every mobile AI app to “enable GPU” in a settings switch. We refuse decorative switches.</p>
+        <p>Multimodal models tempt many mobile AI apps to reach for GPU acceleration. LlamaBox is CPU-only by design.</p>
         <p>Today LlamaBox runs text generation on CPU threads and keeps the <strong>vision encoder on CPU</strong> so the interface stays responsive under memory pressure. A frozen UI is a product bug, not a benchmark flex.</p>
-        <h2>Roadmap honesty</h2>
-        <p>GPU / OpenCL paths need diagnostics and fallback. When they ship, they will be measured — not marketed ahead of reality. Read <a href="/architecture.html">architecture</a> and <a href="/llms.txt">llms.txt</a>.</p>
+        <h2>CPU-only scope</h2>
+        <p>Keeping inference on CPU removes driver fragmentation and lets LlamaBox target the widest range of Android devices. Read <a href="/architecture.html">architecture</a> and <a href="/llms.txt">llms.txt</a>.</p>
+""",
+        ),
+        (
+            "2026-07-30-phone-faster-than-pc.html",
+            "2026-07-30",
+            "Phone vs PC for local LLMs: why fit beats raw power",
+            "A desktop with a GPU should win on paper. In practice, the device that fits the workflow often wins. Why CPU-only Android can be the better tool.",
+            """
+        <p>A recent XDA piece made the observation that the author’s iPhone runs local LLMs faster than their gaming PC. It sounds wrong until you actually use both setups for real work.</p>
+        <p>The desktop is faster on paper. The phone is faster in context. And context is where most LLM work actually happens.</p>
+        <h2>The desktop is stretched, not slow</h2>
+        <p>My desktop has a discrete GPU with finite VRAM, LM Studio open, a browser, Figma, Obsidian, and whatever else I need. If the 9B model I want to use does not fit entirely in VRAM, some layers get pushed to system RAM and CPU, and generation speed collapses. To keep the machine usable, I leave headroom, which means fewer GPU layers, which means slower tokens. The hardware is not the bottleneck — the multi-purpose workload is.</p>
+        <h2>The phone is already focused</h2>
+        <p>On a phone the model is the app. There is no browser battle for VRAM, no GPU layer slider to tune, no ten-second load because the app remembers the last model. You open it, type, and tokens appear. First-token latency often beats cloud chat because there is no network round-trip at all.</p>
+        <p>Modern small models are also built for this. A 0.5B–1B Q4_K_M model is not a brute-forced desktop weights file; it is a smartphone deployment target. Quality has compressed faster than the parameter count suggests.</p>
+        <h2>This applies to Android too — without GPU</h2>
+        <p>The XDA example uses an iPhone with Metal and unified memory. That is one path. LlamaBox takes a different one: <strong>CPU-only on Android</strong>. No GPU dependency means it runs on mid-range devices, old flagships, and budget phones that have no usable compute driver path at all. The trade-off is smaller models and modest tok/s, but the <em>fit</em> is the same: the device you already have, the workflow you are already in, no setup tax.</p>
+        <h2>Honest limits</h2>
+        <ul>
+          <li>Context length fills up fast on small models</li>
+          <li>Sustained generation can thermal-throttle</li>
+          <li>Heavy reasoning or document parsing still belongs on a desktop with RAM to spare</li>
+        </ul>
+        <h2>The real comparison</h2>
+        <p>The phone does not beat the PC at everything. It beats the PC at the small, frequent, interruptible tasks that make up most LLM use: rephrase this, summarize that, draft a reply, check this claim. The tool you reach for is the one that removes friction, not the one with the best benchmark.</p>
+        <p>LlamaBox is built for that reach. Download a small GGUF, load it once, and the model stays in your pocket — no gaming PC required.</p>
 """,
         ),
     ]
@@ -665,10 +691,11 @@ def main():
         ("/blog/2026-07-28-airplane-mode-ai.html", "0.7", "monthly"),
         ("/blog/2026-07-28-best-small-gguf-android.html", "0.7", "monthly"),
         ("/blog/2026-07-28-vision-encoder-cpu.html", "0.7", "monthly"),
+        ("/blog/2026-07-30-phone-faster-than-pc.html", "0.7", "monthly"),
         ("/llms.txt", "0.6", "monthly"),
         ("/llms-full.txt", "0.6", "monthly"),
     ]
-    lastmod = "2026-07-28"
+    lastmod = "2026-07-30"
     sm = ['<?xml version="1.0" encoding="UTF-8"?>', '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">']
     for loc, pri, freq in urls:
         sm.append("  <url>")

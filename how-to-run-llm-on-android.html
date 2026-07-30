@@ -44,7 +44,7 @@
   }
   </script>
   <script type="application/ld+json">
-  {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Do I need root?", "acceptedAnswer": {"@type": "Answer", "text": "No. LlamaBox targets standard Android 7.0+ arm64 devices."}}, {"@type": "Question", "name": "Why is generation slow?", "acceptedAnswer": {"@type": "Answer", "text": "Phone CPUs are limited. Use smaller models, lower context, and close background apps. GPU acceleration is not shipping yet."}}, {"@type": "Question", "name": "What if the app runs out of memory?", "acceptedAnswer": {"@type": "Answer", "text": "Choose a smaller GGUF / heavier quantization, reduce context, and free RAM."}}]}
+  {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Do I need root?", "acceptedAnswer": {"@type": "Answer", "text": "No. LlamaBox targets standard Android 7.0+ arm64 devices."}}, {"@type": "Question", "name": "Why is generation slow?", "acceptedAnswer": {"@type": "Answer", "text": "Phone CPUs are limited. Use smaller models, lower context, and close background apps. LlamaBox is CPU-only by design."}}, {"@type": "Question", "name": "What if the app runs out of memory?", "acceptedAnswer": {"@type": "Answer", "text": "Choose a smaller GGUF / heavier quantization, reduce context, and free RAM."}}]}
   </script>
 </head>
 <body>
@@ -104,7 +104,7 @@
         <h2 id="faq">FAQ</h2>
 <div class="faq-list">
 <details class="faq-item" open><summary>Do I need root?</summary><div class="ans">No. LlamaBox targets standard Android 7.0+ arm64 devices.</div></details>
-<details class="faq-item"><summary>Why is generation slow?</summary><div class="ans">Phone CPUs are limited. Use smaller models, lower context, and close background apps. GPU acceleration is not shipping yet.</div></details>
+<details class="faq-item"><summary>Why is generation slow?</summary><div class="ans">Phone CPUs are limited. Use smaller models, lower context, and close background apps. LlamaBox is CPU-only by design.</div></details>
 <details class="faq-item"><summary>What if the app runs out of memory?</summary><div class="ans">Choose a smaller GGUF / heavier quantization, reduce context, and free RAM.</div></details>
 </div>
 
@@ -168,7 +168,7 @@
           </ul>
         </div>
       </div>
-      <p class="footer-legal">Source dual-licensed AGPL-3.0 (open-source) and a separate commercial license. “LlamaBox” is a reserved trademark. Full public source lands when closed beta ends. CPU-only inference today; GPU is roadmap.</p>
+      <p class="footer-legal">Source dual-licensed AGPL-3.0 (open-source) and a separate commercial license. “LlamaBox” is a reserved trademark. Full public source lands when closed beta ends. CPU-only inference by design.</p>
       <div class="footer-bottom">
         <span>© 2026 LlamaBox AI · Mythos Labs</span>
         <span>Package com.llamabox · Android 7.0+</span>

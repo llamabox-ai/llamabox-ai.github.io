@@ -12,4 +12,4 @@ LlamaBox runs large language models entirely on your Android device using GGUF a
 
 **First comment (maker):**
 
-Built LlamaBox because “trust us with your prompts” is not a privacy architecture. On-device inference only. CPU today; GPU when it’s real. Dual-licensed AGPL + commercial. Happy to answer anything technical.
+Built LlamaBox because “trust us with your prompts” is not a privacy architecture. On-device inference only, CPU-only by design for the widest Android coverage. Dual-licensed AGPL + commercial. Happy to answer anything technical.

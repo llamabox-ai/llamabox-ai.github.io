@@ -29,7 +29,7 @@
   <meta name="twitter:description" content="On-device LLM inference on Android with LlamaBox: GGUF models, llama.cpp, private chat, no cloud API for generation.">
   <meta name="twitter:image" content="https://llamabox-ai.github.io/assets/screenshot-1-home.png">
   <script type="application/ld+json">
-  {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "What is an on-device LLM?", "acceptedAnswer": {"@type": "Answer", "text": "A language model that runs inference on the user’s hardware — here, an Android phone — rather than on a remote API server."}}, {"@type": "Question", "name": "Is on-device slower?", "acceptedAnswer": {"@type": "Answer", "text": "Usually yes versus frontier cloud GPUs. Small Q4_K_M models on mid-range phones often land in a few tokens/sec. LlamaBox publishes honest ranges, not theater."}}, {"@type": "Question", "name": "Does on-device require a datacenter GPU?", "acceptedAnswer": {"@type": "Answer", "text": "No. LlamaBox targets CPU with ARM NEON today. Phone GPU acceleration is planned, not claimed as shipping."}}]}
+  {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "What is an on-device LLM?", "acceptedAnswer": {"@type": "Answer", "text": "A language model that runs inference on the user’s hardware — here, an Android phone — rather than on a remote API server."}}, {"@type": "Question", "name": "Is on-device slower?", "acceptedAnswer": {"@type": "Answer", "text": "Usually yes versus frontier cloud APIs. Small Q4_K_M models on mid-range phones often land in a few tokens/sec. LlamaBox publishes honest ranges, not theater."}}, {"@type": "Question", "name": "Does on-device require special hardware?", "acceptedAnswer": {"@type": "Answer", "text": "No. LlamaBox runs on standard Android CPUs with ARM NEON. No GPU or datacenter hardware is needed."}}]}
   </script>
 </head>
 <body>
@@ -81,8 +81,8 @@
         <h2 id="faq">FAQ</h2>
 <div class="faq-list">
 <details class="faq-item" open><summary>What is an on-device LLM?</summary><div class="ans">A language model that runs inference on the user’s hardware — here, an Android phone — rather than on a remote API server.</div></details>
-<details class="faq-item"><summary>Is on-device slower?</summary><div class="ans">Usually yes versus frontier cloud GPUs. Small Q4_K_M models on mid-range phones often land in a few tokens/sec. LlamaBox publishes honest ranges, not theater.</div></details>
-<details class="faq-item"><summary>Does on-device require a datacenter GPU?</summary><div class="ans">No. LlamaBox targets CPU with ARM NEON today. Phone GPU acceleration is planned, not claimed as shipping.</div></details>
+<details class="faq-item"><summary>Is on-device slower?</summary><div class="ans">Usually yes versus frontier cloud APIs. Small Q4_K_M models on mid-range phones often land in a few tokens/sec. LlamaBox publishes honest ranges, not theater.</div></details>
+<details class="faq-item"><summary>Does on-device require special hardware?</summary><div class="ans">No. LlamaBox runs on standard Android CPUs with ARM NEON. No GPU or datacenter hardware is needed.</div></details>
 </div>
 
       </div>
@@ -145,7 +145,7 @@
           </ul>
         </div>
       </div>
-      <p class="footer-legal">Source dual-licensed AGPL-3.0 (open-source) and a separate commercial license. “LlamaBox” is a reserved trademark. Full public source lands when closed beta ends. CPU-only inference today; GPU is roadmap.</p>
+      <p class="footer-legal">Source dual-licensed AGPL-3.0 (open-source) and a separate commercial license. “LlamaBox” is a reserved trademark. Full public source lands when closed beta ends. CPU-only inference by design.</p>
       <div class="footer-bottom">
         <span>© 2026 LlamaBox AI · Mythos Labs</span>
         <span>Package com.llamabox · Android 7.0+</span>
