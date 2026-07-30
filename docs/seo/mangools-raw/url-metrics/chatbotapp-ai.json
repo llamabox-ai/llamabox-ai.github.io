@@ -1,0 +1,11 @@
+{
+  "_id": "fdf34c9318d85933bd0de896c9795277",
+  "url": "https://chatbotapp.ai/",
+  "domain": "chatbotapp.ai",
+  "topRank": 40521,
+  "m": {
+    "moz": {"upa": 43, "pda": 45, "umrp": 4.3, "pmrp": 4.5},
+    "majestic": {"ExtBackLinks": 764, "RefDomains": 325, "CitationFlow": 40, "TrustFlow": 13, "RefIPs": 240},
+    "rank": {"r": 48}
+  }
+}

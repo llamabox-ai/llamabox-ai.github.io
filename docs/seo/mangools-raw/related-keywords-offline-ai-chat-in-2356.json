@@ -1,0 +1,25 @@
+{
+  "seed": null,
+  "location": {
+    "_id": 2356,
+    "code": "in",
+    "label": "India"
+  },
+  "language": {
+    "_id": 0,
+    "label": "Any Language",
+    "code": null
+  },
+  "total_keywords": 1,
+  "returned_keywords": 1,
+  "truncated": false,
+  "keywords": [
+    {
+      "kw": "offline ai chat",
+      "search_volume": 300,
+      "search_volume_12m": 300,
+      "cpc": 0.18,
+      "ppc": 7
+    }
+  ]
+}

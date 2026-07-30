@@ -1,0 +1,65 @@
+{
+  "kw": "small llm android",
+  "location_id": 2840,
+  "platform_id": 1,
+  "rank": 32,
+  "organic": [
+    {
+      "rank": 1,
+      "url": "https://www.reddit.com/r/LocalLLaMA/comments/1rbrw12/is_there_any_llm_that_can_run_directly_on_an/",
+      "title": "Is there any LLM that can run directly on an Android phone",
+      "domain": "reddit.com",
+      "upa": 55,
+      "pda": 92
+    },
+    {
+      "rank": 2,
+      "url": "https://mostlynerdless.de/blog/2025/11/05/running-an-llm-on-an-android-phone/",
+      "title": "Running an LLM on an Android Phone",
+      "domain": "mostlynerdless.de",
+      "upa": 24,
+      "pda": 28
+    },
+    {
+      "rank": 3,
+      "url": "https://discuss.huggingface.co/t/the-best-android-client-and-the-best-llm-model-for-android/167329",
+      "title": "The best Android client and the best LLM model for android?",
+      "domain": "huggingface.co",
+      "upa": 39,
+      "pda": 84
+    },
+    {
+      "rank": 4,
+      "url": "https://github.com/shubham0204/SmolChat-Android",
+      "title": "SmolChat - On-Device Inference of SLMs in Android",
+      "domain": "github.com",
+      "upa": 62,
+      "pda": 97
+    },
+    {
+      "rank": 5,
+      "url": "https://androiddevs.substack.com/p/how-to-run-local-llms-on-android",
+      "title": "How to Run Local LLMs on Android: From Setup to Real ...",
+      "domain": "substack.com",
+      "upa": 44,
+      "pda": 92
+    },
+    {
+      "rank": 6,
+      "url": "https://medium.com/@samvardhan777/running-lightweight-llms-on-android-devices-b2ee4082557e",
+      "title": "Running Lightweight LLMs on Android Devices 📱",
+      "domain": "medium.com",
+      "upa": 50,
+      "pda": 95
+    },
+    {
+      "rank": 7,
+      "url": "https://developers.googleblog.com/google-ai-edge-small-language-models-multimodality-rag-function-calling/",
+      "title": "On-device small language models with multimodality, RAG ...",
+      "domain": "googleblog.com",
+      "upa": 49,
+      "pda": 95
+    }
+  ],
+  "snapshot_id": "3cb0dd6e355949a4a7252e546eb9a07b.2026-07-30"
+}

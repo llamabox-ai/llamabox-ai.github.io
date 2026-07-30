@@ -1,0 +1,73 @@
+{
+  "kw": "local ai android",
+  "location_id": 2840,
+  "platform_id": 1,
+  "rank": 42,
+  "organic": [
+    {
+      "rank": 1,
+      "url": "https://www.reddit.com/r/LocalLLaMA/comments/1rl7n24/whats_the_fastest_way_to_run_ai_locally_on_android/",
+      "title": "What's the fastest way to run AI locally on Android?",
+      "domain": "reddit.com",
+      "upa": 53,
+      "pda": 92
+    },
+    {
+      "rank": 2,
+      "url": "https://locallyai.app/",
+      "title": "Locally AI - Run AI models locally on your iPhone, iPad, and ...",
+      "domain": "locallyai.app",
+      "upa": 33,
+      "pda": 26
+    },
+    {
+      "rank": 3,
+      "url": "https://dev.to/alichherawalla/how-to-run-local-ai-on-your-android-phone-in-2026-no-cloud-no-account-5cbp",
+      "title": "How to Run Local AI on Your Android Phone in 2026 (No ...",
+      "domain": "dev.to",
+      "upa": 39,
+      "pda": 85
+    },
+    {
+      "rank": 4,
+      "url": "https://github.com/timmyy123/LLM-Hub",
+      "title": "LLM-Hub - Local AI Assistant on your phone",
+      "domain": "github.com",
+      "upa": 59,
+      "pda": 97
+    },
+    {
+      "rank": 5,
+      "url": "https://play.google.com/store/apps/details?id=com.ishanvohra2.localai",
+      "title": "Local AI - Offline AI chatbot - Apps on Google Play",
+      "domain": "google.com",
+      "upa": 59,
+      "pda": 99
+    },
+    {
+      "rank": 6,
+      "url": "https://localai.io/",
+      "title": "LocalAI",
+      "domain": "localai.io",
+      "upa": 48,
+      "pda": 36
+    },
+    {
+      "rank": 7,
+      "url": "https://developer.android.com/ai",
+      "title": "AI on Android | Android Developers",
+      "domain": "android.com",
+      "upa": 59,
+      "pda": 93
+    },
+    {
+      "rank": 8,
+      "url": "https://itsfoss.com/android-on-device-ai/",
+      "title": "I Ran Local LLMs on My Android Phone",
+      "domain": "itsfoss.com",
+      "upa": 43,
+      "pda": 80
+    }
+  ],
+  "snapshot_id": "3ef54942088973b6ba9b0d21f646fbab.2026-07-30"
+}

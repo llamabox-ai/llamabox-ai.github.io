@@ -1,0 +1,16 @@
+{
+  "seed": "pocketpal ai",
+  "location_id": 2356,
+  "location": "India",
+  "total_keywords": 8,
+  "keywords": [
+    {"kw": "pocketpal ai", "search_volume": 5100, "search_volume_12m": 4400, "cpc": 0.93, "ppc": 3},
+    {"kw": "pocketpal ai apk", "search_volume": 210, "search_volume_12m": 210, "cpc": null, "ppc": 1},
+    {"kw": "pocketpal ai download", "search_volume": 60, "search_volume_12m": 50, "cpc": 0.02, "ppc": 3},
+    {"kw": "pocketpal ai mod apk", "search_volume": 40, "search_volume_12m": 40, "cpc": null, "ppc": 1},
+    {"kw": "pocketpal ai best model", "search_volume": 10, "search_volume_12m": 20, "cpc": null, "ppc": null},
+    {"kw": "pocketpal ai for pc", "search_volume": 10, "search_volume_12m": 10, "cpc": null, "ppc": null},
+    {"kw": "pocketpal ai website", "search_volume": 10, "search_volume_12m": 10, "cpc": 0.47, "ppc": 11},
+    {"kw": "pocketpal ai android", "search_volume": 10, "search_volume_12m": 10, "cpc": null, "ppc": null}
+  ]
+}

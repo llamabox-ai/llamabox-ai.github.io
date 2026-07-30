@@ -1,0 +1,731 @@
+{
+  "seed": null,
+  "location": {
+    "_id": 2840,
+    "code": "us",
+    "label": "United States"
+  },
+  "language": {
+    "_id": 0,
+    "label": "Any Language",
+    "code": null
+  },
+  "total_keywords": 102,
+  "returned_keywords": 100,
+  "truncated": true,
+  "note": "Showing top 100 of 102 keywords by search volume. Use full=true for the complete list.",
+  "keywords": [
+    {
+      "kw": "duckduckgo",
+      "search_volume": 6120000,
+      "search_volume_12m": 6120000,
+      "kd": 74,
+      "cpc": 1.75,
+      "ppc": 0
+    },
+    {
+      "kw": "perplexity",
+      "search_volume": 1620000,
+      "search_volume_12m": 1500000,
+      "kd": 69,
+      "cpc": 2.58,
+      "ppc": 18
+    },
+    {
+      "kw": "venice ai",
+      "search_volume": 192000,
+      "search_volume_12m": 201000,
+      "kd": 51,
+      "cpc": 3.02,
+      "ppc": 2
+    },
+    {
+      "kw": "duck ai",
+      "search_volume": 60300,
+      "search_volume_12m": 63300,
+      "kd": 54,
+      "cpc": 2.97,
+      "ppc": 3
+    },
+    {
+      "kw": "ai chat free",
+      "search_volume": 31600,
+      "search_volume_12m": 32000,
+      "kd": 43,
+      "cpc": 2.47,
+      "ppc": 22
+    },
+    {
+      "kw": "best ai chatbot for roleplay",
+      "search_volume": 3100,
+      "search_volume_12m": 2900,
+      "kd": 33,
+      "cpc": 2.56,
+      "ppc": 22
+    },
+    {
+      "kw": "chat bot online free",
+      "search_volume": 2900,
+      "search_volume_12m": 3000,
+      "kd": 43,
+      "cpc": 1.95,
+      "ppc": 18
+    },
+    {
+      "kw": "venice ai chat",
+      "search_volume": 2500,
+      "search_volume_12m": 2400,
+      "cpc": 6.02,
+      "ppc": 1
+    },
+    {
+      "kw": "venice ai image generator",
+      "search_volume": 2100,
+      "search_volume_12m": 1900,
+      "cpc": 2.18,
+      "ppc": 9
+    },
+    {
+      "kw": "duck ai chat",
+      "search_volume": 1400,
+      "search_volume_12m": 1600,
+      "cpc": 1.97,
+      "ppc": 3
+    },
+    {
+      "kw": "maple ai",
+      "search_volume": 1300,
+      "search_volume_12m": 1300,
+      "cpc": 22.03,
+      "ppc": 16
+    },
+    {
+      "kw": "best ai chatbot free",
+      "search_volume": 1100,
+      "search_volume_12m": 1200,
+      "cpc": 2.23,
+      "ppc": 41
+    },
+    {
+      "kw": "answerthis ai",
+      "search_volume": 1100,
+      "search_volume_12m": 1000,
+      "cpc": 1.42,
+      "ppc": 57
+    },
+    {
+      "kw": "venice ai app",
+      "search_volume": 1000,
+      "search_volume_12m": 1000,
+      "cpc": 4.85,
+      "ppc": 7
+    },
+    {
+      "kw": "top ai chatbot",
+      "search_volume": 1000,
+      "search_volume_12m": 1000,
+      "kd": 39,
+      "cpc": 6.22,
+      "ppc": 32
+    },
+    {
+      "kw": "private ai chat",
+      "search_volume": 950,
+      "search_volume_12m": 980,
+      "kd": 30,
+      "cpc": 3.21,
+      "ppc": 4
+    },
+    {
+      "kw": "ai that answers questions free",
+      "search_volume": 850,
+      "search_volume_12m": 880,
+      "cpc": 3.48,
+      "ppc": 38
+    },
+    {
+      "kw": "venice ai reddit",
+      "search_volume": 790,
+      "search_volume_12m": 880,
+      "cpc": null,
+      "ppc": null
+    },
+    {
+      "kw": "is venice ai safe",
+      "search_volume": 660,
+      "search_volume_12m": 720,
+      "kd": 28,
+      "cpc": null,
+      "ppc": null
+    },
+    {
+      "kw": "best ai chat apps with no filter",
+      "search_volume": 600,
+      "search_volume_12m": 590,
+      "cpc": 4.08,
+      "ppc": 33
+    },
+    {
+      "kw": "venice ai alternative",
+      "search_volume": 410,
+      "search_volume_12m": 390,
+      "kd": 13,
+      "cpc": 1.94,
+      "ppc": 17
+    },
+    {
+      "kw": "duck ai app",
+      "search_volume": 380,
+      "search_volume_12m": 390,
+      "cpc": 1.78,
+      "ppc": 10
+    },
+    {
+      "kw": "most accurate ai chatbot",
+      "search_volume": 270,
+      "search_volume_12m": 260,
+      "kd": 34,
+      "cpc": 5.43,
+      "ppc": 43
+    },
+    {
+      "kw": "dolphin-mistral 24b venice edition",
+      "search_volume": 200,
+      "search_volume_12m": 210,
+      "cpc": 5.6,
+      "ppc": 3
+    },
+    {
+      "kw": "maple inc",
+      "search_volume": 200,
+      "search_volume_12m": 210,
+      "cpc": null,
+      "ppc": null
+    },
+    {
+      "kw": "is venice ai free",
+      "search_volume": 180,
+      "search_volume_12m": 170,
+      "cpc": 6.44,
+      "ppc": 1
+    },
+    {
+      "kw": "venice ai vs chatgpt",
+      "search_volume": 180,
+      "search_volume_12m": 170,
+      "cpc": 2.23,
+      "ppc": 3
+    },
+    {
+      "kw": "venice ai free",
+      "search_volume": 170,
+      "search_volume_12m": 170,
+      "cpc": 1.6,
+      "ppc": 10
+    },
+    {
+      "kw": "venice ai down",
+      "search_volume": 150,
+      "search_volume_12m": 140,
+      "cpc": null,
+      "ppc": null
+    },
+    {
+      "kw": "is venice ai private",
+      "search_volume": 130,
+      "search_volume_12m": 140,
+      "cpc": null,
+      "ppc": null
+    },
+    {
+      "kw": "venice ai free trial",
+      "search_volume": 120,
+      "search_volume_12m": 110,
+      "cpc": 2.78,
+      "ppc": 14
+    },
+    {
+      "kw": "most accurate ai for answers",
+      "search_volume": 90,
+      "search_volume_12m": 90,
+      "cpc": 3.51,
+      "ppc": 51
+    },
+    {
+      "kw": "usemaple ai",
+      "search_volume": 90,
+      "search_volume_12m": 90,
+      "cpc": 3.01,
+      "ppc": 2
+    },
+    {
+      "kw": "top 5 ai chatbots",
+      "search_volume": 90,
+      "search_volume_12m": 90,
+      "cpc": 8.06,
+      "ppc": 24
+    },
+    {
+      "kw": "best ai chatbot 2026",
+      "search_volume": 80,
+      "search_volume_12m": 90,
+      "cpc": 6.28,
+      "ppc": 25
+    },
+    {
+      "kw": "venice ai chat bot",
+      "search_volume": 80,
+      "search_volume_12m": 90,
+      "cpc": null,
+      "ppc": 1
+    },
+    {
+      "kw": "best paid ai chatbot",
+      "search_volume": 70,
+      "search_volume_12m": 70,
+      "cpc": 2.56,
+      "ppc": 36
+    },
+    {
+      "kw": "duck ai reddit",
+      "search_volume": 70,
+      "search_volume_12m": 70,
+      "cpc": null,
+      "ppc": null
+    },
+    {
+      "kw": "duck ai vs chatgpt",
+      "search_volume": 60,
+      "search_volume_12m": 70,
+      "cpc": 8.4,
+      "ppc": 2
+    },
+    {
+      "kw": "venice ai app download",
+      "search_volume": 60,
+      "search_volume_12m": 70,
+      "cpc": 3.27,
+      "ppc": 6
+    },
+    {
+      "kw": "dolphin venice ai",
+      "search_volume": 60,
+      "search_volume_12m": 70,
+      "cpc": 1.43,
+      "ppc": 7
+    },
+    {
+      "kw": "venice ai sign in",
+      "search_volume": 60,
+      "search_volume_12m": 70,
+      "cpc": null,
+      "ppc": null
+    },
+    {
+      "kw": "best ai chatbot for roleplay reddit",
+      "search_volume": 60,
+      "search_volume_12m": 70,
+      "cpc": null,
+      "ppc": 4
+    },
+    {
+      "kw": "best free ai chatbot for android",
+      "search_volume": 60,
+      "search_volume_12m": 70,
+      "cpc": 2.16,
+      "ppc": 48
+    },
+    {
+      "kw": "venice ai image to video",
+      "search_volume": 60,
+      "search_volume_12m": 70,
+      "cpc": 3.96,
+      "ppc": 21
+    },
+    {
+      "kw": "venice ai pro free",
+      "search_volume": 60,
+      "search_volume_12m": 70,
+      "cpc": 2.2,
+      "ppc": 17
+    },
+    {
+      "kw": "duck ai free",
+      "search_volume": 60,
+      "search_volume_12m": 50,
+      "cpc": 2.32,
+      "ppc": 5
+    },
+    {
+      "kw": "private ai chat bot",
+      "search_volume": 50,
+      "search_volume_12m": 50,
+      "cpc": 6.82,
+      "ppc": 2
+    },
+    {
+      "kw": "most private ai chatbot",
+      "search_volume": 50,
+      "search_volume_12m": 50,
+      "cpc": null,
+      "ppc": 7
+    },
+    {
+      "kw": "is duck ai private",
+      "search_volume": 50,
+      "search_volume_12m": 50,
+      "cpc": null,
+      "ppc": null
+    },
+    {
+      "kw": "best private ai chat",
+      "search_volume": 40,
+      "search_volume_12m": 50,
+      "cpc": 7.24,
+      "ppc": 32
+    },
+    {
+      "kw": "duck ai api",
+      "search_volume": 40,
+      "search_volume_12m": 50,
+      "cpc": 22.77,
+      "ppc": 13
+    },
+    {
+      "kw": "maple ai voice",
+      "search_volume": 40,
+      "search_volume_12m": 50,
+      "cpc": 18.4,
+      "ppc": 20
+    },
+    {
+      "kw": "best ai chatbot in the world",
+      "search_volume": 40,
+      "search_volume_12m": 40,
+      "cpc": 6.97,
+      "ppc": 24
+    },
+    {
+      "kw": "most secure ai chatbot",
+      "search_volume": 30,
+      "search_volume_12m": 40,
+      "cpc": null,
+      "ppc": 13
+    },
+    {
+      "kw": "maple ai restaurant",
+      "search_volume": 30,
+      "search_volume_12m": 30,
+      "cpc": 36.65,
+      "ppc": 38
+    },
+    {
+      "kw": "best ai chatbot free no filter",
+      "search_volume": 30,
+      "search_volume_12m": 30,
+      "cpc": 2.08,
+      "ppc": 18
+    },
+    {
+      "kw": "duck ai website",
+      "search_volume": 30,
+      "search_volume_12m": 30,
+      "cpc": null,
+      "ppc": null
+    },
+    {
+      "kw": "venice ai vs grok",
+      "search_volume": 30,
+      "search_volume_12m": 30,
+      "cpc": 16.91,
+      "ppc": 3
+    },
+    {
+      "kw": "best ai chatbot for roleplay no sign up",
+      "search_volume": 20,
+      "search_volume_12m": 30,
+      "cpc": null,
+      "ppc": 4
+    },
+    {
+      "kw": "best ai chatbot for students",
+      "search_volume": 20,
+      "search_volume_12m": 30,
+      "cpc": null,
+      "ppc": 22
+    },
+    {
+      "kw": "venice ai image generator review",
+      "search_volume": 20,
+      "search_volume_12m": 30,
+      "cpc": null,
+      "ppc": 20
+    },
+    {
+      "kw": "is venice ai safe to use",
+      "search_volume": 20,
+      "search_volume_12m": 30,
+      "cpc": null,
+      "ppc": null
+    },
+    {
+      "kw": "private ai chat free",
+      "search_volume": 20,
+      "search_volume_12m": 20,
+      "cpc": null,
+      "ppc": 31
+    },
+    {
+      "kw": "duck ai chat gpt",
+      "search_volume": 20,
+      "search_volume_12m": 20,
+      "cpc": 1.53,
+      "ppc": 7
+    },
+    {
+      "kw": "duck ai logo",
+      "search_volume": 20,
+      "search_volume_12m": 20,
+      "cpc": null,
+      "ppc": null
+    },
+    {
+      "kw": "best ai chatbot ranking",
+      "search_volume": 20,
+      "search_volume_12m": 20,
+      "cpc": null,
+      "ppc": 4
+    },
+    {
+      "kw": "dolphin mistral ai",
+      "search_volume": 20,
+      "search_volume_12m": 20,
+      "cpc": null,
+      "ppc": 3
+    },
+    {
+      "kw": "venice ai pro free trial",
+      "search_volume": 20,
+      "search_volume_12m": 20,
+      "cpc": null,
+      "ppc": 2
+    },
+    {
+      "kw": "venice ai app for android",
+      "search_volume": 10,
+      "search_volume_12m": 20,
+      "cpc": 2.78,
+      "ppc": 11
+    },
+    {
+      "kw": "duck ai login",
+      "search_volume": 10,
+      "search_volume_12m": 10,
+      "cpc": null,
+      "ppc": 1
+    },
+    {
+      "kw": "duck ai download",
+      "search_volume": 10,
+      "search_volume_12m": 10,
+      "cpc": 0.92,
+      "ppc": 5
+    },
+    {
+      "kw": "maple ai chat",
+      "search_volume": 10,
+      "search_volume_12m": 10,
+      "cpc": 14.22,
+      "ppc": 9
+    },
+    {
+      "kw": "maple ai careers",
+      "search_volume": 10,
+      "search_volume_12m": 10,
+      "cpc": null,
+      "ppc": 7
+    },
+    {
+      "kw": "maple ai login",
+      "search_volume": 10,
+      "search_volume_12m": 10,
+      "cpc": null,
+      "ppc": 3
+    },
+    {
+      "kw": "maple ai chatgpt",
+      "search_volume": 10,
+      "search_volume_12m": 10,
+      "cpc": null,
+      "ppc": null
+    },
+    {
+      "kw": "best ai chatbot for roleplay like character ai",
+      "search_volume": 10,
+      "search_volume_12m": 10,
+      "cpc": 2.15,
+      "ppc": 11
+    },
+    {
+      "kw": "best ai chatbot for roleplay mobile",
+      "search_volume": 10,
+      "search_volume_12m": 10,
+      "cpc": 7.82,
+      "ppc": 16
+    },
+    {
+      "kw": "best ai chatbot for roleplay android",
+      "search_volume": 10,
+      "search_volume_12m": 10,
+      "cpc": 1.49,
+      "ppc": 41
+    },
+    {
+      "kw": "most accurate ai chatbot reddit",
+      "search_volume": 10,
+      "search_volume_12m": 10,
+      "cpc": null,
+      "ppc": 14
+    },
+    {
+      "kw": "top 10 most accurate ai chatbot",
+      "search_volume": 10,
+      "search_volume_12m": 10,
+      "cpc": null,
+      "ppc": null
+    },
+    {
+      "kw": "most accurate ai chatbot free",
+      "search_volume": 10,
+      "search_volume_12m": 10,
+      "cpc": 6.47,
+      "ppc": 51
+    },
+    {
+      "kw": "best ai chatbot 2026 reddit",
+      "search_volume": 10,
+      "search_volume_12m": 10,
+      "cpc": null,
+      "ppc": 2
+    },
+    {
+      "kw": "best ai chatbot free reddit",
+      "search_volume": 10,
+      "search_volume_12m": 10,
+      "cpc": null,
+      "ppc": 3
+    },
+    {
+      "kw": "best ai for answering questions for students",
+      "search_volume": 10,
+      "search_volume_12m": 10,
+      "cpc": 4.81,
+      "ppc": 69
+    },
+    {
+      "kw": "most accurate free ai chatbot",
+      "search_volume": 10,
+      "search_volume_12m": 10,
+      "cpc": null,
+      "ppc": 49
+    },
+    {
+      "kw": "best paid ai chatbot reddit",
+      "search_volume": 10,
+      "search_volume_12m": 10,
+      "cpc": null,
+      "ppc": null
+    },
+    {
+      "kw": "duck ai app download",
+      "search_volume": 10,
+      "search_volume_12m": 10,
+      "cpc": null,
+      "ppc": 5
+    },
+    {
+      "kw": "duck ai app for android",
+      "search_volume": 10,
+      "search_volume_12m": 10,
+      "cpc": null,
+      "ppc": 5
+    },
+    {
+      "kw": "duck ai api key",
+      "search_volume": 10,
+      "search_volume_12m": 10,
+      "cpc": null,
+      "ppc": 7
+    },
+    {
+      "kw": "venice ai image generator free",
+      "search_volume": 10,
+      "search_volume_12m": 10,
+      "cpc": 0.38,
+      "ppc": 14
+    },
+    {
+      "kw": "venice ai image generator reddit",
+      "search_volume": 10,
+      "search_volume_12m": 10,
+      "cpc": null,
+      "ppc": 2
+    },
+    {
+      "kw": "venice ai image examples",
+      "search_volume": 10,
+      "search_volume_12m": 10,
+      "cpc": 9.06,
+      "ppc": 2
+    },
+    {
+      "kw": "venice ai chat free",
+      "search_volume": 10,
+      "search_volume_12m": 10,
+      "cpc": null,
+      "ppc": null
+    },
+    {
+      "kw": "venice ai app review",
+      "search_volume": 10,
+      "search_volume_12m": 10,
+      "cpc": null,
+      "ppc": 10
+    },
+    {
+      "kw": "is venice ai safe reddit",
+      "search_volume": 10,
+      "search_volume_12m": 10,
+      "cpc": null,
+      "ppc": null
+    },
+    {
+      "kw": "venice ai free limits",
+      "search_volume": 10,
+      "search_volume_12m": 10,
+      "cpc": null,
+      "ppc": 2
+    },
+    {
+      "kw": "venice ai windows app",
+      "search_volume": 10,
+      "search_volume_12m": 10,
+      "cpc": null,
+      "ppc": null
+    },
+    {
+      "kw": "venice ai mod apk download",
+      "search_volume": 10,
+      "search_volume_12m": 10,
+      "cpc": null,
+      "ppc": 3
+    },
+    {
+      "kw": "dolphin-mistral-24b-venice-edition ollama",
+      "search_volume": 10,
+      "search_volume_12m": 10,
+      "cpc": null,
+      "ppc": null
+    }
+  ]
+}

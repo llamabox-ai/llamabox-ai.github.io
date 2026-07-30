@@ -1,0 +1,23 @@
+{
+  "seed": null,
+  "location": {
+    "_id": 2826,
+    "code": "gb",
+    "label": "United Kingdom"
+  },
+  "language": {
+    "_id": 0,
+    "label": "Any Language",
+    "code": null
+  },
+  "total_keywords": 1,
+  "returned_keywords": 1,
+  "truncated": false,
+  "keywords": [
+    {
+      "kw": "ai chat without internet android",
+      "search_volume": null,
+      "search_volume_12m": null
+    }
+  ]
+}

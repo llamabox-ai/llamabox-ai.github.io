@@ -1,0 +1,65 @@
+{
+  "kw": "cpu llm android",
+  "location_id": 2840,
+  "platform_id": 1,
+  "rank": 25,
+  "organic": [
+    {
+      "rank": 1,
+      "url": "https://www.reddit.com/r/LocalLLaMA/comments/1q0hg8z/android_llm_client_with_hardware_acceleration/",
+      "title": "Android LLM Client with Hardware Acceleration?",
+      "domain": "reddit.com",
+      "upa": 53,
+      "pda": 92
+    },
+    {
+      "rank": 2,
+      "url": "https://mostlynerdless.de/blog/2025/11/05/running-an-llm-on-an-android-phone/",
+      "title": "Running an LLM on an Android Phone",
+      "domain": "mostlynerdless.de",
+      "upa": 24,
+      "pda": 28
+    },
+    {
+      "rank": 3,
+      "url": "https://github.com/UbiquitousLearning/mllm",
+      "title": "UbiquitousLearning/mllm: Fast Multimodal LLM on Mobile ...",
+      "domain": "github.com",
+      "upa": 63,
+      "pda": 97
+    },
+    {
+      "rank": 4,
+      "url": "https://www.promptquorum.com/power-local-llm/best-local-llm-apps-android-2026",
+      "title": "Android Local LLM Apps 2026: Speed, NPU & Setup Tested",
+      "domain": "promptquorum.com",
+      "upa": 16,
+      "pda": 19
+    },
+    {
+      "rank": 5,
+      "url": "https://developers.google.com/edge/mediapipe/solutions/genai/llm_inference/android",
+      "title": "LLM Inference guide for Android | Google AI Edge",
+      "domain": "google.com",
+      "upa": 52,
+      "pda": 95
+    },
+    {
+      "rank": 6,
+      "url": "https://vivekparasharr.medium.com/how-i-ran-a-local-llm-on-my-android-phone-and-what-i-learned-about-googles-ai-edge-gallery-807572211562",
+      "title": "How I Ran a Local LLM on My Android Phone, And ... - Medium",
+      "domain": "medium.com",
+      "upa": 48,
+      "pda": 95
+    },
+    {
+      "rank": 7,
+      "url": "https://developer.arm.com/community/arm-community-blogs/b/ai-blog/posts/generative-ai-on-mobile-on-arm-cpu",
+      "title": "Generative AI on mobile is running on the Arm CPU",
+      "domain": "arm.com",
+      "upa": 36,
+      "pda": 82
+    }
+  ],
+  "snapshot_id": "319e80bfc30b735f85e6d5a55ea3acfb.2026-07-30"
+}

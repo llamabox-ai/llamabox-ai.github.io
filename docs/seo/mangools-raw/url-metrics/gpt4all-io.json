@@ -1,0 +1,11 @@
+{
+  "_id": "116de3a2c2746b58e71ebe96ce9376b0",
+  "url": "https://gpt4all.io/",
+  "domain": "gpt4all.io",
+  "topRank": 302451,
+  "m": {
+    "moz": {"upa": 48, "pda": 41, "umrp": 4.8, "pmrp": 4.1},
+    "majestic": {"ExtBackLinks": 2133, "RefDomains": 670, "CitationFlow": 38, "TrustFlow": 16, "RefIPs": 509},
+    "rank": {"r": 49}
+  }
+}

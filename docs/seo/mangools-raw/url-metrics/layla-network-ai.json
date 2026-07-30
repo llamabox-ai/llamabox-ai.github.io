@@ -1,0 +1,28 @@
+{
+  "url": "https://layla-network.ai/",
+  "domain": "layla-network.ai",
+  "source": "serpchecker_get_url_metrics",
+  "serpchecker_metrics": {
+    "moz": {
+      "upa": 31,
+      "pda": 11,
+      "ueid": 91,
+      "feid": 92,
+      "uid": 130,
+      "fid": 30,
+      "pid": 477,
+      "umrp": 3.1,
+      "fmrp": 0.069,
+      "pmrp": 1.1
+    },
+    "majestic": {
+      "ExtBackLinks": 87,
+      "RefDomains": 25,
+      "RefIPs": 23,
+      "CitationFlow": 23,
+      "TrustFlow": 0,
+      "IndexedURLs": 1
+    },
+    "rank": {"r": 23}
+  }
+}

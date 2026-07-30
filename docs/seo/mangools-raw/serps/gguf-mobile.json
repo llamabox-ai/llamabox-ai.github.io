@@ -1,0 +1,31 @@
+{
+  "kw": "gguf mobile",
+  "page": 0,
+  "location_id": 2840,
+  "platform_id": 1,
+  "serp_results": null,
+  "rank": 0,
+  "items": [],
+  "browser": {
+    "doc": {
+      "w": 1366,
+      "h": 768
+    },
+    "view": {
+      "w": 1366,
+      "h": 768
+    }
+  },
+  "rank_updated_at": 1785381650,
+  "created_at": 1785381650,
+  "_id": "ece9751df53da9141ed9d62959dd56fb",
+  "location": {
+    "_id": 2840,
+    "code": "us",
+    "label": "United States"
+  },
+  "serp_snapshot_id": "ece9751df53da9141ed9d62959dd56fb.2026-07-30",
+  "serp_source_url": "https://s3.amazonaws.com/mangools-google-pages/ece9751df53da9141ed9d62959dd56fb.2026-07-30.html",
+  "ctr": [],
+  "serpFeaturesImpact": 0
+}

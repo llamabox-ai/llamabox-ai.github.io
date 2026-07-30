@@ -1,0 +1,31 @@
+{
+  "kw": "android ai assistant offline",
+  "page": 0,
+  "location_id": 2840,
+  "platform_id": 1,
+  "serp_results": null,
+  "rank": 0,
+  "items": [],
+  "browser": {
+    "doc": {
+      "w": 1366,
+      "h": 768
+    },
+    "view": {
+      "w": 1366,
+      "h": 768
+    }
+  },
+  "rank_updated_at": 1785381652,
+  "created_at": 1785381652,
+  "_id": "c85f8be2c8f5ace8affc80d2cfa088ba",
+  "location": {
+    "_id": 2840,
+    "code": "us",
+    "label": "United States"
+  },
+  "serp_snapshot_id": "c85f8be2c8f5ace8affc80d2cfa088ba.2026-07-30",
+  "serp_source_url": "https://s3.amazonaws.com/mangools-google-pages/c85f8be2c8f5ace8affc80d2cfa088ba.2026-07-30.html",
+  "ctr": [],
+  "serpFeaturesImpact": 0
+}

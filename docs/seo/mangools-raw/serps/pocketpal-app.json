@@ -1,0 +1,81 @@
+{
+  "kw": "pocketpal app",
+  "location_id": 2840,
+  "platform_id": 1,
+  "rank": 37,
+  "organic": [
+    {
+      "rank": 1,
+      "url": "https://apps.apple.com/us/app/pocketpal-ai/id6502579498",
+      "title": "PocketPal AI - App Store - Apple",
+      "domain": "apple.com",
+      "upa": 69,
+      "pda": 99
+    },
+    {
+      "rank": 2,
+      "url": "https://play.google.com/store/apps/details?id=com.pocketpalai",
+      "title": "PocketPal AI - Apps on Google Play",
+      "domain": "google.com",
+      "upa": 68,
+      "pda": 99
+    },
+    {
+      "rank": 3,
+      "url": "https://github.com/a-ghorbani/pocketpal-ai",
+      "title": "a-ghorbani/pocketpal-ai: An app that brings language ...",
+      "domain": "github.com",
+      "upa": 69,
+      "pda": 97
+    },
+    {
+      "rank": 4,
+      "url": "https://pocketpal.dev/",
+      "title": "PocketPal AI — Private AI on Your Phone | PocketPal AI",
+      "domain": "pocketpal.dev",
+      "upa": 26,
+      "pda": 7
+    },
+    {
+      "rank": 5,
+      "url": "https://www.reddit.com/r/LocalLLaMA/comments/1g8kl5e/pocketpal_ai_is_open_sourced/",
+      "title": "PocketPal AI is open sourced : r/LocalLLaMA",
+      "domain": "reddit.com",
+      "upa": 53,
+      "pda": 92
+    },
+    {
+      "rank": 6,
+      "url": "https://pocketpal.en.softonic.com/android",
+      "title": "PocketPal for Android - Download",
+      "domain": "softonic.com",
+      "upa": 48,
+      "pda": 92
+    },
+    {
+      "rank": 7,
+      "url": "https://com-pocketpalai.en.uptodown.com/android",
+      "title": "PocketPal AI for Android - Download the APK from Uptodown",
+      "domain": "uptodown.com",
+      "upa": 55,
+      "pda": 92
+    },
+    {
+      "rank": 8,
+      "url": "https://pocketpal.en.aptoide.com/app",
+      "title": "PocketPal AI - APK Download for Android",
+      "domain": "aptoide.com",
+      "upa": 49,
+      "pda": 83
+    },
+    {
+      "rank": 9,
+      "url": "https://jmlbeaujour.medium.com/pocketpal-ai-bringing-small-language-models-to-your-cellphone-5ae486902f1b",
+      "title": "PocketPal AI — Bringing Small Language Models to Your ...",
+      "domain": "medium.com",
+      "upa": 52,
+      "pda": 95
+    }
+  ],
+  "snapshot_id": "4d9d7132f63493e4f000c79875aa6115.2026-07-30"
+}

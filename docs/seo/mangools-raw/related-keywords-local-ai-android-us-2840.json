@@ -1,0 +1,116 @@
+{
+  "seed": null,
+  "location": {
+    "_id": 2840,
+    "code": "us",
+    "label": "United States"
+  },
+  "language": {
+    "_id": 0,
+    "label": "Any Language",
+    "code": null
+  },
+  "total_keywords": 14,
+  "returned_keywords": 14,
+  "truncated": false,
+  "keywords": [
+    {
+      "kw": "locally ai app",
+      "search_volume": 200,
+      "search_volume_12m": 210,
+      "cpc": 2.86,
+      "ppc": 7
+    },
+    {
+      "kw": "local ai android",
+      "search_volume": 50,
+      "search_volume_12m": 50,
+      "cpc": 2.28,
+      "ppc": 2
+    },
+    {
+      "kw": "local ai download",
+      "search_volume": 50,
+      "search_volume_12m": 50,
+      "cpc": 25.4,
+      "ppc": 24
+    },
+    {
+      "kw": "local ai on phone",
+      "search_volume": 20,
+      "search_volume_12m": 20,
+      "cpc": null,
+      "ppc": 1
+    },
+    {
+      "kw": "locally ai android",
+      "search_volume": 20,
+      "search_volume_12m": 20,
+      "cpc": null,
+      "ppc": 1
+    },
+    {
+      "kw": "local ai android github",
+      "search_volume": 10,
+      "search_volume_12m": 10,
+      "cpc": null,
+      "ppc": 1
+    },
+    {
+      "kw": "locally ai apk",
+      "search_volume": 10,
+      "search_volume_12m": 10,
+      "cpc": null,
+      "ppc": null
+    },
+    {
+      "kw": "best local ai android",
+      "search_volume": 10,
+      "search_volume_12m": 10,
+      "cpc": null,
+      "ppc": 20
+    },
+    {
+      "kw": "locally ai local ai chat",
+      "search_volume": 10,
+      "search_volume_12m": 10,
+      "cpc": null,
+      "ppc": 5
+    },
+    {
+      "kw": "local ai download android",
+      "search_volume": 10,
+      "search_volume_12m": 10,
+      "cpc": null,
+      "ppc": null
+    },
+    {
+      "kw": "locally ai app download",
+      "search_volume": 10,
+      "search_volume_12m": 10,
+      "cpc": null,
+      "ppc": 29
+    },
+    {
+      "kw": "locally ai app store",
+      "search_volume": 10,
+      "search_volume_12m": 10,
+      "cpc": null,
+      "ppc": 2
+    },
+    {
+      "kw": "locally ai app reddit",
+      "search_volume": 10,
+      "search_volume_12m": 10,
+      "cpc": null,
+      "ppc": null
+    },
+    {
+      "kw": "local ai download windows",
+      "search_volume": 10,
+      "search_volume_12m": 10,
+      "cpc": null,
+      "ppc": 36
+    }
+  ]
+}

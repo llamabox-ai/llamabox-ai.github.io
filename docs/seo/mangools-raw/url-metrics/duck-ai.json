@@ -1,0 +1,11 @@
+{
+  "_id": "8cec026a6f2173b801bfdf3a764775e6",
+  "url": "https://duck.ai/",
+  "domain": "duck.ai",
+  "topRank": 27047,
+  "m": {
+    "moz": {"upa": 50, "pda": 51, "umrp": 5.0, "pmrp": 5.1},
+    "majestic": {"ExtBackLinks": 23563, "RefDomains": 1490, "CitationFlow": 65, "TrustFlow": 87, "RefIPs": 1154},
+    "rank": {"r": 99}
+  }
+}

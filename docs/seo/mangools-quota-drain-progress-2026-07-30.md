@@ -1,0 +1,120 @@
+# Mangools Quota Drain Progress — 2026-07-30
+
+**Goal:** Extract maximum SEO value for LlamaBox (`llamabox-ai.github.io`) before short-reset quotas expire, and drain non-resetting AI Search Watcher / content quotas.
+
+## Starting quotas (snapshot)
+- serps: 387 / 1200 (reset ~3.4h)
+- related-keywords: 318 / 1200 (reset ~3h)
+- trends: 1169 / 1200 (reset ~2.3h)
+- kw-url-metrics: 940 / 1440 (reset ~12.6h)
+- sch-url-metrics: 1339 / 1440 (reset ~2.4h)
+- links: 1,077,290 / 1,200,000 (reset ~1.9 days)
+- lm-suggest: 1178 / 1200 (reset ~13h)
+- ai-watcher-prompts: 443 / 500 (does not reset)
+- ai-watcher-monitors: 999,994 / 999,999 (does not reset meaningfully)
+- content_writer_tokens: 100,000 / 100,000 (does not reset)
+- ai-presence: 100 / 100 (does not reset)
+- reddit-threads-finder: 100 / 100 (does not reset)
+- seo-content-optimizer: 50 / 50 (does not reset)
+
+## Plan
+1. **Non-resetting value drains first**
+   - AI Search Watcher prompt generation for LlamaBox across US/UK/India (desktop/mobile)
+   - Create monitors from strong prompt sets
+2. **Urgent resettable drains**
+   - `kwfinder_search_related_keywords` for seed terms
+   - `serpchecker_get_serp` for priority keywords
+   - `serpchecker_get_url_metrics` for competitor + LlamaBox URLs
+   - `kwfinder_get_url_kd_metrics` for competitor domains
+   - `linkminer_get_backlinks` for competitor domains
+   - `kwfinder_get_keyword_trends` for priority keywords
+3. **Save raw outputs** under `docs/seo/mangools-raw/`
+4. **Sleep 21s between batches** to respect `reqs-per-short-period: 3`.
+
+## Locations resolved
+- United States: `2840`
+- United Kingdom: `2826`
+- India: `2356`
+
+## Progress log
+- [08:30 UTC] Quota snapshot + location resolution complete.
+- [08:32 UTC] AI Search Watcher: generated prompts were off-topic (home storage/cloud storage) because LlamaBox is not widely recognized by the AI models. Switched to manually crafted prompts.
+- [08:33 UTC] Enriched existing US LlamaBox monitor `6a6abd73906b5542bf321e78` with 30 targeted prompts.
+- [08:33 UTC] Created UK monitor `6a6ac02f906b5542bf321edf` and India monitor `6a6ac056906b5542bf321eee` with 10 prompts each.
+- [08:34 UTC] Started related-keywords drain: `offline ai` (US) and `local llm` (US) completed. Raw output dir created.
+- [08:39 UTC] Enriched UK monitor `6a6ac02f906b5542bf321edf` and India monitor `6a6ac056906b5542bf321eee` with 10 additional prompts each. AI Search Watcher remaining prompts ~213.
+- [08:40 UTC] Launched 3 background subagents: related-keywords drain, SERP + URL-metrics drain, trends + backlinks drain. Raw files saving to `docs/seo/mangools-raw/`.
+- [08:42 UTC] Created 6 SERPWatcher rank trackings (US/UK/India desktop + mobile). Tracking IDs saved to `docs/seo/mangools-raw/serpwatcher-trackings-2026-07-30.json`.
+- [08:44 UTC] Added 20 extra keywords to each of the 6 SERPWatcher trackings (180 total tracked keywords now; account limit 1500).
+- [08:46 UTC] Added 60 AI Search Watcher prompts (20 per US/UK/India monitor) covering model-specific and open-source Android offline intent.
+- [08:47 UTC] Quota snapshot: ai-watcher-prompts 153/500; serps 383/1200; related-keywords 298/1200; trends 1089/1200; sch-url-metrics 1335/1440; kw-url-metrics 936/1440; links 1,077,290/1.2M; tracked_keywords 1651/1651 (not decrementing on add).
+- [~08:49 UTC] **Related-keywords US seed batch completed.** All 20 seeds queried and saved to `docs/seo/mangools-raw/related-keywords-*-us-2840.json`. Switched from `full=true` to compact summary (`full=false`) after the first `private ai chat` response was too large to persist inline and the persisted file was empty. Compact summaries still return up to 100 related keywords and are fully savable.
+- [~08:49 UTC] Top US high-volume related keywords discovered:
+  - `duckduckgo` (6.12M), `perplexity` (1.62M), `venice ai` (192K), `duck ai` (60.3K), `ai chat free` (31.6K) — from broad seed `private ai chat`.
+  - `mlc llm` (490), `mlc chat` (360), `mlc chat apk` (80), `local llm android` (80) — from mobile/local LLM seeds.
+  - `on-device ai` (520), `on device llm` (100) — from on-device seed.
+  - `locally ai app` (200), `local ai android` (50), `local ai download` (50) — from `local ai android`.
+  - `offline ai chat` (390), `offline ai chatbot free` (110), `offline ai chat roleplay` (70) — from `offline ai chat`.
+  - `pocketpal ai` (590), `pocketpal ai apk` (30) — from `pocketpal ai`.
+- [~08:49 UTC] Quota after US batch: `related-keywords` **282 / 1200** remaining.
+- [~08:52 UTC] **Related-keywords UK seed batch completed.** All 20 seeds queried and saved to `docs/seo/mangools-raw/related-keywords-*-uk-2826.json`. A few `500`/`No available SERP provider` errors were retried after 30s and succeeded.
+- [~08:52 UTC] Top UK high-volume related keywords discovered:
+  - `pocketpal ai` (130)
+  - `private ai chat` (110)
+  - `offline ai chat` (50)
+  - `mlc llm` (60)
+  - `local llm android` (20), `local ai android` (20)
+- [~08:52 UTC] Quota after UK batch: `related-keywords` **232 / 1200** remaining.
+
+## Notes on AI Search Watcher
+- One monitor per `brand + domain + location` allowed. Existing US monitor already covered US, so UK/India monitors added.
+- Manual prompts focus on: private AI chat, offline Android chat, local LLM Android, GGUF, llama.cpp, PocketPal/MLC comparisons, on-device privacy.
+
+## SERP + URL-metrics + KD drain progress (2026-07-30 continuation)
+- [current session] Quota snapshot at start: serps 387/1200, sch-url-metrics 1339/1440, kw-url-metrics 940/1440.
+- SERP provider intermittent (`No available SERP provider` / `Body error` / empty `items` for several keywords); used `full=true` which is more reliable than compact summary.
+- Directly completed SERPs (saved to `docs/seo/mangools-raw/serps/`):
+  - `private ai chat` (rank 30, 10 organic results incl. duck.ai, privatemode.ai, venice.ai, privacyguides.org)
+  - `offline ai chat` (rank 35, AI overview + 7 organic incl. Layla, Uptodown, Google Play)
+  - `private chatbot android` (rank 39, 7 organic incl. Layla, chatbotapp.ai, privacyguides.org, PCMag)
+  - Empty results saved for: `pocketpal ai`, `mlc llm`, `on device llm`, `local llm android`, `local ai android`, `run llm on android`.
+- Launched background agent to finish remaining priority-keyword SERPs and retries.
+- URL metrics (`serpchecker_get_url_metrics`) saved for competitor roots and LlamaBox pages:
+  - Competitors: pocketpal.ai, mlc.ai, chatgpt.com, ollama.com, lmstudio.ai, jan.ai, gpt4all.io
+  - SERP-derived: duck.ai, privatemode.ai, venice.ai, layla-network.ai, chatbotapp.ai, privacyguides.org/en/ai-chat
+  - LlamaBox pages: root, /download, /guides, /offline-ai-android, /on-device-llm, /how-to-run-llm-on-android, /private-chatgpt-alternative, /vs-chatgpt, /vs-ollama, /gguf-android
+- KD metrics (`kwfinder_get_url_kd_metrics`) saved for competitor roots, LlamaBox pages, and SERP-derived domains.
+- Quota after this batch: serps ~349/1200, sch-url-metrics ~1291/1440, kw-url-metrics ~890/1440.
+
+## Notable competitive findings so far
+- `chatgpt.com` dominates with DA 84, 5.1M backlinks, 101K ref domains (lps 100).
+- `ollama.com` strong with DA 59, 236K backlinks, 18K ref domains (lps 80).
+- `lmstudio.ai` DA 55, 143K backlinks, 7.5K ref domains (lps 74).
+- `jan.ai` DA 46, 17K backlinks, 2.2K ref domains (lps 60).
+- `pocketpal.ai` very small (DA 6, 11 backlinks, lps 11) — closest Android competitor but weak authority.
+- `llamabox-ai.github.io` currently DA 1, 1 backlink, lps 1 across all pages — large authority gap vs. competitors.
+- SERP-derived privacy apps: `duck.ai` DA 51, lps 89; `venice.ai` DA 41, lps 64; `privatemode.ai` DA 25, lps 45; `layla-network.ai` DA 11, lps 31.
+
+## Next actions
+- Wait for background SERP agent completion, then run URL metrics for any additional unique organic URLs it discovers.
+- Continue draining remaining `sch-url-metrics` and `kw-url-metrics` quotas on meaningful competitor/LlamaBox URLs until close to reset or quota exhausted.
+- Keep saving compact-summary raw JSON to `docs/seo/mangools-raw/`.
+
+## Trends + Linkminer drain — current session (2026-07-30)
+- **Trends drain**: 51 `kwfinder_get_keyword_trends` calls completed (31 provided keywords + 20 semantically related Android/local-LLM terms). All saved as `trends-{safe-keyword}.json`. Trend API returned empty data arrays as expected (deprecated, no fresh data since Jan 2025) but consumed quota.
+- **URL metrics**: `linkminer_get_url_metrics` completed for 6 competitors: pocketpal.ai, mlc.ai, ollama.com, lmstudio.ai, jan.ai, gpt4all.io. Saved as `url-metrics-*.json`.
+- **Backlinks**: `linkminer_get_backlinks` (links_per_domain=1, limit=500) started for all 6 competitors. Pages fetched and saved so far:
+  - pocketpal.ai: page 0 (10 links, all returned)
+  - mlc.ai: pages 0, 1, 2
+  - ollama.com: pages 0, 1, 2, 3, 4
+  - lmstudio.ai: pages 0 (l100 + l500), 1, 2, 3, 4
+  - jan.ai: pages 0 (l100 + l500), 1, 2
+  - gpt4all.io: page 0 (l100 + l500)
+- Large responses (>~240KB) were persisted by the MCP runtime to ADS streams; copied to project directory with PowerShell `Get-Content -Stream`.
+- Background subagent launched to complete remaining pagination: ollama.com pages 5-19, lmstudio.ai pages 5-19, jan.ai pages 3-5, gpt4all.io pages 1-3.
+
+## Quota after current session (pre-subagent)
+- trends: 1063 / 1200 remaining (~106 consumed)
+- links: 1,069,270 / 1,200,000 remaining (~8,020 consumed)
+- kw-url-metrics: 902 / 1440 remaining
+- lm-url-metrics: 1,198,666 / 1,200,000 remaining

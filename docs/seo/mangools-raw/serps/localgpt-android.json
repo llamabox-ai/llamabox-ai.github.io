@@ -1,0 +1,81 @@
+{
+  "kw": "localgpt android",
+  "location_id": 2840,
+  "platform_id": 1,
+  "rank": 27,
+  "organic": [
+    {
+      "rank": 1,
+      "url": "https://github.com/ronith256/LocalGPT-Android",
+      "title": "ronith256/LocalGPT-Android: Run GPT4ALL locally on ...",
+      "domain": "github.com",
+      "upa": 53,
+      "pda": 97
+    },
+    {
+      "rank": 2,
+      "url": "https://play.google.com/store/apps/details?id=com.rnllamaexample",
+      "title": "LocalGPT: Offline AI Assistant - Apps on Google Play",
+      "domain": "google.com",
+      "upa": 52,
+      "pda": 99
+    },
+    {
+      "rank": 3,
+      "url": "https://f-droid.org/en/packages/dev.chungjungsoo.gptmobile/",
+      "title": "GPTMobile | F-Droid - Free and Open Source Android App ...",
+      "domain": "f-droid.org",
+      "upa": 39,
+      "pda": 70
+    },
+    {
+      "rank": 4,
+      "url": "https://www.localgpt.io/",
+      "title": "LocalGPT — Run AI Models Locally",
+      "domain": "localgpt.io",
+      "upa": 12,
+      "pda": 4
+    },
+    {
+      "rank": 5,
+      "url": "https://www.reddit.com/r/AndroidClosedTesting/comments/1fiemaj/local_gpt_app_need_testers/",
+      "title": "Local GPT APP (need testers) : r/AndroidClosedTesting",
+      "domain": "reddit.com",
+      "upa": 53,
+      "pda": 92
+    },
+    {
+      "rank": 6,
+      "url": "https://localgpt.app/",
+      "title": "LocalGPT: Home",
+      "domain": "localgpt.app",
+      "upa": 24,
+      "pda": 9
+    },
+    {
+      "rank": 7,
+      "url": "https://github.com/promtengineer/localgpt",
+      "title": "PromtEngineer/localGPT: Chat with your documents on ...",
+      "domain": "github.com",
+      "upa": 58,
+      "pda": 97
+    },
+    {
+      "rank": 8,
+      "url": "https://localgpt.pages.dev/index.html",
+      "title": "Download LocalGPT | TUSI",
+      "domain": "pages.dev",
+      "upa": 42,
+      "pda": 92
+    },
+    {
+      "rank": 9,
+      "url": "https://www.nomic.ai/gpt4all",
+      "title": "gpt4all.io",
+      "domain": "nomic.ai",
+      "upa": 48,
+      "pda": 48
+    }
+  ],
+  "snapshot_id": "aab47095d05487931466bc212af0af4c.2026-07-30"
+}

@@ -1,0 +1,54 @@
+{
+  "trackings_created": [
+    {"_id": "6a6ac171a4d7d442f2c49a40", "domain": "llamabox-ai.github.io", "location_id": 2840, "platform_id": 1, "location": "United States", "device": "desktop", "count": 10},
+    {"_id": "6a6ac173a4d7d442f2c49a4f", "domain": "llamabox-ai.github.io", "location_id": 2826, "platform_id": 1, "location": "United Kingdom", "device": "desktop", "count": 10},
+    {"_id": "6a6ac174a4d7d442f2c49a5e", "domain": "llamabox-ai.github.io", "location_id": 2356, "platform_id": 1, "location": "India", "device": "desktop", "count": 10},
+    {"_id": "6a6ac198a4d7d442f2c49a6d", "domain": "llamabox-ai.github.io", "location_id": 2840, "platform_id": 2, "location": "United States", "device": "mobile", "count": 10},
+    {"_id": "6a6ac199a4d7d442f2c49a7c", "domain": "llamabox-ai.github.io", "location_id": 2826, "platform_id": 2, "location": "United Kingdom", "device": "mobile", "count": 10},
+    {"_id": "6a6ac19aa4d7d442f2c49a8b", "domain": "llamabox-ai.github.io", "location_id": 2356, "platform_id": 2, "location": "India", "device": "mobile", "count": 10}
+  ],
+  "priority_keyword_volumes": {
+    "us_desktop": {
+      "private ai chat": {"sv": 980, "seo": 30, "cpc": 3.21, "ppc": 4},
+      "pocketpal ai": {"sv": 660, "cpc": 3.94, "ppc": 7},
+      "offline ai chat": {"sv": 410, "cpc": 2.11, "ppc": 14},
+      "mlc llm": {"sv": 480, "cpc": 7.18, "ppc": 9},
+      "on device llm": {"sv": 100, "cpc": 7.44, "ppc": 3},
+      "local llm android": {"sv": 80},
+      "local ai android": {"sv": 50},
+      "run llm on android": {"sv": 30},
+      "offline ai android": {"sv": 20},
+      "private chatgpt alternative android": {"sv": null}
+    },
+    "uk_desktop": {
+      "private ai chat": {"sv": 120, "cpc": 2.78, "ppc": 21},
+      "pocketpal ai": {"sv": 140, "cpc": 2.69, "ppc": 7},
+      "offline ai chat": {"sv": 50, "cpc": 1.58, "ppc": 13},
+      "mlc llm": {"sv": 50, "cpc": 2.97, "ppc": 6},
+      "on device llm": {"sv": 10},
+      "local llm android": {"sv": 20},
+      "local ai android": {"sv": 20},
+      "run llm on android": {"sv": 10},
+      "offline ai android": {"sv": 10},
+      "private chatgpt alternative android": {"sv": null}
+    },
+    "india_desktop": {
+      "private ai chat": {"sv": 190, "cpc": 0.22, "ppc": 2},
+      "pocketpal ai": {"sv": 5600, "cpc": 0.31, "ppc": 3},
+      "offline ai chat": {"sv": 300, "cpc": 0.18, "ppc": 7},
+      "mlc llm": {"sv": 230, "cpc": 1.14, "ppc": 2},
+      "on device llm": {"sv": 40},
+      "local llm android": {"sv": 30},
+      "local ai android": {"sv": 20},
+      "run llm on android": {"sv": 30},
+      "offline ai android": {"sv": 20},
+      "private chatgpt alternative android": {"sv": null}
+    }
+  },
+  "notable_findings": [
+    "India 'pocketpal ai' search volume is 5,600/month (desktop) — far larger than US (660) or UK (140). Strong signal to target PocketPal comparison content in India/Asia.",
+    "US 'private ai chat' is the biggest clean-intent keyword at 980/month with KD 30 (moderate).",
+    "UK has higher PPC competition on 'private ai chat' (21 advertisers) than US (4), suggesting stronger commercial intent per query.",
+    "India CPCs are much lower ($0.18-$1.14) but volumes for competitor-branded terms are significant."
+  ]
+}

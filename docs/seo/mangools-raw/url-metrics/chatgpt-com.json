@@ -1,0 +1,11 @@
+{
+  "_id": "a2b7c1160d7f6eda8be66e2e3e5a9f82",
+  "url": "https://chatgpt.com/",
+  "domain": "chatgpt.com",
+  "topRank": 67,
+  "m": {
+    "moz": {"upa": 76, "pda": 84, "umrp": 7.6, "pmrp": 8.4},
+    "majestic": {"ExtBackLinks": 5170261, "RefDomains": 101368, "CitationFlow": 77, "TrustFlow": 59, "RefIPs": 56226},
+    "rank": {"r": 100}
+  }
+}

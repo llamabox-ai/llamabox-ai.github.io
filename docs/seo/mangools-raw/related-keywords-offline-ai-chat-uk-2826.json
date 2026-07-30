@@ -1,0 +1,25 @@
+{
+  "seed": null,
+  "location": {
+    "_id": 2826,
+    "code": "gb",
+    "label": "United Kingdom"
+  },
+  "language": {
+    "_id": 0,
+    "label": "Any Language",
+    "code": null
+  },
+  "total_keywords": 1,
+  "returned_keywords": 1,
+  "truncated": false,
+  "keywords": [
+    {
+      "kw": "offline ai chat",
+      "search_volume": 50,
+      "search_volume_12m": 50,
+      "cpc": 1.58,
+      "ppc": 13
+    }
+  ]
+}

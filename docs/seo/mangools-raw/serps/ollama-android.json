@@ -1,0 +1,73 @@
+{
+  "kw": "ollama android",
+  "location_id": 2840,
+  "platform_id": 1,
+  "rank": 34,
+  "organic": [
+    {
+      "rank": 1,
+      "url": "https://www.reddit.com/r/ollama/comments/1qrkbsr/run_ollama_on_your_android/",
+      "title": "Run Ollama on your Android!",
+      "domain": "reddit.com",
+      "upa": 55,
+      "pda": 92
+    },
+    {
+      "rank": 2,
+      "url": "https://ollama.com/",
+      "title": "Ollama",
+      "domain": "ollama.com",
+      "upa": 66,
+      "pda": 59
+    },
+    {
+      "rank": 3,
+      "url": "https://github.com/SMuflhi/ollama-app-for-Android-",
+      "title": "SMuflhi/ollama-app-for-Android",
+      "domain": "github.com",
+      "upa": 59,
+      "pda": 97
+    },
+    {
+      "rank": 4,
+      "url": "https://play.google.com/store/apps/details?id=com.charles.ollama.client.play",
+      "title": "Ollama AI Chat - Apps on Google Play",
+      "domain": "google.com",
+      "upa": 55,
+      "pda": 99
+    },
+    {
+      "rank": 5,
+      "url": "https://dev.to/koolkamalkishor/running-llama-32-on-android-a-step-by-step-guide-using-ollama-54ig",
+      "title": "Running Llama 3.2 on Android: A Step-by-Step Guide ...",
+      "domain": "dev.to",
+      "upa": 48,
+      "pda": 85
+    },
+    {
+      "rank": 6,
+      "url": "https://deepakness.com/blog/ollama-in-android-linux/",
+      "title": "Running Ollama in Android Linux Terminal",
+      "domain": "deepakness.com",
+      "upa": 22,
+      "pda": 20
+    },
+    {
+      "rank": 7,
+      "url": "https://apt.izzysoft.de/fdroid/index/apk/com.freakurl.apps.ollama",
+      "title": "Ollama - IzzyOnDroid F-Droid Repository",
+      "domain": "izzysoft.de",
+      "upa": 36,
+      "pda": 47
+    },
+    {
+      "rank": 8,
+      "url": "https://medium.com/@mohammed.ali.chherawalla/how-to-use-ollama-from-your-android-phone-in-2026-auto-discovery-zero-setup-96ce58fb8dac",
+      "title": "How to Use Ollama From Your Android Phone in 2026 ...",
+      "domain": "medium.com",
+      "upa": 48,
+      "pda": 95
+    }
+  ],
+  "snapshot_id": "b76153602b84d236367540e35978a9ce.2026-07-30"
+}

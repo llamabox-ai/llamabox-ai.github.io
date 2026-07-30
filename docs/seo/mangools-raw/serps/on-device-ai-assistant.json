@@ -1,0 +1,73 @@
+{
+  "kw": "on device ai assistant",
+  "location_id": 2840,
+  "platform_id": 1,
+  "rank": 38,
+  "organic": [
+    {
+      "rank": 1,
+      "url": "https://www.simular.ai/alternatives/ai-assistant",
+      "title": "15 Best AI Assistants in 2026: We Tested Them All to Find ...",
+      "domain": "simular.ai",
+      "upa": 28,
+      "pda": 19
+    },
+    {
+      "rank": 2,
+      "url": "https://www.reddit.com/r/Android/comments/1pentcw/open_source_ondevice_ai_assistant/",
+      "title": "Open Source On-Device AI Assistant : r/Android",
+      "domain": "reddit.com",
+      "upa": 53,
+      "pda": 92
+    },
+    {
+      "rank": 3,
+      "url": "https://www.lindy.ai/blog/best-ai-voice-assistants",
+      "title": "I Tested 20+ AI Voice Assistants, These Are the Top 12 for ...",
+      "domain": "lindy.ai",
+      "upa": 45,
+      "pda": 38
+    },
+    {
+      "rank": 4,
+      "url": "https://gemini.google/assistant/",
+      "title": "Introducing Gemini, your new personal AI assistant",
+      "domain": "gemini.google",
+      "upa": 47,
+      "pda": 62
+    },
+    {
+      "rank": 5,
+      "url": "https://www.vellum.ai/blog/best-ai-assistants-across-all-your-devices",
+      "title": "10 Best AI Assistants That Work Across All Your Devices in 2026",
+      "domain": "vellum.ai",
+      "upa": 27,
+      "pda": 44
+    },
+    {
+      "rank": 6,
+      "url": "https://github.com/dpajak-synaptics/on-device-ai-assistant",
+      "title": "dpajak-synaptics/on-device-ai-assistant",
+      "domain": "github.com",
+      "upa": 56,
+      "pda": 97
+    },
+    {
+      "rank": 7,
+      "url": "https://apps.apple.com/us/app/on-device-ai-tts-stt-agent/id6497060890",
+      "title": "On-Device AI: TTS & STT Agent - App Store - Apple",
+      "domain": "apple.com",
+      "upa": 56,
+      "pda": 99
+    },
+    {
+      "rank": 8,
+      "url": "https://www.amazon.com/ai-assistant-device/s?k=ai+assistant+device",
+      "title": "Ai Assistant Device",
+      "domain": "amazon.com",
+      "upa": 52,
+      "pda": 95
+    }
+  ],
+  "snapshot_id": "24acc548dc49899de775f1825c0c223c.2026-07-30"
+}

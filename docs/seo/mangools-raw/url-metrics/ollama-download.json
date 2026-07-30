@@ -1,0 +1,11 @@
+{
+  "_id": "181a6069c3eb0d5a7e8b2a8a296936ac",
+  "url": "https://ollama.com/download",
+  "domain": "ollama.com",
+  "topRank": 4545,
+  "m": {
+    "moz": {"upa": 61, "pda": 59, "umrp": 6.1, "pmrp": 5.9},
+    "majestic": {"ExtBackLinks": 13457, "RefDomains": 3299, "CitationFlow": 55, "TrustFlow": 31, "RefIPs": 2280},
+    "rank": {"r": 72}
+  }
+}

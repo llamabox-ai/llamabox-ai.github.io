@@ -1,0 +1,65 @@
+{
+  "kw": "on device llm",
+  "location_id": 2840,
+  "platform_id": 1,
+  "rank": 28,
+  "organic": [
+    {
+      "rank": 1,
+      "url": "https://v-chandra.github.io/on-device-llms/",
+      "title": "On-Device LLMs: State of the Union, 2026",
+      "domain": "github.io",
+      "upa": 27,
+      "pda": 18
+    },
+    {
+      "rank": 2,
+      "url": "https://www.reddit.com/r/LocalLLM/comments/1jtqmqh/what_do_you_think_is_the_future_of_running_llms/",
+      "title": "What do you think is the future of running LLMs locally on ...",
+      "domain": "reddit.com",
+      "upa": 53,
+      "pda": 92
+    },
+    {
+      "rank": 3,
+      "url": "https://medium.com/@jiminlee-ai/on-device-llm-1ea0476a2df6",
+      "title": "On-Device LLM",
+      "domain": "medium.com",
+      "upa": 48,
+      "pda": 95
+    },
+    {
+      "rank": 4,
+      "url": "https://developers.google.com/edge/mediapipe/solutions/genai/llm_inference/android",
+      "title": "LLM Inference guide for Android | Google AI Edge",
+      "domain": "google.com",
+      "upa": 52,
+      "pda": 95
+    },
+    {
+      "rank": 5,
+      "url": "https://www.tecace.com/on-device-llm",
+      "title": "On-device LLM",
+      "domain": "tecace.com",
+      "upa": 19,
+      "pda": 30
+    },
+    {
+      "rank": 6,
+      "url": "https://arxiv.org/html/2409.00088v1",
+      "title": "On-Device Language Models: A Comprehensive Review",
+      "domain": "arxiv.org",
+      "upa": 51,
+      "pda": 93
+    },
+    {
+      "rank": 7,
+      "url": "https://www.callstack.com/blog/local-llms-on-mobile-are-a-gimmick",
+      "title": "Are Local LLMs on Mobile a Gimmick? The Reality in 2025",
+      "domain": "callstack.com",
+      "upa": 31,
+      "pda": 41
+    }
+  ],
+  "snapshot_id": "384a92f57bf44baa6d16546bcfa77c18.2026-07-30"
+}

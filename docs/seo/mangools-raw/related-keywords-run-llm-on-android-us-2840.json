@@ -1,0 +1,214 @@
+{
+  "seed": null,
+  "location": {
+    "_id": 2840,
+    "code": "us",
+    "label": "United States"
+  },
+  "language": {
+    "_id": 0,
+    "label": "Any Language",
+    "code": null
+  },
+  "total_keywords": 28,
+  "returned_keywords": 28,
+  "truncated": false,
+  "keywords": [
+    {
+      "kw": "mlc llm",
+      "search_volume": 490,
+      "search_volume_12m": 480,
+      "cpc": 7.18,
+      "ppc": 9
+    },
+    {
+      "kw": "mlc chat apk",
+      "search_volume": 80,
+      "search_volume_12m": 90,
+      "cpc": null,
+      "ppc": null
+    },
+    {
+      "kw": "mlc chat android",
+      "search_volume": 60,
+      "search_volume_12m": 70,
+      "cpc": 9.76,
+      "ppc": 2
+    },
+    {
+      "kw": "mlc-ai",
+      "search_volume": 60,
+      "search_volume_12m": 70,
+      "cpc": 14.64,
+      "ppc": 5
+    },
+    {
+      "kw": "mlc llm android",
+      "search_volume": 50,
+      "search_volume_12m": 50,
+      "cpc": 8.95,
+      "ppc": 11
+    },
+    {
+      "kw": "mlc chat app",
+      "search_volume": 30,
+      "search_volume_12m": 30,
+      "cpc": null,
+      "ppc": null
+    },
+    {
+      "kw": "run llm on android",
+      "search_volume": 20,
+      "search_volume_12m": 30,
+      "cpc": null,
+      "ppc": 0
+    },
+    {
+      "kw": "mlc-llm github",
+      "search_volume": 20,
+      "search_volume_12m": 30,
+      "cpc": 11.48,
+      "ppc": 8
+    },
+    {
+      "kw": "mlc llm apk",
+      "search_volume": 20,
+      "search_volume_12m": 20,
+      "cpc": 7.61,
+      "ppc": 4
+    },
+    {
+      "kw": "mlc chat android apk",
+      "search_volume": 10,
+      "search_volume_12m": 20,
+      "cpc": null,
+      "ppc": null
+    },
+    {
+      "kw": "local llm android github",
+      "search_volume": 10,
+      "search_volume_12m": 10,
+      "cpc": null,
+      "ppc": null
+    },
+    {
+      "kw": "local llm app android",
+      "search_volume": 10,
+      "search_volume_12m": 10,
+      "cpc": null,
+      "ppc": 2
+    },
+    {
+      "kw": "mlc-llm android github",
+      "search_volume": 10,
+      "search_volume_12m": 10,
+      "cpc": null,
+      "ppc": null
+    },
+    {
+      "kw": "mlc llm app",
+      "search_volume": 10,
+      "search_volume_12m": 10,
+      "cpc": null,
+      "ppc": 64
+    },
+    {
+      "kw": "mlc llm download",
+      "search_volume": 10,
+      "search_volume_12m": 10,
+      "cpc": null,
+      "ppc": null
+    },
+    {
+      "kw": "mlc chat android github",
+      "search_volume": 10,
+      "search_volume_12m": 10,
+      "cpc": null,
+      "ppc": null
+    },
+    {
+      "kw": "mlc-llm models",
+      "search_volume": 10,
+      "search_volume_12m": 10,
+      "cpc": null,
+      "ppc": null
+    },
+    {
+      "kw": "mlc chat github",
+      "search_volume": 10,
+      "search_volume_12m": 10,
+      "cpc": 5.07,
+      "ppc": 6
+    },
+    {
+      "kw": "mlc llm install",
+      "search_volume": 10,
+      "search_volume_12m": 10,
+      "cpc": null,
+      "ppc": null
+    },
+    {
+      "kw": "mlc github",
+      "search_volume": 10,
+      "search_volume_12m": 10,
+      "cpc": null,
+      "ppc": null
+    },
+    {
+      "kw": "mlc-ai mlc llm",
+      "search_volume": 10,
+      "search_volume_12m": 10,
+      "cpc": null,
+      "ppc": 40
+    },
+    {
+      "kw": "mlc chat apk latest version",
+      "search_volume": 10,
+      "search_volume_12m": 10,
+      "cpc": null,
+      "ppc": null
+    },
+    {
+      "kw": "mlc chat app download",
+      "search_volume": 10,
+      "search_volume_12m": 10,
+      "cpc": null,
+      "ppc": null
+    },
+    {
+      "kw": "mlc chat play store",
+      "search_volume": 10,
+      "search_volume_12m": 10,
+      "cpc": null,
+      "ppc": null
+    },
+    {
+      "kw": "mlc chat for android",
+      "search_volume": 10,
+      "search_volume_12m": 10,
+      "cpc": null,
+      "ppc": null
+    },
+    {
+      "kw": "mlc chat ai",
+      "search_volume": 10,
+      "search_volume_12m": 10,
+      "cpc": null,
+      "ppc": null
+    },
+    {
+      "kw": "mlc chat android download",
+      "search_volume": 10,
+      "search_volume_12m": 10,
+      "cpc": null,
+      "ppc": null
+    },
+    {
+      "kw": "mlc chat app for android",
+      "search_volume": 10,
+      "search_volume_12m": 10,
+      "cpc": null,
+      "ppc": null
+    }
+  ]
+}

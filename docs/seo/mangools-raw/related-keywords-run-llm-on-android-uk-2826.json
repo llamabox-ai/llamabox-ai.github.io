@@ -1,0 +1,25 @@
+{
+  "seed": null,
+  "location": {
+    "_id": 2826,
+    "code": "gb",
+    "label": "United Kingdom"
+  },
+  "language": {
+    "_id": 0,
+    "label": "Any Language",
+    "code": null
+  },
+  "total_keywords": 1,
+  "returned_keywords": 1,
+  "truncated": false,
+  "keywords": [
+    {
+      "kw": "run llm on android",
+      "search_volume": 10,
+      "search_volume_12m": 10,
+      "cpc": null,
+      "ppc": 0
+    }
+  ]
+}

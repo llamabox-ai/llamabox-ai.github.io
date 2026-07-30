@@ -1,0 +1,73 @@
+{
+  "kw": "llama.cpp android",
+  "location_id": 2840,
+  "platform_id": 1,
+  "rank": 31,
+  "organic": [
+    {
+      "rank": 1,
+      "url": "https://github.com/ggml-org/llama.cpp/blob/master/docs/android.md",
+      "title": "llama.cpp/docs/android.md at master · ggml-org ...",
+      "domain": "github.com",
+      "upa": 53,
+      "pda": 97
+    },
+    {
+      "rank": 2,
+      "url": "https://www.reddit.com/r/LocalLLaMA/comments/1moabey/llamacpp_on_android/",
+      "title": "r/LocalLLaMA - Llama.cpp on android",
+      "domain": "reddit.com",
+      "upa": 53,
+      "pda": 92
+    },
+    {
+      "rank": 3,
+      "url": "https://play.google.com/store/apps/details?id=com.micklab.llama",
+      "title": "LLM AI Server with llama.cpp - Apps on Google Play",
+      "domain": "google.com",
+      "upa": 52,
+      "pda": 99
+    },
+    {
+      "rank": 4,
+      "url": "https://github.com/JackZeng0208/llama.cpp-android-tutorial",
+      "title": "llama.cpp Android Tutorial (Adreno OpenCL Backend)",
+      "domain": "github.com",
+      "upa": 51,
+      "pda": 97
+    },
+    {
+      "rank": 5,
+      "url": "https://farmaker47.medium.com/run-gemma-and-vlms-on-mobile-with-llama-cpp-dbb6e1b19a93",
+      "title": "Run Gemma and VLMs on mobile with llama.cpp - Medium",
+      "domain": "medium.com",
+      "upa": 50,
+      "pda": 95
+    },
+    {
+      "rank": 6,
+      "url": "https://www.linkedin.com/posts/sundaramoorthy-masilamani-496b857a_github-weaktogeekllamacpp-android-java-activity-7390697267709718529-h1aC",
+      "title": "Building Offline AI with Llama.cpp on Android",
+      "domain": "linkedin.com",
+      "upa": 56,
+      "pda": 99
+    },
+    {
+      "rank": 7,
+      "url": "https://docs.feishu.cn/v/wiki/Lwr9wpOQdinr6AkLzHrc9LlgnJD/a3",
+      "title": "Lama.cpp Android Deployment Requirements",
+      "domain": "feishu.cn",
+      "upa": 34,
+      "pda": 43
+    },
+    {
+      "rank": 8,
+      "url": "https://moschip.com/tag/llama-cpp-android/",
+      "title": "llama.cpp Android Archives",
+      "domain": "moschip.com",
+      "upa": 26,
+      "pda": 42
+    }
+  ],
+  "snapshot_id": "168debfb43c4a82c46e842adeb93e7f9.2026-07-30"
+}

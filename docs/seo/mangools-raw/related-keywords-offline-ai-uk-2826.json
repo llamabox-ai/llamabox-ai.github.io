@@ -1,0 +1,12 @@
+{
+  "seed": "offline ai",
+  "location_id": 2826,
+  "location": "United Kingdom",
+  "total_keywords": 4,
+  "keywords": [
+    {"kw": "offline ai", "search_volume": 250, "search_volume_12m": 260, "cpc": 2.29, "ppc": 13},
+    {"kw": "topaz video enhance ai offline", "search_volume": 10, "search_volume_12m": 10, "cpc": null, "ppc": null},
+    {"kw": "luminar ai offline", "search_volume": null, "search_volume_12m": null, "cpc": null, "ppc": null},
+    {"kw": "topaz video enhance ai offline models", "search_volume": null, "search_volume_12m": null, "cpc": null, "ppc": null}
+  ]
+}

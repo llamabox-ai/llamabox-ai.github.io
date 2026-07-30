@@ -1,0 +1,74 @@
+{
+  "seed": null,
+  "location": {
+    "_id": 2826,
+    "code": "gb",
+    "label": "United Kingdom"
+  },
+  "language": {
+    "_id": 0,
+    "label": "Any Language",
+    "code": null
+  },
+  "total_keywords": 8,
+  "returned_keywords": 8,
+  "truncated": false,
+  "keywords": [
+    {
+      "kw": "pocketpal ai",
+      "search_volume": 130,
+      "search_volume_12m": 140,
+      "cpc": 8.6,
+      "ppc": 7
+    },
+    {
+      "kw": "pocketpal ai apk",
+      "search_volume": 10,
+      "search_volume_12m": 10,
+      "cpc": null,
+      "ppc": null
+    },
+    {
+      "kw": "pocketpal ai website",
+      "search_volume": 10,
+      "search_volume_12m": 10,
+      "cpc": null,
+      "ppc": null
+    },
+    {
+      "kw": "pocketpal ai mod apk",
+      "search_volume": 10,
+      "search_volume_12m": 10,
+      "cpc": null,
+      "ppc": null
+    },
+    {
+      "kw": "pocketpal ai download",
+      "search_volume": 10,
+      "search_volume_12m": 10,
+      "cpc": null,
+      "ppc": null
+    },
+    {
+      "kw": "pocketpal ai best model",
+      "search_volume": 10,
+      "search_volume_12m": 10,
+      "cpc": null,
+      "ppc": null
+    },
+    {
+      "kw": "pocketpal ai offline",
+      "search_volume": 10,
+      "search_volume_12m": 10,
+      "cpc": null,
+      "ppc": null
+    },
+    {
+      "kw": "pocketpal ai reddit",
+      "search_volume": 10,
+      "search_volume_12m": 10,
+      "cpc": null,
+      "ppc": null
+    }
+  ]
+}

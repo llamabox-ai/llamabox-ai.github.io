@@ -1,0 +1,31 @@
+{
+  "kw": "offline ai android",
+  "page": 0,
+  "location_id": 2840,
+  "platform_id": 1,
+  "serp_results": null,
+  "rank": 0,
+  "items": [],
+  "browser": {
+    "doc": {
+      "w": 1366,
+      "h": 768
+    },
+    "view": {
+      "w": 1366,
+      "h": 768
+    }
+  },
+  "rank_updated_at": 1785381668,
+  "created_at": 1785381668,
+  "_id": "1efdbdaa930f31bef9ed5eecb4ec16e7",
+  "location": {
+    "_id": 2840,
+    "code": "us",
+    "label": "United States"
+  },
+  "serp_snapshot_id": "1efdbdaa930f31bef9ed5eecb4ec16e7.2026-07-30",
+  "serp_source_url": "https://s3.amazonaws.com/mangools-google-pages/1efdbdaa930f31bef9ed5eecb4ec16e7.2026-07-30.html",
+  "ctr": [],
+  "serpFeaturesImpact": 0
+}

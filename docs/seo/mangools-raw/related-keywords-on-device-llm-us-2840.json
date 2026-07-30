@@ -1,0 +1,117 @@
+{
+  "seed": null,
+  "location": {
+    "_id": 2840,
+    "code": "us",
+    "label": "United States"
+  },
+  "language": {
+    "_id": 0,
+    "label": "Any Language",
+    "code": null
+  },
+  "total_keywords": 14,
+  "returned_keywords": 14,
+  "truncated": false,
+  "keywords": [
+    {
+      "kw": "on-device ai",
+      "search_volume": 520,
+      "search_volume_12m": 590,
+      "kd": 33,
+      "cpc": 3.13,
+      "ppc": 2
+    },
+    {
+      "kw": "on device llm",
+      "search_volume": 100,
+      "search_volume_12m": 110,
+      "cpc": 15.74,
+      "ppc": 3
+    },
+    {
+      "kw": "on-device ai chrome",
+      "search_volume": 20,
+      "search_volume_12m": 20,
+      "cpc": null,
+      "ppc": null
+    },
+    {
+      "kw": "on-device ai apple",
+      "search_volume": 20,
+      "search_volume_12m": 20,
+      "cpc": null,
+      "ppc": 1
+    },
+    {
+      "kw": "on-device ai android",
+      "search_volume": 20,
+      "search_volume_12m": 20,
+      "cpc": 2.67,
+      "ppc": 8
+    },
+    {
+      "kw": "on-device llm ios",
+      "search_volume": 10,
+      "search_volume_12m": 20,
+      "cpc": null,
+      "ppc": null
+    },
+    {
+      "kw": "on device llm android",
+      "search_volume": 10,
+      "search_volume_12m": 20,
+      "cpc": null,
+      "ppc": null
+    },
+    {
+      "kw": "best on-device llm",
+      "search_volume": 10,
+      "search_volume_12m": 20,
+      "cpc": null,
+      "ppc": 4
+    },
+    {
+      "kw": "on-device ai model",
+      "search_volume": 10,
+      "search_volume_12m": 20,
+      "cpc": null,
+      "ppc": 7
+    },
+    {
+      "kw": "on device llm github",
+      "search_volume": 10,
+      "search_volume_12m": 10,
+      "cpc": null,
+      "ppc": null
+    },
+    {
+      "kw": "on-device ai google",
+      "search_volume": 10,
+      "search_volume_12m": 10,
+      "cpc": null,
+      "ppc": null
+    },
+    {
+      "kw": "on-device ai qualcomm",
+      "search_volume": 10,
+      "search_volume_12m": 10,
+      "cpc": 4.93,
+      "ppc": 7
+    },
+    {
+      "kw": "on device ai examples",
+      "search_volume": 10,
+      "search_volume_12m": 10,
+      "cpc": null,
+      "ppc": null
+    },
+    {
+      "kw": "on device ai pc",
+      "search_volume": 10,
+      "search_volume_12m": 10,
+      "cpc": null,
+      "ppc": null
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "seed": null,
+  "location": {
+    "_id": 2826,
+    "code": "gb",
+    "label": "United Kingdom"
+  },
+  "language": {
+    "_id": 0,
+    "label": "Any Language",
+    "code": null
+  },
+  "total_keywords": 1,
+  "returned_keywords": 1,
+  "truncated": false,
+  "keywords": [
+    {
+      "kw": "private ai chat",
+      "search_volume": 110,
+      "search_volume_12m": 120,
+      "cpc": 2.78,
+      "ppc": 21
+    }
+  ]
+}

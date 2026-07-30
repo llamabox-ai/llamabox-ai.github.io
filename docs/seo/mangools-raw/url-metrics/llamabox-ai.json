@@ -1,0 +1,31 @@
+{
+  "url": "https://llamabox-ai.github.io/",
+  "domain": "llamabox-ai.github.io",
+  "source": "serpchecker_get_url_metrics + kwfinder_get_url_kd_metrics",
+  "serpchecker_metrics": {
+    "moz": {
+      "upa": 1,
+      "pda": 1,
+      "ueid": 0,
+      "feid": 0,
+      "uid": 0,
+      "fid": 0,
+      "pid": 0,
+      "umrp": 0.1,
+      "fmrp": 0,
+      "pmrp": 0.1
+    },
+    "majestic": {
+      "ExtBackLinks": 1,
+      "RefDomains": 1,
+      "RefIPs": 1,
+      "CitationFlow": 0,
+      "TrustFlow": 0,
+      "IndexedURLs": 0
+    },
+    "rank": {"r": 1}
+  },
+  "kwfinder_kd_metrics": {
+    "lps": 1
+  }
+}

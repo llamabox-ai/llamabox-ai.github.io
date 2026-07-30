@@ -1,0 +1,17 @@
+{
+  "seed": "local llm",
+  "location_id": 2356,
+  "location": "India",
+  "total_keywords": 9,
+  "keywords": [
+    {"kw": "local llm", "search_volume": 1100, "search_volume_12m": 1000, "cpc": 1.11, "ppc": 9},
+    {"kw": "local llm download", "search_volume": 20, "search_volume_12m": 30, "cpc": 1.4, "ppc": 11},
+    {"kw": "local llm github", "search_volume": 10, "search_volume_12m": 20, "cpc": null, "ppc": 8},
+    {"kw": "local llm hardware", "search_volume": 10, "search_volume_12m": 10, "cpc": 0.05, "ppc": 10},
+    {"kw": "local llm ai", "search_volume": 10, "search_volume_12m": 10, "cpc": null, "ppc": 17},
+    {"kw": "local llm open source", "search_volume": 10, "search_volume_12m": 10, "cpc": 0.92, "ppc": 32},
+    {"kw": "local llm llama", "search_volume": 10, "search_volume_12m": 10, "cpc": null, "ppc": 4},
+    {"kw": "local llm huggingface", "search_volume": 10, "search_volume_12m": 10, "cpc": null, "ppc": 7},
+    {"kw": "local llm google", "search_volume": 10, "search_volume_12m": 10, "cpc": 0.94, "ppc": 8}
+  ]
+}

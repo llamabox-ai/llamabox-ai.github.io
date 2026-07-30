@@ -1,0 +1,73 @@
+{
+  "kw": "run llm on android",
+  "location_id": 2840,
+  "platform_id": 1,
+  "rank": 25,
+  "organic": [
+    {
+      "rank": 1,
+      "url": "https://github.com/dineshsoudagar/local-llms-on-android",
+      "title": "dineshsoudagar/local-llms-on-android: Run ...",
+      "domain": "github.com",
+      "upa": 57,
+      "pda": 97
+    },
+    {
+      "rank": 2,
+      "url": "https://www.reddit.com/r/LocalLLM/comments/1q28sdv/anyone_here_using_local_llms_in_android_apps_for/",
+      "title": "Anyone here using local LLMs in Android apps for on- ...",
+      "domain": "reddit.com",
+      "upa": 53,
+      "pda": 92
+    },
+    {
+      "rank": 3,
+      "url": "https://developers.google.com/edge/mediapipe/solutions/genai/llm_inference/android",
+      "title": "LLM Inference guide for Android | Google AI Edge",
+      "domain": "google.com",
+      "upa": 52,
+      "pda": 95
+    },
+    {
+      "rank": 4,
+      "url": "https://mostlynerdless.de/blog/2025/11/05/running-an-llm-on-an-android-phone/",
+      "title": "Running an LLM on an Android Phone",
+      "domain": "mostlynerdless.de",
+      "upa": 24,
+      "pda": 28
+    },
+    {
+      "rank": 5,
+      "url": "https://www.xda-developers.com/ran-a-full-llm-on-my-phone-with-no-internet-and-more-useful-than-i-expected/",
+      "title": "I ran a full LLM on my phone with no internet, and it's more ...",
+      "domain": "xda-developers.com",
+      "upa": 40,
+      "pda": 92
+    },
+    {
+      "rank": 6,
+      "url": "https://discuss.huggingface.co/t/running-llm-on-android/144838",
+      "title": "Running LLM on Android - Beginners",
+      "domain": "huggingface.co",
+      "upa": 42,
+      "pda": 84
+    },
+    {
+      "rank": 7,
+      "url": "https://unsloth.ai/docs/basics/inference-and-deployment/deploy-llms-phone",
+      "title": "How to Run and Deploy LLMs on your iOS or Android Phone",
+      "domain": "unsloth.ai",
+      "upa": 30,
+      "pda": 43
+    },
+    {
+      "rank": 8,
+      "url": "https://www.promptquorum.com/power-local-llm/best-local-llm-apps-android-2026",
+      "title": "Android Local LLM Apps 2026: Speed, NPU & Setup Tested",
+      "domain": "promptquorum.com",
+      "upa": 16,
+      "pda": 19
+    }
+  ],
+  "snapshot_id": "bfbf51b91abf84eeffb0dbfe79950b92.2026-07-30"
+}

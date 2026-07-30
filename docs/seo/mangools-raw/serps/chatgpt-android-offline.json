@@ -1,0 +1,73 @@
+{
+  "kw": "chatgpt android offline",
+  "location_id": 2840,
+  "platform_id": 1,
+  "rank": 34,
+  "organic": [
+    {
+      "rank": 1,
+      "url": "https://www.reddit.com/r/LocalLLaMA/comments/1lt98oq/wouldnt_it_be_great_if_we_have_a_local_offline/",
+      "title": "Wouldn't it be great if we have a local offline ChatGPT runs ...",
+      "domain": "reddit.com",
+      "upa": 53,
+      "pda": 92
+    },
+    {
+      "rank": 2,
+      "url": "https://community.openai.com/t/offline-version-of-chatgpt/1374449",
+      "title": "Offline Version of ChatGPT",
+      "domain": "openai.com",
+      "upa": 43,
+      "pda": 92
+    },
+    {
+      "rank": 3,
+      "url": "https://play.google.com/store/apps/details?id=com.karthek.android.v.aic",
+      "title": "OfflineGPT - Apps on Google Play",
+      "domain": "google.com",
+      "upa": 55,
+      "pda": 99
+    },
+    {
+      "rank": 4,
+      "url": "https://jan.ai/post/offline-chatgpt-alternative",
+      "title": "You can't run ChatGPT offline, do this instead",
+      "domain": "jan.ai",
+      "upa": 30,
+      "pda": 46
+    },
+    {
+      "rank": 5,
+      "url": "https://www.tomsguide.com/ai/i-replaced-chatgpt-with-offline-ai-on-my-phone-heres-what-actually-happened",
+      "title": "I replaced ChatGPT with Google's offline AI on my phone ...",
+      "domain": "tomsguide.com",
+      "upa": 46,
+      "pda": 89
+    },
+    {
+      "rank": 6,
+      "url": "https://fritz.ai/can-you-use-chatgpt-offline/",
+      "title": "Can You Use ChatGPT Offline?",
+      "domain": "fritz.ai",
+      "upa": 30,
+      "pda": 52
+    },
+    {
+      "rank": 7,
+      "url": "https://www.youtube.com/watch?v=3SIuDhy6Rdw",
+      "title": "Use ChatGPT Without Internet on Mobile | Run LLMs Offline",
+      "domain": "youtube.com",
+      "upa": 60,
+      "pda": 100
+    },
+    {
+      "rank": 8,
+      "url": "https://medium.com/@desmondmutuma35/how-to-build-your-own-chatgpt-on-your-phone-works-100-offline-2026-fcb7e82d8323",
+      "title": "How to Build Your Own ChatGPT on Your Phone (Works ...",
+      "domain": "medium.com",
+      "upa": 48,
+      "pda": 95
+    }
+  ],
+  "snapshot_id": "1b1e96e75baa7721a8f82101e2483a5c.2026-07-30"
+}

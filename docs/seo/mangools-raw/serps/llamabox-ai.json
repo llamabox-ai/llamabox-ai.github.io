@@ -1,0 +1,31 @@
+{
+  "kw": "llamabox ai",
+  "page": 0,
+  "location_id": 2840,
+  "platform_id": 1,
+  "serp_results": null,
+  "rank": 0,
+  "items": [],
+  "browser": {
+    "doc": {
+      "w": 1366,
+      "h": 768
+    },
+    "view": {
+      "w": 1366,
+      "h": 768
+    }
+  },
+  "rank_updated_at": 1785381788,
+  "created_at": 1785381788,
+  "_id": "aa0df5898e977233560f40c7d0c3d7dc",
+  "location": {
+    "_id": 2840,
+    "code": "us",
+    "label": "United States"
+  },
+  "serp_snapshot_id": "aa0df5898e977233560f40c7d0c3d7dc.2026-07-30",
+  "serp_source_url": "https://s3.amazonaws.com/mangools-google-pages/aa0df5898e977233560f40c7d0c3d7dc.2026-07-30.html",
+  "ctr": [],
+  "serpFeaturesImpact": 0
+}

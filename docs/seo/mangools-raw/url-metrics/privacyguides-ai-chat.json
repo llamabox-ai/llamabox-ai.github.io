@@ -1,0 +1,10 @@
+{
+  "_id": "7265d3651758e94bbd309f475a94af28",
+  "url": "https://www.privacyguides.org/en/ai-chat",
+  "domain": "www.privacyguides.org",
+  "m": {
+    "moz": {"upa": 29, "pda": 51, "umrp": 2.9, "pmrp": 5.1},
+    "majestic": {"ExtBackLinks": 64, "RefDomains": 36, "CitationFlow": 41, "TrustFlow": 18, "RefIPs": 35},
+    "rank": {"r": 48}
+  }
+}

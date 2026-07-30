@@ -1,0 +1,17 @@
+{
+  "seed": "local llm",
+  "location_id": 2826,
+  "location": "United Kingdom",
+  "total_keywords": 9,
+  "keywords": [
+    {"kw": "local llm", "search_volume": 890, "search_volume_12m": 880, "cpc": 4.79, "ppc": 8},
+    {"kw": "local llm hardware", "search_volume": 40, "search_volume_12m": 50, "cpc": 0.84, "ppc": 59},
+    {"kw": "local llm coding", "search_volume": 10, "search_volume_12m": 20, "cpc": null, "ppc": 13},
+    {"kw": "local llm llama", "search_volume": 10, "search_volume_12m": 10, "cpc": null, "ppc": 11},
+    {"kw": "local llm ai", "search_volume": 10, "search_volume_12m": 10, "cpc": null, "ppc": 39},
+    {"kw": "local llm open source", "search_volume": 10, "search_volume_12m": 10, "cpc": null, "ppc": 12},
+    {"kw": "local llm huggingface", "search_volume": 10, "search_volume_12m": 10, "cpc": null, "ppc": null},
+    {"kw": "local llm google", "search_volume": 10, "search_volume_12m": 10, "cpc": null, "ppc": null},
+    {"kw": "local llm github", "search_volume": 10, "search_volume_12m": 10, "cpc": null, "ppc": null}
+  ]
+}

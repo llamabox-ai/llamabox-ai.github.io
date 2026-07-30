@@ -1,0 +1,11 @@
+{
+  "_id": "4254cf426f3eb802228694807cbed90e",
+  "url": "https://jan.ai/download",
+  "domain": "jan.ai",
+  "topRank": 147727,
+  "m": {
+    "moz": {"upa": 38, "pda": 46, "umrp": 3.8, "pmrp": 4.6},
+    "majestic": {"ExtBackLinks": 47, "RefDomains": 33, "CitationFlow": 25, "TrustFlow": 8, "RefIPs": 32},
+    "rank": {"r": 37}
+  }
+}

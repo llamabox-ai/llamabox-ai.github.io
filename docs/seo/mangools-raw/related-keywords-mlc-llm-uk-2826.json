@@ -1,0 +1,67 @@
+{
+  "seed": null,
+  "location": {
+    "_id": 2826,
+    "code": "gb",
+    "label": "United Kingdom"
+  },
+  "language": {
+    "_id": 0,
+    "label": "Any Language",
+    "code": null
+  },
+  "total_keywords": 7,
+  "returned_keywords": 7,
+  "truncated": false,
+  "keywords": [
+    {
+      "kw": "mlc llm",
+      "search_volume": 60,
+      "search_volume_12m": 70,
+      "cpc": 12,
+      "ppc": 6
+    },
+    {
+      "kw": "mlc llm apk",
+      "search_volume": 10,
+      "search_volume_12m": 10,
+      "cpc": null,
+      "ppc": 2
+    },
+    {
+      "kw": "mlc llm android",
+      "search_volume": 10,
+      "search_volume_12m": 10,
+      "cpc": null,
+      "ppc": 4
+    },
+    {
+      "kw": "mlc-llm github",
+      "search_volume": 10,
+      "search_volume_12m": 10,
+      "cpc": null,
+      "ppc": null
+    },
+    {
+      "kw": "mlc-llm flutter",
+      "search_volume": 10,
+      "search_volume_12m": 10,
+      "cpc": null,
+      "ppc": null
+    },
+    {
+      "kw": "mlc llm react native",
+      "search_volume": 10,
+      "search_volume_12m": 10,
+      "cpc": null,
+      "ppc": null
+    },
+    {
+      "kw": "mlc-llm huggingface",
+      "search_volume": 0,
+      "search_volume_12m": 10,
+      "cpc": null,
+      "ppc": null
+    }
+  ]
+}

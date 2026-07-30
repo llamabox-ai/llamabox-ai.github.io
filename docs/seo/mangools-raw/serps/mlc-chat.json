@@ -1,0 +1,89 @@
+{
+  "kw": "mlc chat",
+  "location_id": 2840,
+  "platform_id": 1,
+  "rank": 34,
+  "organic": [
+    {
+      "rank": 1,
+      "url": "https://llm.mlc.ai/",
+      "title": "MLC LLM | Home",
+      "domain": "mlc.ai",
+      "upa": 43,
+      "pda": 39
+    },
+    {
+      "rank": 2,
+      "url": "https://apps.apple.com/us/app/mlc-chat/id6448482937",
+      "title": "MLC Chat - App Store - Apple",
+      "domain": "apple.com",
+      "upa": 67,
+      "pda": 99
+    },
+    {
+      "rank": 3,
+      "url": "https://www.reddit.com/r/LocalLLaMA/comments/13ctg4c/project_mlc_llm_for_android/",
+      "title": "[Project] MLC LLM for Android : r/LocalLLaMA",
+      "domain": "reddit.com",
+      "upa": 53,
+      "pda": 92
+    },
+    {
+      "rank": 4,
+      "url": "https://mlc-chat.updatestar.com/",
+      "title": "MLC Chat - Download",
+      "domain": "updatestar.com",
+      "upa": 33,
+      "pda": 60
+    },
+    {
+      "rank": 5,
+      "url": "https://webllm.mlc.ai/",
+      "title": "WebLLM | Home - MLC",
+      "domain": "mlc.ai",
+      "upa": 44,
+      "pda": 39
+    },
+    {
+      "rank": 6,
+      "url": "https://play.google.com/store/apps/details?id=in.llmchat",
+      "title": "LLMChat - Apps on Google Play",
+      "domain": "google.com",
+      "upa": 52,
+      "pda": 99
+    },
+    {
+      "rank": 7,
+      "url": "https://www.callstack.com/blog/want-to-run-llms-on-your-device-meet-mlc",
+      "title": "Want to Run LLMs on Your Device? Meet MLC",
+      "domain": "callstack.com",
+      "upa": 25,
+      "pda": 41
+    },
+    {
+      "rank": 8,
+      "url": "https://llm.mlc.ai/docs/deploy/android.html",
+      "title": "Android SDK — mlc-llm 0.1.0 documentation",
+      "domain": "mlc.ai",
+      "upa": 39,
+      "pda": 39
+    },
+    {
+      "rank": 9,
+      "url": "https://huggingface.co/mlc-ai",
+      "title": "mlc-ai (machine learning compilation)",
+      "domain": "huggingface.co",
+      "upa": 50,
+      "pda": 84
+    },
+    {
+      "rank": 10,
+      "url": "https://github.com/mlc-ai/binary-mlc-llm-libs/releases",
+      "title": "Releases · mlc-ai/binary-mlc-llm-libs",
+      "domain": "github.com",
+      "upa": 63,
+      "pda": 97
+    }
+  ],
+  "snapshot_id": "cc7521c9218f7ae60938e1505760683c.2026-07-30"
+}

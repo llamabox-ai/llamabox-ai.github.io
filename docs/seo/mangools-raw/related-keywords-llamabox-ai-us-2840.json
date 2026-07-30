@@ -1,0 +1,23 @@
+{
+  "seed": 3,
+  "location": {
+    "_id": 2840,
+    "code": "us",
+    "label": "United States"
+  },
+  "language": {
+    "_id": 0,
+    "label": "Any Language",
+    "code": null
+  },
+  "total_keywords": 1,
+  "returned_keywords": 1,
+  "truncated": false,
+  "keywords": [
+    {
+      "kw": "llamabox ai",
+      "search_volume": null,
+      "search_volume_12m": null
+    }
+  ]
+}
