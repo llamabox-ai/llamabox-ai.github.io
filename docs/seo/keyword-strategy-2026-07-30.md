@@ -81,6 +81,8 @@ Three additional keywords pulled fresh US desktop SERPs and competitor backlink 
 | `local llm app` | 40 | — | Desktop-heavy intent (LM Studio, Ollama, AnythingLLM) but includes "locally ai android" (20 vol), "anything llm android" (10 vol) | Add Android-specific section to `/best-local-llm-apps-android.html` and target "local llm app android" |
 | `llm software` | 590 (12m avg) / 560 (current) | 41 | Category term; SERP dominated by LM Studio, Ollama, AnythingLLM, open-source leaderboard pages | Create `/llm-software.html` category page focusing on CPU-only, offline Android LLM software |
 | `gbnf` | 390 (12m avg) / 410 (current) | 23 | `gbnf` SERP mixed with motorcycle slang; LLM grammar results are llama.cpp README, Medium article, gbnf.dev (DA=1) | Low priority; can cover in a technical blog post about structured outputs once feature ships |
+| `local llm android` | 80 | 27 | Reddit r/LocalLLaMA #1, GitHub repo #2, XDA #3, mostlynerdless.de DA=28 #4, Google AI Edge #5, PromptQuorum DA=19/0BL #6, Medium #7, Play Store LLM Hub #8 | `/best-local-llm-apps-android.html` already targets this; optimize title/H1 for exact phrase; beat PromptQuorum easily |
+| `private ai android` | 10 | 38 | Google Play "Private AI" #1, Reddit r/privacy #2, Uptodown #3, Layla DA=11/223RD #4, De.AI Play Store #5, Softonic #6, Bearly AI DA=30 #7 | `/private-ai-android.html` should win with real content + backlinks; Layla is beatable despite links because DA is low |
 
 ### International SERP findings
 

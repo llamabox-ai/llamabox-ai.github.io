@@ -1,0 +1,18 @@
+{
+  "kw": "local llm android",
+  "location_id": 2840,
+  "platform_id": 1,
+  "rank": 27,
+  "snapshot_id": "39f251c0f44635d5e2fb7e866cf2be13.2026-07-30",
+  "ai_overview": true,
+  "results": [
+    {"rank":1,"url":"https://www.reddit.com/r/LocalLLaMA/comments/1lwwuwq/help_me_find_the_best_android_app_for_running/","title":"Help me find the best Android app for running LLMs locally","domain":"reddit.com","pda":92,"upa":53,"ctr":0.3113},
+    {"rank":2,"url":"https://github.com/dineshsoudagar/local-llms-on-android","title":"dineshsoudagar/local-llms-on-android: Run ...","domain":"github.com","pda":97,"upa":57,"ctr":0.1583},
+    {"rank":3,"url":"https://www.xda-developers.com/ran-a-full-llm-on-my-phone-with-no-internet-and-more-useful-than-i-expected/","title":"I ran a full LLM on my phone with no internet, and it's more ...","domain":"xda-developers.com","pda":92,"upa":40,"ctr":0.0883},
+    {"rank":4,"url":"https://mostlynerdless.de/blog/2025/11/05/running-an-llm-on-an-android-phone/","title":"Running an LLM on an Android Phone","domain":"mostlynerdless.de","pda":28,"upa":24,"ctr":0.0567},
+    {"rank":5,"url":"https://developers.google.com/edge/mediapipe/solutions/genai/llm_inference/android","title":"LLM Inference guide for Android | Google AI Edge","domain":"google.com","pda":95,"upa":52,"ctr":0.0385},
+    {"rank":6,"url":"https://www.promptquorum.com/power-local-llm/best-local-llm-apps-android-2026","title":"Android Local LLM Apps 2026: Speed, NPU & Setup Tested","domain":"promptquorum.com","pda":19,"upa":16,"ctr":0.0272},
+    {"rank":7,"url":"https://vivekparasharr.medium.com/how-i-ran-a-local-llm-on-my-android-phone-and-what-i-learned-about-googles-ai-edge-gallery-807572211562","title":"How I Ran a Local LLM on My Android Phone, And ... - Medium","domain":"medium.com","pda":95,"upa":48,"ctr":0.0199},
+    {"rank":8,"url":"https://play.google.com/store/apps/details?id=com.llmhub.llmhub","title":"LLM Hub - Local AI Assistant - Apps on Google Play","domain":"google.com","pda":99,"upa":58,"ctr":0.0152}
+  ]
+}

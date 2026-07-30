@@ -1,0 +1,23 @@
+{
+  "kw": "private ai android",
+  "location_id": 2840,
+  "platform_id": 1,
+  "rank": 38,
+  "snapshot_id": "a0fa6361cb2bccf678b510bdd885f677.2026-07-30",
+  "ai_overview": true,
+  "people_also_ask": [
+    "Is there an AI that is completely private?",
+    "What AI can I use privately?",
+    "What is the secret AI app?",
+    "What does private AI do?"
+  ],
+  "results": [
+    {"rank":1,"url":"https://play.google.com/store/apps/details?id=us.valkon.privateai","title":"Private AI - Apps on Google Play","domain":"google.com","pda":98,"upa":64,"ctr":0.3113},
+    {"rank":2,"url":"https://www.reddit.com/r/privacy/comments/1kdym3a/private_ai_app/","title":"Private AI app? : r/privacy","domain":"reddit.com","pda":92,"upa":53,"ctr":0.1583},
+    {"rank":3,"url":"https://private-ai.en.uptodown.com/android","title":"Private AI for Android - Download the APK from Uptodown","domain":"uptodown.com","pda":92,"upa":38,"ctr":0.0883},
+    {"rank":4,"url":"https://www.layla-network.ai/","title":"Layla: Private Offline AI Assistant for Android & iOS","domain":"layla-network.ai","pda":11,"upa":39,"ctr":0.0567},
+    {"rank":5,"url":"https://play.google.com/store/apps/details?id=com.DAI.DAIapp","title":"De.AI Personal Private AI - Apps on Google Play","domain":"google.com","pda":99,"upa":57,"ctr":0.0385},
+    {"rank":6,"url":"https://off-grid-private-ai-chat.en.softonic.com/android","title":"Off Grid - Private AI Chat for Android - Download","domain":"softonic.com","pda":92,"upa":40,"ctr":0.0272},
+    {"rank":7,"url":"https://bearly.ai/","title":"Bearly AI | The Private AI Workspace","domain":"bearly.ai","pda":30,"upa":49,"ctr":0.0199}
+  ]
+}
